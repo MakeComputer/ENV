@@ -51,43 +51,43 @@ architecture Computer_beh of Computer is
 
     --end  component IFID;
 
-    component Execute is
+    component InstructionDecode is
+        generic (
+            delay: time
+        )
         port (
-        -- clock
             clk: in std_logic;
 
         -- IN
-            -- Data (black)
-            rx, ry, rz: in std_logic_vector(2 downto 0);
-            rx_val, ry_val: in std_logic_vector(15 downto 0);
-            immediate: in std_logic_vector(15 downto 0);
+            -- From IF stage
+            pc: in std_logic_vector(15 downto 0);
+            instruction: in std_logic_vector(15 downto 0);
 
-            -- Control (blue)
-            control_in_ex: in type_control_ex;
-            control_in_mem: out type_control_mem;
-            control_in_wb: out type_control_wb;
+            -- From Hazard control
+            bubble_select: in std_logic;
 
-            -- Forwarding data
-            forward_data_from_mem: in std_logic_vector(15 downto 0);
-            forward_data_from_wb: in std_logic_vector(15 downto 0);
-            -- Forwarding control
-            forward_control_x: in std_logic_vector(1 downto 0);
-            forward_control_y: in std_logic_vector(1 downto 0);
+            -- From write back
+            register_from_write_back: in std_logic_vector(2 downto 0);
+            data_from_write_back: in std_logic_vector(15 downto 0);
+            reg_write: in std_logic;
 
         -- OUT
-            -- data
-            alu_result: out std_logic_vector(15 downto 0);
-            write_data: out std_logic_vector(15 downto 0);
-            -- register destination
-            id_ex_rd: out std_logic_vector(2 downto 0);
-            ex_mem_rd: out std_logic_vector(2 downto 0);
+            -- Register file
+            rx, ry, rz: out std_logic_vector(2 downto 0);
+            rx_val, ry_val: out std_logic_vector(15 downto 0);
+            -- IMM
+            immediate: out std_logic_vector(15 downto 0);
 
-            -- control
+            -- Control
+            pc_select: out std_logic;
+            branch_pc: out std_logic_vector(15 downto 0);
+
+            control_out_ex: out type_control_ex;
             control_out_mem: out type_control_mem;
             control_out_wb: out type_control_wb
-
         );
-    end component Execute;
+    end component InstructionDecode;
+
 
     component Execute is
         port (
