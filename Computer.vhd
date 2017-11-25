@@ -133,35 +133,67 @@ architecture Computer_beh of Computer is
     --end  component EXEMEM;
 
 
-    component Memory is
+    component exe_mem is
         port(
-        -- clock
-            clk: in std_logic;
-
-        -- IN
-            -- Data
-            alu_result: in std_logic_vector(15 downto 0);
-            write_data: in std_logic_vector(15 downto 0);
-
-            -- Control
-            control_in_mem: in type_control_mem;
-            control_in_wb: in type_control_wb;
-
-        -- MID
-            -- data
-            -- data_from_memory: out std_logic_vector(15 downto 0);
-            -- data_from_alu_result: out std_logic_vector(15 downto 0);
-
-        -- OUT
-            -- data
-            data_to_write_back: out std_logic_vector(15 downto 0);
-            --
-            mem_wb_rd: out std_logic_vector(2 downto 0);
-            -- Control
-            control_out_wb: out type_control_wb
+            clk_cpu : in std_logic;
+            rst : in std_logic;
+            aluout_exe : in std_logic_vector(15 downto 0);
+            memwrite_id_exe :in std_logic;
+            memread_id_exe : in std_logic;
+            out_sw_exe : in std_logic_vector(15 downto 0);
+            regwrite_id_exe : in std_logic;
+            memtoreg_id_exe : in std_logic;
+            rd_id_exe : in std_logic_vector(3 downto 0);
+            
+            memadress_out : out std_logic_vector(15 downto 0);
+            memdata_out : out std_logic_vector(15 downto 0);
+            memwrite_out : out std_logic;
+            memread_out:out std_logic;
+            memtoreg_out : out std_logic;
+            regwrite_out :out std_logic;
+            aluout_out : out std_logic_vector(15 downto 0);
+            rd_out : out std_logic_vector(3 downto 0)
         );
-    end component Memory;
+    end component;
 
+
+    COMPONENT MemoryBlock
+    port( 
+            Block_clk:in STD_LOGIC; --脉冲信号,注意这里的时钟信号比较捉鸡
+            Block_rst:in STD_LOGIC; --复位信号
+            Block_address:in STD_LOGIC_VECTOR(15 downto 0); --要写入/读取的16位内存地址
+            Block_data:in STD_LOGIC_VECTOR(15 downto 0); --输入的要写的数据
+            Block_MemRead:in STD_LOGIC;
+            Block_MemWrite:in STD_LOGIC;
+            Block_MemOut:out STD_LOGIC_VECTOR(15 downto 0);
+            
+            tsre : in STD_LOGIC;
+            tbre : in STD_LOGIC;
+            wrn : out STD_LOGIC;
+            rdn : out STD_LOGIC;
+            dataready : in std_logic;
+            MemData1:inout STD_LOGIC_VECTOR(15 downto 0) := "0000000000000000"; --从内存中读取数据进该元件RAM2存数据
+            MemAddr1:out STD_LOGIC_VECTOR(17 downto 0) := "000000000000000000"; --输入到RAM2的内存地址
+            oe1,we1:out STD_LOGIC := '1';--RAM1和RAM2的使能信号.RAM1存指令，RAM2存数据
+            en1:out STD_LOGIC := '1'--初始使能为1
+            );
+    END COMPONENT;
+
+    component mem_wb is
+        port(
+            clk : in std_logic;
+            reset : in std_logic;
+            memtoreg_in:in std_logic;
+            regwrite_in:in std_logic;
+            aluout_in :in std_logic_vector(15 downto 0);
+            memout_in :in std_logic_vector(15 downto 0);
+            rd_in : in std_logic_vector(3 downto 0);
+            
+            wbregwrite_out : out std_logic;
+            wbadress_out : out std_logic_vector(3 downto 0);
+            wbregdata_out : out std_logic_vector(15 downto 0)
+        );
+    end component;
 
     --component MEMWB is
 
@@ -200,5 +232,10 @@ architecture Computer_beh of Computer is
 
 
 begin
+    
+    --clk_cpu
+
+
+
 	
 end architecture ; -- Computer_beh
