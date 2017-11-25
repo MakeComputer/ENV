@@ -6,21 +6,20 @@ use IEEE.STD_LOGIC_UNSIGNED.ALL;
 entity PCMux is
 	port( 
 			branch : in std_logic;
-			branchJudge : in std_logic;
-			PCAdd : in std_logic_vector(15 downto 0);
+			PCNext : in std_logic_vector(15 downto 0);
 			PCJump : in std_logic_vector(15 downto 0);			
-			PCNext : out std_logic_vector(15 downto 0)
+			PCOut : out std_logic_vector(15 downto 0)
 		);
 end PCMux;
 
 architecture Behavioral of PCMux is
 begin
-	process(branch, branchJudge, PCAdd, PCJump)
+	process(branch, PCNext, PCJump)
 	begin 
-		if (branch = '0' or branchJudge = '0') then
-			PCNext <= PCAdd;
+		if (branch = '0') then
+			PCOut <= PCNext;
 		else
-			PCNext <= PCJump;
+			PCOut <= PCJump;
 		end if;
 	end process;
 
