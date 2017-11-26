@@ -33,7 +33,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 entity MemoryBlock is
     port( 
-            Block_clk:in STD_LOGIC; --脉冲信号
+            Block_clk:in STD_LOGIC; --脉冲信号,注意这里的时钟信号比较捉鸡
             Block_rst:in STD_LOGIC; --复位信号
             Block_address:in STD_LOGIC_VECTOR(15 downto 0); --要写入/读取的16位内存地址
             Block_data:in STD_LOGIC_VECTOR(15 downto 0); --输入的要写的数据

@@ -5,7 +5,7 @@ use IEEE.STD_LOGIC_UNSIGNED.all;
 
 entity id is
 	port(
-		clock, reset, pause: in std_logic;
+		clock, reset, pause, flush: in std_logic;
 		jump, bubble: in std_logic;
 		instruction: in std_logic_vector(15 downto 0);
 		fromPC: in std_logic_vector(15 downto 0);
@@ -276,7 +276,7 @@ begin
 	process(reset, clock, pause)
 	begin
 		
-		if reset = '1' then
+		if reset = '1' or flush = '1' then
 			s_instruction <= "0000000000000000";
 			s_from_pc <= "0000000000000000";
 		elsif clock'event and clock = '1' and pause = '0' then
