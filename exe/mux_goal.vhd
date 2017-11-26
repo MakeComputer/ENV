@@ -15,7 +15,7 @@ end mux_goal;
 
 architecture behavior of mux_goal is
 begin
-	process(alu_select_goal)
+	process(alu_select_goal, rx, ry, rz)
 	begin
 		case alu_select_goal is
 			when "000" =>   --rx

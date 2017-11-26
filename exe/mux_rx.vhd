@@ -22,7 +22,7 @@ end mux_rx;
 
 architecture behavior of mux_rx is
 begin
-	process(alu_mux_rx, from_forwardx)
+	process(alu_mux_rx, from_forwardx, rx, ry, sp, pc, ra, ih, t, forward_datax, immediate)
 	begin
 	    if from_forwardx = '0' then
 			case alu_mux_rx is

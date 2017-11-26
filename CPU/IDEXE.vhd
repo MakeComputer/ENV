@@ -7,21 +7,25 @@ entity IDEXE is
 	port(
 		clock, reset, pause: in std_logic;
 
-		fromSourceA: in std_logic_vector(1 downto 0);
-		sourceA: out std_logic_vector(1 downto 0);
-		fromSourceB: in std_logic_vector(1 downto 0);
-		sourceB: out std_logic_vector(1 downto 0);
-		fromOperation: in std_logic_vector(2 downto 0);
-		operation: out std_logic_vector(2 downto 0);
+		from_alu_rx: in std_logic_vector(2 downto 0);
+		alu_rx: out std_logic_vector(2 downto 0);
+		from_alu_ry: in std_logic_vector(1 downto 0);
+		alu_ry: out std_logic_vector(1 downto 0);
+		from_alu_op: in std_logic_vector(2 downto 0);
+		alu_op: out std_logic_vector(2 downto 0);
+		from_address: std_logic_vector(1 downto 0);
+		address: out std_logic_vector(1 downto 0);
+		from_goal: in std_logic_vector(2 downto 0);
+		goal: out std_logic_vector(2 downto 0);
 
 		fromBranch: in std_logic_vector(2 downto 0);
 		branch: out in std_logic_vector(2 downto 0);
 		
-		toRegister: in std_logic_vector(3 downto 0);
-		registerSource: out std_logic_vector(3 downto 0);
+		from_wb_memory_or_aluout: in std_logic_vector(1 downto 0);
+		wb_memory_or_aluout: out std_logic_vector(1 downto 0);
 		
-		fromWhere: in std_logic_vector(1 downto 0);
-		where: out std_logic_vector(1 downto 0);
+		fromWhere: in std_logic;
+		where: out std_logic;
 		
 		fromMemoryRead: in std_logic;
 		memoryRead: out std_logic;
@@ -32,8 +36,8 @@ entity IDEXE is
 		fromRegisterWrite: in std_logic;
 		registerWrite: out std_logic;
 
-		numberA: in std_logic_vector(15 downto 0);
-		numberB: in std_logic_vector(15 downto 0);
+		from_readDataA: in std_logic_vector(15 downto 0);
+		from_readDataB: in std_logic_vector(15 downto 0);
 		dataA: out std_logic_vector(15 downto 0);
 		dataB: out std_logic_vector(15 downto 0);
 		fromImmediate: in std_logic_vector(15 downto 0);
@@ -61,18 +65,20 @@ end IDEXE;
 
 architecture behavior of IDEXE is
 begin
-	process(clock, reset, pause, fromSourceA, fromSourceB, fromOperation, fromBranch, toRegister, fromWhere, fromMemoryRead, fromMemoryWrite, fromRegisterWrite, numberA, numberB, r_x, r_y, r_z, r_t, r_sp, fromPC, r_a, r_ih, fromImmediate)
+	process(clock, reset, pause, from_alu_rx, from_alu_ry, from_alu_op, fromBranch, from_wb_memory_or_aluout, fromWhere, fromMemoryRead, fromMemoryWrite, fromRegisterWrite, from_readDataA, from_readDataB, r_x, r_y, r_z, r_t, r_sp, fromPC, r_a, r_ih, fromImmediate)
 	begin
 		if reset = '1' then
-			sourceA <= "00";
-			sourceB <= "00";
-			operation <= "000";
+			alu_rx <= "000";
+			alu_ry <= "00";
+			alu_op <= "000";
 			branch <= "000";
-			registerSource <= "0000";
-			where <= "00";
+			wb_memory_or_aluout <= "00";
+			where <= '0';
 			memoryRead <= '0';
 			memoryWrite <= '0';
 			registerWrite <= '0';
+			goal <= "000";
+			address <= "00";
 			dataA <= "0000000000000000";
 			dataB <= "0000000000000000";
 			immediate <= "0000000000000000";
@@ -85,17 +91,19 @@ begin
 			ra <= "0000000000000000";
 			ih <= "0000000000000000";
 		elsif clock'event and clock = '1' and pause = '0' then
-			sourceA <= fromSourceA;
-			sourceB <= fromSourceB;
-			operation <= fromOperation;
+			alu_rx <= from_alu_rx;
+			alu_ry <= from_alu_ry;
+			alu_op <= from_alu_op;
+			address <= from_address;
+			goal <= from_goal;
 			branch <= fromBranch;
-			registerSource <= toRegister;
+			wb_memory_or_aluout <= from_wb_memory_or_aluout;
 			where <= fromWhere;
 			memoryRead <= fromMemoryRead;
 			memoryWrite <= fromMemoryWrite;
 			registerWrite <= fromRegisterWrite;
-			dataA <= numberA;
-			dataB <= numberB;
+			dataA <= from_readDataA;
+			dataB <= from_readDataB;
 			immediate <= fromImmediate;
 			rx <= r_x;
 			ry <= r_y;

@@ -17,7 +17,7 @@ end mux_ry;
 
 architecture behavior of mux_ry is
 begin
-	process(alu_mux_ry, from_forwardy)
+	process(alu_mux_ry, from_forwardy, rx, ry, forward_datay, immediate)
 	begin
 		if from_forwardy = '0' then
 			case alu_mux_ry is

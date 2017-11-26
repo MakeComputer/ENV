@@ -17,7 +17,8 @@ end mux_address;
 
 architecture behavior of mux_address is
 begin
-	process(address_mux, from_forward_address)
+	process(address_mux, from_forward_address, rx, ra, pc_offset, forward_address)
+		begin
 		if from_forward_address = '0' then
 			case address_mux is
 				when "00" =>
