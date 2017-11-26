@@ -19,6 +19,8 @@ entity exe is
 		memoryRead: out std_logic;
 		from_registerWrite: in std_logic;
 		registerWrite: out std_logic;
+		fromWhere: in std_logic;
+		where: out std_logic;
 		
 		fromBranch: in std_logic_vector(2 downto 0);
 		shouldJump: out std_logic;
@@ -153,6 +155,7 @@ signal add_result: std_logic_vector(15 downto 0);
 signal address_result: std_logic_vector(15 downto 0);
 
 signal s_alu_out: std_logic_vector(15 downto 0);
+signal s_goal: std_logic_vector(3 downto 0);
 
 begin 
 	mux_rx_instance: mux_rx port map(
@@ -207,20 +210,62 @@ begin
 		rx => s_r_x,
 		ry => s_r_y,
 		rz => s_r_z,
-		alu_select_goal => s_select_goal
+		alu_select_goal => s_select_goal,
+		goal => s_goal
 	);
+				
+	jumpAddress <= address_result;
+	alu_out <= s_alu_out;
+	goal <= s_goal;
+	
+	process(s_branch, s_rx, s_t)
+	begin
+		if s_branch = "001" or (s_branch = "010" and s_rx = X"0000") or 
+			(s_branch = "011" and s_rx /= X"0000") or (s_branch = "100" and s_t = X"0000") or
+			s_branch = "101" or s_branch = "110" or s_branch = "111" then
+			shouldJump <= '1';
+		else
+			shouldJump <= '0';
+		end if;			
+	end process;
 	
 	process(reset, clock, pause)
 	begin
 		if reset = '1' then
+			s_rx <= "0000000000000000";
+			s_ry <= "0000000000000000";
+			s_sp <= "0000000000000000";
+			s_pc <= "0000000000000000";
+			s_ra <= "0000000000000000";
+			s_ih <= "0000000000000000";
+			s_t <= "0000000000000000";
+			s_immediate <= "0000000000000000";
+				
+			s_alu_op <= "000";
+			s_alu_mux_rx <= "000";
+			s_alu_mux_ry <= "00";
+			s_select_goal <= "000";
+			s_address_mux <= "00";
+				
+			s_branch <= "000";
+				
+			s_r_x <= "000";
+			s_r_y <= "000";
+			s_r_z <= "000";
+				
+			s_from_forwardx <= '0';
+			s_from_forwardy <= '0';
+			s_from_forward_address <= '0';
+				
+			s_forward_datax <= "0000000000000000";
+			s_forward_datay <= "0000000000000000";
+			s_forward_address <= "0000000000000000";	
+
 			wb_memory_or_alu_out <= "00";
 			memoryRead <= '0';
 			memoryWrite <= '0';
 			registerWrite <= '0';
-			shouldJump <= '0';
-			jumpAddress <= "0000000000000000";
-			goal <= "0000";
-			alu_out <= "0000000000000000";
+			where <= '0';
 		else
 			if clock'event and clock = '1' and pause = '0' then
 				s_rx <= rx;
@@ -250,26 +295,14 @@ begin
 				
 				s_forward_datax <= forward_datax;
 				s_forward_datay <= forward_datay;
-				s_forward_address <= forward_address;
-				
+				s_forward_address <= forward_address;	
+
 				wb_memory_or_alu_out <= from_wb_memory_or_alu_out;
 				memoryRead <= from_memoryRead;
 				memoryWrite <= from_memoryWrite;
 				registerWrite <= from_registerWrite;
-				
-				jumpAddress <= address_result;
-				alu_out <= s_alu_out;
-				goal <= s_select_goal;
-				
-				if s_branch = "001" or (s_branch = "010" and s_rx = X"0000") or 
-					(s_branch = "011" and s_rx /= X"0000") or (s_branch = "100" and s_t = X"0000") or
-					s_branch = "101" or s_branch = "110" or s_branch = "111" then
-					shouldJump <= '1';
-				else
-					shouldJump <= '0';
-				end if;			
+				where <= fromWhere;
 			end if;
 		end if;
-	end process;
-	
+	end process;	
 end behavior;
