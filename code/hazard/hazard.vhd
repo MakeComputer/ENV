@@ -11,7 +11,6 @@ entity hazard is
 		
 		pause: out std_logic;
 		bubble: out std_logic
-		
 	);
 end entity;
 
