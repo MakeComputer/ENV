@@ -28,7 +28,7 @@ entity heap is
 		readDataB: out std_logic_vector(15 downto 0);
 
 		writeAddress: in std_logic_vector(3 downto 0);
-		writeData: in std_logic_vector(3 downto 0);
+		writeData: in std_logic_vector(15 downto 0);
 
 		SP: out std_logic_vector(15 downto 0);
 		RA: out std_logic_vector(15 downto 0);

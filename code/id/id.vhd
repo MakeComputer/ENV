@@ -12,7 +12,7 @@ entity id is
 		
 		write_register: in std_logic;
 		writeData: in std_logic_vector(15 downto 0);
-		writeAddress: in std_logic_vector(15 downto 0);
+		writeAddress: in std_logic_vector(3 downto 0);
 	
 		memoryRead: out std_logic;
 		memoryWrite: out std_logic;
@@ -115,7 +115,7 @@ component heap
 		readDataB: out std_logic_vector(15 downto 0);
 
 		writeAddress: in std_logic_vector(3 downto 0);
-		writeData: in std_logic_vector(3 downto 0);
+		writeData: in std_logic_vector(15 downto 0);
 
 		SP: out std_logic_vector(15 downto 0);
 		RA: out std_logic_vector(15 downto 0);
@@ -134,7 +134,7 @@ signal s_dataA: std_logic_vector(15 downto 0);
 signal s_dataB: std_logic_vector(15 downto 0);
 signal s_write_register: std_logic;
 signal s_write_data: std_logic_vector(15 downto 0);
-signal s_write_address: std_logic_vector(15 downto 0);
+signal s_write_address: std_logic_vector(3 downto 0);
 signal s_sp: std_logic_vector(15 downto 0);
 signal s_ra: std_logic_vector(15 downto 0);
 signal s_ih: std_logic_vector(15 downto 0);

@@ -44,6 +44,7 @@ entity MemoryController is
 		basicdatabus : inout STD_LOGIC_VECTOR(7 downto 0);
 		ram1_en : out STD_LOGIC;
 		reset : in STD_LOGIC;
+		
 		VGA_addr : out std_logic_vector(10 downto 0);
 		VGA_write : out std_LOGIC_vector(0 downto 0);
 		VGA_char : out std_logic_vector(7 downto 0)

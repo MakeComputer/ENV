@@ -5,7 +5,7 @@ use IEEE.STD_LOGIC_UNSIGNED.ALL;
 
 entity exe is
 	port(
-		clock, reset, pause: in std_logic;
+		clock, reset: in std_logic;
 		from_wb_memory_or_alu_out: in std_logic_vector(1 downto 0);
 		wb_memory_or_alu_out: out std_logic_vector(1 downto 0);
 		exe_select_goal: in std_logic_vector(2 downto 0);
@@ -20,7 +20,8 @@ entity exe is
 		from_registerWrite: in std_logic;
 		registerWrite: out std_logic;
 		fromWhere: in std_logic;
-		where: out std_logic;
+		--where: out std_logic;
+		memoryData: out std_logic_vector(15 downto 0);
 		
 		fromBranch: in std_logic_vector(2 downto 0);
 		shouldJump: out std_logic;
@@ -156,6 +157,7 @@ signal address_result: std_logic_vector(15 downto 0);
 
 signal s_alu_out: std_logic_vector(15 downto 0);
 signal s_goal: std_logic_vector(3 downto 0);
+signal s_where: std_logic;
 
 begin 
 	mux_rx_instance: mux_rx port map(
@@ -228,6 +230,15 @@ begin
 			shouldJump <= '0';
 		end if;			
 	end process;
+
+	process(s_where)
+	begin
+		if s_where = '0' then
+			memoryData <= s_rx;
+		else
+			memoryData <= s_ry;
+		end if;
+	end process;
 	
 	process(reset, clock, pause)
 	begin
@@ -256,6 +267,7 @@ begin
 			s_from_forwardx <= '0';
 			s_from_forwardy <= '0';
 			s_from_forward_address <= '0';
+			s_where <= '0';
 				
 			s_forward_datax <= "0000000000000000";
 			s_forward_datay <= "0000000000000000";
@@ -265,9 +277,9 @@ begin
 			memoryRead <= '0';
 			memoryWrite <= '0';
 			registerWrite <= '0';
-			where <= '0';
+			--where <= '0';
 		else
-			if clock'event and clock = '1' and pause = '0' then
+			if clock'event and clock = '1' then
 				s_rx <= rx;
 				s_ry <= ry;
 				s_sp <= sp;
@@ -282,6 +294,8 @@ begin
 				s_alu_mux_ry <= exe_alu_ry;
 				s_select_goal <= exe_select_goal;
 				s_address_mux <= exe_address;
+
+				s_where <= where;
 				
 				s_branch <= fromBranch;
 				

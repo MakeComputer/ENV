@@ -181,7 +181,7 @@ architecture Computer_beh of Computer is
         
         write_register: in std_logic;
         writeData: in std_logic_vector(15 downto 0);
-        writeAddress: in std_logic_vector(15 downto 0);
+        writeAddress: in std_logic_vector(3 downto 0);
     
         memoryRead: out std_logic;
         memoryWrite: out std_logic;
@@ -213,6 +213,7 @@ architecture Computer_beh of Computer is
     end component id;
 
 
+
     component exe is
         port(
         clock, reset, pause: in std_logic;
@@ -230,8 +231,9 @@ architecture Computer_beh of Computer is
         from_registerWrite: in std_logic;
         registerWrite: out std_logic;
         fromWhere: in std_logic;
-        where: out std_logic;
-        
+        --where: out std_logic;
+        memoryData : out STD_LOGIC_VECTOR(15 downto 0);
+
         fromBranch: in std_logic_vector(2 downto 0);
         shouldJump: out std_logic;
         jumpAddress: out std_logic_vector(15 downto 0);
@@ -277,14 +279,14 @@ architecture Computer_beh of Computer is
             memread_id_exe : in std_logic;
             out_sw_exe : in std_logic_vector(15 downto 0);
             regwrite_id_exe : in std_logic;
-            memtoreg_id_exe : in std_logic;
+            memtoreg_id_exe : in std_logic_vector(1 downto 0);
             rd_id_exe : in std_logic_vector(3 downto 0);
             
             memadress_out : out std_logic_vector(15 downto 0);
             memdata_out : out std_logic_vector(15 downto 0);
             memwrite_out : out std_logic;
             memread_out:out std_logic;
-            memtoreg_out : out std_logic;
+            memtoreg_out : out std_logic_vector(1 downto 0);
             regwrite_out :out std_logic;
             aluout_out : out std_logic_vector(15 downto 0);
             rd_out : out std_logic_vector(3 downto 0)
@@ -389,24 +391,81 @@ architecture Computer_beh of Computer is
 
 -----clock---
 signal clk_cpu:std_logic;
+signal cpuclk:std_logic;
 signal clk_mem:std_logic;
 signal s_pc_mux:std_logic_vector(15 downto 0);
 signal s_pc_add_address:std_logic_vector(15 downto 0);
 signal s_pc_reg:std_logic_vector(15 downto 0);
-signal s_exe_jump: std_logic;
-signal s_exe_branch_address: std_logic_vector(15 downto 0);
-signal s_hazard_bubble: STD_LOGIC;
 signal s_flash_load_finsh: std_logic;
 signal s_reset_out: std_logic;
 
+signal s_id_memoryRead:std_logic;
+signal s_id_memoryWrite:std_logic;
+signal s_id_registerWrite:std_logic;
+signal s_id_where:STD_LOGIC;
+signal s_id_wb_memory_or_alu_out:std_logic_vector(1 downto 0);
+signal s_id_branch:std_logic_vector(2 downto 0);
+signal s_id_pc:std_logic_vector(15 downto 0);
+signal s_id_immediate:std_logic_vector(15 downto 0);
+
+signal s_id_rx:std_logic_vector(15 downto 0);
+signal s_id_ry:std_logic_vector(15 downto 0);
+signal s_id_sp:std_logic_vector(15 downto 0);
+signal s_id_ra:std_logic_vector(15 downto 0);
+signal s_id_ih:std_logic_vector(15 downto 0);
+signal s_id_t:std_logic_vector(15 downto 0);     
+signal s_id_exe_alu_op:std_logic_vector(2 downto 0);
+signal s_id_exe_alu_rx:std_logic_vector(2 downto 0);
+signal s_id_exe_alu_ry:std_logic_vector(1 downto 0);
+signal s_id_exe_address:std_logic_vector(1 downto 0);
+signal s_id_exe_select_goal:std_logic_vector(2 downto 0);
+signal s_id_r_x:std_logic_vector(2 downto 0);
+signal s_id_r_y:std_logic_vector(2 downto 0);
+signal s_id_r_z:std_logic_vector(2 downto 0);
+
+signal s_exe_regwrite_out:std_logic;
+signal s_exe_aluout_out:STD_LOGIC_VECTOR(15 downto 0);
+
+signal s_mem_rd_in:std_logic_vector(3 downto 0);
+signal s_mem_rd_id_exe:std_logic_vector(3 downto 0);
 
 
+signal  s_exe_wb_memory_or_alu_out:std_logic_vector(1 downto 0);
+signal  s_exe_memoryWrite:std_logic;
+signal  s_exe_memoryRead:std_logic;
+signal  s_exe_registerWrite:std_logic;
+--signal  s_exe_where:std_logic;
+signal  s_exe_memData : std_logic_vector (15 downto 0);
+signal  s_exe_shouldJump:std_logic;
+signal  s_exe_jumpAddress:std_logic_vector(15 downto 0);
+signal  s_exe_goal:std_logic_vector(3 downto 0);
+signal  s_exe_alu_out:std_logic_vector(15 downto 0);
+signal  s_exe_memadress_out:std_logic_vector(15 downto 0);
+signal  s_exe_memdata_out:std_logic_vector(15 downto 0);
+signal  s_exe_memwrite_out:std_logic;
+signal  s_exe_memread_out:std_logic;
+signal  s_exe_memtoreg_out:std_logic_vector(1 downto 0);
+signal  s_exe_rd_out:std_logic_vector(3 downto 0)
 
+
+signal s_memout_mem: std_logic_vector(15 downto 0);
+signal s_instruction: std_logic_vector(15 downto 0);
+signal s_pause:STD_LOGIC;
+signal s_bubble:std_logic;
+signal s_wb_write: std_logic;
+signal s_wb_writeData:  std_logic_vector(15 downto 0);
+signal s_wb_writeAddress:  std_logic_vector(3 downto 0);
 ----vga----
 signal clk_useless : std_logic;
 signal vga_data:std_logic_vector(7 downto 0):="00010001";
 signal vga_addr:std_logic_vector(10 downto 0):="00000000100";
 signal VGA_write : std_logic_vector(0 downto 0);
+
+signal s_from_forward_datax:std_logic;
+signal s_from_forward_datay:std_logic;
+signal s_from_forward_address:std_logic;
+signal s_forward_data:std_logic_vector(15 downto 0)
+
 
 begin
     
@@ -424,26 +483,147 @@ begin
 
     local_pc_mux: PCMux port map(
    
-            branch => s_exe_jump,
+            branch => s_exe_shouldJump,
             PCNext =>  s_pc_add_address,
-            PCJump => s_exe_branch_address,       
+            PCJump => s_exe_jumpAddress,       
             PCOut => s_pc_mux
         );
 
     local_pc_reg:  PCRegister port map(   
             rst => s_reset_out,
             clk => clk_cpu,
-            PCHold => s_hazard_bubble,
+            PCHold => s_bubble,
             PCIn => s_pc_mux,
             PCOut => s_pc_reg
         );
 
-    local_rrset: RestControler port map(
+    local_rset: RestControler port map(
 
         reset_in => rst,
         load_finsh => s_flash_load_finsh;
         reset_out => s_reset_out
         );
+
+
+    local_id: id port map(
+        clock => clk_cpu,
+        reset => rst,
+        pause => s_pause, 
+        flush => 
+        jump => 
+        bubble => s_bubble,
+        instruction => s_instruction,
+        fromPC => s_pc_reg,
+        
+        write_register =>s_wb_write,
+        writeData => s_wb_writeData,
+        writeAddress => s_wb_writeAddress,
+    
+        memoryRead => s_id_memoryRead,
+        memoryWrite => s_id_memoryWrite,
+        registerWrite => s_id_registerWrite,
+        where => s_id_where,
+
+        wb_memory_or_alu_out => s_id_wb_memory_or_alu_out,
+
+        branch => s_id_branch,
+        
+        pc => s_id_pc,
+        
+        immediate => s_id_immediate,
+
+        rx => s_id_rx,
+        ry => s_id_ry,
+        sp => s_id_sp,
+        ra =>s_id_ra,
+        ih => s_id_ih,
+        t => s_id_t,
+        
+        exe_alu_op => s_id_exe_alu_op,
+        exe_alu_rx => s_id_exe_alu_rx,
+        exe_alu_ry => s_id_exe_alu_ry,
+        exe_address => s_id_exe_address,
+        exe_select_goal => s_id_exe_select_goal,
+        r_x => s_id_r_x,
+        r_y => s_id_r_y,
+        r_z => s_id_r_z
+        
+    );
+    
+    local_exe: exe port map(
+        clock => clk_cpu,
+        reset => rst,
+        --pause: in std_logic;
+        from_wb_memory_or_alu_out => s_id_wb_memory_or_alu_out;
+        wb_memory_or_alu_out => s_exe_wb_memory_or_alu_out,
+        exe_select_goal => s_id_exe_select_goal,
+        exe_alu_op => s_id_exe_alu_op,
+        exe_alu_rx => s_id_exe_alu_rx,
+        exe_alu_ry => s_id_exe_alu_ry,
+        exe_address => s_id_exe_address,
+        from_memoryWrite => s_id_memoryWrite,
+        memoryWrite => s_exe_memoryWrite,
+        from_memoryRead => s_id_memoryRead,
+        memoryRead => s_exe_memoryRead,
+        from_registerWrite => s_id_registerWrite,
+
+        registerWrite => s_exe_registerWrite,
+        fromWhere => s_id_where,
+        --where => s_exe_where,
+        memoryData => s_exe_memData,
+        
+        fromBranch => s_id_branch,
+        shouldJump => s_exe_shouldJump,
+        jumpAddress => s_exe_jumpAddress,
+        
+        rx => s_id_rx,
+        ry => s_id_ry,
+        sp => s_id_sp,
+        pc => s_id_pc,
+        ra => s_id_ra,
+        ih => s_id_ih,
+        t => s_id_t,
+        immediate => s_id_immediate,
+        
+        r_x => s_id_r_x,
+        r_y => s_id_r_y,
+        r_z => s_id_r_z,
+        
+        goal => s_exe_goal,
+        alu_out => s_exe_alu_out,
+
+        from_forwardx => s_from_forward_datax,
+        from_forwardy => s_from_forward_datay,
+        from_forward_address => s_from_forward_address,
+        
+        forward_datax => s_forward_data,
+        forward_datay => s_forward_data,
+        forward_address => s_forward_data
+    );
+   
+    local_exe_mem: exe_mem port map(
+        clk_cpu => clk_cpu,
+        rst => rst
+        aluout_exe => s_exe_alu_out,
+        memwrite_id_exe => s_exe_memoryWrite,
+        memread_id_exe => s_exe_memoryRead,
+        out_sw_exe => s_exe_memData,
+        regwrite_id_exe => s_exe_registerWrite,
+        memtoreg_id_exe => s_exe_wb_memory_or_alu_out,
+        rd_id_exe => s_mem_rd_id_exe,
+        
+        memadress_out => s_exe_memadress_out,
+        memdata_out => s_exe_memdata_out,
+        memwrite_out => s_exe_memwrite_out,
+        memread_out => s_exe_memread_out,
+        memtoreg_out => s_exe_memtoreg_out
+        regwrite_out => s_exe_regwrite_out,
+        aluout_out => s_exe_aluout_out,
+        rd_out => s_exe_rd_out
+    );
+   
+
+   
 
     vga : VGA_play port map(
         CLK_0 => clk_in,
@@ -464,12 +644,15 @@ begin
         );
 
     local_mem: MemoryController port map(
-        address1 => s_pc_reg, --1为指令内存地址和数据
-        output1 : out  STD_LOGIC_VECTOR (15 downto 0);
-        address2 : in  STD_LOGIC_VECTOR (15 downto 0);--2为数据内存地址和数据，用于访存阶段
-        output2 : out  STD_LOGIC_VECTOR (15 downto 0);
-        clk: in STD_LOGIC;--一个高频时钟
-        cpuclock : out STD_LOGIC;--时钟四分频后输出
+        --1为指令内存地址和数据
+        address1 => s_pc_reg, 
+        output1 => s_instruction,
+
+        --2为数据内存地址和数据，用于访存阶段
+        address2 => s_exe_memadress_out,
+        output2 => s_memout_mem,
+        clk => clk_in,--一个高频时钟
+        cpuclock => cpuclk,--时钟四分频后输出
         
         --flash部分的信号，只是接到上层例化用于管脚绑定，在这一层实际上木有用
         flash_byte => flash_byte,
@@ -482,10 +665,10 @@ begin
         flash_data => flash_data,
         --内存读写部分的信号
 
-        dataWrite : in  STD_LOGIC_VECTOR (15 downto 0); --要写的数据
-        memoryAddr : out STD_LOGIC_VECTOR (17 downto 0);
-        MemWrite : in STD_LOGIC; --内存写信号
-        MemRead : in STD_LOGIC; --内存读信号
+        dataWrite =>  s_exe_memdata_out,--要写的数据
+        memoryAddr => MemAddr1,
+        MemWrite => s_exe_memwrite_out,--内存写信号
+        MemRead => s_exe_memread_out, --内存读信号
 
         memoryEN =>en2,
         memoryOE =>oe2,
@@ -510,6 +693,53 @@ begin
         vga_write=>VGA_write
         
     );
+
+    local_mem_wb: mem_wb port map(
+            clk => clk_cpu,
+            reset => rst,
+            memtoreg_in => s_exe_memtoreg_out,
+            regwrite_in => s_exe_regwrite_out,
+            aluout_in => s_exe_aluout_out,
+            memout_in => s_memout_mem,
+            rd_in => s_mem_rd_in,
+            
+            wbregwrite_out => s_wb_write,
+            wbadress_out => s_wb_writeAddress,
+            wbregdata_out => s_wb_writeData
+        );
+    
+    local_hazard: hazard port map(
+        memoryRead => s_exe_memoryRead,
+        goal => s_exe_goal,
+        instruction => s_instruction,
+        
+        pause => s_pause,
+        bubble => s_bubble
+    );
+    local_forward: forward port map(
+        exe_alu_rx => s_id_exe_alu_rx,
+        exe_alu_ry =>s_id_exe_alu_ry,
+        exe_select_address => s_id_exe_address,
+
+        rx => s_id_r_x,
+        ry => s_id_r_y,
+
+        address_memory => s_mem_rd_id_exe,
+        mem_registerWrite => s_exe_regwrite_out,
+        mem_aluout => s_exe_aluout_out,
+
+        address_wb => s_mem_rd_in,
+        wb_registerWrite => s_wb_write,
+        wb_toRegister => s_wb_writeData,
+
+        from_forward_datax => s_from_forward_datax,
+        from_forward_datay => s_from_forward_datay,
+        from_forward_address => s_from_forward_address,
+        forward_data => s_forward_data
+
+    );
+ 
+
     oe1<='1';
     we1<='1';
 
