@@ -666,7 +666,7 @@ begin
         --内存读写部分的信号
 
         dataWrite =>  s_exe_memdata_out,--要写的数据
-        memoryAddr => MemAddr1,
+        memoryAddr => MemAddr2,
         MemWrite => s_exe_memwrite_out,--内存写信号
         MemRead => s_exe_memread_out, --内存读信号
 
