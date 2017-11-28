@@ -1,0 +1,1045 @@
+
+*** Running vivado
+    with args -log Computer.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source Computer.tcl
+
+
+****** Vivado v2017.1 (64-bit)
+  **** SW Build 1846317 on Fri Apr 14 18:55:03 MDT 2017
+  **** IP Build 1846188 on Fri Apr 14 20:52:08 MDT 2017
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+source Computer.tcl -notrace
+Command: synth_design -top Computer -part xc7a100tfgg676-2L
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t-fgg676'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t-fgg676'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 3776 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 360.426 ; gain = 74.883
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'Computer' [E:/GitHub/Computer/Computer.srcs/sources_1/new/Computer.vhd:81]
+INFO: [Synth 8-3491] module 'PCAdder' declared at 'E:/GitHub/Computer/Computer.srcs/sources_1/new/PCAdder.vhd:6' bound to instance 'local_pc_adder' of component 'PCAdder' [E:/GitHub/Computer/Computer.srcs/sources_1/new/Computer.vhd:527]
+INFO: [Synth 8-638] synthesizing module 'PCAdder' [E:/GitHub/Computer/Computer.srcs/sources_1/new/PCAdder.vhd:13]
+INFO: [Synth 8-256] done synthesizing module 'PCAdder' (1#1) [E:/GitHub/Computer/Computer.srcs/sources_1/new/PCAdder.vhd:13]
+INFO: [Synth 8-3491] module 'PCMux' declared at 'E:/GitHub/Computer/Computer.srcs/sources_1/new/PCMux.vhd:6' bound to instance 'local_pc_mux' of component 'PCMux' [E:/GitHub/Computer/Computer.srcs/sources_1/new/Computer.vhd:532]
+INFO: [Synth 8-638] synthesizing module 'PCMux' [E:/GitHub/Computer/Computer.srcs/sources_1/new/PCMux.vhd:15]
+INFO: [Synth 8-256] done synthesizing module 'PCMux' (2#1) [E:/GitHub/Computer/Computer.srcs/sources_1/new/PCMux.vhd:15]
+INFO: [Synth 8-3491] module 'PCRegister' declared at 'E:/GitHub/Computer/Computer.srcs/sources_1/new/PCRegister.vhd:6' bound to instance 'local_pc_reg' of component 'PCRegister' [E:/GitHub/Computer/Computer.srcs/sources_1/new/Computer.vhd:540]
+INFO: [Synth 8-638] synthesizing module 'PCRegister' [E:/GitHub/Computer/Computer.srcs/sources_1/new/PCRegister.vhd:15]
+INFO: [Synth 8-256] done synthesizing module 'PCRegister' (3#1) [E:/GitHub/Computer/Computer.srcs/sources_1/new/PCRegister.vhd:15]
+INFO: [Synth 8-3491] module 'id' declared at 'E:/GitHub/Computer/Computer.srcs/sources_1/new/id.vhd:6' bound to instance 'local_id' of component 'id' [E:/GitHub/Computer/Computer.srcs/sources_1/new/Computer.vhd:556]
+INFO: [Synth 8-638] synthesizing module 'id' [E:/GitHub/Computer/Computer.srcs/sources_1/new/id.vhd:46]
+INFO: [Synth 8-3491] module 'decoder' declared at 'E:/GitHub/Computer/Computer.srcs/sources_1/new/decoder.vhd:36' bound to instance 'decoder_instance' of component 'decoder' [E:/GitHub/Computer/Computer.srcs/sources_1/new/id.vhd:175]
+INFO: [Synth 8-638] synthesizing module 'decoder' [E:/GitHub/Computer/Computer.srcs/sources_1/new/decoder.vhd:57]
+WARNING: [Synth 8-6014] Unused sequential element where_reg was removed.  [E:/GitHub/Computer/Computer.srcs/sources_1/new/decoder.vhd:73]
+INFO: [Synth 8-256] done synthesizing module 'decoder' (4#1) [E:/GitHub/Computer/Computer.srcs/sources_1/new/decoder.vhd:57]
+INFO: [Synth 8-3491] module 'mux_control' declared at 'E:/GitHub/Computer/Computer.srcs/sources_1/new/mux_control.vhd:6' bound to instance 'mux_control_instance' of component 'mux_control' [E:/GitHub/Computer/Computer.srcs/sources_1/new/id.vhd:193]
+INFO: [Synth 8-638] synthesizing module 'mux_control' [E:/GitHub/Computer/Computer.srcs/sources_1/new/mux_control.vhd:38]
+INFO: [Synth 8-256] done synthesizing module 'mux_control' (5#1) [E:/GitHub/Computer/Computer.srcs/sources_1/new/mux_control.vhd:38]
+INFO: [Synth 8-3491] module 'heap' declared at 'E:/GitHub/Computer/Computer.srcs/sources_1/new/heap.vhd:21' bound to instance 'heap_instance' of component 'heap' [E:/GitHub/Computer/Computer.srcs/sources_1/new/id.vhd:222]
+INFO: [Synth 8-638] synthesizing module 'heap' [E:/GitHub/Computer/Computer.srcs/sources_1/new/heap.vhd:40]
+INFO: [Synth 8-256] done synthesizing module 'heap' (6#1) [E:/GitHub/Computer/Computer.srcs/sources_1/new/heap.vhd:40]
+INFO: [Synth 8-3491] module 'extend' declared at 'E:/GitHub/Computer/Computer.srcs/sources_1/new/extend.vhd:6' bound to instance 'extend_instance' of component 'extend' [E:/GitHub/Computer/Computer.srcs/sources_1/new/id.vhd:240]
+INFO: [Synth 8-638] synthesizing module 'extend' [E:/GitHub/Computer/Computer.srcs/sources_1/new/extend.vhd:14]
+INFO: [Synth 8-256] done synthesizing module 'extend' (7#1) [E:/GitHub/Computer/Computer.srcs/sources_1/new/extend.vhd:14]
+WARNING: [Synth 8-614] signal 'flush' is read in the process but is not in the sensitivity list [E:/GitHub/Computer/Computer.srcs/sources_1/new/id.vhd:282]
+INFO: [Synth 8-256] done synthesizing module 'id' (8#1) [E:/GitHub/Computer/Computer.srcs/sources_1/new/id.vhd:46]
+INFO: [Synth 8-3491] module 'exe' declared at 'E:/GitHub/Computer/Computer.srcs/sources_1/new/exe.vhd:6' bound to instance 'local_exe' of component 'exe' [E:/GitHub/Computer/Computer.srcs/sources_1/new/Computer.vhd:601]
+INFO: [Synth 8-638] synthesizing module 'exe' [E:/GitHub/Computer/Computer.srcs/sources_1/new/exe.vhd:56]
+INFO: [Synth 8-3491] module 'mux_rx' declared at 'E:/GitHub/Computer/Computer.srcs/sources_1/new/mux_rx.vhd:6' bound to instance 'mux_rx_instance' of component 'mux_rx' [E:/GitHub/Computer/Computer.srcs/sources_1/new/exe.vhd:163]
+INFO: [Synth 8-638] synthesizing module 'mux_rx' [E:/GitHub/Computer/Computer.srcs/sources_1/new/mux_rx.vhd:23]
+INFO: [Synth 8-226] default block is never used [E:/GitHub/Computer/Computer.srcs/sources_1/new/mux_rx.vhd:28]
+INFO: [Synth 8-256] done synthesizing module 'mux_rx' (9#1) [E:/GitHub/Computer/Computer.srcs/sources_1/new/mux_rx.vhd:23]
+INFO: [Synth 8-3491] module 'mux_ry' declared at 'E:/GitHub/Computer/Computer.srcs/sources_1/new/mux_ry.vhd:6' bound to instance 'mux_ry_instance' of component 'mux_ry' [E:/GitHub/Computer/Computer.srcs/sources_1/new/exe.vhd:178]
+INFO: [Synth 8-638] synthesizing module 'mux_ry' [E:/GitHub/Computer/Computer.srcs/sources_1/new/mux_ry.vhd:18]
+INFO: [Synth 8-226] default block is never used [E:/GitHub/Computer/Computer.srcs/sources_1/new/mux_ry.vhd:23]
+INFO: [Synth 8-256] done synthesizing module 'mux_ry' (10#1) [E:/GitHub/Computer/Computer.srcs/sources_1/new/mux_ry.vhd:18]
+INFO: [Synth 8-3491] module 'adder' declared at 'E:/GitHub/Computer/Computer.srcs/sources_1/new/adder.vhd:6' bound to instance 'adder_instance' of component 'adder' [E:/GitHub/Computer/Computer.srcs/sources_1/new/exe.vhd:188]
+INFO: [Synth 8-638] synthesizing module 'adder' [E:/GitHub/Computer/Computer.srcs/sources_1/new/adder.vhd:14]
+INFO: [Synth 8-256] done synthesizing module 'adder' (11#1) [E:/GitHub/Computer/Computer.srcs/sources_1/new/adder.vhd:14]
+INFO: [Synth 8-3491] module 'mux_address' declared at 'E:/GitHub/Computer/Computer.srcs/sources_1/new/mux_address.vhd:6' bound to instance 'mux_address_instance' of component 'mux_address' [E:/GitHub/Computer/Computer.srcs/sources_1/new/exe.vhd:194]
+INFO: [Synth 8-638] synthesizing module 'mux_address' [E:/GitHub/Computer/Computer.srcs/sources_1/new/mux_address.vhd:18]
+INFO: [Synth 8-256] done synthesizing module 'mux_address' (12#1) [E:/GitHub/Computer/Computer.srcs/sources_1/new/mux_address.vhd:18]
+INFO: [Synth 8-3491] module 'alu' declared at 'E:/GitHub/Computer/Computer.srcs/sources_1/new/alu.vhd:6' bound to instance 'alu_instance' of component 'alu' [E:/GitHub/Computer/Computer.srcs/sources_1/new/exe.vhd:204]
+INFO: [Synth 8-638] synthesizing module 'alu' [E:/GitHub/Computer/Computer.srcs/sources_1/new/alu.vhd:15]
+INFO: [Synth 8-226] default block is never used [E:/GitHub/Computer/Computer.srcs/sources_1/new/alu.vhd:20]
+INFO: [Synth 8-256] done synthesizing module 'alu' (13#1) [E:/GitHub/Computer/Computer.srcs/sources_1/new/alu.vhd:15]
+INFO: [Synth 8-3491] module 'mux_goal' declared at 'E:/GitHub/Computer/Computer.srcs/sources_1/new/mux_goal.vhd:6' bound to instance 'mux_goal_instance' of component 'mux_goal' [E:/GitHub/Computer/Computer.srcs/sources_1/new/exe.vhd:211]
+INFO: [Synth 8-638] synthesizing module 'mux_goal' [E:/GitHub/Computer/Computer.srcs/sources_1/new/mux_goal.vhd:16]
+INFO: [Synth 8-256] done synthesizing module 'mux_goal' (14#1) [E:/GitHub/Computer/Computer.srcs/sources_1/new/mux_goal.vhd:16]
+WARNING: [Synth 8-614] signal 's_rx' is read in the process but is not in the sensitivity list [E:/GitHub/Computer/Computer.srcs/sources_1/new/exe.vhd:234]
+WARNING: [Synth 8-614] signal 's_ry' is read in the process but is not in the sensitivity list [E:/GitHub/Computer/Computer.srcs/sources_1/new/exe.vhd:234]
+INFO: [Synth 8-256] done synthesizing module 'exe' (15#1) [E:/GitHub/Computer/Computer.srcs/sources_1/new/exe.vhd:56]
+INFO: [Synth 8-3491] module 'exe_mem' declared at 'E:/GitHub/Computer/Computer.srcs/sources_1/new/exe_mem.vhd:13' bound to instance 'local_exe_mem' of component 'exe_mem' [E:/GitHub/Computer/Computer.srcs/sources_1/new/Computer.vhd:652]
+INFO: [Synth 8-638] synthesizing module 'exe_mem' [E:/GitHub/Computer/Computer.srcs/sources_1/new/exe_mem.vhd:38]
+WARNING: [Synth 8-613] shared variable will be implemented as local to architecture [E:/GitHub/Computer/Computer.srcs/sources_1/new/exe_mem.vhd:40]
+WARNING: [Synth 8-613] shared variable will be implemented as local to architecture [E:/GitHub/Computer/Computer.srcs/sources_1/new/exe_mem.vhd:41]
+WARNING: [Synth 8-613] shared variable will be implemented as local to architecture [E:/GitHub/Computer/Computer.srcs/sources_1/new/exe_mem.vhd:42]
+WARNING: [Synth 8-613] shared variable will be implemented as local to architecture [E:/GitHub/Computer/Computer.srcs/sources_1/new/exe_mem.vhd:43]
+WARNING: [Synth 8-613] shared variable will be implemented as local to architecture [E:/GitHub/Computer/Computer.srcs/sources_1/new/exe_mem.vhd:44]
+WARNING: [Synth 8-613] shared variable will be implemented as local to architecture [E:/GitHub/Computer/Computer.srcs/sources_1/new/exe_mem.vhd:45]
+WARNING: [Synth 8-613] shared variable will be implemented as local to architecture [E:/GitHub/Computer/Computer.srcs/sources_1/new/exe_mem.vhd:46]
+WARNING: [Synth 8-613] shared variable will be implemented as local to architecture [E:/GitHub/Computer/Computer.srcs/sources_1/new/exe_mem.vhd:47]
+INFO: [Synth 8-256] done synthesizing module 'exe_mem' (16#1) [E:/GitHub/Computer/Computer.srcs/sources_1/new/exe_mem.vhd:38]
+INFO: [Synth 8-3491] module 'VGA_play' declared at 'E:/GitHub/Computer/Computer.srcs/sources_1/new/VGA_play.vhd:35' bound to instance 'vga' of component 'VGA_play' [E:/GitHub/Computer/Computer.srcs/sources_1/new/Computer.vhd:676]
+INFO: [Synth 8-638] synthesizing module 'VGA_play' [E:/GitHub/Computer/Computer.srcs/sources_1/new/VGA_play.vhd:60]
+INFO: [Synth 8-3491] module 'char_mem' declared at 'E:/GitHub/Computer/Computer.runs/synth_1/.Xil/Vivado-12372-samsung/realtime/char_mem_stub.vhdl:5' bound to instance 'ram' of component 'char_mem' [E:/GitHub/Computer/Computer.srcs/sources_1/new/VGA_play.vhd:117]
+INFO: [Synth 8-638] synthesizing module 'char_mem' [E:/GitHub/Computer/Computer.runs/synth_1/.Xil/Vivado-12372-samsung/realtime/char_mem_stub.vhdl:14]
+INFO: [Synth 8-3491] module 'fifo_mem' declared at 'E:/GitHub/Computer/Computer.runs/synth_1/.Xil/Vivado-12372-samsung/realtime/fifo_mem_stub.vhdl:5' bound to instance 'cache' of component 'fifo_mem' [E:/GitHub/Computer/Computer.srcs/sources_1/new/VGA_play.vhd:120]
+INFO: [Synth 8-638] synthesizing module 'fifo_mem' [E:/GitHub/Computer/Computer.runs/synth_1/.Xil/Vivado-12372-samsung/realtime/fifo_mem_stub.vhdl:18]
+INFO: [Synth 8-256] done synthesizing module 'VGA_play' (17#1) [E:/GitHub/Computer/Computer.srcs/sources_1/new/VGA_play.vhd:60]
+INFO: [Synth 8-3491] module 'MemoryController' declared at 'E:/GitHub/Computer/Computer.srcs/sources_1/new/MemoryController.vhd:7' bound to instance 'local_mem' of component 'MemoryController' [E:/GitHub/Computer/Computer.srcs/sources_1/new/Computer.vhd:698]
+INFO: [Synth 8-638] synthesizing module 'MemoryController' [E:/GitHub/Computer/Computer.srcs/sources_1/new/MemoryController.vhd:54]
+INFO: [Synth 8-3491] module 'Flash' declared at 'E:/GitHub/Computer/Computer.srcs/sources_1/new/Flash.vhd:7' bound to instance 'flash_local' of component 'Flash' [E:/GitHub/Computer/Computer.srcs/sources_1/new/MemoryController.vhd:134]
+INFO: [Synth 8-638] synthesizing module 'Flash' [E:/GitHub/Computer/Computer.srcs/sources_1/new/Flash.vhd:26]
+WARNING: [Synth 8-613] shared variable will be implemented as local to architecture [E:/GitHub/Computer/Computer.srcs/sources_1/new/Flash.vhd:35]
+INFO: [Synth 8-256] done synthesizing module 'Flash' (18#1) [E:/GitHub/Computer/Computer.srcs/sources_1/new/Flash.vhd:26]
+INFO: [Synth 8-226] default block is never used [E:/GitHub/Computer/Computer.srcs/sources_1/new/MemoryController.vhd:198]
+WARNING: [Synth 8-614] signal 'extendDatabus' is read in the process but is not in the sensitivity list [E:/GitHub/Computer/Computer.srcs/sources_1/new/MemoryController.vhd:191]
+INFO: [Synth 8-256] done synthesizing module 'MemoryController' (19#1) [E:/GitHub/Computer/Computer.srcs/sources_1/new/MemoryController.vhd:54]
+INFO: [Synth 8-3491] module 'mem_wb' declared at 'E:/GitHub/Computer/Computer.srcs/sources_1/new/mem_wb.vhd:14' bound to instance 'local_mem_wb' of component 'mem_wb' [E:/GitHub/Computer/Computer.srcs/sources_1/new/Computer.vhd:749]
+INFO: [Synth 8-638] synthesizing module 'mem_wb' [E:/GitHub/Computer/Computer.srcs/sources_1/new/mem_wb.vhd:30]
+WARNING: [Synth 8-613] shared variable will be implemented as local to architecture [E:/GitHub/Computer/Computer.srcs/sources_1/new/mem_wb.vhd:31]
+WARNING: [Synth 8-613] shared variable will be implemented as local to architecture [E:/GitHub/Computer/Computer.srcs/sources_1/new/mem_wb.vhd:32]
+WARNING: [Synth 8-613] shared variable will be implemented as local to architecture [E:/GitHub/Computer/Computer.srcs/sources_1/new/mem_wb.vhd:33]
+INFO: [Synth 8-256] done synthesizing module 'mem_wb' (20#1) [E:/GitHub/Computer/Computer.srcs/sources_1/new/mem_wb.vhd:30]
+INFO: [Synth 8-3491] module 'hazard' declared at 'E:/GitHub/Computer/Computer.srcs/sources_1/new/hazard.vhd:6' bound to instance 'local_hazard' of component 'hazard' [E:/GitHub/Computer/Computer.srcs/sources_1/new/Computer.vhd:763]
+INFO: [Synth 8-638] synthesizing module 'hazard' [E:/GitHub/Computer/Computer.srcs/sources_1/new/hazard.vhd:17]
+WARNING: [Synth 8-6014] Unused sequential element bubble_reg was removed.  [E:/GitHub/Computer/Computer.srcs/sources_1/new/hazard.vhd:24]
+INFO: [Synth 8-256] done synthesizing module 'hazard' (21#1) [E:/GitHub/Computer/Computer.srcs/sources_1/new/hazard.vhd:17]
+INFO: [Synth 8-3491] module 'forward' declared at 'E:/GitHub/Computer/Computer.srcs/sources_1/new/forward.vhd:6' bound to instance 'local_forward' of component 'forward' [E:/GitHub/Computer/Computer.srcs/sources_1/new/Computer.vhd:771]
+INFO: [Synth 8-638] synthesizing module 'forward' [E:/GitHub/Computer/Computer.srcs/sources_1/new/forward.vhd:32]
+WARNING: [Synth 8-614] signal 'mem_registerWrite' is read in the process but is not in the sensitivity list [E:/GitHub/Computer/Computer.srcs/sources_1/new/forward.vhd:34]
+WARNING: [Synth 8-614] signal 'rx' is read in the process but is not in the sensitivity list [E:/GitHub/Computer/Computer.srcs/sources_1/new/forward.vhd:34]
+WARNING: [Synth 8-614] signal 'address_memory' is read in the process but is not in the sensitivity list [E:/GitHub/Computer/Computer.srcs/sources_1/new/forward.vhd:34]
+WARNING: [Synth 8-614] signal 'ry' is read in the process but is not in the sensitivity list [E:/GitHub/Computer/Computer.srcs/sources_1/new/forward.vhd:34]
+WARNING: [Synth 8-614] signal 'mem_aluout' is read in the process but is not in the sensitivity list [E:/GitHub/Computer/Computer.srcs/sources_1/new/forward.vhd:34]
+WARNING: [Synth 8-614] signal 'wb_registerWrite' is read in the process but is not in the sensitivity list [E:/GitHub/Computer/Computer.srcs/sources_1/new/forward.vhd:34]
+WARNING: [Synth 8-614] signal 'address_wb' is read in the process but is not in the sensitivity list [E:/GitHub/Computer/Computer.srcs/sources_1/new/forward.vhd:34]
+WARNING: [Synth 8-614] signal 'wb_toRegister' is read in the process but is not in the sensitivity list [E:/GitHub/Computer/Computer.srcs/sources_1/new/forward.vhd:34]
+INFO: [Synth 8-256] done synthesizing module 'forward' (22#1) [E:/GitHub/Computer/Computer.srcs/sources_1/new/forward.vhd:32]
+WARNING: [Synth 8-3848] Net s_reset_out in module/entity Computer does not have driver. [E:/GitHub/Computer/Computer.srcs/sources_1/new/Computer.vhd:452]
+WARNING: [Synth 8-3848] Net s_mem_rd_id_exe in module/entity Computer does not have driver. [E:/GitHub/Computer/Computer.srcs/sources_1/new/Computer.vhd:482]
+WARNING: [Synth 8-3848] Net s_mem_rd_in in module/entity Computer does not have driver. [E:/GitHub/Computer/Computer.srcs/sources_1/new/Computer.vhd:481]
+INFO: [Synth 8-256] done synthesizing module 'Computer' (23#1) [E:/GitHub/Computer/Computer.srcs/sources_1/new/Computer.vhd:81]
+WARNING: [Synth 8-3917] design Computer has port oe1 driven by constant 1
+WARNING: [Synth 8-3917] design Computer has port we1 driven by constant 1
+WARNING: [Synth 8-3917] design Computer has port MemAddr2[17] driven by constant 0
+WARNING: [Synth 8-3917] design Computer has port MemAddr2[16] driven by constant 0
+WARNING: [Synth 8-3917] design Computer has port MemAddr2[15] driven by constant 0
+WARNING: [Synth 8-3917] design Computer has port MemAddr2[14] driven by constant 0
+WARNING: [Synth 8-3917] design Computer has port MemAddr2[13] driven by constant 0
+WARNING: [Synth 8-3917] design Computer has port MemAddr2[12] driven by constant 0
+WARNING: [Synth 8-3917] design Computer has port MemAddr2[11] driven by constant 0
+WARNING: [Synth 8-3917] design Computer has port MemAddr2[10] driven by constant 0
+WARNING: [Synth 8-3917] design Computer has port MemAddr2[9] driven by constant 0
+WARNING: [Synth 8-3917] design Computer has port MemAddr2[8] driven by constant 0
+WARNING: [Synth 8-3917] design Computer has port MemAddr2[7] driven by constant 0
+WARNING: [Synth 8-3917] design Computer has port MemAddr2[6] driven by constant 0
+WARNING: [Synth 8-3917] design Computer has port MemAddr2[5] driven by constant 0
+WARNING: [Synth 8-3917] design Computer has port MemAddr2[4] driven by constant 0
+WARNING: [Synth 8-3917] design Computer has port MemAddr2[3] driven by constant 0
+WARNING: [Synth 8-3917] design Computer has port MemAddr2[2] driven by constant 0
+WARNING: [Synth 8-3917] design Computer has port MemAddr2[1] driven by constant 0
+WARNING: [Synth 8-3917] design Computer has port MemAddr2[0] driven by constant 0
+WARNING: [Synth 8-3331] design hazard has unconnected port instruction[15]
+WARNING: [Synth 8-3331] design hazard has unconnected port instruction[14]
+WARNING: [Synth 8-3331] design hazard has unconnected port instruction[13]
+WARNING: [Synth 8-3331] design hazard has unconnected port instruction[12]
+WARNING: [Synth 8-3331] design hazard has unconnected port instruction[11]
+WARNING: [Synth 8-3331] design hazard has unconnected port instruction[4]
+WARNING: [Synth 8-3331] design hazard has unconnected port instruction[3]
+WARNING: [Synth 8-3331] design hazard has unconnected port instruction[2]
+WARNING: [Synth 8-3331] design hazard has unconnected port instruction[1]
+WARNING: [Synth 8-3331] design hazard has unconnected port instruction[0]
+WARNING: [Synth 8-3331] design extend has unconnected port number[15]
+WARNING: [Synth 8-3331] design extend has unconnected port number[14]
+WARNING: [Synth 8-3331] design extend has unconnected port number[13]
+WARNING: [Synth 8-3331] design extend has unconnected port number[12]
+WARNING: [Synth 8-3331] design extend has unconnected port number[11]
+WARNING: [Synth 8-3331] design Computer has unconnected port MemData1[15]
+WARNING: [Synth 8-3331] design Computer has unconnected port MemData1[14]
+WARNING: [Synth 8-3331] design Computer has unconnected port MemData1[13]
+WARNING: [Synth 8-3331] design Computer has unconnected port MemData1[12]
+WARNING: [Synth 8-3331] design Computer has unconnected port MemData1[11]
+WARNING: [Synth 8-3331] design Computer has unconnected port MemData1[10]
+WARNING: [Synth 8-3331] design Computer has unconnected port MemData1[9]
+WARNING: [Synth 8-3331] design Computer has unconnected port MemData1[8]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 402.508 ; gain = 116.965
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+WARNING: [Synth 8-3295] tying undriven pin local_pc_reg:rst to constant 0 [E:/GitHub/Computer/Computer.srcs/sources_1/new/Computer.vhd:540]
+WARNING: [Synth 8-3295] tying undriven pin local_exe_mem:rd_in[3] to constant 0 [E:/GitHub/Computer/Computer.srcs/sources_1/new/Computer.vhd:652]
+WARNING: [Synth 8-3295] tying undriven pin local_exe_mem:rd_in[2] to constant 0 [E:/GitHub/Computer/Computer.srcs/sources_1/new/Computer.vhd:652]
+WARNING: [Synth 8-3295] tying undriven pin local_exe_mem:rd_in[1] to constant 0 [E:/GitHub/Computer/Computer.srcs/sources_1/new/Computer.vhd:652]
+WARNING: [Synth 8-3295] tying undriven pin local_exe_mem:rd_in[0] to constant 0 [E:/GitHub/Computer/Computer.srcs/sources_1/new/Computer.vhd:652]
+WARNING: [Synth 8-3295] tying undriven pin local_mem_wb:rd_in[3] to constant 0 [E:/GitHub/Computer/Computer.srcs/sources_1/new/Computer.vhd:749]
+WARNING: [Synth 8-3295] tying undriven pin local_mem_wb:rd_in[2] to constant 0 [E:/GitHub/Computer/Computer.srcs/sources_1/new/Computer.vhd:749]
+WARNING: [Synth 8-3295] tying undriven pin local_mem_wb:rd_in[1] to constant 0 [E:/GitHub/Computer/Computer.srcs/sources_1/new/Computer.vhd:749]
+WARNING: [Synth 8-3295] tying undriven pin local_mem_wb:rd_in[0] to constant 0 [E:/GitHub/Computer/Computer.srcs/sources_1/new/Computer.vhd:749]
+WARNING: [Synth 8-3295] tying undriven pin local_forward:address_memory[3] to constant 0 [E:/GitHub/Computer/Computer.srcs/sources_1/new/Computer.vhd:771]
+WARNING: [Synth 8-3295] tying undriven pin local_forward:address_memory[2] to constant 0 [E:/GitHub/Computer/Computer.srcs/sources_1/new/Computer.vhd:771]
+WARNING: [Synth 8-3295] tying undriven pin local_forward:address_memory[1] to constant 0 [E:/GitHub/Computer/Computer.srcs/sources_1/new/Computer.vhd:771]
+WARNING: [Synth 8-3295] tying undriven pin local_forward:address_memory[0] to constant 0 [E:/GitHub/Computer/Computer.srcs/sources_1/new/Computer.vhd:771]
+WARNING: [Synth 8-3295] tying undriven pin local_forward:address_wb[3] to constant 0 [E:/GitHub/Computer/Computer.srcs/sources_1/new/Computer.vhd:771]
+WARNING: [Synth 8-3295] tying undriven pin local_forward:address_wb[2] to constant 0 [E:/GitHub/Computer/Computer.srcs/sources_1/new/Computer.vhd:771]
+WARNING: [Synth 8-3295] tying undriven pin local_forward:address_wb[1] to constant 0 [E:/GitHub/Computer/Computer.srcs/sources_1/new/Computer.vhd:771]
+WARNING: [Synth 8-3295] tying undriven pin local_forward:address_wb[0] to constant 0 [E:/GitHub/Computer/Computer.srcs/sources_1/new/Computer.vhd:771]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 402.508 ; gain = 116.965
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a100tfgg676-2L
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [E:/GitHub/Computer/Computer.runs/synth_1/.Xil/Vivado-12372-samsung/dcp5/char_mem_in_context.xdc] for cell 'vga/ram'
+Finished Parsing XDC File [E:/GitHub/Computer/Computer.runs/synth_1/.Xil/Vivado-12372-samsung/dcp5/char_mem_in_context.xdc] for cell 'vga/ram'
+Parsing XDC File [E:/GitHub/Computer/Computer.runs/synth_1/.Xil/Vivado-12372-samsung/dcp7/fifo_mem_in_context.xdc] for cell 'vga/cache'
+Finished Parsing XDC File [E:/GitHub/Computer/Computer.runs/synth_1/.Xil/Vivado-12372-samsung/dcp7/fifo_mem_in_context.xdc] for cell 'vga/cache'
+Parsing XDC File [E:/GitHub/Computer/Computer.srcs/constrs_1/new/Computer.xdc]
+WARNING: [Vivado 12-584] No ports matched 'clk_uart_in'. [E:/GitHub/Computer/Computer.srcs/constrs_1/new/Computer.xdc:3]
+WARNING: [Vivado 12-507] No nets matched 'clk_uart_in_IBUF'. [E:/GitHub/Computer/Computer.srcs/constrs_1/new/Computer.xdc:4]
+WARNING: [Vivado 12-584] No ports matched 'clk_uart_in'. [E:/GitHub/Computer/Computer.srcs/constrs_1/new/Computer.xdc:7]
+WARNING: [Vivado 12-584] No ports matched 'touch_btn[*]'. [E:/GitHub/Computer/Computer.srcs/constrs_1/new/Computer.xdc:10]
+WARNING: [Vivado 12-584] No ports matched 'touch_btn[0]'. [E:/GitHub/Computer/Computer.srcs/constrs_1/new/Computer.xdc:11]
+WARNING: [Vivado 12-584] No ports matched 'touch_btn[1]'. [E:/GitHub/Computer/Computer.srcs/constrs_1/new/Computer.xdc:12]
+WARNING: [Vivado 12-584] No ports matched 'touch_btn[2]'. [E:/GitHub/Computer/Computer.srcs/constrs_1/new/Computer.xdc:13]
+WARNING: [Vivado 12-584] No ports matched 'touch_btn[3]'. [E:/GitHub/Computer/Computer.srcs/constrs_1/new/Computer.xdc:14]
+WARNING: [Vivado 12-584] No ports matched 'txd'. [E:/GitHub/Computer/Computer.srcs/constrs_1/new/Computer.xdc:28]
+WARNING: [Vivado 12-584] No ports matched 'rxd'. [E:/GitHub/Computer/Computer.srcs/constrs_1/new/Computer.xdc:29]
+WARNING: [Vivado 12-584] No ports matched 'sl811_a0'. [E:/GitHub/Computer/Computer.srcs/constrs_1/new/Computer.xdc:32]
+WARNING: [Vivado 12-584] No ports matched 'sl811_we_n'. [E:/GitHub/Computer/Computer.srcs/constrs_1/new/Computer.xdc:33]
+WARNING: [Vivado 12-584] No ports matched 'sl811_rd_n'. [E:/GitHub/Computer/Computer.srcs/constrs_1/new/Computer.xdc:34]
+WARNING: [Vivado 12-584] No ports matched 'sl811_cs_n'. [E:/GitHub/Computer/Computer.srcs/constrs_1/new/Computer.xdc:35]
+WARNING: [Vivado 12-584] No ports matched 'sl811_rst_n'. [E:/GitHub/Computer/Computer.srcs/constrs_1/new/Computer.xdc:36]
+WARNING: [Vivado 12-584] No ports matched 'sl811_drq'. [E:/GitHub/Computer/Computer.srcs/constrs_1/new/Computer.xdc:37]
+WARNING: [Vivado 12-584] No ports matched 'sl811_dack'. [E:/GitHub/Computer/Computer.srcs/constrs_1/new/Computer.xdc:38]
+WARNING: [Vivado 12-584] No ports matched 'sl811_int'. [E:/GitHub/Computer/Computer.srcs/constrs_1/new/Computer.xdc:39]
+WARNING: [Vivado 12-584] No ports matched 'sl811_data[0]'. [E:/GitHub/Computer/Computer.srcs/constrs_1/new/Computer.xdc:40]
+WARNING: [Vivado 12-584] No ports matched 'sl811_data[1]'. [E:/GitHub/Computer/Computer.srcs/constrs_1/new/Computer.xdc:41]
+WARNING: [Vivado 12-584] No ports matched 'sl811_data[2]'. [E:/GitHub/Computer/Computer.srcs/constrs_1/new/Computer.xdc:42]
+WARNING: [Vivado 12-584] No ports matched 'sl811_data[3]'. [E:/GitHub/Computer/Computer.srcs/constrs_1/new/Computer.xdc:43]
+WARNING: [Vivado 12-584] No ports matched 'sl811_data[4]'. [E:/GitHub/Computer/Computer.srcs/constrs_1/new/Computer.xdc:44]
+WARNING: [Vivado 12-584] No ports matched 'sl811_data[5]'. [E:/GitHub/Computer/Computer.srcs/constrs_1/new/Computer.xdc:45]
+WARNING: [Vivado 12-584] No ports matched 'sl811_data[6]'. [E:/GitHub/Computer/Computer.srcs/constrs_1/new/Computer.xdc:46]
+WARNING: [Vivado 12-584] No ports matched 'sl811_data[7]'. [E:/GitHub/Computer/Computer.srcs/constrs_1/new/Computer.xdc:47]
+WARNING: [Vivado 12-584] No ports matched 'dm9k_we_n'. [E:/GitHub/Computer/Computer.srcs/constrs_1/new/Computer.xdc:50]
+WARNING: [Vivado 12-584] No ports matched 'dm9k_rd_n'. [E:/GitHub/Computer/Computer.srcs/constrs_1/new/Computer.xdc:51]
+WARNING: [Vivado 12-584] No ports matched 'dm9k_cs_n'. [E:/GitHub/Computer/Computer.srcs/constrs_1/new/Computer.xdc:52]
+WARNING: [Vivado 12-584] No ports matched 'dm9k_rst_n'. [E:/GitHub/Computer/Computer.srcs/constrs_1/new/Computer.xdc:53]
+WARNING: [Vivado 12-584] No ports matched 'dm9k_int'. [E:/GitHub/Computer/Computer.srcs/constrs_1/new/Computer.xdc:54]
+WARNING: [Vivado 12-584] No ports matched 'dm9k_cmd'. [E:/GitHub/Computer/Computer.srcs/constrs_1/new/Computer.xdc:55]
+WARNING: [Vivado 12-584] No ports matched 'dm9k_data[0]'. [E:/GitHub/Computer/Computer.srcs/constrs_1/new/Computer.xdc:56]
+WARNING: [Vivado 12-584] No ports matched 'dm9k_data[1]'. [E:/GitHub/Computer/Computer.srcs/constrs_1/new/Computer.xdc:57]
+WARNING: [Vivado 12-584] No ports matched 'dm9k_data[2]'. [E:/GitHub/Computer/Computer.srcs/constrs_1/new/Computer.xdc:58]
+WARNING: [Vivado 12-584] No ports matched 'dm9k_data[3]'. [E:/GitHub/Computer/Computer.srcs/constrs_1/new/Computer.xdc:59]
+WARNING: [Vivado 12-584] No ports matched 'dm9k_data[4]'. [E:/GitHub/Computer/Computer.srcs/constrs_1/new/Computer.xdc:60]
+WARNING: [Vivado 12-584] No ports matched 'dm9k_data[5]'. [E:/GitHub/Computer/Computer.srcs/constrs_1/new/Computer.xdc:61]
+WARNING: [Vivado 12-584] No ports matched 'dm9k_data[6]'. [E:/GitHub/Computer/Computer.srcs/constrs_1/new/Computer.xdc:62]
+WARNING: [Vivado 12-584] No ports matched 'dm9k_data[7]'. [E:/GitHub/Computer/Computer.srcs/constrs_1/new/Computer.xdc:63]
+WARNING: [Vivado 12-584] No ports matched 'dm9k_data[8]'. [E:/GitHub/Computer/Computer.srcs/constrs_1/new/Computer.xdc:64]
+WARNING: [Vivado 12-584] No ports matched 'dm9k_data[9]'. [E:/GitHub/Computer/Computer.srcs/constrs_1/new/Computer.xdc:65]
+WARNING: [Vivado 12-584] No ports matched 'dm9k_data[10]'. [E:/GitHub/Computer/Computer.srcs/constrs_1/new/Computer.xdc:66]
+WARNING: [Vivado 12-584] No ports matched 'dm9k_data[11]'. [E:/GitHub/Computer/Computer.srcs/constrs_1/new/Computer.xdc:67]
+WARNING: [Vivado 12-584] No ports matched 'dm9k_data[12]'. [E:/GitHub/Computer/Computer.srcs/constrs_1/new/Computer.xdc:68]
+WARNING: [Vivado 12-584] No ports matched 'dm9k_data[13]'. [E:/GitHub/Computer/Computer.srcs/constrs_1/new/Computer.xdc:69]
+WARNING: [Vivado 12-584] No ports matched 'dm9k_data[14]'. [E:/GitHub/Computer/Computer.srcs/constrs_1/new/Computer.xdc:70]
+WARNING: [Vivado 12-584] No ports matched 'dm9k_data[15]'. [E:/GitHub/Computer/Computer.srcs/constrs_1/new/Computer.xdc:71]
+WARNING: [Vivado 12-584] No ports matched 'dip_sw[*]'. [E:/GitHub/Computer/Computer.srcs/constrs_1/new/Computer.xdc:106]
+WARNING: [Vivado 12-584] No ports matched 'dip_sw[0]'. [E:/GitHub/Computer/Computer.srcs/constrs_1/new/Computer.xdc:107]
+WARNING: [Vivado 12-584] No ports matched 'dip_sw[1]'. [E:/GitHub/Computer/Computer.srcs/constrs_1/new/Computer.xdc:108]
+WARNING: [Vivado 12-584] No ports matched 'dip_sw[2]'. [E:/GitHub/Computer/Computer.srcs/constrs_1/new/Computer.xdc:109]
+WARNING: [Vivado 12-584] No ports matched 'dip_sw[3]'. [E:/GitHub/Computer/Computer.srcs/constrs_1/new/Computer.xdc:110]
+WARNING: [Vivado 12-584] No ports matched 'dip_sw[4]'. [E:/GitHub/Computer/Computer.srcs/constrs_1/new/Computer.xdc:111]
+WARNING: [Vivado 12-584] No ports matched 'dip_sw[5]'. [E:/GitHub/Computer/Computer.srcs/constrs_1/new/Computer.xdc:112]
+WARNING: [Vivado 12-584] No ports matched 'dip_sw[6]'. [E:/GitHub/Computer/Computer.srcs/constrs_1/new/Computer.xdc:113]
+WARNING: [Vivado 12-584] No ports matched 'dip_sw[7]'. [E:/GitHub/Computer/Computer.srcs/constrs_1/new/Computer.xdc:114]
+WARNING: [Vivado 12-584] No ports matched 'dip_sw[8]'. [E:/GitHub/Computer/Computer.srcs/constrs_1/new/Computer.xdc:115]
+WARNING: [Vivado 12-584] No ports matched 'dip_sw[9]'. [E:/GitHub/Computer/Computer.srcs/constrs_1/new/Computer.xdc:116]
+WARNING: [Vivado 12-584] No ports matched 'dip_sw[10]'. [E:/GitHub/Computer/Computer.srcs/constrs_1/new/Computer.xdc:117]
+WARNING: [Vivado 12-584] No ports matched 'dip_sw[11]'. [E:/GitHub/Computer/Computer.srcs/constrs_1/new/Computer.xdc:118]
+WARNING: [Vivado 12-584] No ports matched 'dip_sw[12]'. [E:/GitHub/Computer/Computer.srcs/constrs_1/new/Computer.xdc:119]
+WARNING: [Vivado 12-584] No ports matched 'dip_sw[13]'. [E:/GitHub/Computer/Computer.srcs/constrs_1/new/Computer.xdc:120]
+WARNING: [Vivado 12-584] No ports matched 'dip_sw[14]'. [E:/GitHub/Computer/Computer.srcs/constrs_1/new/Computer.xdc:121]
+WARNING: [Vivado 12-584] No ports matched 'dip_sw[15]'. [E:/GitHub/Computer/Computer.srcs/constrs_1/new/Computer.xdc:122]
+WARNING: [Vivado 12-584] No ports matched 'dip_sw[16]'. [E:/GitHub/Computer/Computer.srcs/constrs_1/new/Computer.xdc:123]
+WARNING: [Vivado 12-584] No ports matched 'dip_sw[17]'. [E:/GitHub/Computer/Computer.srcs/constrs_1/new/Computer.xdc:124]
+WARNING: [Vivado 12-584] No ports matched 'dip_sw[18]'. [E:/GitHub/Computer/Computer.srcs/constrs_1/new/Computer.xdc:125]
+WARNING: [Vivado 12-584] No ports matched 'dip_sw[19]'. [E:/GitHub/Computer/Computer.srcs/constrs_1/new/Computer.xdc:126]
+WARNING: [Vivado 12-584] No ports matched 'dip_sw[20]'. [E:/GitHub/Computer/Computer.srcs/constrs_1/new/Computer.xdc:127]
+WARNING: [Vivado 12-584] No ports matched 'dip_sw[21]'. [E:/GitHub/Computer/Computer.srcs/constrs_1/new/Computer.xdc:128]
+WARNING: [Vivado 12-584] No ports matched 'dip_sw[22]'. [E:/GitHub/Computer/Computer.srcs/constrs_1/new/Computer.xdc:129]
+WARNING: [Vivado 12-584] No ports matched 'dip_sw[23]'. [E:/GitHub/Computer/Computer.srcs/constrs_1/new/Computer.xdc:130]
+WARNING: [Vivado 12-584] No ports matched 'dip_sw[24]'. [E:/GitHub/Computer/Computer.srcs/constrs_1/new/Computer.xdc:131]
+WARNING: [Vivado 12-584] No ports matched 'dip_sw[25]'. [E:/GitHub/Computer/Computer.srcs/constrs_1/new/Computer.xdc:132]
+WARNING: [Vivado 12-584] No ports matched 'dip_sw[26]'. [E:/GitHub/Computer/Computer.srcs/constrs_1/new/Computer.xdc:133]
+WARNING: [Vivado 12-584] No ports matched 'dip_sw[27]'. [E:/GitHub/Computer/Computer.srcs/constrs_1/new/Computer.xdc:134]
+WARNING: [Vivado 12-584] No ports matched 'dip_sw[28]'. [E:/GitHub/Computer/Computer.srcs/constrs_1/new/Computer.xdc:135]
+WARNING: [Vivado 12-584] No ports matched 'dip_sw[29]'. [E:/GitHub/Computer/Computer.srcs/constrs_1/new/Computer.xdc:136]
+WARNING: [Vivado 12-584] No ports matched 'dip_sw[30]'. [E:/GitHub/Computer/Computer.srcs/constrs_1/new/Computer.xdc:137]
+WARNING: [Vivado 12-584] No ports matched 'dip_sw[31]'. [E:/GitHub/Computer/Computer.srcs/constrs_1/new/Computer.xdc:138]
+WARNING: [Vivado 12-584] No ports matched 'flash_addr[0]'. [E:/GitHub/Computer/Computer.srcs/constrs_1/new/Computer.xdc:141]
+WARNING: [Vivado 12-584] No ports matched 'MemAddr2[18]'. [E:/GitHub/Computer/Computer.srcs/constrs_1/new/Computer.xdc:215]
+WARNING: [Vivado 12-584] No ports matched 'MemAddr2[19]'. [E:/GitHub/Computer/Computer.srcs/constrs_1/new/Computer.xdc:216]
+WARNING: [Vivado 12-584] No ports matched 'base_ram_be_n[*]'. [E:/GitHub/Computer/Computer.srcs/constrs_1/new/Computer.xdc:217]
+WARNING: [Vivado 12-584] No ports matched 'base_ram_be_n[0]'. [E:/GitHub/Computer/Computer.srcs/constrs_1/new/Computer.xdc:218]
+WARNING: [Vivado 12-584] No ports matched 'base_ram_be_n[1]'. [E:/GitHub/Computer/Computer.srcs/constrs_1/new/Computer.xdc:219]
+WARNING: [Vivado 12-584] No ports matched 'base_ram_be_n[2]'. [E:/GitHub/Computer/Computer.srcs/constrs_1/new/Computer.xdc:220]
+WARNING: [Vivado 12-584] No ports matched 'base_ram_be_n[3]'. [E:/GitHub/Computer/Computer.srcs/constrs_1/new/Computer.xdc:221]
+WARNING: [Vivado 12-584] No ports matched 'MemData2[16]'. [E:/GitHub/Computer/Computer.srcs/constrs_1/new/Computer.xdc:239]
+WARNING: [Vivado 12-584] No ports matched 'MemData2[17]'. [E:/GitHub/Computer/Computer.srcs/constrs_1/new/Computer.xdc:240]
+WARNING: [Vivado 12-584] No ports matched 'MemData2[18]'. [E:/GitHub/Computer/Computer.srcs/constrs_1/new/Computer.xdc:241]
+WARNING: [Vivado 12-584] No ports matched 'MemData2[19]'. [E:/GitHub/Computer/Computer.srcs/constrs_1/new/Computer.xdc:242]
+WARNING: [Vivado 12-584] No ports matched 'MemData2[20]'. [E:/GitHub/Computer/Computer.srcs/constrs_1/new/Computer.xdc:243]
+WARNING: [Vivado 12-584] No ports matched 'MemData2[21]'. [E:/GitHub/Computer/Computer.srcs/constrs_1/new/Computer.xdc:244]
+WARNING: [Vivado 12-584] No ports matched 'MemData2[22]'. [E:/GitHub/Computer/Computer.srcs/constrs_1/new/Computer.xdc:245]
+WARNING: [Vivado 12-584] No ports matched 'MemData2[23]'. [E:/GitHub/Computer/Computer.srcs/constrs_1/new/Computer.xdc:246]
+WARNING: [Vivado 12-584] No ports matched 'MemData2[24]'. [E:/GitHub/Computer/Computer.srcs/constrs_1/new/Computer.xdc:247]
+WARNING: [Vivado 12-584] No ports matched 'MemData2[25]'. [E:/GitHub/Computer/Computer.srcs/constrs_1/new/Computer.xdc:248]
+WARNING: [Vivado 12-584] No ports matched 'MemData2[26]'. [E:/GitHub/Computer/Computer.srcs/constrs_1/new/Computer.xdc:249]
+WARNING: [Vivado 12-584] No ports matched 'MemData2[27]'. [E:/GitHub/Computer/Computer.srcs/constrs_1/new/Computer.xdc:250]
+INFO: [Common 17-14] Message 'Vivado 12-584' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings. [E:/GitHub/Computer/Computer.srcs/constrs_1/new/Computer.xdc:250]
+Finished Parsing XDC File [E:/GitHub/Computer/Computer.srcs/constrs_1/new/Computer.xdc]
+WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [E:/GitHub/Computer/Computer.srcs/constrs_1/new/Computer.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/Computer_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [E:/GitHub/Computer/Computer.srcs/constrs_1/new/Computer.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/Computer_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/Computer_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.538 . Memory (MB): peak = 720.957 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:18 ; elapsed = 00:00:24 . Memory (MB): peak = 720.957 ; gain = 435.414
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tfgg676-2L
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:19 ; elapsed = 00:00:24 . Memory (MB): peak = 720.957 ; gain = 435.414
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property DONT_TOUCH = true for vga/cache. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for vga/ram. (constraint file  auto generated constraint, line ).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:19 ; elapsed = 00:00:24 . Memory (MB): peak = 720.957 ; gain = 435.414
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5544] ROM "branch" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "wb_memory_or_alu_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "exe_select_goal" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "exe_select_goal" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "exe_alu_op" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "exe_alu_op" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "exe_alu_rx" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "exe_alu_rx" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "registerWrite" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "registerWrite" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [E:/GitHub/Computer/Computer.srcs/sources_1/new/alu.vhd:20]
+INFO: [Synth 8-4471] merging register 't_memadress_out_reg[15:0]' into 't_aluout_out_reg[15:0]' [E:/GitHub/Computer/Computer.srcs/sources_1/new/exe_mem.vhd:54]
+WARNING: [Synth 8-6014] Unused sequential element t_memadress_out_reg was removed.  [E:/GitHub/Computer/Computer.srcs/sources_1/new/exe_mem.vhd:54]
+WARNING: [Synth 8-6014] Unused sequential element vector_x_reg was removed.  [E:/GitHub/Computer/Computer.srcs/sources_1/new/VGA_play.vhd:135]
+WARNING: [Synth 8-6014] Unused sequential element vector_y_reg was removed.  [E:/GitHub/Computer/Computer.srcs/sources_1/new/VGA_play.vhd:135]
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'Flash'
+WARNING: [Synth 8-6014] Unused sequential element state_reg was removed.  [E:/GitHub/Computer/Computer.srcs/sources_1/new/Flash.vhd:50]
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'MemoryController'
+WARNING: [Synth 8-6014] Unused sequential element state_reg was removed.  [E:/GitHub/Computer/Computer.srcs/sources_1/new/MemoryController.vhd:194]
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "flash_addr_input" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "flash_state_num" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "flash_read" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "toutput1" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "toutput2" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "cpuclock" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+WARNING: [Synth 8-6014] Unused sequential element flash_pc_addr_reg was removed.  [E:/GitHub/Computer/Computer.srcs/sources_1/new/MemoryController.vhd:211]
+INFO: [Synth 8-5546] ROM "t_wbregdata_out" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-6014] Unused sequential element state_reg was removed.  [E:/GitHub/Computer/Computer.srcs/sources_1/new/Flash.vhd:50]
+WARNING: [Synth 8-6014] Unused sequential element state_reg was removed.  [E:/GitHub/Computer/Computer.srcs/sources_1/new/Flash.vhd:50]
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+             boot_start1 |                           000001 |                              000
+             boot_start2 |                           000010 |                              001
+             boot_start3 |                           000100 |                              010
+          boot_addrready |                           001000 |                              011
+           boot_dataread |                           010000 |                              100
+          boot_dataread2 |                           100000 |                              101
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'Flash'
+WARNING: [Synth 8-6014] Unused sequential element state_reg was removed.  [E:/GitHub/Computer/Computer.srcs/sources_1/new/Flash.vhd:50]
+WARNING: [Synth 8-6014] Unused sequential element state_reg was removed.  [E:/GitHub/Computer/Computer.srcs/sources_1/new/MemoryController.vhd:194]
+WARNING: [Synth 8-6014] Unused sequential element state_reg was removed.  [E:/GitHub/Computer/Computer.srcs/sources_1/new/MemoryController.vhd:194]
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                bootinit |                              000 |                              000
+          boot_readflash |                              001 |                              001
+           boot_writeram |                              010 |                              010
+              boot_ready |                              011 |                              011
+                  readir |                              100 |                              100
+                  serial |                              101 |                              101
+                   rwram |                              110 |                              110
+                   pause |                              111 |                              111
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'MemoryController'
+WARNING: [Synth 8-6014] Unused sequential element state_reg was removed.  [E:/GitHub/Computer/Computer.srcs/sources_1/new/MemoryController.vhd:194]
+WARNING: [Synth 8-327] inferring latch for variable 'from_forward_datax_reg' [E:/GitHub/Computer/Computer.srcs/sources_1/new/forward.vhd:43]
+WARNING: [Synth 8-327] inferring latch for variable 'from_forward_datay_reg' [E:/GitHub/Computer/Computer.srcs/sources_1/new/forward.vhd:50]
+WARNING: [Synth 8-327] inferring latch for variable 'from_forward_address_reg' [E:/GitHub/Computer/Computer.srcs/sources_1/new/forward.vhd:57]
+WARNING: [Synth 8-327] inferring latch for variable 'forward_data_reg' [E:/GitHub/Computer/Computer.srcs/sources_1/new/forward.vhd:44]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:20 ; elapsed = 00:00:25 . Memory (MB): peak = 720.957 ; gain = 435.414
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     17 Bit       Adders := 1     
+	   2 Input     16 Bit       Adders := 3     
+	   3 Input     16 Bit       Adders := 1     
+	   2 Input     10 Bit       Adders := 1     
+	   2 Input      9 Bit       Adders := 1     
+	   2 Input      3 Bit       Adders := 1     
++---Registers : 
+	               22 Bit    Registers := 1     
+	               17 Bit    Registers := 1     
+	               16 Bit    Registers := 23    
+	               10 Bit    Registers := 1     
+	                9 Bit    Registers := 1     
+	                4 Bit    Registers := 2     
+	                3 Bit    Registers := 10    
+	                2 Bit    Registers := 5     
+	                1 Bit    Registers := 22    
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 20    
+	   4 Input     16 Bit        Muxes := 3     
+	   8 Input     16 Bit        Muxes := 3     
+	   2 Input     10 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 2     
+	   8 Input      4 Bit        Muxes := 1     
+	  21 Input      3 Bit        Muxes := 1     
+	   4 Input      3 Bit        Muxes := 2     
+	  10 Input      3 Bit        Muxes := 4     
+	  19 Input      3 Bit        Muxes := 4     
+	   2 Input      3 Bit        Muxes := 12    
+	   3 Input      3 Bit        Muxes := 2     
+	   8 Input      3 Bit        Muxes := 1     
+	   9 Input      3 Bit        Muxes := 1     
+	  24 Input      2 Bit        Muxes := 1     
+	   4 Input      2 Bit        Muxes := 2     
+	  28 Input      2 Bit        Muxes := 1     
+	  10 Input      2 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 5     
+	   3 Input      1 Bit        Muxes := 6     
+	  19 Input      1 Bit        Muxes := 3     
+	   4 Input      1 Bit        Muxes := 1     
+	  10 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 8     
+	  13 Input      1 Bit        Muxes := 12    
+	   6 Input      1 Bit        Muxes := 4     
+	   8 Input      1 Bit        Muxes := 8     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module PCAdder 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     16 Bit       Adders := 1     
+Module PCMux 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 1     
+Module PCRegister 
+Detailed RTL Component Info : 
++---Registers : 
+	               16 Bit    Registers := 1     
+Module decoder 
+Detailed RTL Component Info : 
++---Muxes : 
+	  21 Input      3 Bit        Muxes := 1     
+	   4 Input      3 Bit        Muxes := 2     
+	  10 Input      3 Bit        Muxes := 4     
+	  19 Input      3 Bit        Muxes := 4     
+	   2 Input      3 Bit        Muxes := 6     
+	   3 Input      3 Bit        Muxes := 1     
+	  24 Input      2 Bit        Muxes := 1     
+	   4 Input      2 Bit        Muxes := 2     
+	  28 Input      2 Bit        Muxes := 1     
+	  10 Input      2 Bit        Muxes := 1     
+	   3 Input      1 Bit        Muxes := 2     
+	  19 Input      1 Bit        Muxes := 3     
+	   4 Input      1 Bit        Muxes := 1     
+	  10 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
+Module mux_control 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      3 Bit        Muxes := 4     
+	   2 Input      2 Bit        Muxes := 3     
+Module heap 
+Detailed RTL Component Info : 
++---Muxes : 
+	  13 Input      1 Bit        Muxes := 12    
+Module extend 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 4     
+Module id 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     16 Bit       Adders := 1     
++---Registers : 
+	               16 Bit    Registers := 2     
+Module mux_rx 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 1     
+Module mux_ry 
+Detailed RTL Component Info : 
++---Muxes : 
+	   4 Input     16 Bit        Muxes := 1     
+	   2 Input     16 Bit        Muxes := 1     
+Module adder 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     16 Bit       Adders := 1     
+Module mux_address 
+Detailed RTL Component Info : 
++---Muxes : 
+	   4 Input     16 Bit        Muxes := 1     
+	   2 Input     16 Bit        Muxes := 1     
+Module alu 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     16 Bit       Adders := 1     
++---Muxes : 
+	   8 Input     16 Bit        Muxes := 1     
+	   2 Input     16 Bit        Muxes := 2     
+Module mux_goal 
+Detailed RTL Component Info : 
++---Muxes : 
+	   8 Input      4 Bit        Muxes := 1     
+Module exe 
+Detailed RTL Component Info : 
++---Registers : 
+	               16 Bit    Registers := 11    
+	                3 Bit    Registers := 7     
+	                2 Bit    Registers := 3     
+	                1 Bit    Registers := 7     
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 1     
+Module exe_mem 
+Detailed RTL Component Info : 
++---Registers : 
+	               16 Bit    Registers := 2     
+	                4 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 3     
+Module VGA_play 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     10 Bit       Adders := 1     
+	   2 Input      9 Bit       Adders := 1     
++---Registers : 
+	               10 Bit    Registers := 1     
+	                9 Bit    Registers := 1     
+	                3 Bit    Registers := 2     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 7     
++---Muxes : 
+	   2 Input     10 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 2     
+	   2 Input      2 Bit        Muxes := 2     
+Module Flash 
+Detailed RTL Component Info : 
++---Registers : 
+	               22 Bit    Registers := 1     
+	               16 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 1     
+	   6 Input      1 Bit        Muxes := 3     
+Module MemoryController 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     17 Bit       Adders := 1     
+	   2 Input      3 Bit       Adders := 1     
++---Registers : 
+	               17 Bit    Registers := 1     
+	               16 Bit    Registers := 5     
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 5     
+	   8 Input     16 Bit        Muxes := 2     
+	   2 Input      8 Bit        Muxes := 1     
+	   3 Input      3 Bit        Muxes := 1     
+	   8 Input      3 Bit        Muxes := 1     
+	   9 Input      3 Bit        Muxes := 1     
+	   3 Input      1 Bit        Muxes := 4     
+	   8 Input      1 Bit        Muxes := 8     
+	   2 Input      1 Bit        Muxes := 5     
+Module mem_wb 
+Detailed RTL Component Info : 
++---Registers : 
+	               16 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   4 Input     16 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module forward 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 3     
+	   6 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-6014] Unused sequential element vector_x_reg was removed.  [E:/GitHub/Computer/Computer.srcs/sources_1/new/VGA_play.vhd:135]
+WARNING: [Synth 8-6014] Unused sequential element vector_y_reg was removed.  [E:/GitHub/Computer/Computer.srcs/sources_1/new/VGA_play.vhd:135]
+WARNING: [Synth 8-6014] Unused sequential element flash_pc_addr_reg was removed.  [E:/GitHub/Computer/Computer.srcs/sources_1/new/MemoryController.vhd:211]
+INFO: [Synth 8-5546] ROM "t_wbregdata_out" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-6014] Unused sequential element local_exe_mem/t_rd_out_reg was removed.  [E:/GitHub/Computer/Computer.srcs/sources_1/new/exe_mem.vhd:60]
+WARNING: [Synth 8-6014] Unused sequential element local_pc_reg/PCOut_reg was removed.  [E:/GitHub/Computer/Computer.srcs/sources_1/new/PCRegister.vhd:21]
+WARNING: [Synth 8-3917] design Computer has port oe1 driven by constant 1
+WARNING: [Synth 8-3917] design Computer has port we1 driven by constant 1
+WARNING: [Synth 8-3917] design Computer has port MemAddr2[17] driven by constant 0
+WARNING: [Synth 8-3917] design Computer has port MemAddr2[16] driven by constant 0
+WARNING: [Synth 8-3917] design Computer has port MemAddr2[15] driven by constant 0
+WARNING: [Synth 8-3917] design Computer has port MemAddr2[14] driven by constant 0
+WARNING: [Synth 8-3917] design Computer has port MemAddr2[13] driven by constant 0
+WARNING: [Synth 8-3917] design Computer has port MemAddr2[12] driven by constant 0
+WARNING: [Synth 8-3917] design Computer has port MemAddr2[11] driven by constant 0
+WARNING: [Synth 8-3917] design Computer has port MemAddr2[10] driven by constant 0
+WARNING: [Synth 8-3917] design Computer has port MemAddr2[9] driven by constant 0
+WARNING: [Synth 8-3917] design Computer has port MemAddr2[8] driven by constant 0
+WARNING: [Synth 8-3917] design Computer has port MemAddr2[7] driven by constant 0
+WARNING: [Synth 8-3917] design Computer has port MemAddr2[6] driven by constant 0
+WARNING: [Synth 8-3917] design Computer has port MemAddr2[5] driven by constant 0
+WARNING: [Synth 8-3917] design Computer has port MemAddr2[4] driven by constant 0
+WARNING: [Synth 8-3917] design Computer has port MemAddr2[3] driven by constant 0
+WARNING: [Synth 8-3917] design Computer has port MemAddr2[2] driven by constant 0
+WARNING: [Synth 8-3917] design Computer has port MemAddr2[1] driven by constant 0
+WARNING: [Synth 8-3917] design Computer has port MemAddr2[0] driven by constant 0
+WARNING: [Synth 8-3331] design Computer has unconnected port MemData1[15]
+WARNING: [Synth 8-3331] design Computer has unconnected port MemData1[14]
+WARNING: [Synth 8-3331] design Computer has unconnected port MemData1[13]
+WARNING: [Synth 8-3331] design Computer has unconnected port MemData1[12]
+WARNING: [Synth 8-3331] design Computer has unconnected port MemData1[11]
+WARNING: [Synth 8-3331] design Computer has unconnected port MemData1[10]
+WARNING: [Synth 8-3331] design Computer has unconnected port MemData1[9]
+WARNING: [Synth 8-3331] design Computer has unconnected port MemData1[8]
+INFO: [Synth 8-3886] merging instance 'local_exe/s_forward_address_reg[0]' (FDC) to 'local_exe/s_forward_datax_reg[0]'
+INFO: [Synth 8-3886] merging instance 'local_exe/s_forward_address_reg[1]' (FDC) to 'local_exe/s_forward_datax_reg[1]'
+INFO: [Synth 8-3886] merging instance 'local_exe/s_forward_address_reg[2]' (FDC) to 'local_exe/s_forward_datax_reg[2]'
+INFO: [Synth 8-3886] merging instance 'local_exe/s_forward_address_reg[3]' (FDC) to 'local_exe/s_forward_datax_reg[3]'
+INFO: [Synth 8-3886] merging instance 'local_exe/s_forward_address_reg[4]' (FDC) to 'local_exe/s_forward_datax_reg[4]'
+INFO: [Synth 8-3886] merging instance 'local_exe/s_forward_address_reg[5]' (FDC) to 'local_exe/s_forward_datax_reg[5]'
+INFO: [Synth 8-3886] merging instance 'local_exe/s_forward_address_reg[6]' (FDC) to 'local_exe/s_forward_datax_reg[6]'
+INFO: [Synth 8-3886] merging instance 'local_exe/s_forward_address_reg[7]' (FDC) to 'local_exe/s_forward_datax_reg[7]'
+INFO: [Synth 8-3886] merging instance 'local_exe/s_forward_address_reg[8]' (FDC) to 'local_exe/s_forward_datax_reg[8]'
+INFO: [Synth 8-3886] merging instance 'local_exe/s_forward_address_reg[9]' (FDC) to 'local_exe/s_forward_datax_reg[9]'
+INFO: [Synth 8-3886] merging instance 'local_exe/s_forward_address_reg[10]' (FDC) to 'local_exe/s_forward_datax_reg[10]'
+INFO: [Synth 8-3886] merging instance 'local_exe/s_forward_address_reg[11]' (FDC) to 'local_exe/s_forward_datax_reg[11]'
+INFO: [Synth 8-3886] merging instance 'local_exe/s_forward_address_reg[12]' (FDC) to 'local_exe/s_forward_datax_reg[12]'
+INFO: [Synth 8-3886] merging instance 'local_exe/s_forward_address_reg[13]' (FDC) to 'local_exe/s_forward_datax_reg[13]'
+INFO: [Synth 8-3886] merging instance 'local_exe/s_forward_address_reg[14]' (FDC) to 'local_exe/s_forward_datax_reg[14]'
+INFO: [Synth 8-3886] merging instance 'local_exe/s_forward_address_reg[15]' (FDC) to 'local_exe/s_forward_datax_reg[15]'
+INFO: [Synth 8-3886] merging instance 'local_exe/s_from_forward_address_reg' (FDC) to 'local_exe/s_from_forwardx_reg'
+INFO: [Synth 8-3886] merging instance 'local_exe/s_forward_datax_reg[14]' (FDC) to 'local_exe/s_forward_datay_reg[14]'
+INFO: [Synth 8-3886] merging instance 'local_exe/s_forward_datax_reg[15]' (FDC) to 'local_exe/s_forward_datay_reg[15]'
+INFO: [Synth 8-3886] merging instance 'local_exe/s_immediate_reg[15]' (FDC) to 'local_exe/s_immediate_reg[14]'
+INFO: [Synth 8-3886] merging instance 'local_exe/s_immediate_reg[14]' (FDC) to 'local_exe/s_immediate_reg[10]'
+INFO: [Synth 8-3886] merging instance 'local_exe/s_forward_datax_reg[0]' (FDC) to 'local_exe/s_forward_datay_reg[0]'
+INFO: [Synth 8-3886] merging instance 'local_exe/s_forward_datay_reg[1]' (FDC) to 'local_exe/s_forward_datax_reg[1]'
+INFO: [Synth 8-3886] merging instance 'local_exe/s_forward_datay_reg[2]' (FDC) to 'local_exe/s_forward_datax_reg[2]'
+INFO: [Synth 8-3886] merging instance 'local_exe/s_forward_datay_reg[3]' (FDC) to 'local_exe/s_forward_datax_reg[3]'
+INFO: [Synth 8-3886] merging instance 'local_exe/s_forward_datay_reg[4]' (FDC) to 'local_exe/s_forward_datax_reg[4]'
+INFO: [Synth 8-3886] merging instance 'local_exe/s_forward_datay_reg[5]' (FDC) to 'local_exe/s_forward_datax_reg[5]'
+INFO: [Synth 8-3886] merging instance 'local_exe/s_forward_datay_reg[6]' (FDC) to 'local_exe/s_forward_datax_reg[6]'
+INFO: [Synth 8-3886] merging instance 'local_exe/s_forward_datay_reg[7]' (FDC) to 'local_exe/s_forward_datax_reg[7]'
+INFO: [Synth 8-3886] merging instance 'local_exe/s_forward_datay_reg[8]' (FDC) to 'local_exe/s_forward_datax_reg[8]'
+INFO: [Synth 8-3886] merging instance 'local_exe/s_forward_datay_reg[9]' (FDC) to 'local_exe/s_forward_datax_reg[9]'
+INFO: [Synth 8-3886] merging instance 'local_exe/s_forward_datay_reg[10]' (FDC) to 'local_exe/s_forward_datax_reg[10]'
+INFO: [Synth 8-3886] merging instance 'local_exe/s_immediate_reg[10]' (FDC) to 'local_exe/s_immediate_reg[11]'
+INFO: [Synth 8-3886] merging instance 'local_exe/s_forward_datay_reg[11]' (FDC) to 'local_exe/s_forward_datax_reg[11]'
+INFO: [Synth 8-3886] merging instance 'local_exe/s_immediate_reg[11]' (FDC) to 'local_exe/s_immediate_reg[12]'
+INFO: [Synth 8-3886] merging instance 'local_exe/s_forward_datay_reg[12]' (FDC) to 'local_exe/s_forward_datax_reg[12]'
+INFO: [Synth 8-3886] merging instance 'local_exe/s_immediate_reg[12]' (FDC) to 'local_exe/s_immediate_reg[13]'
+INFO: [Synth 8-3886] merging instance 'local_exe/s_forward_datax_reg[13]' (FDC) to 'local_exe/s_forward_datay_reg[13]'
+INFO: [Synth 8-3886] merging instance 'local_exe/s_from_forwardx_reg' (FDC) to 'local_exe/s_from_forwardy_reg'
+INFO: [Synth 8-3886] merging instance 'flash_data_reg__0i_32' (FDCE) to 'flash_data_reg__0i_18'
+INFO: [Synth 8-3886] merging instance 'local_mem/flash_local/flash_data_retimed_reg[0]' (FDE) to 'local_mem/flash_local/flash_data_retimed_reg[6]'
+INFO: [Synth 8-3886] merging instance 'flash_data_reg__0i_31' (FDCE) to 'flash_data_reg__0i_18'
+INFO: [Synth 8-3886] merging instance 'local_mem/flash_local/flash_data_retimed_reg[1]' (FDE) to 'local_mem/flash_local/flash_data_retimed_reg[6]'
+INFO: [Synth 8-3886] merging instance 'flash_data_reg__0i_30' (FDCE) to 'flash_data_reg__0i_18'
+INFO: [Synth 8-3886] merging instance 'local_mem/flash_local/flash_data_retimed_reg[2]' (FDE) to 'local_mem/flash_local/flash_data_retimed_reg[6]'
+INFO: [Synth 8-3886] merging instance 'flash_data_reg__0i_29' (FDCE) to 'flash_data_reg__0i_18'
+INFO: [Synth 8-3886] merging instance 'local_mem/flash_local/flash_data_retimed_reg[3]' (FDE) to 'local_mem/flash_local/flash_data_retimed_reg[6]'
+INFO: [Synth 8-3886] merging instance 'flash_data_reg__0i_28' (FDCE) to 'flash_data_reg__0i_18'
+INFO: [Synth 8-3886] merging instance 'local_mem/flash_local/flash_data_retimed_reg[4]' (FDE) to 'local_mem/flash_local/flash_data_retimed_reg[6]'
+INFO: [Synth 8-3886] merging instance 'flash_data_reg__0i_27' (FDCE) to 'flash_data_reg__0i_18'
+INFO: [Synth 8-3886] merging instance 'local_mem/flash_local/flash_data_retimed_reg[5]' (FDE) to 'local_mem/flash_local/flash_data_retimed_reg[6]'
+INFO: [Synth 8-3886] merging instance 'flash_data_reg__0i_26' (FDCE) to 'flash_data_reg__0i_18'
+INFO: [Synth 8-3886] merging instance 'local_mem/flash_local/flash_data_retimed_reg[6]' (FDE) to 'local_mem/flash_local/flash_data_retimed_reg[7]'
+INFO: [Synth 8-3886] merging instance 'flash_data_reg__0i_25' (FDCE) to 'flash_data_reg__0i_18'
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\local_mem/flash_local/flash_data_retimed_reg[7] )
+INFO: [Synth 8-3886] merging instance 'flash_data_reg__0i_24' (FDCE) to 'flash_data_reg__0i_18'
+INFO: [Synth 8-3886] merging instance 'local_mem/flash_local/flash_data_retimed_reg[8]' (FDE) to 'local_mem/flash_local/flash_data_retimed_reg[14]'
+INFO: [Synth 8-3886] merging instance 'flash_data_reg__0i_23' (FDCE) to 'flash_data_reg__0i_18'
+INFO: [Synth 8-3886] merging instance 'local_mem/flash_local/flash_data_retimed_reg[9]' (FDE) to 'local_mem/flash_local/flash_data_retimed_reg[14]'
+INFO: [Synth 8-3886] merging instance 'flash_data_reg__0i_22' (FDCE) to 'flash_data_reg__0i_18'
+INFO: [Synth 8-3886] merging instance 'local_mem/flash_local/flash_data_retimed_reg[10]' (FDE) to 'local_mem/flash_local/flash_data_retimed_reg[14]'
+INFO: [Synth 8-3886] merging instance 'flash_data_reg__0i_21' (FDCE) to 'flash_data_reg__0i_18'
+INFO: [Synth 8-3886] merging instance 'local_mem/flash_local/flash_data_retimed_reg[11]' (FDE) to 'local_mem/flash_local/flash_data_retimed_reg[14]'
+INFO: [Synth 8-3886] merging instance 'flash_data_reg__0i_20' (FDCE) to 'flash_data_reg__0i_18'
+INFO: [Synth 8-3886] merging instance 'local_mem/flash_local/flash_data_retimed_reg[12]' (FDE) to 'local_mem/flash_local/flash_data_retimed_reg[14]'
+INFO: [Synth 8-3886] merging instance 'flash_data_reg__0i_19' (FDCE) to 'flash_data_reg__0i_18'
+INFO: [Synth 8-3886] merging instance 'local_mem/flash_local/flash_data_retimed_reg[13]' (FDE) to 'local_mem/flash_local/flash_data_retimed_reg[14]'
+INFO: [Synth 8-3886] merging instance 'flash_data_reg__0i_18' (FDCE) to 'flash_data_reg__0i_17'
+INFO: [Synth 8-3886] merging instance 'local_mem/flash_local/flash_data_retimed_reg[14]' (FDE) to 'local_mem/flash_local/flash_data_retimed_reg[15]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\local_mem/flash_local/flash_data_retimed_reg[15] )
+INFO: [Synth 8-3886] merging instance 'vga/b0_reg[0]' (FDC) to 'vga/g0_reg[0]'
+INFO: [Synth 8-3886] merging instance 'vga/g0_reg[1]' (FDC) to 'vga/g0_reg[2]'
+INFO: [Synth 8-3886] merging instance 'vga/r0_reg[0]' (FDC) to 'vga/r0_reg[1]'
+INFO: [Synth 8-3886] merging instance 'vga/r0_reg[1]' (FDC) to 'vga/r0_reg[2]'
+WARNING: [Synth 8-3332] Sequential element (vga/clkout_reg) is unused and will be removed from module Computer.
+WARNING: [Synth 8-3332] Sequential element (local_mem/flash_local/flash_data_retimed_reg[15]) is unused and will be removed from module Computer.
+WARNING: [Synth 8-3332] Sequential element (local_mem/flash_local/flash_data_retimed_reg[7]) is unused and will be removed from module Computer.
+INFO: [Synth 8-3886] merging instance 'local_exe/wb_memory_or_alu_out_reg[0]' (FDC) to 'local_exe/memoryRead_reg'
+INFO: [Synth 8-3886] merging instance 'local_exe_mem/t_memtoreg_out_reg[0]' (FDC) to 'local_exe_mem/t_memread_out_reg'
+INFO: [Synth 8-3886] merging instance 'local_mem_wb/t_wbadress_out_reg[2]' (FDC) to 'local_mem_wb/t_wbadress_out_reg[3]'
+INFO: [Synth 8-3886] merging instance 'local_mem_wb/t_wbadress_out_reg[3]' (FDC) to 'local_mem_wb/t_wbadress_out_reg[1]'
+INFO: [Synth 8-3886] merging instance 'local_mem_wb/t_wbadress_out_reg[1]' (FDC) to 'local_mem_wb/t_wbadress_out_reg[0]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\local_mem_wb/t_wbadress_out_reg[0] )
+INFO: [Synth 8-3886] merging instance 'local_exe/s_where_reg' (FDC) to 'local_exe/memoryWrite_reg'
+INFO: [Synth 8-3886] merging instance 'vga/b0_reg[1]' (FDC) to 'vga/g0_reg[2]'
+INFO: [Synth 8-3886] merging instance 'vga/g0_reg[2]' (FDC) to 'vga/r0_reg[2]'
+INFO: [Synth 8-3886] merging instance 'local_exe/s_sp_reg[14]' (FDC) to 'local_exe/s_sp_reg[13]'
+INFO: [Synth 8-3886] merging instance 'local_exe/s_sp_reg[0]' (FDC) to 'local_exe/s_sp_reg[13]'
+INFO: [Synth 8-3886] merging instance 'local_exe/s_sp_reg[1]' (FDC) to 'local_exe/s_sp_reg[13]'
+INFO: [Synth 8-3886] merging instance 'local_exe/s_sp_reg[2]' (FDC) to 'local_exe/s_sp_reg[13]'
+INFO: [Synth 8-3886] merging instance 'local_exe/s_sp_reg[3]' (FDC) to 'local_exe/s_sp_reg[13]'
+INFO: [Synth 8-3886] merging instance 'local_exe/s_sp_reg[4]' (FDC) to 'local_exe/s_sp_reg[13]'
+INFO: [Synth 8-3886] merging instance 'local_exe/s_sp_reg[5]' (FDC) to 'local_exe/s_sp_reg[13]'
+INFO: [Synth 8-3886] merging instance 'local_exe/s_sp_reg[6]' (FDC) to 'local_exe/s_sp_reg[13]'
+INFO: [Synth 8-3886] merging instance 'local_exe/s_sp_reg[7]' (FDC) to 'local_exe/s_sp_reg[13]'
+INFO: [Synth 8-3886] merging instance 'local_exe/s_sp_reg[8]' (FDC) to 'local_exe/s_sp_reg[13]'
+INFO: [Synth 8-3886] merging instance 'local_exe/s_sp_reg[9]' (FDC) to 'local_exe/s_sp_reg[13]'
+INFO: [Synth 8-3886] merging instance 'local_exe/s_sp_reg[10]' (FDC) to 'local_exe/s_sp_reg[13]'
+INFO: [Synth 8-3886] merging instance 'local_exe/s_sp_reg[11]' (FDC) to 'local_exe/s_sp_reg[13]'
+INFO: [Synth 8-3886] merging instance 'local_exe/s_sp_reg[12]' (FDC) to 'local_exe/s_sp_reg[13]'
+INFO: [Synth 8-3886] merging instance 'local_exe/s_sp_reg[13]' (FDC) to 'local_exe/s_from_forwardy_reg'
+WARNING: [Synth 8-3332] Sequential element (local_id/heap_instance/s1_reg[15]) is unused and will be removed from module Computer.
+WARNING: [Synth 8-3332] Sequential element (local_id/heap_instance/s1_reg[14]) is unused and will be removed from module Computer.
+WARNING: [Synth 8-3332] Sequential element (local_id/heap_instance/s1_reg[13]) is unused and will be removed from module Computer.
+WARNING: [Synth 8-3332] Sequential element (local_id/heap_instance/s1_reg[12]) is unused and will be removed from module Computer.
+WARNING: [Synth 8-3332] Sequential element (local_id/heap_instance/s1_reg[11]) is unused and will be removed from module Computer.
+WARNING: [Synth 8-3332] Sequential element (local_id/heap_instance/s1_reg[10]) is unused and will be removed from module Computer.
+WARNING: [Synth 8-3332] Sequential element (local_id/heap_instance/s1_reg[9]) is unused and will be removed from module Computer.
+WARNING: [Synth 8-3332] Sequential element (local_id/heap_instance/s1_reg[8]) is unused and will be removed from module Computer.
+WARNING: [Synth 8-3332] Sequential element (local_id/heap_instance/s1_reg[7]) is unused and will be removed from module Computer.
+WARNING: [Synth 8-3332] Sequential element (local_id/heap_instance/s1_reg[6]) is unused and will be removed from module Computer.
+WARNING: [Synth 8-3332] Sequential element (local_id/heap_instance/s1_reg[5]) is unused and will be removed from module Computer.
+WARNING: [Synth 8-3332] Sequential element (local_id/heap_instance/s1_reg[4]) is unused and will be removed from module Computer.
+WARNING: [Synth 8-3332] Sequential element (local_id/heap_instance/s1_reg[3]) is unused and will be removed from module Computer.
+WARNING: [Synth 8-3332] Sequential element (local_id/heap_instance/s1_reg[2]) is unused and will be removed from module Computer.
+WARNING: [Synth 8-3332] Sequential element (local_id/heap_instance/s1_reg[1]) is unused and will be removed from module Computer.
+WARNING: [Synth 8-3332] Sequential element (local_id/heap_instance/s1_reg[0]) is unused and will be removed from module Computer.
+WARNING: [Synth 8-3332] Sequential element (local_id/heap_instance/s2_reg[15]) is unused and will be removed from module Computer.
+WARNING: [Synth 8-3332] Sequential element (local_id/heap_instance/s2_reg[14]) is unused and will be removed from module Computer.
+WARNING: [Synth 8-3332] Sequential element (local_id/heap_instance/s2_reg[13]) is unused and will be removed from module Computer.
+WARNING: [Synth 8-3332] Sequential element (local_id/heap_instance/s2_reg[12]) is unused and will be removed from module Computer.
+WARNING: [Synth 8-3332] Sequential element (local_id/heap_instance/s2_reg[11]) is unused and will be removed from module Computer.
+WARNING: [Synth 8-3332] Sequential element (local_id/heap_instance/s2_reg[10]) is unused and will be removed from module Computer.
+WARNING: [Synth 8-3332] Sequential element (local_id/heap_instance/s2_reg[9]) is unused and will be removed from module Computer.
+WARNING: [Synth 8-3332] Sequential element (local_id/heap_instance/s2_reg[8]) is unused and will be removed from module Computer.
+WARNING: [Synth 8-3332] Sequential element (local_id/heap_instance/s2_reg[7]) is unused and will be removed from module Computer.
+WARNING: [Synth 8-3332] Sequential element (local_id/heap_instance/s2_reg[6]) is unused and will be removed from module Computer.
+WARNING: [Synth 8-3332] Sequential element (local_id/heap_instance/s2_reg[5]) is unused and will be removed from module Computer.
+WARNING: [Synth 8-3332] Sequential element (local_id/heap_instance/s2_reg[4]) is unused and will be removed from module Computer.
+WARNING: [Synth 8-3332] Sequential element (local_id/heap_instance/s2_reg[3]) is unused and will be removed from module Computer.
+WARNING: [Synth 8-3332] Sequential element (local_id/heap_instance/s2_reg[2]) is unused and will be removed from module Computer.
+WARNING: [Synth 8-3332] Sequential element (local_id/heap_instance/s2_reg[1]) is unused and will be removed from module Computer.
+WARNING: [Synth 8-3332] Sequential element (local_id/heap_instance/s2_reg[0]) is unused and will be removed from module Computer.
+WARNING: [Synth 8-3332] Sequential element (local_id/heap_instance/s3_reg[15]) is unused and will be removed from module Computer.
+WARNING: [Synth 8-3332] Sequential element (local_id/heap_instance/s3_reg[14]) is unused and will be removed from module Computer.
+WARNING: [Synth 8-3332] Sequential element (local_id/heap_instance/s3_reg[13]) is unused and will be removed from module Computer.
+WARNING: [Synth 8-3332] Sequential element (local_id/heap_instance/s3_reg[12]) is unused and will be removed from module Computer.
+WARNING: [Synth 8-3332] Sequential element (local_id/heap_instance/s3_reg[11]) is unused and will be removed from module Computer.
+WARNING: [Synth 8-3332] Sequential element (local_id/heap_instance/s3_reg[10]) is unused and will be removed from module Computer.
+WARNING: [Synth 8-3332] Sequential element (local_id/heap_instance/s3_reg[9]) is unused and will be removed from module Computer.
+WARNING: [Synth 8-3332] Sequential element (local_id/heap_instance/s3_reg[8]) is unused and will be removed from module Computer.
+WARNING: [Synth 8-3332] Sequential element (local_id/heap_instance/s3_reg[7]) is unused and will be removed from module Computer.
+WARNING: [Synth 8-3332] Sequential element (local_id/heap_instance/s3_reg[6]) is unused and will be removed from module Computer.
+WARNING: [Synth 8-3332] Sequential element (local_id/heap_instance/s3_reg[5]) is unused and will be removed from module Computer.
+WARNING: [Synth 8-3332] Sequential element (local_id/heap_instance/s3_reg[4]) is unused and will be removed from module Computer.
+WARNING: [Synth 8-3332] Sequential element (local_id/heap_instance/s3_reg[3]) is unused and will be removed from module Computer.
+WARNING: [Synth 8-3332] Sequential element (local_id/heap_instance/s3_reg[2]) is unused and will be removed from module Computer.
+WARNING: [Synth 8-3332] Sequential element (local_id/heap_instance/s3_reg[1]) is unused and will be removed from module Computer.
+WARNING: [Synth 8-3332] Sequential element (local_id/heap_instance/s3_reg[0]) is unused and will be removed from module Computer.
+WARNING: [Synth 8-3332] Sequential element (local_id/heap_instance/s4_reg[15]) is unused and will be removed from module Computer.
+WARNING: [Synth 8-3332] Sequential element (local_id/heap_instance/s4_reg[14]) is unused and will be removed from module Computer.
+WARNING: [Synth 8-3332] Sequential element (local_id/heap_instance/s4_reg[13]) is unused and will be removed from module Computer.
+WARNING: [Synth 8-3332] Sequential element (local_id/heap_instance/s4_reg[12]) is unused and will be removed from module Computer.
+WARNING: [Synth 8-3332] Sequential element (local_id/heap_instance/s4_reg[11]) is unused and will be removed from module Computer.
+WARNING: [Synth 8-3332] Sequential element (local_id/heap_instance/s4_reg[10]) is unused and will be removed from module Computer.
+WARNING: [Synth 8-3332] Sequential element (local_id/heap_instance/s4_reg[9]) is unused and will be removed from module Computer.
+WARNING: [Synth 8-3332] Sequential element (local_id/heap_instance/s4_reg[8]) is unused and will be removed from module Computer.
+WARNING: [Synth 8-3332] Sequential element (local_id/heap_instance/s4_reg[7]) is unused and will be removed from module Computer.
+WARNING: [Synth 8-3332] Sequential element (local_id/heap_instance/s4_reg[6]) is unused and will be removed from module Computer.
+WARNING: [Synth 8-3332] Sequential element (local_id/heap_instance/s4_reg[5]) is unused and will be removed from module Computer.
+WARNING: [Synth 8-3332] Sequential element (local_id/heap_instance/s4_reg[4]) is unused and will be removed from module Computer.
+WARNING: [Synth 8-3332] Sequential element (local_id/heap_instance/s4_reg[3]) is unused and will be removed from module Computer.
+WARNING: [Synth 8-3332] Sequential element (local_id/heap_instance/s4_reg[2]) is unused and will be removed from module Computer.
+WARNING: [Synth 8-3332] Sequential element (local_id/heap_instance/s4_reg[1]) is unused and will be removed from module Computer.
+WARNING: [Synth 8-3332] Sequential element (local_id/heap_instance/s4_reg[0]) is unused and will be removed from module Computer.
+WARNING: [Synth 8-3332] Sequential element (local_id/heap_instance/s5_reg[15]) is unused and will be removed from module Computer.
+WARNING: [Synth 8-3332] Sequential element (local_id/heap_instance/s5_reg[14]) is unused and will be removed from module Computer.
+WARNING: [Synth 8-3332] Sequential element (local_id/heap_instance/s5_reg[13]) is unused and will be removed from module Computer.
+WARNING: [Synth 8-3332] Sequential element (local_id/heap_instance/s5_reg[12]) is unused and will be removed from module Computer.
+WARNING: [Synth 8-3332] Sequential element (local_id/heap_instance/s5_reg[11]) is unused and will be removed from module Computer.
+WARNING: [Synth 8-3332] Sequential element (local_id/heap_instance/s5_reg[10]) is unused and will be removed from module Computer.
+WARNING: [Synth 8-3332] Sequential element (local_id/heap_instance/s5_reg[9]) is unused and will be removed from module Computer.
+WARNING: [Synth 8-3332] Sequential element (local_id/heap_instance/s5_reg[8]) is unused and will be removed from module Computer.
+WARNING: [Synth 8-3332] Sequential element (local_id/heap_instance/s5_reg[7]) is unused and will be removed from module Computer.
+WARNING: [Synth 8-3332] Sequential element (local_id/heap_instance/s5_reg[6]) is unused and will be removed from module Computer.
+WARNING: [Synth 8-3332] Sequential element (local_id/heap_instance/s5_reg[5]) is unused and will be removed from module Computer.
+WARNING: [Synth 8-3332] Sequential element (local_id/heap_instance/s5_reg[4]) is unused and will be removed from module Computer.
+WARNING: [Synth 8-3332] Sequential element (local_id/heap_instance/s5_reg[3]) is unused and will be removed from module Computer.
+WARNING: [Synth 8-3332] Sequential element (local_id/heap_instance/s5_reg[2]) is unused and will be removed from module Computer.
+WARNING: [Synth 8-3332] Sequential element (local_id/heap_instance/s5_reg[1]) is unused and will be removed from module Computer.
+WARNING: [Synth 8-3332] Sequential element (local_id/heap_instance/s5_reg[0]) is unused and will be removed from module Computer.
+WARNING: [Synth 8-3332] Sequential element (local_id/heap_instance/s6_reg[15]) is unused and will be removed from module Computer.
+WARNING: [Synth 8-3332] Sequential element (local_id/heap_instance/s6_reg[14]) is unused and will be removed from module Computer.
+WARNING: [Synth 8-3332] Sequential element (local_id/heap_instance/s6_reg[13]) is unused and will be removed from module Computer.
+WARNING: [Synth 8-3332] Sequential element (local_id/heap_instance/s6_reg[12]) is unused and will be removed from module Computer.
+WARNING: [Synth 8-3332] Sequential element (local_id/heap_instance/s6_reg[11]) is unused and will be removed from module Computer.
+WARNING: [Synth 8-3332] Sequential element (local_id/heap_instance/s6_reg[10]) is unused and will be removed from module Computer.
+WARNING: [Synth 8-3332] Sequential element (local_id/heap_instance/s6_reg[9]) is unused and will be removed from module Computer.
+WARNING: [Synth 8-3332] Sequential element (local_id/heap_instance/s6_reg[8]) is unused and will be removed from module Computer.
+WARNING: [Synth 8-3332] Sequential element (local_id/heap_instance/s6_reg[7]) is unused and will be removed from module Computer.
+WARNING: [Synth 8-3332] Sequential element (local_id/heap_instance/s6_reg[6]) is unused and will be removed from module Computer.
+WARNING: [Synth 8-3332] Sequential element (local_id/heap_instance/s6_reg[5]) is unused and will be removed from module Computer.
+WARNING: [Synth 8-3332] Sequential element (local_id/heap_instance/s6_reg[4]) is unused and will be removed from module Computer.
+WARNING: [Synth 8-3332] Sequential element (local_id/heap_instance/s6_reg[3]) is unused and will be removed from module Computer.
+WARNING: [Synth 8-3332] Sequential element (local_id/heap_instance/s6_reg[2]) is unused and will be removed from module Computer.
+WARNING: [Synth 8-3332] Sequential element (local_id/heap_instance/s6_reg[1]) is unused and will be removed from module Computer.
+WARNING: [Synth 8-3332] Sequential element (local_id/heap_instance/s6_reg[0]) is unused and will be removed from module Computer.
+WARNING: [Synth 8-3332] Sequential element (local_id/heap_instance/s7_reg[15]) is unused and will be removed from module Computer.
+INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:27 ; elapsed = 00:00:33 . Memory (MB): peak = 720.957 ; gain = 435.414
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:43 ; elapsed = 00:00:49 . Memory (MB): peak = 720.957 ; gain = 435.414
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:49 ; elapsed = 00:00:55 . Memory (MB): peak = 794.820 ; gain = 509.277
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:49 ; elapsed = 00:00:56 . Memory (MB): peak = 794.820 ; gain = 509.277
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5365] Flop local_mem/WillWrite_reg is being inverted and renamed to local_mem/WillWrite_reg_inv.
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:50 ; elapsed = 00:00:57 . Memory (MB): peak = 794.820 ; gain = 509.277
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:50 ; elapsed = 00:00:57 . Memory (MB): peak = 794.820 ; gain = 509.277
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:50 ; elapsed = 00:00:57 . Memory (MB): peak = 794.820 ; gain = 509.277
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:50 ; elapsed = 00:00:57 . Memory (MB): peak = 794.820 ; gain = 509.277
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:50 ; elapsed = 00:00:57 . Memory (MB): peak = 794.820 ; gain = 509.277
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:50 ; elapsed = 00:00:57 . Memory (MB): peak = 794.820 ; gain = 509.277
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+--------------+----------+
+|      |BlackBox name |Instances |
++------+--------------+----------+
+|1     |char_mem      |         1|
+|2     |fifo_mem      |         1|
++------+--------------+----------+
+
+Report Cell Usage: 
++------+--------------+------+
+|      |Cell          |Count |
++------+--------------+------+
+|1     |char_mem_bbox |     1|
+|2     |fifo_mem_bbox |     1|
+|3     |BUFG          |     2|
+|4     |CARRY4        |    24|
+|5     |LUT1          |    57|
+|6     |LUT2          |    87|
+|7     |LUT3          |   127|
+|8     |LUT4          |    94|
+|9     |LUT5          |   119|
+|10    |LUT6          |   248|
+|11    |FDCE          |   269|
+|12    |FDPE          |    23|
+|13    |FDRE          |   136|
+|14    |LD            |    16|
+|15    |LDC           |    16|
+|16    |IBUF          |     5|
+|17    |IOBUF         |    40|
+|18    |OBUF          |   100|
++------+--------------+------+
+
+Report Instance Areas: 
++------+-------------------+-----------------+------+
+|      |Instance           |Module           |Cells |
++------+-------------------+-----------------+------+
+|1     |top                |                 |  1372|
+|2     |  local_exe        |exe              |   465|
+|3     |    adder_instance |adder            |    57|
+|4     |    alu_instance   |alu              |    51|
+|5     |  local_exe_mem    |exe_mem          |    69|
+|6     |  local_forward    |forward          |    16|
+|7     |  local_id         |id               |   188|
+|8     |    heap_instance  |heap             |    48|
+|9     |  local_mem        |MemoryController |   366|
+|10    |    flash_local    |Flash            |    48|
+|11    |  local_mem_wb     |mem_wb           |    17|
+|12    |  local_pc_reg     |PCRegister       |    32|
+|13    |  vga              |VGA_play         |    70|
++------+-------------------+-----------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:50 ; elapsed = 00:00:57 . Memory (MB): peak = 794.820 ; gain = 509.277
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 278 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:36 ; elapsed = 00:00:45 . Memory (MB): peak = 794.820 ; gain = 190.828
+Synthesis Optimization Complete : Time (s): cpu = 00:00:51 ; elapsed = 00:00:57 . Memory (MB): peak = 794.820 ; gain = 509.277
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 101 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 72 instances were transformed.
+  IOBUF => IOBUF (IBUF, OBUFT): 40 instances
+  LD => LDCE: 16 instances
+  LDC => LDCE: 16 instances
+
+214 Infos, 340 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:53 ; elapsed = 00:01:02 . Memory (MB): peak = 794.820 ; gain = 515.855
+INFO: [Common 17-1381] The checkpoint 'E:/GitHub/Computer/Computer.runs/synth_1/Computer.dcp' has been generated.
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.029 . Memory (MB): peak = 794.820 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Tue Nov 28 19:37:15 2017...

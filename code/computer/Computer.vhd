@@ -1,13 +1,41 @@
+----------------------------------------------------------------------------------
+-- Company: 
+-- Engineer: 
+-- 
+-- Create Date: 2017/11/27 22:24:22
+-- Design Name: 
+-- Module Name: Computer - Behavioral
+-- Project Name: 
+-- Target Devices: 
+-- Tool Versions: 
+-- Description: 
+-- 
+-- Dependencies: 
+-- 
+-- Revision:
+-- Revision 0.01 - File Created
+-- Additional Comments:
+-- 
+----------------------------------------------------------------------------------
+
+
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.STD_LOGIC_ARITH.ALL;
 use IEEE.STD_LOGIC_UNSIGNED.ALL;
 
-use work.utils.all;
+-- Uncomment the following library declaration if using
+-- arithmetic functions with Signed or Unsigned values
+--use IEEE.NUMERIC_STD.ALL;
+
+-- Uncomment the following library declaration if instantiating
+-- any Xilinx leaf cells in this code.
+--library UNISIM;
+--use UNISIM.VComponents.all;
 
 entity Computer is
     port (
-        clk_in,rst: in std_logic
+        clk_in,rst: in std_logic;
 
         -- vga port
         R: out std_logic_vector(2 downto 0) := "000";
@@ -119,6 +147,26 @@ architecture Computer_beh of Computer is
     --        flash_data : inout STD_LOGIC_VECTOR( 15 downto 0 ) --flash输出信号
     --        );
     --end component IRMemory;
+   component  VGA_play is
+        Port(
+            -- common port
+            CLK_0: in std_logic; -- must 50M
+            clkout: out std_logic; -- used to sync
+            reset: in std_logic;
+            
+            -- vga port
+            R: out std_logic_vector(2 downto 0) := "000";
+            G: out std_logic_vector(2 downto 0) := "000";
+            B: out std_logic_vector(2 downto 0) := "000";
+            Hs: out std_logic := '0';
+            Vs: out std_logic := '0';
+            
+            -- fifo memory
+            wctrl: in std_logic_vector(0 downto 0); -- 1 is write
+            waddr: in std_logic_vector(10 downto 0);
+            wdata : in std_logic_vector(7 downto 0)
+        );
+    end component VGA_play;
 
     component MemoryController is
     Port(
@@ -216,7 +264,8 @@ architecture Computer_beh of Computer is
 
     component exe is
         port(
-        clock, reset, pause: in std_logic;
+        clock: in std_logic;
+        reset : in std_logic;
         from_wb_memory_or_alu_out: in std_logic_vector(1 downto 0);
         wb_memory_or_alu_out: out std_logic_vector(1 downto 0);
         exe_select_goal: in std_logic_vector(2 downto 0);
@@ -272,7 +321,7 @@ architecture Computer_beh of Computer is
 
     component exe_mem is
         port(
-            clk_cpu : in std_logic;
+            cpuclk : in std_logic;
             rst : in std_logic;
             aluout_exe : in std_logic_vector(15 downto 0);
             memwrite_id_exe :in std_logic;
@@ -320,7 +369,7 @@ architecture Computer_beh of Computer is
         port(
             clk : in std_logic;
             reset : in std_logic;
-            memtoreg_in:in std_logic;
+            memtoreg_in:in std_logic_vector(1 downto 0);
             regwrite_in:in std_logic;
             aluout_in :in std_logic_vector(15 downto 0);
             memout_in :in std_logic_vector(15 downto 0);
@@ -373,13 +422,7 @@ architecture Computer_beh of Computer is
     );
     end component  hazard;
 
-    component clock is
-        port(
-            clk_in: in std_logic;
-            clk_cpu: out std_logic
-            );
-    end component clock;
-
+  
     component RestControler is
     port(
 
@@ -390,9 +433,9 @@ architecture Computer_beh of Computer is
     end component RestControler;
 
 -----clock---
-signal clk_cpu:std_logic;
+
 signal cpuclk:std_logic;
-signal clk_mem:std_logic;
+
 signal s_pc_mux:std_logic_vector(15 downto 0);
 signal s_pc_add_address:std_logic_vector(15 downto 0);
 signal s_pc_reg:std_logic_vector(15 downto 0);
@@ -445,7 +488,7 @@ signal  s_exe_memdata_out:std_logic_vector(15 downto 0);
 signal  s_exe_memwrite_out:std_logic;
 signal  s_exe_memread_out:std_logic;
 signal  s_exe_memtoreg_out:std_logic_vector(1 downto 0);
-signal  s_exe_rd_out:std_logic_vector(3 downto 0)
+signal  s_exe_rd_out:std_logic_vector(3 downto 0);
 
 
 signal s_memout_mem: std_logic_vector(15 downto 0);
@@ -464,17 +507,11 @@ signal VGA_write : std_logic_vector(0 downto 0);
 signal s_from_forward_datax:std_logic;
 signal s_from_forward_datay:std_logic;
 signal s_from_forward_address:std_logic;
-signal s_forward_data:std_logic_vector(15 downto 0)
+signal s_forward_data:std_logic_vector(15 downto 0);
 
 
 begin
     
-    --clk_cpu
-    local_clock: clock port map(
-        clk_in => clk_in,
-        clk_cpu => clk_cpu,
-        clk_mem => clk_mem
-        );
 
     local_pc_adder: PCAdder port map(
         adderIn => s_pc_reg,
@@ -491,26 +528,26 @@ begin
 
     local_pc_reg:  PCRegister port map(   
             rst => s_reset_out,
-            clk => clk_cpu,
+            clk => cpuclk,
             PCHold => s_bubble,
             PCIn => s_pc_mux,
             PCOut => s_pc_reg
         );
 
-    local_rset: RestControler port map(
+--    local_rset: RestControler port map(
 
-        reset_in => rst,
-        load_finsh => s_flash_load_finsh;
-        reset_out => s_reset_out
-        );
+--        reset_in => rst,
+--        load_finsh => s_flash_load_finsh,
+--        reset_out => s_reset_out
+--        );
 
 
     local_id: id port map(
-        clock => clk_cpu,
+        clock => cpuclk,
         reset => rst,
         pause => s_pause, 
-        flush => 
-        jump => 
+        flush => s_exe_shouldJump,
+        jump => s_exe_shouldJump,
         bubble => s_bubble,
         instruction => s_instruction,
         fromPC => s_pc_reg,
@@ -551,10 +588,10 @@ begin
     );
     
     local_exe: exe port map(
-        clock => clk_cpu,
+        clock => cpuclk,
         reset => rst,
         --pause: in std_logic;
-        from_wb_memory_or_alu_out => s_id_wb_memory_or_alu_out;
+        from_wb_memory_or_alu_out => s_id_wb_memory_or_alu_out,
         wb_memory_or_alu_out => s_exe_wb_memory_or_alu_out,
         exe_select_goal => s_id_exe_select_goal,
         exe_alu_op => s_id_exe_alu_op,
@@ -602,8 +639,8 @@ begin
     );
    
     local_exe_mem: exe_mem port map(
-        clk_cpu => clk_cpu,
-        rst => rst
+        cpuclk => cpuclk,
+        rst => rst,
         aluout_exe => s_exe_alu_out,
         memwrite_id_exe => s_exe_memoryWrite,
         memread_id_exe => s_exe_memoryRead,
@@ -616,7 +653,7 @@ begin
         memdata_out => s_exe_memdata_out,
         memwrite_out => s_exe_memwrite_out,
         memread_out => s_exe_memread_out,
-        memtoreg_out => s_exe_memtoreg_out
+        memtoreg_out => s_exe_memtoreg_out,
         regwrite_out => s_exe_regwrite_out,
         aluout_out => s_exe_aluout_out,
         rd_out => s_exe_rd_out
@@ -695,7 +732,7 @@ begin
     );
 
     local_mem_wb: mem_wb port map(
-            clk => clk_cpu,
+            clk => cpuclk,
             reset => rst,
             memtoreg_in => s_exe_memtoreg_out,
             regwrite_in => s_exe_regwrite_out,
@@ -776,20 +813,6 @@ begin
     --        flash_addr : out STD_LOGIC_VECTOR( 22 downto 1 ) := "0000000000000000000000"; --flash内存地址
     --        flash_data : inout STD_LOGIC_VECTOR( 15 downto 0 ) --flash输出信号
     --        );
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 end architecture ; -- Computer_beh

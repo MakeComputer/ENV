@@ -1,0 +1,26 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "E:/GitHub/Computer/Computer.sim/sim_1/impl/func/id_func_impl.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity Flash
+INFO: [VRFC 10-307] analyzing entity alu
+INFO: [VRFC 10-307] analyzing entity exe_mem
+INFO: [VRFC 10-307] analyzing entity forward
+INFO: [VRFC 10-307] analyzing entity heap
+INFO: [VRFC 10-307] analyzing entity mem_wb
+INFO: [VRFC 10-307] analyzing entity char_mem_blk_mem_gen_prim_wrapper
+INFO: [VRFC 10-307] analyzing entity fifo_mem_blk_mem_gen_prim_wrapper
+INFO: [VRFC 10-307] analyzing entity MemoryController
+INFO: [VRFC 10-307] analyzing entity exe
+INFO: [VRFC 10-307] analyzing entity id
+INFO: [VRFC 10-307] analyzing entity char_mem_blk_mem_gen_prim_width
+INFO: [VRFC 10-307] analyzing entity fifo_mem_blk_mem_gen_prim_width
+INFO: [VRFC 10-307] analyzing entity char_mem_blk_mem_gen_generic_cstr
+INFO: [VRFC 10-307] analyzing entity fifo_mem_blk_mem_gen_generic_cstr
+INFO: [VRFC 10-307] analyzing entity char_mem_blk_mem_gen_top
+INFO: [VRFC 10-307] analyzing entity fifo_mem_blk_mem_gen_top
+INFO: [VRFC 10-307] analyzing entity char_mem_blk_mem_gen_v8_3_6_synth
+INFO: [VRFC 10-307] analyzing entity fifo_mem_blk_mem_gen_v8_3_6_synth
+INFO: [VRFC 10-307] analyzing entity char_mem_blk_mem_gen_v8_3_6
+INFO: [VRFC 10-307] analyzing entity fifo_mem_blk_mem_gen_v8_3_6
+INFO: [VRFC 10-307] analyzing entity char_mem
+INFO: [VRFC 10-307] analyzing entity fifo_mem
+INFO: [VRFC 10-307] analyzing entity VGA_play
+INFO: [VRFC 10-307] analyzing entity Computer

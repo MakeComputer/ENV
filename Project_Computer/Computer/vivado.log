@@ -1,0 +1,419 @@
+#-----------------------------------------------------------
+# Vivado v2017.1 (64-bit)
+# SW Build 1846317 on Fri Apr 14 18:55:03 MDT 2017
+# IP Build 1846188 on Fri Apr 14 20:52:08 MDT 2017
+# Start of session at: Tue Nov 28 07:37:08 2017
+# Process ID: 7288
+# Current directory: E:/GitHub/Computer
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent11740 E:\GitHub\Computer\Computer.xpr
+# Log file: E:/GitHub/Computer/vivado.log
+# Journal file: E:/GitHub/Computer\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project E:/GitHub/Computer/Computer.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'E:/Vivado/Vivado/2017.1/data/ip'.
+open_project: Time (s): cpu = 00:00:25 ; elapsed = 00:00:32 . Memory (MB): peak = 738.156 ; gain = 82.770
+launch_runs synth_1 -jobs 2
+[Tue Nov 28 07:45:52 2017] Launched synth_1...
+Run output will be captured here: E:/GitHub/Computer/Computer.runs/synth_1/runme.log
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+[Tue Nov 28 07:55:51 2017] Launched synth_1...
+Run output will be captured here: E:/GitHub/Computer/Computer.runs/synth_1/runme.log
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+[Tue Nov 28 07:57:16 2017] Launched synth_1...
+Run output will be captured here: E:/GitHub/Computer/Computer.runs/synth_1/runme.log
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+[Tue Nov 28 07:59:35 2017] Launched synth_1...
+Run output will be captured here: E:/GitHub/Computer/Computer.runs/synth_1/runme.log
+INFO: [Device 21-403] Loading part xc7a100tfgg676-2L
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+[Tue Nov 28 14:14:29 2017] Launched synth_1...
+Run output will be captured here: E:/GitHub/Computer/Computer.runs/synth_1/runme.log
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+[Tue Nov 28 14:15:11 2017] Launched synth_1...
+Run output will be captured here: E:/GitHub/Computer/Computer.runs/synth_1/runme.log
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+[Tue Nov 28 14:19:11 2017] Launched synth_1...
+Run output will be captured here: E:/GitHub/Computer/Computer.runs/synth_1/runme.log
+remove_files  E:/GitHub/Computer/Computer.srcs/sources_1/new/DataMemory.vhd
+file delete -force E:/GitHub/Computer/Computer.srcs/sources_1/new/DataMemory.vhd
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+[Tue Nov 28 14:26:03 2017] Launched synth_1...
+Run output will be captured here: E:/GitHub/Computer/Computer.runs/synth_1/runme.log
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+[Tue Nov 28 14:31:15 2017] Launched synth_1...
+Run output will be captured here: E:/GitHub/Computer/Computer.runs/synth_1/runme.log
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+[Tue Nov 28 14:51:25 2017] Launched synth_1...
+Run output will be captured here: E:/GitHub/Computer/Computer.runs/synth_1/runme.log
+launch_runs impl_1 -jobs 2
+[Tue Nov 28 14:52:41 2017] Launched impl_1...
+Run output will be captured here: E:/GitHub/Computer/Computer.runs/impl_1/runme.log
+open_run impl_1
+INFO: [Netlist 29-17] Analyzing 59 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2017.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [E:/GitHub/Computer/.Xil/Vivado-7288-samsung/dcp45/Computer.xdc]
+Finished Parsing XDC File [E:/GitHub/Computer/.Xil/Vivado-7288-samsung/dcp45/Computer.xdc]
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 1064.570 ; gain = 0.000
+Restored from archive | CPU: 1.000000 secs | Memory: 0.000000 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 1064.570 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 40 instances were transformed.
+  IOBUF => IOBUF (IBUF, OBUFT): 40 instances
+
+open_run: Time (s): cpu = 00:00:20 ; elapsed = 00:00:25 . Memory (MB): peak = 1218.113 ; gain = 188.309
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+[Tue Nov 28 15:55:48 2017] Launched synth_1...
+Run output will be captured here: E:/GitHub/Computer/Computer.runs/synth_1/runme.log
+[Tue Nov 28 15:55:48 2017] Launched impl_1...
+Run output will be captured here: E:/GitHub/Computer/Computer.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+[Tue Nov 28 16:28:09 2017] Launched synth_1...
+Run output will be captured here: E:/GitHub/Computer/Computer.runs/synth_1/runme.log
+[Tue Nov 28 16:28:09 2017] Launched impl_1...
+Run output will be captured here: E:/GitHub/Computer/Computer.runs/impl_1/runme.log
+close_design
+launch_simulation -mode post-implementation -type functional
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [Netlist 29-17] Analyzing 59 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2017.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [E:/GitHub/Computer/.Xil/Vivado-7288-samsung/dcp55/Computer.xdc]
+Finished Parsing XDC File [E:/GitHub/Computer/.Xil/Vivado-7288-samsung/dcp55/Computer.xdc]
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.535 . Memory (MB): peak = 1676.148 ; gain = 0.000
+Restored from archive | CPU: 1.000000 secs | Memory: 0.000000 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.535 . Memory (MB): peak = 1676.148 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 40 instances were transformed.
+  IOBUF => IOBUF (IBUF, OBUFT): 40 instances
+
+open_run: Time (s): cpu = 00:00:10 ; elapsed = 00:00:06 . Memory (MB): peak = 1683.441 ; gain = 7.293
+INFO: [SIM-utils-31] Writing simulation netlist file for design 'impl_1'...
+INFO: [SIM-utils-33] write_vhdl -mode funcsim -nolib -force -file "E:/GitHub/Computer/Computer.sim/sim_1/impl/func/id_func_impl.vhd"
+INFO: [SIM-utils-36] Netlist generated:E:/GitHub/Computer/Computer.sim/sim_1/impl/func/id_func_impl.vhd
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'E:/Vivado/Vivado/2017.1/data/xsim/ip/xsim_ip.ini' copied to run dir:'E:/GitHub/Computer/Computer.sim/sim_1/impl/func'
+INFO: [SIM-utils-54] Inspecting design source files for 'id' in fileset 'sim_1'...
+WARNING: [Vivado 12-818] No files matched '*'
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/GitHub/Computer/Computer.sim/sim_1/impl/func'
+"xvhdl -m64 --relax -prj id_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "E:/GitHub/Computer/Computer.sim/sim_1/impl/func/id_func_impl.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity Flash
+INFO: [VRFC 10-307] analyzing entity alu
+INFO: [VRFC 10-307] analyzing entity exe_mem
+INFO: [VRFC 10-307] analyzing entity forward
+INFO: [VRFC 10-307] analyzing entity heap
+INFO: [VRFC 10-307] analyzing entity mem_wb
+INFO: [VRFC 10-307] analyzing entity char_mem_blk_mem_gen_prim_wrapper
+INFO: [VRFC 10-307] analyzing entity fifo_mem_blk_mem_gen_prim_wrapper
+INFO: [VRFC 10-307] analyzing entity MemoryController
+INFO: [VRFC 10-307] analyzing entity exe
+INFO: [VRFC 10-307] analyzing entity id
+INFO: [VRFC 10-307] analyzing entity char_mem_blk_mem_gen_prim_width
+INFO: [VRFC 10-307] analyzing entity fifo_mem_blk_mem_gen_prim_width
+INFO: [VRFC 10-307] analyzing entity char_mem_blk_mem_gen_generic_cstr
+INFO: [VRFC 10-307] analyzing entity fifo_mem_blk_mem_gen_generic_cstr
+INFO: [VRFC 10-307] analyzing entity char_mem_blk_mem_gen_top
+INFO: [VRFC 10-307] analyzing entity fifo_mem_blk_mem_gen_top
+INFO: [VRFC 10-307] analyzing entity char_mem_blk_mem_gen_v8_3_6_synth
+INFO: [VRFC 10-307] analyzing entity fifo_mem_blk_mem_gen_v8_3_6_synth
+INFO: [VRFC 10-307] analyzing entity char_mem_blk_mem_gen_v8_3_6
+INFO: [VRFC 10-307] analyzing entity fifo_mem_blk_mem_gen_v8_3_6
+INFO: [VRFC 10-307] analyzing entity char_mem
+INFO: [VRFC 10-307] analyzing entity fifo_mem
+INFO: [VRFC 10-307] analyzing entity VGA_play
+INFO: [VRFC 10-307] analyzing entity Computer
+INFO: [USF-XSim-69] 'compile' step finished in '4' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/GitHub/Computer/Computer.sim/sim_1/impl/func'
+Vivado Simulator 2017.1
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: E:/Vivado/Vivado/2017.1/bin/unwrapped/win64.o/xelab.exe -wto dc5e449bc45641f2b83d8a92d1182b6b --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot id_func_impl xil_defaultlib.id -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package unisim.vcomponents
+Compiling package ieee.vital_timing
+Compiling package ieee.vital_primitives
+Compiling package unisim.vpkg
+Compiling package ieee.numeric_std
+Compiling architecture lut6_v of entity unisim.LUT6 [\LUT6(init="11111111010101010101...]
+Compiling architecture lut6_v of entity unisim.LUT6 [\LUT6(init="01000000000000000101...]
+Compiling architecture lut6_v of entity unisim.LUT6 [\LUT6(init="11111111111111111111...]
+Compiling architecture lut6_v of entity unisim.LUT6 [\LUT6(init="11111111111111110100...]
+Compiling architecture lut6_v of entity unisim.LUT6 [\LUT6(init="00000000000000000000...]
+Compiling architecture lut6_v of entity unisim.LUT6 [\LUT6(init="00000000000000000000...]
+Compiling architecture lut4_v of entity unisim.LUT4 [\LUT4(init="1111111111111101")(0...]
+Compiling architecture lut2_v of entity unisim.LUT2 [\LUT2(init="0010")(0,3)\]
+Compiling architecture lut5_v of entity unisim.LUT5 [\LUT5(init="00000000000100000000...]
+Compiling architecture lut3_v of entity unisim.LUT3 [\LUT3(init="00000100")(0,7)\]
+Compiling architecture lut5_v of entity unisim.LUT5 [\LUT5(init="00000000010000000000...]
+Compiling architecture lut4_v of entity unisim.LUT4 [\LUT4(init="1111111011111111")(0...]
+Compiling architecture lut5_v of entity unisim.LUT5 [\LUT5(init="11111111111111111111...]
+Compiling architecture lut2_v of entity unisim.LUT2 [\LUT2(init="1110")(0,3)\]
+Compiling architecture lut5_v of entity unisim.LUT5 [\LUT5(init="00000000000000000000...]
+Compiling architecture lut6_v of entity unisim.LUT6 [\LUT6(init="00000000000000000000...]
+Compiling architecture lut4_v of entity unisim.LUT4 [\LUT4(init="0000000100000000")(0...]
+Compiling architecture lut6_v of entity unisim.LUT6 [\LUT6(init="00000000000011100000...]
+Compiling architecture lut6_v of entity unisim.LUT6 [\LUT6(init="11111110111111111111...]
+Compiling architecture lut4_v of entity unisim.LUT4 [\LUT4(init="1111111111111011")(0...]
+Compiling architecture lut4_v of entity unisim.LUT4 [\LUT4(init="1101000011111111")(0...]
+Compiling architecture fdce_v of entity unisim.FDCE [\FDCE(is_c_inverted='1')\]
+Compiling architecture lut4_v of entity unisim.LUT4 [\LUT4(init="0000000000000010")(0...]
+Compiling architecture structure of entity xil_defaultlib.heap [heap_default]
+Compiling architecture lut5_v of entity unisim.LUT5 [\LUT5(init="00000000000000000000...]
+Compiling architecture lut6_v of entity unisim.LUT6 [\LUT6(init="00000000100000000000...]
+Compiling architecture lut6_v of entity unisim.LUT6 [\LUT6(init="11111111111111111111...]
+Compiling architecture lut6_v of entity unisim.LUT6 [\LUT6(init="00001010100000000000...]
+Compiling architecture lut6_v of entity unisim.LUT6 [\LUT6(init="00000000000000000000...]
+Compiling architecture lut5_v of entity unisim.LUT5 [\LUT5(init="11001100110111011100...]
+Compiling architecture lut6_v of entity unisim.LUT6 [\LUT6(init="11111111111111111111...]
+Compiling architecture lut6_v of entity unisim.LUT6 [\LUT6(init="10111010000000001010...]
+Compiling architecture lut5_v of entity unisim.LUT5 [\LUT5(init="11111111111111101111...]
+Compiling architecture lut5_v of entity unisim.LUT5 [\LUT5(init="00010000000000000000...]
+Compiling architecture lut6_v of entity unisim.LUT6 [\LUT6(init="11101110111011101110...]
+Compiling architecture lut6_v of entity unisim.LUT6 [\LUT6(init="00000000000000000000...]
+Compiling architecture lut6_v of entity unisim.LUT6 [\LUT6(init="00000001000000000000...]
+Compiling architecture lut4_v of entity unisim.LUT4 [\LUT4(init="1111111111101111")(0...]
+Compiling architecture lut3_v of entity unisim.LUT3 [\LUT3(init="11011111")(0,7)\]
+Compiling architecture lut6_v of entity unisim.LUT6 [\LUT6(init="11111111111111111111...]
+Compiling architecture lut6_v of entity unisim.LUT6 [\LUT6(init="00000000000000000000...]
+Compiling architecture lut4_v of entity unisim.LUT4 [\LUT4(init="1111111101111111")(0...]
+Compiling architecture lut6_v of entity unisim.LUT6 [\LUT6(init="00000000000000000000...]
+Compiling architecture lut5_v of entity unisim.LUT5 [\LUT5(init="11111111111011111111...]
+Compiling architecture lut3_v of entity unisim.LUT3 [\LUT3(init="00000001")(0,7)\]
+Compiling architecture lut6_v of entity unisim.LUT6 [\LUT6(init="11111111111111111111...]
+Compiling architecture lut6_v of entity unisim.LUT6 [\LUT6(init="11111111111111111111...]
+Compiling architecture lut6_v of entity unisim.LUT6 [\LUT6(init="00000000111111111111...]
+Compiling architecture lut6_v of entity unisim.LUT6 [\LUT6(init="00000000000000000000...]
+Compiling architecture lut3_v of entity unisim.LUT3 [\LUT3(init="10001010")(0,7)\]
+Compiling architecture lut5_v of entity unisim.LUT5 [\LUT5(init="00000000000000000000...]
+Compiling architecture lut5_v of entity unisim.LUT5 [\LUT5(init="00000000000000000000...]
+Compiling architecture lut6_v of entity unisim.LUT6 [\LUT6(init="00000000000000000000...]
+Compiling architecture lut3_v of entity unisim.LUT3 [\LUT3(init="11101111")(0,7)\]
+Compiling architecture lut5_v of entity unisim.LUT5 [\LUT5(init="11111111111111111110...]
+Compiling architecture lut6_v of entity unisim.LUT6 [\LUT6(init="00000000000000000000...]
+Compiling architecture lut4_v of entity unisim.LUT4 [\LUT4(init="1111111111111000")(0...]
+Compiling architecture lut5_v of entity unisim.LUT5 [\LUT5(init="10101011101010101010...]
+Compiling architecture lut6_v of entity unisim.LUT6 [\LUT6(init="01000000000000001111...]
+Compiling architecture lut6_v of entity unisim.LUT6 [\LUT6(init="11111111111111111111...]
+Compiling architecture lut6_v of entity unisim.LUT6 [\LUT6(init="11111111111111110011...]
+Compiling architecture lut4_v of entity unisim.LUT4 [\LUT4(init="0000000000001000")(0...]
+Compiling architecture lut6_v of entity unisim.LUT6 [\LUT6(init="01001111000000000000...]
+Compiling architecture lut6_v of entity unisim.LUT6 [\LUT6(init="11111111111111111111...]
+Compiling architecture lut6_v of entity unisim.LUT6 [\LUT6(init="11111111111111111111...]
+Compiling architecture lut5_v of entity unisim.LUT5 [\LUT5(init="11111110111111101111...]
+Compiling architecture lut6_v of entity unisim.LUT6 [\LUT6(init="11101110111011101110...]
+Compiling architecture lut6_v of entity unisim.LUT6 [\LUT6(init="10000000100000000000...]
+Compiling architecture lut5_v of entity unisim.LUT5 [\LUT5(init="00000000000000000000...]
+Compiling architecture lut5_v of entity unisim.LUT5 [\LUT5(init="00000000000000001000...]
+Compiling architecture lut2_v of entity unisim.LUT2 [\LUT2(init="0001")(0,3)\]
+Compiling architecture lut3_v of entity unisim.LUT3 [\LUT3(init="00000010")(0,7)\]
+Compiling architecture lut6_v of entity unisim.LUT6 [\LUT6(init="11111111111111111111...]
+Compiling architecture lut6_v of entity unisim.LUT6 [\LUT6(init="00000000000000000000...]
+Compiling architecture lut5_v of entity unisim.LUT5 [\LUT5(init="00000000000000000000...]
+Compiling architecture lut6_v of entity unisim.LUT6 [\LUT6(init="11111111111111111111...]
+Compiling architecture lut3_v of entity unisim.LUT3 [\LUT3(init="11111110")(0,7)\]
+Compiling architecture lut4_v of entity unisim.LUT4 [\LUT4(init="1011111111111111")(0...]
+Compiling architecture lut6_v of entity unisim.LUT6 [\LUT6(init="00000000000000000000...]
+Compiling architecture fdce_v of entity unisim.FDCE [fdce_default]
+Compiling architecture lut3_v of entity unisim.LUT3 [\LUT3(init="10111000")(0,7)\]
+Compiling architecture lut3_v of entity unisim.LUT3 [\LUT3(init="10111010")(0,7)\]
+Compiling architecture lut6_v of entity unisim.LUT6 [\LUT6(init="00000000000000000000...]
+Compiling architecture lut5_v of entity unisim.LUT5 [\LUT5(init="00000000000000000110...]
+Compiling architecture lut6_v of entity unisim.LUT6 [\LUT6(init="00000000000000000000...]
+Compiling architecture lut4_v of entity unisim.LUT4 [\LUT4(init="1000100010111000")(0...]
+Compiling architecture lut6_v of entity unisim.LUT6 [\LUT6(init="11111111010111010101...]
+Compiling architecture lut6_v of entity unisim.LUT6 [\LUT6(init="10111010101010101000...]
+Compiling architecture lut6_v of entity unisim.LUT6 [\LUT6(init="10111010101010101011...]
+Compiling architecture lut6_v of entity unisim.LUT6 [\LUT6(init="01010101010101010101...]
+Compiling architecture lut6_v of entity unisim.LUT6 [\LUT6(init="11111111111111111111...]
+Compiling architecture lut5_v of entity unisim.LUT5 [\LUT5(init="11111111111110111111...]
+Compiling architecture lut6_v of entity unisim.LUT6 [\LUT6(init="00000000000000000010...]
+Compiling architecture lut4_v of entity unisim.LUT4 [\LUT4(init="1111111111110010")(0...]
+Compiling architecture lut5_v of entity unisim.LUT5 [\LUT5(init="00000000001000100000...]
+Compiling architecture lut3_v of entity unisim.LUT3 [\LUT3(init="11100111")(0,7)\]
+Compiling architecture lut5_v of entity unisim.LUT5 [\LUT5(init="11111111111111111110...]
+Compiling architecture lut6_v of entity unisim.LUT6 [\LUT6(init="00000000000000000000...]
+Compiling architecture structure of entity xil_defaultlib.id
+Built simulation snapshot id_func_impl
+
+****** Webtalk v2017.1 (64-bit)
+  **** SW Build 1846317 on Fri Apr 14 18:55:03 MDT 2017
+  **** IP Build 1846188 on Fri Apr 14 20:52:08 MDT 2017
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+source E:/GitHub/Computer/Computer.sim/sim_1/impl/func/xsim.dir/id_func_impl/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Tue Nov 28 16:44:25 2017...
+run_program: Time (s): cpu = 00:00:01 ; elapsed = 00:00:17 . Memory (MB): peak = 1683.441 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '17' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'E:/GitHub/Computer/Computer.sim/sim_1/impl/func'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "id_func_impl -key {Post-Implementation:sim_1:Functional:id} -tclbatch {id.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2017.1
+Time resolution is 1 ps
+source id.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'id_func_impl' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:19 ; elapsed = 00:00:38 . Memory (MB): peak = 1691.891 ; gain = 15.742
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory E:/GitHub/Computer/Computer.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+[Tue Nov 28 16:59:05 2017] Launched synth_1...
+Run output will be captured here: E:/GitHub/Computer/Computer.runs/synth_1/runme.log
+[Tue Nov 28 16:59:05 2017] Launched impl_1...
+Run output will be captured here: E:/GitHub/Computer/Computer.runs/impl_1/runme.log
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory E:/GitHub/Computer/Computer.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+[Tue Nov 28 17:00:10 2017] Launched synth_1...
+Run output will be captured here: E:/GitHub/Computer/Computer.runs/synth_1/runme.log
+[Tue Nov 28 17:00:10 2017] Launched impl_1...
+Run output will be captured here: E:/GitHub/Computer/Computer.runs/impl_1/runme.log
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory E:/GitHub/Computer/Computer.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+[Tue Nov 28 17:06:30 2017] Launched synth_1...
+Run output will be captured here: E:/GitHub/Computer/Computer.runs/synth_1/runme.log
+[Tue Nov 28 17:06:30 2017] Launched impl_1...
+Run output will be captured here: E:/GitHub/Computer/Computer.runs/impl_1/runme.log
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory E:/GitHub/Computer/Computer.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+[Tue Nov 28 17:15:35 2017] Launched synth_1...
+Run output will be captured here: E:/GitHub/Computer/Computer.runs/synth_1/runme.log
+[Tue Nov 28 17:15:35 2017] Launched impl_1...
+Run output will be captured here: E:/GitHub/Computer/Computer.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:04 ; elapsed = 00:00:07 . Memory (MB): peak = 1696.160 ; gain = 0.000
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory E:/GitHub/Computer/Computer.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+[Tue Nov 28 17:27:37 2017] Launched synth_1...
+Run output will be captured here: E:/GitHub/Computer/Computer.runs/synth_1/runme.log
+[Tue Nov 28 17:27:37 2017] Launched impl_1...
+Run output will be captured here: E:/GitHub/Computer/Computer.runs/impl_1/runme.log
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory E:/GitHub/Computer/Computer.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+[Tue Nov 28 17:32:45 2017] Launched synth_1...
+Run output will be captured here: E:/GitHub/Computer/Computer.runs/synth_1/runme.log
+[Tue Nov 28 17:32:45 2017] Launched impl_1...
+Run output will be captured here: E:/GitHub/Computer/Computer.runs/impl_1/runme.log
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory E:/GitHub/Computer/Computer.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+[Tue Nov 28 17:41:48 2017] Launched synth_1...
+Run output will be captured here: E:/GitHub/Computer/Computer.runs/synth_1/runme.log
+[Tue Nov 28 17:41:49 2017] Launched impl_1...
+Run output will be captured here: E:/GitHub/Computer/Computer.runs/impl_1/runme.log
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory E:/GitHub/Computer/Computer.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+[Tue Nov 28 17:51:22 2017] Launched synth_1...
+Run output will be captured here: E:/GitHub/Computer/Computer.runs/synth_1/runme.log
+[Tue Nov 28 17:51:22 2017] Launched impl_1...
+Run output will be captured here: E:/GitHub/Computer/Computer.runs/impl_1/runme.log
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+reset_run impl_1 -prev_step 
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+[Tue Nov 28 19:14:11 2017] Launched impl_1...
+Run output will be captured here: E:/GitHub/Computer/Computer.runs/impl_1/runme.log
+reset_run impl_1 -prev_step 
+WARNING: [Vivado 12-1017] Problems encountered:
+1. PID not specified
+
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory E:/GitHub/Computer/Computer.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+[Tue Nov 28 19:14:52 2017] Launched synth_1...
+Run output will be captured here: E:/GitHub/Computer/Computer.runs/synth_1/runme.log
+[Tue Nov 28 19:14:52 2017] Launched impl_1...
+Run output will be captured here: E:/GitHub/Computer/Computer.runs/impl_1/runme.log
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory E:/GitHub/Computer/Computer.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+[Tue Nov 28 19:30:22 2017] Launched synth_1...
+Run output will be captured here: E:/GitHub/Computer/Computer.runs/synth_1/runme.log
+[Tue Nov 28 19:30:22 2017] Launched impl_1...
+Run output will be captured here: E:/GitHub/Computer/Computer.runs/impl_1/runme.log
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory E:/GitHub/Computer/Computer.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+[Tue Nov 28 19:35:59 2017] Launched synth_1...
+Run output will be captured here: E:/GitHub/Computer/Computer.runs/synth_1/runme.log
+[Tue Nov 28 19:35:59 2017] Launched impl_1...
+Run output will be captured here: E:/GitHub/Computer/Computer.runs/impl_1/runme.log
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+close_sim: Time (s): cpu = 00:00:02 ; elapsed = 00:00:11 . Memory (MB): peak = 1721.133 ; gain = 0.000
+exit
+INFO: [Common 17-206] Exiting Vivado at Tue Nov 28 20:03:04 2017...
