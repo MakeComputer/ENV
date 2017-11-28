@@ -14,7 +14,7 @@ end entity ; -- clock
 architecture arch of clock is
 
 	signal clk_1: STD_LOGIC;
-	signal clk_2: STD_LOGIC;
+	signal clk_1: STD_LOGIC;
 
 begin
 	clk_mem: process( clk_in )

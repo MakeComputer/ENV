@@ -35,8 +35,10 @@ use IEEE.STD_LOGIC_UNSIGNED.ALL;
 
 entity Computer is
     port (
+
+        clk_hand : in std_logic;
         clk_in,rst: in std_logic;
-        leds: out std_logic_vector(15 downto 0);
+        leds: out std_logic_vector(31 downto 0);
         
         -- vga port
 --        R: out std_logic_vector(2 downto 0) := "000";
@@ -747,18 +749,18 @@ begin
     );
 
     local_mem_wb: mem_wb port map(
-            clk => cpuclk,
-            reset => rst,
-            memtoreg_in => s_exe_memtoreg_out,
-            regwrite_in => s_exe_regwrite_out,
-            aluout_in => s_exe_aluout_out,
-            memout_in => s_memout_mem,
-            rd_in => s_mem_rd_in,
-            
-            wbregwrite_out => s_wb_write,
-            wbadress_out => s_wb_writeAddress,
-            wbregdata_out => s_wb_writeData
-        );
+        clk => cpuclk,
+        reset => rst,
+        memtoreg_in => s_exe_memtoreg_out,
+        regwrite_in => s_exe_regwrite_out,
+        aluout_in => s_exe_aluout_out,
+        memout_in => s_memout_mem,
+        rd_in => s_mem_rd_in,
+        
+        wbregwrite_out => s_wb_write,
+        wbadress_out => s_wb_writeAddress,
+        wbregdata_out => s_wb_writeData
+    );
     
     local_hazard: hazard port map(
         memoryRead => s_exe_memoryRead,
@@ -794,8 +796,8 @@ begin
 
     oe1<='1';
     we1<='1';
-    leds <= s_instruction;
-
+    leds(15 downto 0) <= s_instruction;
+    leds(31 downto 16) <= s_pc_reg;
 
     --locla_if: IRMemory  port map( 
     --        clk => clk_mem,

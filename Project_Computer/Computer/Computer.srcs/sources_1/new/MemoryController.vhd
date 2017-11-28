@@ -191,7 +191,7 @@ begin
 	process(clk, reset)
 	begin
 		if reset='1' then
-			state <= BOOTINIT;
+			state <= BOOT_READY;
 			toutput1 <= extendDatabus;
 			
 		elsif clk'event and clk='1' then
