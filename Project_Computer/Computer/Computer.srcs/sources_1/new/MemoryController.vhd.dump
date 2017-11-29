@@ -6,14 +6,14 @@ use IEEE.std_logic_unsigned.all;
 
 entity MemoryController is
     Port(
-		address1 : in  STD_LOGIC_VECTOR (15 downto 0); --1ÎªÖ¸ÁîÄÚ´æµØÖ·ºÍÊı¾İ
+		address1 : in  STD_LOGIC_VECTOR (15 downto 0); --1ä¸ºæŒ‡ä»¤å†…å­˜åœ°å€å’Œæ•°æ®
 		output1 : out  STD_LOGIC_VECTOR (15 downto 0);
-		address2 : in  STD_LOGIC_VECTOR (15 downto 0);--2ÎªÊı¾İÄÚ´æµØÖ·ºÍÊı¾İ£¬ÓÃÓÚ·Ã´æ½×¶Î
+		address2 : in  STD_LOGIC_VECTOR (15 downto 0);--2ä¸ºæ•°æ®å†…å­˜åœ°å€å’Œæ•°æ®ï¼Œç”¨äºè®¿å­˜é˜¶æ®µ
 		output2 : out  STD_LOGIC_VECTOR (15 downto 0);
-		clk: in STD_LOGIC;--Ò»¸ö¸ßÆµÊ±ÖÓ
-		cpuclock : out STD_LOGIC;--Ê±ÖÓËÄ·ÖÆµºóÊä³ö
+		clk: in STD_LOGIC;--ä¸€ä¸ªé«˜é¢‘æ—¶é’Ÿ
+		cpuclock : out STD_LOGIC;--æ—¶é’Ÿå››åˆ†é¢‘åè¾“å‡º
 		
-		--flash²¿·ÖµÄĞÅºÅ£¬Ö»ÊÇ½Óµ½ÉÏ²ãÀı»¯ÓÃÓÚ¹Ü½Å°ó¶¨£¬ÔÚÕâÒ»²ãÊµ¼ÊÉÏÄ¾ÓĞÓÃ
+		--flashéƒ¨åˆ†çš„ä¿¡å·ï¼Œåªæ˜¯æ¥åˆ°ä¸Šå±‚ä¾‹åŒ–ç”¨äºç®¡è„šç»‘å®šï¼Œåœ¨è¿™ä¸€å±‚å®é™…ä¸Šæœ¨æœ‰ç”¨
 		flash_byte : out std_logic;
 		flash_vpen : out std_logic;
 		flash_ce : out std_logic;
@@ -23,19 +23,19 @@ entity MemoryController is
 		flash_addr : out std_logic_vector(22 downto 1);
 		flash_data : inout std_logic_vector(15 downto 0);
 		
-		--ÄÚ´æ¶ÁĞ´²¿·ÖµÄĞÅºÅ
-		dataWrite : in  STD_LOGIC_VECTOR (15 downto 0); --ÒªĞ´µÄÊı¾İ
+		--å†…å­˜è¯»å†™éƒ¨åˆ†çš„ä¿¡å·
+		dataWrite : in  STD_LOGIC_VECTOR (15 downto 0); --è¦å†™çš„æ•°æ®
 		memoryAddr : out STD_LOGIC_VECTOR (17 downto 0);
-		MemWrite : in STD_LOGIC; --ÄÚ´æĞ´ĞÅºÅ
-		MemRead : in STD_LOGIC; --ÄÚ´æ¶ÁĞÅºÅ
+		MemWrite : in STD_LOGIC; --å†…å­˜å†™ä¿¡å·
+		MemRead : in STD_LOGIC; --å†…å­˜è¯»ä¿¡å·
 		memoryEN : out STD_LOGIC;
 		memoryOE : out STD_LOGIC;
 		memoryRW : out STD_LOGIC;
 		
-		--À©Õ¹Êı¾İÏß
+		--æ‰©å±•æ•°æ®çº¿
 		extendDatabus : inout STD_LOGIC_VECTOR(15 downto 0);
 		
-		--´®¿ÚºÍVGA²¿·ÖµÄĞÅºÅ
+		--ä¸²å£å’ŒVGAéƒ¨åˆ†çš„ä¿¡å·
 		serial_wrn : out STD_LOGIC;
 		serial_rdn : out STD_LOGIC;
 		serial_dataready : in STD_LOGIC;
@@ -54,18 +54,18 @@ end MemoryController;
 architecture Behavioral of MemoryController is
 
 	type state_type is (
-		BOOTINIT, --×ÔÆô¶¯µÄ³õÊ¼»¯×´Ì¬
-		BOOT_READFLASH, --´ÓFlashÖĞ¶ÁÊı¾İ
-		BOOT_WRITERAM, --½«¶ÁÈ¡µÄÊı¾İĞ´µ½Ram2ÖĞ
-		BOOT_READY, --×ÔÆô¶¯¾ÍĞ÷
-		READIR, --È¡Ö¸
-		SERIAL, --´¦Àí´®¿Ú¶ÁĞ´µÄ×´Ì¬
-		RWRAM, --ÄÚ´æµÄ¶Á»òĞ´
-		PAUSE --»º³å×´Ì¬
+		BOOTINIT, --è‡ªå¯åŠ¨çš„åˆå§‹åŒ–çŠ¶æ€
+		BOOT_READFLASH, --ä»Flashä¸­è¯»æ•°æ®
+		BOOT_WRITERAM, --å°†è¯»å–çš„æ•°æ®å†™åˆ°Ram2ä¸­
+		BOOT_READY, --è‡ªå¯åŠ¨å°±ç»ª
+		READIR, --å–æŒ‡
+		SERIAL, --å¤„ç†ä¸²å£è¯»å†™çš„çŠ¶æ€
+		RWRAM, --å†…å­˜çš„è¯»æˆ–å†™
+		PAUSE --ç¼“å†²çŠ¶æ€
 	);
 	signal state : state_type := BOOTINIT;
 	
--- FlashÔª¼şÀı»¯
+-- Flashå…ƒä»¶ä¾‹åŒ–
 	component Flash
 		port(
 			address: in std_logic_vector(22 downto 1);
@@ -88,16 +88,16 @@ architecture Behavioral of MemoryController is
 	signal flash_addr_input : std_logic_vector(22 downto 1) := "0000000000000000000000";
 	signal flash_data_output : std_logic_vector(15 downto 0);
 	
-	signal flash_read: std_logic; --¿ØÖÆFlashÔª¼şµÄ¶Á
+	signal flash_read: std_logic; --æ§åˆ¶Flashå…ƒä»¶çš„è¯»
 	signal flash_state_num: std_logic_vector(2 downto 0) := "000";
 	
-	signal flash_pc_addr : std_logic_vector(15 downto 0) := x"FFFF"; --³õÖµÎª-1,ÓÃÓÚflash¶ÁÈ¡µØÖ·¼ÆËã´æ´¢
-	signal tflash_data : STD_LOGIC_VECTOR(15 downto 0); --ÁÙÊ±´æ´¢flashÖĞ¶Á³öµÄÊı¾İ
+	signal flash_pc_addr : std_logic_vector(15 downto 0) := x"FFFF"; --åˆå€¼ä¸º-1,ç”¨äºflashè¯»å–åœ°å€è®¡ç®—å­˜å‚¨
+	signal tflash_data : STD_LOGIC_VECTOR(15 downto 0); --ä¸´æ—¶å­˜å‚¨flashä¸­è¯»å‡ºçš„æ•°æ®
 
 -------------------------------------
--- Memory¿ØÖÆµÄÖĞ¼äĞÅºÅ
+-- Memoryæ§åˆ¶çš„ä¸­é—´ä¿¡å·
 	signal toutput1, toutput2:  STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
-	signal WillWrite : STD_LOGIC; --ÒªÏò×ÜÏßĞ´Êı¾İµÄĞÅºÅ
+	signal WillWrite : STD_LOGIC; --è¦å‘æ€»çº¿å†™æ•°æ®çš„ä¿¡å·
 	signal BF01 : STD_LOGIC_VECTOR (15 downto 0);
 	signal readin, DataBuf, addressTemp : STD_LOGIC_VECTOR (15 downto 0);
 
@@ -109,7 +109,7 @@ architecture Behavioral of MemoryController is
 begin
 
 
--- ´®¿Ú²¿·Ö
+-- ä¸²å£éƒ¨åˆ†
 
 	ram1_en <= '1';	--disable ram1
 
@@ -129,7 +129,7 @@ begin
 	serialHolder <= dataWrite (7 downto 0);
 	
 -------------------------------------
--- Flash²¿·Ö
+-- Flashéƒ¨åˆ†
 
 	flash_local: Flash port map(
 		address => flash_addr_input,
@@ -148,25 +148,25 @@ begin
 	);
 -------------------------------------
 
---·ÖÆµ
+--åˆ†é¢‘
 	with state select
 		cpuclock <= 
 			'1' when SERIAL | READIR,
 			'0' when others;
 
--- ÄÚ´æ²¿·Ö
+-- å†…å­˜éƒ¨åˆ†
 
 	output1 <= toutput1;
 	output2 <= toutput2;
 	extendDatabus <= DataBuf when WillWrite = '0' else "ZZZZZZZZZZZZZZZZ";
 	memoryAddr <= "00" & addressTemp;
 	
-	-- BF×¨ÃÅ´¦Àí
+	-- BFä¸“é—¨å¤„ç†
 	BF01(0) <= serial_tsre and serial_tbre;
 	BF01(1) <= serial_dataready;
 	BF01(15 downto 2) <= "00000000000000";
 	
-	memoryEN <= '0'; --Ê¹ÄÜÒ»Ö±´ò¿ª
+	memoryEN <= '0'; --ä½¿èƒ½ä¸€ç›´æ‰“å¼€
 	
 	memoryRW <= 
 		'1' when (address2 = x"BF00" and state = RWRAM) 
@@ -182,12 +182,12 @@ begin
 -----------------------------------------
 
 
--- VGA²¿·Ö
+-- VGAéƒ¨åˆ†
 	VGA_addr <= address2(10 downto 0);
 	VGA_char <= dataWrite(7 downto 0);
 	VGA_write <="1" when ((MemWrite='1') and (state=RWRAM) and (address2(15 downto 12)=x"F"))else "0"; 
 
---Ö÷Òª¿ØÖÆµÄprocess
+--ä¸»è¦æ§åˆ¶çš„process
 	process(clk, reset)
 	begin
 		if reset='1' then
@@ -196,8 +196,8 @@ begin
 			
 		elsif clk'event and clk='1' then
 			case state is
-				-- Flash×ÔÆô¶¯¹ı³Ì
-				when BOOTINIT => --FlashÒıµ¼³õÊ¼»¯
+				-- Flashè‡ªå¯åŠ¨è¿‡ç¨‹
+				when BOOTINIT => --Flashå¼•å¯¼åˆå§‹åŒ–
 					flash_state_num <= "000";
 					flash_read <= '1';
 					state <= BOOT_READFLASH;
@@ -205,7 +205,7 @@ begin
 					addressTemp <= "0000000000000000";
 					WillWrite <= '1';
 				
-				when BOOT_READFLASH => --Flash¶ÁÈ¡Êı¾İ
+				when BOOT_READFLASH => --Flashè¯»å–æ•°æ®
 					flash_read <= '0';
 					DataBuf <= tflash_data;
 					addressTemp <= flash_pc_addr;
@@ -222,39 +222,39 @@ begin
 						when others =>
 							flash_state_num <= flash_state_num + 1;
 					end case;				
-				when BOOT_WRITERAM => --Flash¶ÁÈ¡µÄÊı¾İĞ´ÈëRam2
+				when BOOT_WRITERAM => --Flashè¯»å–çš„æ•°æ®å†™å…¥Ram2
 					flash_read <= '1';
 					DataBuf <= tflash_data;
 					addressTemp <= flash_pc_addr;
 					WillWrite <= '0';
-					if flash_pc_addr < x"0FFF" then --¶ÁÈ¡ÉĞÎ´½áÊø£¬¼ÌĞø½øÈëflashÑ­»·
-						state <= BOOT_READFLASH; --¶ÁÈ¡ÏµÍ³³ÌĞòÇø0~x0FFFµÄËùÓĞÖ¸Áî(ËäÈ»Êµ¼Ê¼à¿Ø³ÌĞòÄ¾ÓĞÄÇÃ´¶àÖ¸Áî)
+					if flash_pc_addr < x"0FFF" then --è¯»å–å°šæœªç»“æŸï¼Œç»§ç»­è¿›å…¥flashå¾ªç¯
+						state <= BOOT_READFLASH; --è¯»å–ç³»ç»Ÿç¨‹åºåŒº0~x0FFFçš„æ‰€æœ‰æŒ‡ä»¤(è™½ç„¶å®é™…ç›‘æ§ç¨‹åºæœ¨æœ‰é‚£ä¹ˆå¤šæŒ‡ä»¤)
 					else
-						state <= BOOT_READY; --·ñÔò½øÈëÒıµ¼¾ÍĞ÷×´Ì¬
+						state <= BOOT_READY; --å¦åˆ™è¿›å…¥å¼•å¯¼å°±ç»ªçŠ¶æ€
 					end if;
 				
-				when BOOT_READY => --Òıµ¼¾ÍĞ÷×´Ì¬
+				when BOOT_READY => --å¼•å¯¼å°±ç»ªçŠ¶æ€
 					state <= READIR;
 					flash_read <= '1';
 					WillWrite <= '1';
 					DataBuf <= dataWrite;
 					addressTemp <= "0000000000000000";
 				
-				-- ×ÔÆô¶¯½áÊø£¬µÈ´ıcpu¶ÁĞ´Ö¸Áî
-				when READIR => --È¡Ö¸
+				-- è‡ªå¯åŠ¨ç»“æŸï¼Œç­‰å¾…cpuè¯»å†™æŒ‡ä»¤
+				when READIR => --å–æŒ‡
 					flash_read <= '1';
 					DataBuf <= dataWrite;
 					state <= SERIAL;
 					addressTemp <= address1;
 					WillWrite <= '1';
 					toutput1 <= extendDatabus;
-				when SERIAL => --´®¿Ú¶ÁĞ´
+				when SERIAL => --ä¸²å£è¯»å†™
 					flash_read <= '1';
 					DataBuf <= dataWrite;
 					addressTemp <= address1;
 					WillWrite <= NOT MemWrite;
 					state <= RWRAM;
-				when RWRAM => --·Ã´æ
+				when RWRAM => --è®¿å­˜
 					flash_read <= '1';
 					DataBuf <= dataWrite;
 					addressTemp <= address2;
@@ -268,7 +268,7 @@ begin
 						when others =>
 							toutput2 <= extendDatabus;		
 					end case;
-				when PAUSE => --»º³å
+				when PAUSE => --ç¼“å†²
 					flash_read <= '1';
 					WillWrite <= '1';
 					DataBuf <= dataWrite;

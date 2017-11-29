@@ -156,7 +156,7 @@ process(CLK_0)
 begin
 	if(CLK_0'event and CLK_0 = '1') then
 		clk <= not clk;
-		clkout <= clk;
+		_clk <= clk;
 	end if;
 end process;
 
@@ -227,7 +227,7 @@ end process;
 
 process(reset, clk, vector_x, vector_y) -- X, Y ×ø±ê¿ØÖÆ
 begin
-    v_clk <= clk;
+    
 	if reset = '1' then
 		r0 <= "000";
 		g0 <= "000";
