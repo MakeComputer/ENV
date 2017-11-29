@@ -1,0 +1,1125 @@
+#-----------------------------------------------------------
+# Vivado v2017.1 (64-bit)
+# SW Build 1846317 on Fri Apr 14 18:55:03 MDT 2017
+# IP Build 1846188 on Fri Apr 14 20:52:08 MDT 2017
+# Start of session at: Wed Nov 29 23:37:16 2017
+# Process ID: 1608
+# Current directory: E:/project_fz/project_fz.runs/synth_1
+# Command line: vivado.exe -log cpu.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source cpu.tcl
+# Log file: E:/project_fz/project_fz.runs/synth_1/cpu.vds
+# Journal file: E:/project_fz/project_fz.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source cpu.tcl -notrace
+Command: synth_design -top cpu -part xc7a100tlfgg676-2L
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100tl-fgg676'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100tl-fgg676'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 1644 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 360.898 ; gain = 76.055
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'cpu' [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/cpu.vhd:85]
+INFO: [Synth 8-3491] module 'PCRegister' declared at 'E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/PCRegister.vhd:32' bound to instance 'u1' of component 'PCRegister' [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/cpu.vhd:697]
+INFO: [Synth 8-638] synthesizing module 'PCRegister' [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/PCRegister.vhd:41]
+INFO: [Synth 8-256] done synthesizing module 'PCRegister' (1#1) [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/PCRegister.vhd:41]
+INFO: [Synth 8-3491] module 'PCAdder' declared at 'E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/PCAdder.vhd:32' bound to instance 'u2' of component 'PCAdder' [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/cpu.vhd:707]
+INFO: [Synth 8-638] synthesizing module 'PCAdder' [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/PCAdder.vhd:38]
+INFO: [Synth 8-256] done synthesizing module 'PCAdder' (2#1) [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/PCAdder.vhd:38]
+INFO: [Synth 8-3491] module 'IfIdRegisters' declared at 'E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/IfIdRegisters.vhd:32' bound to instance 'u3' of component 'IfIdRegisters' [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/cpu.vhd:713]
+INFO: [Synth 8-638] synthesizing module 'IfIdRegisters' [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/IfIdRegisters.vhd:54]
+INFO: [Synth 8-256] done synthesizing module 'IfIdRegisters' (3#1) [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/IfIdRegisters.vhd:54]
+INFO: [Synth 8-3491] module 'RdMux' declared at 'E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/RdMux.vhd:32' bound to instance 'u4' of component 'RdMux' [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/cpu.vhd:733]
+INFO: [Synth 8-638] synthesizing module 'RdMux' [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/RdMux.vhd:44]
+INFO: [Synth 8-256] done synthesizing module 'RdMux' (4#1) [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/RdMux.vhd:44]
+INFO: [Synth 8-3491] module 'Controller' declared at 'E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/Controller.vhd:32' bound to instance 'u5' of component 'Controller' [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/cpu.vhd:743]
+INFO: [Synth 8-638] synthesizing module 'Controller' [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/Controller.vhd:43]
+INFO: [Synth 8-256] done synthesizing module 'Controller' (5#1) [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/Controller.vhd:43]
+INFO: [Synth 8-3491] module 'Registers' declared at 'E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/Registers.vhd:32' bound to instance 'u6' of component 'Registers' [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/cpu.vhd:753]
+INFO: [Synth 8-638] synthesizing module 'Registers' [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/Registers.vhd:59]
+INFO: [Synth 8-256] done synthesizing module 'Registers' (6#1) [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/Registers.vhd:59]
+INFO: [Synth 8-3491] module 'ImmeExtendUnit' declared at 'E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/ImmeExtendUnit.vhd:32' bound to instance 'u7' of component 'ImmeExtendUnit' [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/cpu.vhd:785]
+INFO: [Synth 8-638] synthesizing module 'ImmeExtendUnit' [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/ImmeExtendUnit.vhd:40]
+WARNING: [Synth 8-613] shared variable will be implemented as local to architecture [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/ImmeExtendUnit.vhd:41]
+WARNING: [Synth 8-613] shared variable will be implemented as local to architecture [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/ImmeExtendUnit.vhd:42]
+WARNING: [Synth 8-6014] Unused sequential element tmpOut_reg was removed.  [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/ImmeExtendUnit.vhd:55]
+INFO: [Synth 8-256] done synthesizing module 'ImmeExtendUnit' (7#1) [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/ImmeExtendUnit.vhd:40]
+INFO: [Synth 8-3491] module 'IdExRegisters' declared at 'E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/IdExRegisters.vhd:32' bound to instance 'u8' of component 'IdExRegisters' [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/cpu.vhd:793]
+INFO: [Synth 8-638] synthesizing module 'IdExRegisters' [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/IdExRegisters.vhd:81]
+INFO: [Synth 8-256] done synthesizing module 'IdExRegisters' (8#1) [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/IdExRegisters.vhd:81]
+INFO: [Synth 8-3491] module 'AMux' declared at 'E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/AMux.vhd:32' bound to instance 'u9' of component 'AMux' [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/cpu.vhd:839]
+INFO: [Synth 8-638] synthesizing module 'AMux' [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/AMux.vhd:46]
+INFO: [Synth 8-256] done synthesizing module 'AMux' (9#1) [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/AMux.vhd:46]
+INFO: [Synth 8-3491] module 'BMux' declared at 'E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/BMux.vhd:32' bound to instance 'u10' of component 'BMux' [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/cpu.vhd:850]
+INFO: [Synth 8-638] synthesizing module 'BMux' [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/BMux.vhd:48]
+INFO: [Synth 8-226] default block is never used [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/BMux.vhd:55]
+INFO: [Synth 8-256] done synthesizing module 'BMux' (10#1) [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/BMux.vhd:48]
+INFO: [Synth 8-3491] module 'ForwardController' declared at 'E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/ForwardController.vhd:32' bound to instance 'u11' of component 'ForwardController' [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/cpu.vhd:863]
+INFO: [Synth 8-638] synthesizing module 'ForwardController' [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/ForwardController.vhd:52]
+INFO: [Synth 8-256] done synthesizing module 'ForwardController' (11#1) [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/ForwardController.vhd:52]
+INFO: [Synth 8-3491] module 'ALU' declared at 'E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/ALU.vhd:34' bound to instance 'u12' of component 'ALU' [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/cpu.vhd:883]
+INFO: [Synth 8-638] synthesizing module 'ALU' [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/ALU.vhd:44]
+WARNING: [Synth 8-613] shared variable will be implemented as local to architecture [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/ALU.vhd:45]
+WARNING: [Synth 8-613] shared variable will be implemented as local to architecture [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/ALU.vhd:46]
+WARNING: [Synth 8-6014] Unused sequential element tmp_reg was removed.  [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/ALU.vhd:67]
+INFO: [Synth 8-256] done synthesizing module 'ALU' (12#1) [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/ALU.vhd:44]
+INFO: [Synth 8-3491] module 'ExMemRegisters' declared at 'E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/ExMemRegisters.vhd:32' bound to instance 'u13' of component 'ExMemRegisters' [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/cpu.vhd:893]
+INFO: [Synth 8-638] synthesizing module 'ExMemRegisters' [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/ExMemRegisters.vhd:62]
+INFO: [Synth 8-256] done synthesizing module 'ExMemRegisters' (13#1) [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/ExMemRegisters.vhd:62]
+INFO: [Synth 8-3491] module 'MemWbRegisters' declared at 'E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/MemWbRegisters.vhd:32' bound to instance 'u14' of component 'MemWbRegisters' [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/cpu.vhd:918]
+INFO: [Synth 8-638] synthesizing module 'MemWbRegisters' [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/MemWbRegisters.vhd:52]
+INFO: [Synth 8-256] done synthesizing module 'MemWbRegisters' (14#1) [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/MemWbRegisters.vhd:52]
+INFO: [Synth 8-3491] module 'HazardDetectionUnit' declared at 'E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/HazardDetectionUnit.vhd:32' bound to instance 'u15' of component 'HazardDetectionUnit' [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/cpu.vhd:936]
+INFO: [Synth 8-638] synthesizing module 'HazardDetectionUnit' [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/HazardDetectionUnit.vhd:46]
+WARNING: [Synth 8-6014] Unused sequential element IfIdKeep_reg was removed.  [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/HazardDetectionUnit.vhd:53]
+WARNING: [Synth 8-6014] Unused sequential element IdExFlush_reg was removed.  [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/HazardDetectionUnit.vhd:54]
+INFO: [Synth 8-256] done synthesizing module 'HazardDetectionUnit' (15#1) [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/HazardDetectionUnit.vhd:46]
+INFO: [Synth 8-3491] module 'PCMux' declared at 'E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/PCMux.vhd:34' bound to instance 'u16' of component 'PCMux' [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/cpu.vhd:949]
+INFO: [Synth 8-638] synthesizing module 'PCMux' [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/PCMux.vhd:52]
+WARNING: [Synth 8-614] signal 'IdExPC' is read in the process but is not in the sensitivity list [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/PCMux.vhd:56]
+WARNING: [Synth 8-614] signal 'PCRollback' is read in the process but is not in the sensitivity list [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/PCMux.vhd:56]
+INFO: [Synth 8-256] done synthesizing module 'PCMux' (16#1) [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/PCMux.vhd:52]
+INFO: [Synth 8-3491] module 'MemoryUnit' declared at 'E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/MemoryUnit.vhd:34' bound to instance 'u17' of component 'MemoryUnit' [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/cpu.vhd:963]
+INFO: [Synth 8-638] synthesizing module 'MemoryUnit' [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/MemoryUnit.vhd:98]
+WARNING: [Synth 8-613] shared variable will be implemented as local to architecture [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/MemoryUnit.vhd:108]
+INFO: [Synth 8-256] done synthesizing module 'MemoryUnit' (17#1) [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/MemoryUnit.vhd:98]
+INFO: [Synth 8-3491] module 'clock' declared at 'E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/clock.vhd:32' bound to instance 'u18' of component 'Clock' [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/cpu.vhd:1016]
+INFO: [Synth 8-638] synthesizing module 'clock' [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/clock.vhd:43]
+INFO: [Synth 8-256] done synthesizing module 'clock' (18#1) [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/clock.vhd:43]
+INFO: [Synth 8-3491] module 'StructConflictUnit' declared at 'E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/StructConflictUnit.vhd:34' bound to instance 'u19' of component 'StructConflictUnit' [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/cpu.vhd:1027]
+INFO: [Synth 8-638] synthesizing module 'StructConflictUnit' [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/StructConflictUnit.vhd:47]
+WARNING: [Synth 8-6014] Unused sequential element IdExFlush_reg was removed.  [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/StructConflictUnit.vhd:55]
+WARNING: [Synth 8-6014] Unused sequential element PCRollback_reg was removed.  [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/StructConflictUnit.vhd:56]
+INFO: [Synth 8-256] done synthesizing module 'StructConflictUnit' (19#1) [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/StructConflictUnit.vhd:47]
+INFO: [Synth 8-3491] module 'MFPCMux' declared at 'E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/MFPCMux.vhd:32' bound to instance 'u20' of component 'MFPCMux' [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/cpu.vhd:1040]
+INFO: [Synth 8-638] synthesizing module 'MFPCMux' [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/MFPCMux.vhd:43]
+INFO: [Synth 8-256] done synthesizing module 'MFPCMux' (20#1) [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/MFPCMux.vhd:43]
+INFO: [Synth 8-3491] module 'ReadReg1Mux' declared at 'E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/ReadReg1Mux.vhd:32' bound to instance 'u21' of component 'ReadReg1Mux' [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/cpu.vhd:1049]
+INFO: [Synth 8-638] synthesizing module 'ReadReg1Mux' [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/ReadReg1Mux.vhd:44]
+INFO: [Synth 8-256] done synthesizing module 'ReadReg1Mux' (21#1) [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/ReadReg1Mux.vhd:44]
+INFO: [Synth 8-3491] module 'ReadReg2Mux' declared at 'E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/ReadReg2Mux.vhd:32' bound to instance 'u22' of component 'ReadReg2Mux' [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/cpu.vhd:1058]
+INFO: [Synth 8-638] synthesizing module 'ReadReg2Mux' [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/ReadReg2Mux.vhd:44]
+INFO: [Synth 8-226] default block is never used [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/ReadReg2Mux.vhd:49]
+INFO: [Synth 8-256] done synthesizing module 'ReadReg2Mux' (22#1) [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/ReadReg2Mux.vhd:44]
+INFO: [Synth 8-3491] module 'VGA_Controller' declared at 'E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/VGA_Controller.vhd:5' bound to instance 'u23' of component 'VGA_Controller' [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/cpu.vhd:1068]
+INFO: [Synth 8-638] synthesizing module 'VGA_Controller' [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/VGA_Controller.vhd:34]
+WARNING: [Synth 8-613] shared variable will be implemented as local to architecture [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/VGA_Controller.vhd:44]
+WARNING: [Synth 8-613] shared variable will be implemented as local to architecture [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/VGA_Controller.vhd:45]
+WARNING: [Synth 8-613] shared variable will be implemented as local to architecture [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/VGA_Controller.vhd:45]
+WARNING: [Synth 8-6014] Unused sequential element inty_reg was removed.  [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/VGA_Controller.vhd:150]
+WARNING: [Synth 8-6014] Unused sequential element dx_reg was removed.  [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/VGA_Controller.vhd:153]
+WARNING: [Synth 8-6014] Unused sequential element tmp_reg was removed.  [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/VGA_Controller.vhd:185]
+INFO: [Synth 8-256] done synthesizing module 'VGA_Controller' (23#1) [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/VGA_Controller.vhd:34]
+INFO: [Synth 8-3491] module 'fontRom' declared at 'E:/project_fz/project_fz.runs/synth_1/.Xil/Vivado-1608-samsung/realtime/fontRom_stub.vhdl:5' bound to instance 'u25' of component 'fontRom' [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/cpu.vhd:1110]
+INFO: [Synth 8-638] synthesizing module 'fontRom' [E:/project_fz/project_fz.runs/synth_1/.Xil/Vivado-1608-samsung/realtime/fontRom_stub.vhdl:14]
+INFO: [Synth 8-3491] module 'WriteDataMux' declared at 'E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/WriteDataMux.vhd:32' bound to instance 'u26' of component 'WriteDataMux' [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/cpu.vhd:1117]
+INFO: [Synth 8-638] synthesizing module 'WriteDataMux' [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/WriteDataMux.vhd:45]
+INFO: [Synth 8-256] done synthesizing module 'WriteDataMux' (24#1) [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/WriteDataMux.vhd:45]
+INFO: [Synth 8-3491] module 'dcm' declared at 'E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/dcm.vhd:30' bound to instance 'u27' of component 'dcm' [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/cpu.vhd:1128]
+INFO: [Synth 8-638] synthesizing module 'xil_defaultlib_dcm' [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/dcm.vhd:39]
+INFO: [Synth 8-113] binding component instance 'CLKFX_BUFG_INST' to cell 'BUFG' [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/dcm.vhd:48]
+INFO: [Synth 8-113] binding component instance 'CLK0_BUFG_INST' to cell 'BUFG' [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/dcm.vhd:52]
+INFO: [Synth 8-113] binding component instance 'CLK2X_BUFG_INST' to cell 'BUFG' [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/dcm.vhd:56]
+	Parameter CLKDV_DIVIDE bound to: 2.000000 - type: float 
+	Parameter CLKFX_DIVIDE bound to: 2 - type: integer 
+	Parameter CLKFX_MULTIPLY bound to: 2 - type: integer 
+	Parameter CLKIN_DIVIDE_BY_2 bound to: 0 - type: bool 
+	Parameter CLKIN_PERIOD bound to: 20.000000 - type: float 
+	Parameter CLKOUT_PHASE_SHIFT bound to: NONE - type: string 
+	Parameter CLK_FEEDBACK bound to: 2X - type: string 
+	Parameter DESKEW_ADJUST bound to: SYSTEM_SYNCHRONOUS - type: string 
+	Parameter DFS_FREQUENCY_MODE bound to: LOW - type: string 
+	Parameter DLL_FREQUENCY_MODE bound to: LOW - type: string 
+	Parameter DSS_MODE bound to: NONE - type: string 
+	Parameter DUTY_CYCLE_CORRECTION bound to: 1 - type: bool 
+	Parameter FACTORY_JF bound to: 16'b1100000010000000 
+	Parameter PHASE_SHIFT bound to: 0 - type: integer 
+	Parameter STARTUP_WAIT bound to: 0 - type: bool 
+INFO: [Synth 8-113] binding component instance 'DCM_SP_INST' to cell 'DCM_SP' [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/dcm.vhd:60]
+INFO: [Synth 8-256] done synthesizing module 'xil_defaultlib_dcm' (25#1) [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/dcm.vhd:39]
+WARNING: [Synth 8-614] signal 'dip_sw' is read in the process but is not in the sensitivity list [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/cpu.vhd:1157]
+INFO: [Synth 8-226] default block is never used [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/cpu.vhd:1178]
+INFO: [Synth 8-226] default block is never used [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/cpu.vhd:1198]
+INFO: [Synth 8-256] done synthesizing module 'cpu' (26#1) [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/cpu.vhd:85]
+WARNING: [Synth 8-3331] design StructConflictUnit has unconnected port PC[15]
+WARNING: [Synth 8-3331] design StructConflictUnit has unconnected port PC[14]
+WARNING: [Synth 8-3331] design StructConflictUnit has unconnected port PC[13]
+WARNING: [Synth 8-3331] design StructConflictUnit has unconnected port PC[12]
+WARNING: [Synth 8-3331] design StructConflictUnit has unconnected port PC[11]
+WARNING: [Synth 8-3331] design StructConflictUnit has unconnected port PC[10]
+WARNING: [Synth 8-3331] design StructConflictUnit has unconnected port PC[9]
+WARNING: [Synth 8-3331] design StructConflictUnit has unconnected port PC[8]
+WARNING: [Synth 8-3331] design StructConflictUnit has unconnected port PC[7]
+WARNING: [Synth 8-3331] design StructConflictUnit has unconnected port PC[6]
+WARNING: [Synth 8-3331] design StructConflictUnit has unconnected port PC[5]
+WARNING: [Synth 8-3331] design StructConflictUnit has unconnected port PC[4]
+WARNING: [Synth 8-3331] design StructConflictUnit has unconnected port PC[3]
+WARNING: [Synth 8-3331] design StructConflictUnit has unconnected port PC[2]
+WARNING: [Synth 8-3331] design StructConflictUnit has unconnected port PC[1]
+WARNING: [Synth 8-3331] design StructConflictUnit has unconnected port PC[0]
+WARNING: [Synth 8-3331] design cpu has unconnected port base_ram_addr[19]
+WARNING: [Synth 8-3331] design cpu has unconnected port base_ram_addr[18]
+WARNING: [Synth 8-3331] design cpu has unconnected port ext_ram_addr[19]
+WARNING: [Synth 8-3331] design cpu has unconnected port ext_ram_addr[18]
+WARNING: [Synth 8-3331] design cpu has unconnected port base_ram_data[31]
+WARNING: [Synth 8-3331] design cpu has unconnected port base_ram_data[30]
+WARNING: [Synth 8-3331] design cpu has unconnected port base_ram_data[29]
+WARNING: [Synth 8-3331] design cpu has unconnected port base_ram_data[28]
+WARNING: [Synth 8-3331] design cpu has unconnected port base_ram_data[27]
+WARNING: [Synth 8-3331] design cpu has unconnected port base_ram_data[26]
+WARNING: [Synth 8-3331] design cpu has unconnected port base_ram_data[25]
+WARNING: [Synth 8-3331] design cpu has unconnected port base_ram_data[24]
+WARNING: [Synth 8-3331] design cpu has unconnected port base_ram_data[23]
+WARNING: [Synth 8-3331] design cpu has unconnected port base_ram_data[22]
+WARNING: [Synth 8-3331] design cpu has unconnected port base_ram_data[21]
+WARNING: [Synth 8-3331] design cpu has unconnected port base_ram_data[20]
+WARNING: [Synth 8-3331] design cpu has unconnected port base_ram_data[19]
+WARNING: [Synth 8-3331] design cpu has unconnected port base_ram_data[18]
+WARNING: [Synth 8-3331] design cpu has unconnected port base_ram_data[17]
+WARNING: [Synth 8-3331] design cpu has unconnected port base_ram_data[16]
+WARNING: [Synth 8-3331] design cpu has unconnected port ext_ram_data[31]
+WARNING: [Synth 8-3331] design cpu has unconnected port ext_ram_data[30]
+WARNING: [Synth 8-3331] design cpu has unconnected port ext_ram_data[29]
+WARNING: [Synth 8-3331] design cpu has unconnected port ext_ram_data[28]
+WARNING: [Synth 8-3331] design cpu has unconnected port ext_ram_data[27]
+WARNING: [Synth 8-3331] design cpu has unconnected port ext_ram_data[26]
+WARNING: [Synth 8-3331] design cpu has unconnected port ext_ram_data[25]
+WARNING: [Synth 8-3331] design cpu has unconnected port ext_ram_data[24]
+WARNING: [Synth 8-3331] design cpu has unconnected port ext_ram_data[23]
+WARNING: [Synth 8-3331] design cpu has unconnected port ext_ram_data[22]
+WARNING: [Synth 8-3331] design cpu has unconnected port ext_ram_data[21]
+WARNING: [Synth 8-3331] design cpu has unconnected port ext_ram_data[20]
+WARNING: [Synth 8-3331] design cpu has unconnected port ext_ram_data[19]
+WARNING: [Synth 8-3331] design cpu has unconnected port ext_ram_data[18]
+WARNING: [Synth 8-3331] design cpu has unconnected port ext_ram_data[17]
+WARNING: [Synth 8-3331] design cpu has unconnected port ext_ram_data[16]
+WARNING: [Synth 8-3331] design cpu has unconnected port touch_btn[3]
+WARNING: [Synth 8-3331] design cpu has unconnected port touch_btn[2]
+WARNING: [Synth 8-3331] design cpu has unconnected port touch_btn[1]
+WARNING: [Synth 8-3331] design cpu has unconnected port touch_btn[0]
+WARNING: [Synth 8-3331] design cpu has unconnected port dip_sw[31]
+WARNING: [Synth 8-3331] design cpu has unconnected port dip_sw[30]
+WARNING: [Synth 8-3331] design cpu has unconnected port dip_sw[29]
+WARNING: [Synth 8-3331] design cpu has unconnected port dip_sw[28]
+WARNING: [Synth 8-3331] design cpu has unconnected port dip_sw[27]
+WARNING: [Synth 8-3331] design cpu has unconnected port dip_sw[26]
+WARNING: [Synth 8-3331] design cpu has unconnected port dip_sw[25]
+WARNING: [Synth 8-3331] design cpu has unconnected port dip_sw[24]
+WARNING: [Synth 8-3331] design cpu has unconnected port dip_sw[23]
+WARNING: [Synth 8-3331] design cpu has unconnected port dip_sw[22]
+WARNING: [Synth 8-3331] design cpu has unconnected port dip_sw[21]
+WARNING: [Synth 8-3331] design cpu has unconnected port dip_sw[20]
+WARNING: [Synth 8-3331] design cpu has unconnected port dip_sw[19]
+WARNING: [Synth 8-3331] design cpu has unconnected port dip_sw[18]
+WARNING: [Synth 8-3331] design cpu has unconnected port dip_sw[17]
+WARNING: [Synth 8-3331] design cpu has unconnected port dip_sw[16]
+WARNING: [Synth 8-3331] design cpu has unconnected port dip_sw[15]
+WARNING: [Synth 8-3331] design cpu has unconnected port dip_sw[14]
+WARNING: [Synth 8-3331] design cpu has unconnected port dip_sw[13]
+WARNING: [Synth 8-3331] design cpu has unconnected port dip_sw[12]
+WARNING: [Synth 8-3331] design cpu has unconnected port dip_sw[11]
+WARNING: [Synth 8-3331] design cpu has unconnected port dip_sw[10]
+WARNING: [Synth 8-3331] design cpu has unconnected port dip_sw[9]
+WARNING: [Synth 8-3331] design cpu has unconnected port dip_sw[8]
+WARNING: [Synth 8-3331] design cpu has unconnected port dip_sw[7]
+WARNING: [Synth 8-3331] design cpu has unconnected port dip_sw[6]
+WARNING: [Synth 8-3331] design cpu has unconnected port dip_sw[5]
+WARNING: [Synth 8-3331] design cpu has unconnected port dip_sw[4]
+WARNING: [Synth 8-3331] design cpu has unconnected port dip_sw[3]
+WARNING: [Synth 8-3331] design cpu has unconnected port dip_sw[2]
+WARNING: [Synth 8-3331] design cpu has unconnected port dip_sw[1]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 422.016 ; gain = 137.172
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 422.016 ; gain = 137.172
+---------------------------------------------------------------------------------
+INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
+WARNING: [Netlist 29-365] DCM_ADV instance 'u27/DCM_SP_INST' has been transformed into an MMCM. Please check the output clock waveforms for correctness. If the output clocks are incorrect, modify your design to use the MMCME<#>_ADV native to the target architecture.
+WARNING: [Netlist 29-365] DCM_ADV instance 'u27/DCM_SP_INST' has been transformed into an MMCM. Please check the output clock waveforms for correctness. If the output clocks are incorrect, modify your design to use the MMCME<#>_ADV native to the target architecture.
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Device 21-403] Loading part xc7a100tlfgg676-2L
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [E:/project_fz/project_fz.runs/synth_1/.Xil/Vivado-1608-samsung/dcp3/fontRom_in_context.xdc] for cell 'u25'
+Finished Parsing XDC File [E:/project_fz/project_fz.runs/synth_1/.Xil/Vivado-1608-samsung/dcp3/fontRom_in_context.xdc] for cell 'u25'
+Parsing XDC File [E:/project_fz/project_fz.srcs/constrs_1/new/cpu.xdc]
+WARNING: [Vivado 12-584] No ports matched 'clk_uart_in'. [E:/project_fz/project_fz.srcs/constrs_1/new/cpu.xdc:3]
+WARNING: [Vivado 12-507] No nets matched 'clk_uart_in_IBUF'. [E:/project_fz/project_fz.srcs/constrs_1/new/cpu.xdc:4]
+WARNING: [Vivado 12-584] No ports matched 'clk_uart_in'. [E:/project_fz/project_fz.srcs/constrs_1/new/cpu.xdc:7]
+WARNING: [Vivado 12-584] No ports matched 'txd'. [E:/project_fz/project_fz.srcs/constrs_1/new/cpu.xdc:28]
+WARNING: [Vivado 12-584] No ports matched 'rxd'. [E:/project_fz/project_fz.srcs/constrs_1/new/cpu.xdc:29]
+WARNING: [Vivado 12-584] No ports matched 'sl811_a0'. [E:/project_fz/project_fz.srcs/constrs_1/new/cpu.xdc:32]
+WARNING: [Vivado 12-584] No ports matched 'sl811_we_n'. [E:/project_fz/project_fz.srcs/constrs_1/new/cpu.xdc:33]
+WARNING: [Vivado 12-584] No ports matched 'sl811_rd_n'. [E:/project_fz/project_fz.srcs/constrs_1/new/cpu.xdc:34]
+WARNING: [Vivado 12-584] No ports matched 'sl811_cs_n'. [E:/project_fz/project_fz.srcs/constrs_1/new/cpu.xdc:35]
+WARNING: [Vivado 12-584] No ports matched 'sl811_rst_n'. [E:/project_fz/project_fz.srcs/constrs_1/new/cpu.xdc:36]
+WARNING: [Vivado 12-584] No ports matched 'sl811_drq'. [E:/project_fz/project_fz.srcs/constrs_1/new/cpu.xdc:37]
+WARNING: [Vivado 12-584] No ports matched 'sl811_dack'. [E:/project_fz/project_fz.srcs/constrs_1/new/cpu.xdc:38]
+WARNING: [Vivado 12-584] No ports matched 'sl811_int'. [E:/project_fz/project_fz.srcs/constrs_1/new/cpu.xdc:39]
+WARNING: [Vivado 12-584] No ports matched 'sl811_data[0]'. [E:/project_fz/project_fz.srcs/constrs_1/new/cpu.xdc:40]
+WARNING: [Vivado 12-584] No ports matched 'sl811_data[1]'. [E:/project_fz/project_fz.srcs/constrs_1/new/cpu.xdc:41]
+WARNING: [Vivado 12-584] No ports matched 'sl811_data[2]'. [E:/project_fz/project_fz.srcs/constrs_1/new/cpu.xdc:42]
+WARNING: [Vivado 12-584] No ports matched 'sl811_data[3]'. [E:/project_fz/project_fz.srcs/constrs_1/new/cpu.xdc:43]
+WARNING: [Vivado 12-584] No ports matched 'sl811_data[4]'. [E:/project_fz/project_fz.srcs/constrs_1/new/cpu.xdc:44]
+WARNING: [Vivado 12-584] No ports matched 'sl811_data[5]'. [E:/project_fz/project_fz.srcs/constrs_1/new/cpu.xdc:45]
+WARNING: [Vivado 12-584] No ports matched 'sl811_data[6]'. [E:/project_fz/project_fz.srcs/constrs_1/new/cpu.xdc:46]
+WARNING: [Vivado 12-584] No ports matched 'sl811_data[7]'. [E:/project_fz/project_fz.srcs/constrs_1/new/cpu.xdc:47]
+WARNING: [Vivado 12-584] No ports matched 'dm9k_we_n'. [E:/project_fz/project_fz.srcs/constrs_1/new/cpu.xdc:50]
+WARNING: [Vivado 12-584] No ports matched 'dm9k_rd_n'. [E:/project_fz/project_fz.srcs/constrs_1/new/cpu.xdc:51]
+WARNING: [Vivado 12-584] No ports matched 'dm9k_cs_n'. [E:/project_fz/project_fz.srcs/constrs_1/new/cpu.xdc:52]
+WARNING: [Vivado 12-584] No ports matched 'dm9k_rst_n'. [E:/project_fz/project_fz.srcs/constrs_1/new/cpu.xdc:53]
+WARNING: [Vivado 12-584] No ports matched 'dm9k_int'. [E:/project_fz/project_fz.srcs/constrs_1/new/cpu.xdc:54]
+WARNING: [Vivado 12-584] No ports matched 'dm9k_cmd'. [E:/project_fz/project_fz.srcs/constrs_1/new/cpu.xdc:55]
+WARNING: [Vivado 12-584] No ports matched 'dm9k_data[0]'. [E:/project_fz/project_fz.srcs/constrs_1/new/cpu.xdc:56]
+WARNING: [Vivado 12-584] No ports matched 'dm9k_data[1]'. [E:/project_fz/project_fz.srcs/constrs_1/new/cpu.xdc:57]
+WARNING: [Vivado 12-584] No ports matched 'dm9k_data[2]'. [E:/project_fz/project_fz.srcs/constrs_1/new/cpu.xdc:58]
+WARNING: [Vivado 12-584] No ports matched 'dm9k_data[3]'. [E:/project_fz/project_fz.srcs/constrs_1/new/cpu.xdc:59]
+WARNING: [Vivado 12-584] No ports matched 'dm9k_data[4]'. [E:/project_fz/project_fz.srcs/constrs_1/new/cpu.xdc:60]
+WARNING: [Vivado 12-584] No ports matched 'dm9k_data[5]'. [E:/project_fz/project_fz.srcs/constrs_1/new/cpu.xdc:61]
+WARNING: [Vivado 12-584] No ports matched 'dm9k_data[6]'. [E:/project_fz/project_fz.srcs/constrs_1/new/cpu.xdc:62]
+WARNING: [Vivado 12-584] No ports matched 'dm9k_data[7]'. [E:/project_fz/project_fz.srcs/constrs_1/new/cpu.xdc:63]
+WARNING: [Vivado 12-584] No ports matched 'dm9k_data[8]'. [E:/project_fz/project_fz.srcs/constrs_1/new/cpu.xdc:64]
+WARNING: [Vivado 12-584] No ports matched 'dm9k_data[9]'. [E:/project_fz/project_fz.srcs/constrs_1/new/cpu.xdc:65]
+WARNING: [Vivado 12-584] No ports matched 'dm9k_data[10]'. [E:/project_fz/project_fz.srcs/constrs_1/new/cpu.xdc:66]
+WARNING: [Vivado 12-584] No ports matched 'dm9k_data[11]'. [E:/project_fz/project_fz.srcs/constrs_1/new/cpu.xdc:67]
+WARNING: [Vivado 12-584] No ports matched 'dm9k_data[12]'. [E:/project_fz/project_fz.srcs/constrs_1/new/cpu.xdc:68]
+WARNING: [Vivado 12-584] No ports matched 'dm9k_data[13]'. [E:/project_fz/project_fz.srcs/constrs_1/new/cpu.xdc:69]
+WARNING: [Vivado 12-584] No ports matched 'dm9k_data[14]'. [E:/project_fz/project_fz.srcs/constrs_1/new/cpu.xdc:70]
+WARNING: [Vivado 12-584] No ports matched 'dm9k_data[15]'. [E:/project_fz/project_fz.srcs/constrs_1/new/cpu.xdc:71]
+WARNING: [Vivado 12-584] No ports matched 'base_ram_be_n[*]'. [E:/project_fz/project_fz.srcs/constrs_1/new/cpu.xdc:238]
+WARNING: [Vivado 12-584] No ports matched 'base_ram_be_n[0]'. [E:/project_fz/project_fz.srcs/constrs_1/new/cpu.xdc:239]
+WARNING: [Vivado 12-584] No ports matched 'base_ram_be_n[1]'. [E:/project_fz/project_fz.srcs/constrs_1/new/cpu.xdc:240]
+WARNING: [Vivado 12-584] No ports matched 'base_ram_be_n[2]'. [E:/project_fz/project_fz.srcs/constrs_1/new/cpu.xdc:241]
+WARNING: [Vivado 12-584] No ports matched 'base_ram_be_n[3]'. [E:/project_fz/project_fz.srcs/constrs_1/new/cpu.xdc:242]
+WARNING: [Vivado 12-584] No ports matched 'ext_ram_be_n[*]'. [E:/project_fz/project_fz.srcs/constrs_1/new/cpu.xdc:304]
+WARNING: [Vivado 12-584] No ports matched 'ext_ram_be_n[0]'. [E:/project_fz/project_fz.srcs/constrs_1/new/cpu.xdc:305]
+WARNING: [Vivado 12-584] No ports matched 'ext_ram_be_n[1]'. [E:/project_fz/project_fz.srcs/constrs_1/new/cpu.xdc:306]
+WARNING: [Vivado 12-584] No ports matched 'ext_ram_be_n[2]'. [E:/project_fz/project_fz.srcs/constrs_1/new/cpu.xdc:307]
+WARNING: [Vivado 12-584] No ports matched 'ext_ram_be_n[3]'. [E:/project_fz/project_fz.srcs/constrs_1/new/cpu.xdc:308]
+Finished Parsing XDC File [E:/project_fz/project_fz.srcs/constrs_1/new/cpu.xdc]
+WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [E:/project_fz/project_fz.srcs/constrs_1/new/cpu.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/cpu_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [E:/project_fz/project_fz.srcs/constrs_1/new/cpu.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/cpu_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/cpu_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Timing 38-2] Deriving generated clocks
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 1 instances were transformed.
+  DCM_SP => MMCME2_ADV (inverted pins: PSINCDEC): 1 instances
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 734.461 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 734.461 ; gain = 449.617
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tlfgg676-2L
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 734.461 ; gain = 449.617
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property DONT_TOUCH = true for u25. (constraint file  auto generated constraint, line ).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 734.461 ; gain = 449.617
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5544] ROM "controllerOut" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "controllerOut" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "controllerOut" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "controllerOut" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "controllerOut" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-4471] merging register 'ram1_oe_reg' into 'ram1_en_reg' [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/MemoryUnit.vhd:154]
+INFO: [Synth 8-4471] merging register 'ram1_we_reg' into 'ram1_en_reg' [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/MemoryUnit.vhd:155]
+INFO: [Synth 8-4471] merging register 'flash_vpen_reg' into 'flash_byte_reg' [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/MemoryUnit.vhd:150]
+INFO: [Synth 8-4471] merging register 'flash_rp_reg' into 'flash_byte_reg' [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/MemoryUnit.vhd:151]
+WARNING: [Synth 8-6014] Unused sequential element flash_vpen_reg was removed.  [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/MemoryUnit.vhd:150]
+WARNING: [Synth 8-6014] Unused sequential element flash_rp_reg was removed.  [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/MemoryUnit.vhd:151]
+WARNING: [Synth 8-6014] Unused sequential element ram1_oe_reg was removed.  [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/MemoryUnit.vhd:154]
+WARNING: [Synth 8-6014] Unused sequential element ram1_we_reg was removed.  [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/MemoryUnit.vhd:155]
+INFO: [Synth 8-802] inferred FSM for state register 'flashstate_reg' in module 'MemoryUnit'
+WARNING: [Synth 8-6014] Unused sequential element flashstate_reg was removed.  [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/MemoryUnit.vhd:143]
+INFO: [Synth 8-5545] ROM "cnt" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "cnt" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "flashstate" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5544] ROM "flash_byte" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ram2_addr" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ram2_we" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ram2_data" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "flash_we" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "flash_oe" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "flash_data" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "flash_addr" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "current_addr" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "flashstate" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+WARNING: [Synth 8-6014] Unused sequential element current_addr_reg was removed.  [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/MemoryUnit.vhd:145]
+INFO: [Synth 8-4471] merging register 'gt_reg[2:0]' into 'rt_reg[2:0]' [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/VGA_Controller.vhd:141]
+WARNING: [Synth 8-6014] Unused sequential element gt_reg was removed.  [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/VGA_Controller.vhd:141]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/VGA_Controller.vhd:1096]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <multiplier> is shared. To prevent sharing consider applying a KEEP on the output of the operator [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/VGA_Controller.vhd:1096]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/VGA_Controller.vhd:1081]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <multiplier> is shared. To prevent sharing consider applying a KEEP on the output of the operator [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/VGA_Controller.vhd:1081]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/VGA_Controller.vhd:1032]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <multiplier> is shared. To prevent sharing consider applying a KEEP on the output of the operator [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/VGA_Controller.vhd:1032]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/VGA_Controller.vhd:1066]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <multiplier> is shared. To prevent sharing consider applying a KEEP on the output of the operator [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/VGA_Controller.vhd:1066]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/VGA_Controller.vhd:1032]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <multiplier> is shared. To prevent sharing consider applying a KEEP on the output of the operator [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/VGA_Controller.vhd:1032]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/VGA_Controller.vhd:1051]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <multiplier> is shared. To prevent sharing consider applying a KEEP on the output of the operator [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/VGA_Controller.vhd:1051]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/VGA_Controller.vhd:1032]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <multiplier> is shared. To prevent sharing consider applying a KEEP on the output of the operator [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/VGA_Controller.vhd:1032]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/VGA_Controller.vhd:1036]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <multiplier> is shared. To prevent sharing consider applying a KEEP on the output of the operator [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/VGA_Controller.vhd:1036]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/VGA_Controller.vhd:1032]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <multiplier> is shared. To prevent sharing consider applying a KEEP on the output of the operator [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/VGA_Controller.vhd:1032]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/VGA_Controller.vhd:1014]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <multiplier> is shared. To prevent sharing consider applying a KEEP on the output of the operator [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/VGA_Controller.vhd:1014]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/VGA_Controller.vhd:999]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <multiplier> is shared. To prevent sharing consider applying a KEEP on the output of the operator [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/VGA_Controller.vhd:999]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/VGA_Controller.vhd:950]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <multiplier> is shared. To prevent sharing consider applying a KEEP on the output of the operator [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/VGA_Controller.vhd:950]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/VGA_Controller.vhd:984]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <multiplier> is shared. To prevent sharing consider applying a KEEP on the output of the operator [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/VGA_Controller.vhd:984]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/VGA_Controller.vhd:950]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <multiplier> is shared. To prevent sharing consider applying a KEEP on the output of the operator [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/VGA_Controller.vhd:950]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/VGA_Controller.vhd:969]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <multiplier> is shared. To prevent sharing consider applying a KEEP on the output of the operator [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/VGA_Controller.vhd:969]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/VGA_Controller.vhd:950]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <multiplier> is shared. To prevent sharing consider applying a KEEP on the output of the operator [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/VGA_Controller.vhd:950]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/VGA_Controller.vhd:954]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <multiplier> is shared. To prevent sharing consider applying a KEEP on the output of the operator [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/VGA_Controller.vhd:954]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/VGA_Controller.vhd:950]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <multiplier> is shared. To prevent sharing consider applying a KEEP on the output of the operator [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/VGA_Controller.vhd:950]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/VGA_Controller.vhd:145]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <multiplier> is shared. To prevent sharing consider applying a KEEP on the output of the operator [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/VGA_Controller.vhd:145]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/VGA_Controller.vhd:933]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <multiplier> is shared. To prevent sharing consider applying a KEEP on the output of the operator [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/VGA_Controller.vhd:933]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/VGA_Controller.vhd:918]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <multiplier> is shared. To prevent sharing consider applying a KEEP on the output of the operator [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/VGA_Controller.vhd:918]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/VGA_Controller.vhd:869]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <multiplier> is shared. To prevent sharing consider applying a KEEP on the output of the operator [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/VGA_Controller.vhd:869]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/VGA_Controller.vhd:903]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <multiplier> is shared. To prevent sharing consider applying a KEEP on the output of the operator [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/VGA_Controller.vhd:903]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/VGA_Controller.vhd:869]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <multiplier> is shared. To prevent sharing consider applying a KEEP on the output of the operator [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/VGA_Controller.vhd:869]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/VGA_Controller.vhd:888]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <multiplier> is shared. To prevent sharing consider applying a KEEP on the output of the operator [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/VGA_Controller.vhd:888]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/VGA_Controller.vhd:869]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <multiplier> is shared. To prevent sharing consider applying a KEEP on the output of the operator [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/VGA_Controller.vhd:869]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/VGA_Controller.vhd:873]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <multiplier> is shared. To prevent sharing consider applying a KEEP on the output of the operator [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/VGA_Controller.vhd:873]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/VGA_Controller.vhd:869]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <multiplier> is shared. To prevent sharing consider applying a KEEP on the output of the operator [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/VGA_Controller.vhd:869]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/VGA_Controller.vhd:145]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <multiplier> is shared. To prevent sharing consider applying a KEEP on the output of the operator [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/VGA_Controller.vhd:145]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/VGA_Controller.vhd:852]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <multiplier> is shared. To prevent sharing consider applying a KEEP on the output of the operator [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/VGA_Controller.vhd:852]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/VGA_Controller.vhd:837]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <multiplier> is shared. To prevent sharing consider applying a KEEP on the output of the operator [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/VGA_Controller.vhd:837]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/VGA_Controller.vhd:788]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <multiplier> is shared. To prevent sharing consider applying a KEEP on the output of the operator [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/VGA_Controller.vhd:788]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/VGA_Controller.vhd:822]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <multiplier> is shared. To prevent sharing consider applying a KEEP on the output of the operator [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/VGA_Controller.vhd:822]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/VGA_Controller.vhd:788]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <multiplier> is shared. To prevent sharing consider applying a KEEP on the output of the operator [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/VGA_Controller.vhd:788]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/VGA_Controller.vhd:807]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <multiplier> is shared. To prevent sharing consider applying a KEEP on the output of the operator [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/VGA_Controller.vhd:807]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/VGA_Controller.vhd:788]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <multiplier> is shared. To prevent sharing consider applying a KEEP on the output of the operator [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/VGA_Controller.vhd:788]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/VGA_Controller.vhd:792]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <multiplier> is shared. To prevent sharing consider applying a KEEP on the output of the operator [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/VGA_Controller.vhd:792]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/VGA_Controller.vhd:788]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <multiplier> is shared. To prevent sharing consider applying a KEEP on the output of the operator [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/VGA_Controller.vhd:788]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/VGA_Controller.vhd:145]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <multiplier> is shared. To prevent sharing consider applying a KEEP on the output of the operator [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/VGA_Controller.vhd:145]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/VGA_Controller.vhd:669]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <multiplier> is shared. To prevent sharing consider applying a KEEP on the output of the operator [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/VGA_Controller.vhd:669]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/VGA_Controller.vhd:654]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <multiplier> is shared. To prevent sharing consider applying a KEEP on the output of the operator [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/VGA_Controller.vhd:654]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/VGA_Controller.vhd:560]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <multiplier> is shared. To prevent sharing consider applying a KEEP on the output of the operator [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/VGA_Controller.vhd:560]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/VGA_Controller.vhd:639]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <multiplier> is shared. To prevent sharing consider applying a KEEP on the output of the operator [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/VGA_Controller.vhd:639]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/VGA_Controller.vhd:560]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <multiplier> is shared. To prevent sharing consider applying a KEEP on the output of the operator [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/VGA_Controller.vhd:560]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/VGA_Controller.vhd:624]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <multiplier> is shared. To prevent sharing consider applying a KEEP on the output of the operator [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/VGA_Controller.vhd:624]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/VGA_Controller.vhd:560]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <multiplier> is shared. To prevent sharing consider applying a KEEP on the output of the operator [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/VGA_Controller.vhd:560]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/VGA_Controller.vhd:609]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <multiplier> is shared. To prevent sharing consider applying a KEEP on the output of the operator [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/VGA_Controller.vhd:609]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/VGA_Controller.vhd:560]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <multiplier> is shared. To prevent sharing consider applying a KEEP on the output of the operator [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/VGA_Controller.vhd:560]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/VGA_Controller.vhd:594]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <multiplier> is shared. To prevent sharing consider applying a KEEP on the output of the operator [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/VGA_Controller.vhd:594]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/VGA_Controller.vhd:560]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <multiplier> is shared. To prevent sharing consider applying a KEEP on the output of the operator [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/VGA_Controller.vhd:560]
+INFO: [Common 17-14] Message 'Synth 8-5818' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+WARNING: [Synth 8-6014] Unused sequential element x_reg was removed.  [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/VGA_Controller.vhd:63]
+WARNING: [Synth 8-6014] Unused sequential element y_reg was removed.  [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/VGA_Controller.vhd:77]
+WARNING: [Synth 8-327] inferring latch for variable 'controllerOut_reg' [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/Controller.vhd:49]
+WARNING: [Synth 8-327] inferring latch for variable 'ReadData1_reg' [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/Registers.vhd:138]
+WARNING: [Synth 8-327] inferring latch for variable 'ReadData2_reg' [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/Registers.vhd:153]
+WARNING: [Synth 8-327] inferring latch for variable 'immeOut_reg' [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/ImmeExtendUnit.vhd:59]
+WARNING: [Synth 8-327] inferring latch for variable 'sign_reg' [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/ImmeExtendUnit.vhd:47]
+WARNING: [Synth 8-327] inferring latch for variable 'AsrcOut_reg' [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/AMux.vhd:53]
+WARNING: [Synth 8-327] inferring latch for variable 'BsrcOut_reg' [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/BMux.vhd:57]
+WARNING: [Synth 8-327] inferring latch for variable 'ALUresult_reg' [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/ALU.vhd:52]
+WARNING: [Synth 8-327] inferring latch for variable 'branchJudge_reg' [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/ALU.vhd:53]
+WARNING: [Synth 8-327] inferring latch for variable 'PCOut_reg' [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/PCMux.vhd:59]
+WARNING: [Synth 8-6014] Unused sequential element flashstate_reg was removed.  [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/MemoryUnit.vhd:143]
+WARNING: [Synth 8-6014] Unused sequential element flashstate_reg was removed.  [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/MemoryUnit.vhd:143]
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  iSTATE |                           000001 |                              001
+                 iSTATE0 |                           000010 |                              010
+                 iSTATE1 |                           000100 |                              011
+                 iSTATE2 |                           001000 |                              100
+                 iSTATE3 |                           010000 |                              101
+                 iSTATE4 |                           100000 |                              110
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'flashstate_reg' using encoding 'one-hot' in module 'MemoryUnit'
+WARNING: [Synth 8-6014] Unused sequential element flashstate_reg was removed.  [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/MemoryUnit.vhd:143]
+WARNING: [Synth 8-327] inferring latch for variable 'WriteDataOut_reg' [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/WriteDataMux.vhd:52]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 734.461 ; gain = 449.617
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+	   2 Input     16 Bit       Adders := 4     
+	   3 Input     16 Bit       Adders := 1     
+	   2 Input     11 Bit       Adders := 2     
+	   2 Input     10 Bit       Adders := 2     
+	   2 Input      9 Bit       Adders := 2     
+	   2 Input      7 Bit       Adders := 52    
+	   2 Input      3 Bit       Adders := 3     
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
+	               23 Bit    Registers := 1     
+	               18 Bit    Registers := 2     
+	               16 Bit    Registers := 24    
+	               11 Bit    Registers := 2     
+	               10 Bit    Registers := 1     
+	                9 Bit    Registers := 1     
+	                4 Bit    Registers := 6     
+	                3 Bit    Registers := 4     
+	                2 Bit    Registers := 4     
+	                1 Bit    Registers := 32    
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   2 Input     21 Bit        Muxes := 4     
+	   3 Input     21 Bit        Muxes := 1     
+	   8 Input     21 Bit        Muxes := 1     
+	   2 Input     18 Bit        Muxes := 1     
+	   2 Input     16 Bit        Muxes := 36    
+	   4 Input     16 Bit        Muxes := 9     
+	   5 Input     16 Bit        Muxes := 1     
+	   2 Input     11 Bit        Muxes := 3     
+	   2 Input     10 Bit        Muxes := 8     
+	   2 Input      9 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 2     
+	   2 Input      7 Bit        Muxes := 99    
+	   7 Input      4 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 4     
+	   6 Input      4 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 67    
+	   6 Input      3 Bit        Muxes := 2     
+	   4 Input      2 Bit        Muxes := 2     
+	   3 Input      2 Bit        Muxes := 2     
+	   2 Input      2 Bit        Muxes := 66    
+	   6 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 167   
+	   4 Input      1 Bit        Muxes := 23    
+	   9 Input      1 Bit        Muxes := 1     
+	  19 Input      1 Bit        Muxes := 1     
+	  12 Input      1 Bit        Muxes := 12    
+	   8 Input      1 Bit        Muxes := 1     
+	   7 Input      1 Bit        Muxes := 1     
+	  16 Input      1 Bit        Muxes := 3     
+	   6 Input      1 Bit        Muxes := 5     
+	   5 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module cpu 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module PCRegister 
+Detailed RTL Component Info : 
++---Registers : 
+	               16 Bit    Registers := 1     
+Module PCAdder 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     16 Bit       Adders := 1     
+Module IfIdRegisters 
+Detailed RTL Component Info : 
++---Registers : 
+	               16 Bit    Registers := 2     
+	               11 Bit    Registers := 1     
+	                3 Bit    Registers := 3     
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 2     
+	   2 Input     11 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 3     
+Module RdMux 
+Detailed RTL Component Info : 
++---Muxes : 
+	   7 Input      4 Bit        Muxes := 1     
+Module Controller 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     21 Bit        Muxes := 4     
+	   3 Input     21 Bit        Muxes := 1     
+	   8 Input     21 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 6     
+	   4 Input      1 Bit        Muxes := 1     
+	   9 Input      1 Bit        Muxes := 1     
+	  19 Input      1 Bit        Muxes := 1     
+Module Registers 
+Detailed RTL Component Info : 
++---Registers : 
+	               16 Bit    Registers := 11    
+	                2 Bit    Registers := 1     
++---Muxes : 
+	   4 Input      2 Bit        Muxes := 1     
+	  12 Input      1 Bit        Muxes := 12    
+	   4 Input      1 Bit        Muxes := 11    
+	   2 Input      1 Bit        Muxes := 1     
+	   8 Input      1 Bit        Muxes := 1     
+Module ImmeExtendUnit 
+Detailed RTL Component Info : 
++---Muxes : 
+	   7 Input      1 Bit        Muxes := 1     
+Module IdExRegisters 
+Detailed RTL Component Info : 
++---Registers : 
+	               16 Bit    Registers := 4     
+	                4 Bit    Registers := 4     
+	                1 Bit    Registers := 7     
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 4     
+	   2 Input      4 Bit        Muxes := 4     
+Module AMux 
+Detailed RTL Component Info : 
++---Muxes : 
+	   4 Input     16 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 1     
+Module BMux 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 1     
+	   4 Input     16 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 1     
+Module ForwardController 
+Detailed RTL Component Info : 
++---Muxes : 
+	   3 Input      2 Bit        Muxes := 2     
+	   2 Input      2 Bit        Muxes := 2     
+Module ALU 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     16 Bit       Adders := 2     
+	   3 Input     16 Bit       Adders := 1     
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 2     
+	  16 Input      1 Bit        Muxes := 3     
+Module ExMemRegisters 
+Detailed RTL Component Info : 
++---Registers : 
+	               16 Bit    Registers := 2     
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 4     
+Module MemWbRegisters 
+Detailed RTL Component Info : 
++---Registers : 
+	               16 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 1     
+Module PCMux 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     16 Bit       Adders := 1     
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
+Module MemoryUnit 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
+	               23 Bit    Registers := 1     
+	               18 Bit    Registers := 2     
+	               16 Bit    Registers := 3     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 12    
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   2 Input     18 Bit        Muxes := 1     
+	   4 Input     16 Bit        Muxes := 6     
+	   2 Input     16 Bit        Muxes := 24    
+	   5 Input     16 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 1     
+	   6 Input      3 Bit        Muxes := 1     
+	   4 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 20    
+	   6 Input      1 Bit        Muxes := 5     
+	   4 Input      1 Bit        Muxes := 8     
+Module clock 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 4     
+Module MFPCMux 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 1     
+Module ReadReg1Mux 
+Detailed RTL Component Info : 
++---Muxes : 
+	   6 Input      4 Bit        Muxes := 1     
+Module ReadReg2Mux 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      3 Bit        Muxes := 1     
+Module VGA_Controller 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     11 Bit       Adders := 2     
+	   2 Input     10 Bit       Adders := 2     
+	   2 Input      9 Bit       Adders := 2     
+	   2 Input      7 Bit       Adders := 52    
+	   2 Input      3 Bit       Adders := 3     
++---Registers : 
+	               11 Bit    Registers := 1     
+	               10 Bit    Registers := 1     
+	                9 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 6     
++---Muxes : 
+	   2 Input     11 Bit        Muxes := 2     
+	   2 Input     10 Bit        Muxes := 8     
+	   2 Input      9 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 1     
+	   2 Input      7 Bit        Muxes := 99    
+	   2 Input      3 Bit        Muxes := 63    
+	   6 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 63    
+	   6 Input      2 Bit        Muxes := 1     
+	   5 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 133   
+Module WriteDataMux 
+Detailed RTL Component Info : 
++---Muxes : 
+	   4 Input     16 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5544] ROM "controllerOut" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "controllerOut" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "controllerOut" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "cnt" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "cnt" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "flashstate" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+WARNING: [Synth 8-6014] Unused sequential element current_addr_reg was removed.  [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/MemoryUnit.vhd:145]
+WARNING: [Synth 8-6014] Unused sequential element x_reg was removed.  [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/VGA_Controller.vhd:63]
+WARNING: [Synth 8-6014] Unused sequential element y_reg was removed.  [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/VGA_Controller.vhd:77]
+WARNING: [Synth 8-6014] Unused sequential element u18/clk2_reg was removed.  [E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/clock.vhd:53]
+WARNING: [Synth 8-3331] design cpu has unconnected port base_ram_addr[19]
+WARNING: [Synth 8-3331] design cpu has unconnected port base_ram_addr[18]
+WARNING: [Synth 8-3331] design cpu has unconnected port ext_ram_addr[19]
+WARNING: [Synth 8-3331] design cpu has unconnected port ext_ram_addr[18]
+WARNING: [Synth 8-3331] design cpu has unconnected port leds[24]
+WARNING: [Synth 8-3331] design cpu has unconnected port leds[16]
+WARNING: [Synth 8-3331] design cpu has unconnected port base_ram_data[31]
+WARNING: [Synth 8-3331] design cpu has unconnected port base_ram_data[30]
+WARNING: [Synth 8-3331] design cpu has unconnected port base_ram_data[29]
+WARNING: [Synth 8-3331] design cpu has unconnected port base_ram_data[28]
+WARNING: [Synth 8-3331] design cpu has unconnected port base_ram_data[27]
+WARNING: [Synth 8-3331] design cpu has unconnected port base_ram_data[26]
+WARNING: [Synth 8-3331] design cpu has unconnected port base_ram_data[25]
+INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3886] merging instance 'u5/controllerOut_reg[2]' (LDC) to 'u5/controllerOut_reg[4]'
+INFO: [Synth 8-3886] merging instance 'u7/immeOut_reg[11]' (LD) to 'u7/immeOut_reg[12]'
+INFO: [Synth 8-3886] merging instance 'u7/immeOut_reg[12]' (LD) to 'u7/immeOut_reg[13]'
+INFO: [Synth 8-3886] merging instance 'u7/immeOut_reg[13]' (LD) to 'u7/immeOut_reg[14]'
+INFO: [Synth 8-3886] merging instance 'u7/immeOut_reg[14]' (LD) to 'u7/immeOut_reg[15]'
+INFO: [Synth 8-3886] merging instance 'u17/flash_data_reg__0i_132' (FDE) to 'u17/flash_data_reg__0i_118'
+INFO: [Synth 8-3886] merging instance 'u17/flash_data_retimed_reg[0]' (FDE) to 'u17/flash_data_retimed_reg[6]'
+INFO: [Synth 8-3886] merging instance 'u17/flash_data_reg__0i_131' (FDE) to 'u17/flash_data_reg__0i_118'
+INFO: [Synth 8-3886] merging instance 'u17/flash_data_retimed_reg[1]' (FDE) to 'u17/flash_data_retimed_reg[6]'
+INFO: [Synth 8-3886] merging instance 'u17/flash_data_reg__0i_130' (FDE) to 'u17/flash_data_reg__0i_118'
+INFO: [Synth 8-3886] merging instance 'u17/flash_data_retimed_reg[2]' (FDE) to 'u17/flash_data_retimed_reg[6]'
+INFO: [Synth 8-3886] merging instance 'u17/flash_data_reg__0i_129' (FDE) to 'u17/flash_data_reg__0i_118'
+INFO: [Synth 8-3886] merging instance 'u17/flash_data_retimed_reg[3]' (FDE) to 'u17/flash_data_retimed_reg[6]'
+INFO: [Synth 8-3886] merging instance 'u17/flash_data_reg__0i_128' (FDE) to 'u17/flash_data_reg__0i_118'
+INFO: [Synth 8-3886] merging instance 'u17/flash_data_retimed_reg[4]' (FDE) to 'u17/flash_data_retimed_reg[6]'
+INFO: [Synth 8-3886] merging instance 'u17/flash_data_reg__0i_127' (FDE) to 'u17/flash_data_reg__0i_118'
+INFO: [Synth 8-3886] merging instance 'u17/flash_data_retimed_reg[5]' (FDE) to 'u17/flash_data_retimed_reg[6]'
+INFO: [Synth 8-3886] merging instance 'u17/flash_data_reg__0i_126' (FDE) to 'u17/flash_data_reg__0i_118'
+INFO: [Synth 8-3886] merging instance 'u17/flash_data_retimed_reg[6]' (FDE) to 'u17/flash_data_retimed_reg[7]'
+INFO: [Synth 8-3886] merging instance 'u17/flash_data_reg__0i_125' (FDE) to 'u17/flash_data_reg__0i_118'
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (u17/\flash_data_retimed_reg[7] )
+INFO: [Synth 8-3886] merging instance 'u17/flash_data_reg__0i_124' (FDE) to 'u17/flash_data_reg__0i_118'
+INFO: [Synth 8-3886] merging instance 'u17/flash_data_retimed_reg[8]' (FDE) to 'u17/flash_data_retimed_reg[14]'
+INFO: [Synth 8-3886] merging instance 'u17/flash_data_reg__0i_123' (FDE) to 'u17/flash_data_reg__0i_118'
+INFO: [Synth 8-3886] merging instance 'u17/flash_data_retimed_reg[9]' (FDE) to 'u17/flash_data_retimed_reg[14]'
+INFO: [Synth 8-3886] merging instance 'u17/flash_data_reg__0i_122' (FDE) to 'u17/flash_data_reg__0i_118'
+INFO: [Synth 8-3886] merging instance 'u17/flash_data_retimed_reg[10]' (FDE) to 'u17/flash_data_retimed_reg[14]'
+INFO: [Synth 8-3886] merging instance 'u17/flash_data_reg__0i_121' (FDE) to 'u17/flash_data_reg__0i_118'
+INFO: [Synth 8-3886] merging instance 'u17/flash_data_retimed_reg[11]' (FDE) to 'u17/flash_data_retimed_reg[14]'
+INFO: [Synth 8-3886] merging instance 'u17/flash_data_reg__0i_120' (FDE) to 'u17/flash_data_reg__0i_118'
+INFO: [Synth 8-3886] merging instance 'u17/flash_data_retimed_reg[12]' (FDE) to 'u17/flash_data_retimed_reg[14]'
+INFO: [Synth 8-3886] merging instance 'u17/flash_data_reg__0i_119' (FDE) to 'u17/flash_data_reg__0i_118'
+INFO: [Synth 8-3886] merging instance 'u17/flash_data_retimed_reg[13]' (FDE) to 'u17/flash_data_retimed_reg[14]'
+INFO: [Synth 8-3886] merging instance 'u17/flash_data_reg__0i_118' (FDE) to 'u17/flash_data_reg__0i_117'
+INFO: [Synth 8-3886] merging instance 'u17/flash_data_retimed_reg[14]' (FDE) to 'u17/flash_data_retimed_reg[15]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u17/\flash_data_retimed_reg[15] )
+INFO: [Synth 8-3886] merging instance 'u17/ram2_data_reg__0i_64' (FDE) to 'u17/ram2_data_reg__0i_50'
+INFO: [Synth 8-3886] merging instance 'u17/ram2_data_reg__0i_63' (FDE) to 'u17/ram2_data_reg__0i_50'
+INFO: [Synth 8-3886] merging instance 'u17/ram2_data_reg__0i_62' (FDE) to 'u17/ram2_data_reg__0i_50'
+INFO: [Synth 8-3886] merging instance 'u17/ram2_data_reg__0i_61' (FDE) to 'u17/ram2_data_reg__0i_50'
+INFO: [Synth 8-3886] merging instance 'u17/ram2_data_reg__0i_60' (FDE) to 'u17/ram2_data_reg__0i_50'
+INFO: [Synth 8-3886] merging instance 'u17/ram2_data_reg__0i_59' (FDE) to 'u17/ram2_data_reg__0i_50'
+INFO: [Synth 8-3886] merging instance 'u17/ram2_data_reg__0i_58' (FDE) to 'u17/ram2_data_reg__0i_50'
+INFO: [Synth 8-3886] merging instance 'u17/ram2_data_reg__0i_57' (FDE) to 'u17/ram2_data_reg__0i_50'
+INFO: [Synth 8-3886] merging instance 'u17/ram2_data_reg__0i_56' (FDE) to 'u17/ram2_data_reg__0i_50'
+INFO: [Synth 8-3886] merging instance 'u17/ram2_data_reg__0i_55' (FDE) to 'u17/ram2_data_reg__0i_50'
+INFO: [Synth 8-3886] merging instance 'u17/ram2_data_reg__0i_54' (FDE) to 'u17/ram2_data_reg__0i_50'
+INFO: [Synth 8-3886] merging instance 'u17/ram2_data_reg__0i_53' (FDE) to 'u17/ram2_data_reg__0i_50'
+INFO: [Synth 8-3886] merging instance 'u17/ram2_data_reg__0i_52' (FDE) to 'u17/ram2_data_reg__0i_50'
+INFO: [Synth 8-3886] merging instance 'u17/ram2_data_reg__0i_51' (FDE) to 'u17/ram2_data_reg__0i_50'
+INFO: [Synth 8-3886] merging instance 'u17/ram2_data_reg__0i_50' (FDE) to 'u17/ram2_data_reg__0i_49'
+INFO: [Synth 8-3886] merging instance 'u17/ram1_data_reg__0i_98' (FDE) to 'u17/ram1_data_reg__0i_97'
+INFO: [Synth 8-3886] merging instance 'u17/ram1_data_reg__0i_97' (FDE) to 'u17/ram1_data_reg__0i_96'
+INFO: [Synth 8-3886] merging instance 'u17/ram1_data_reg__0i_96' (FDE) to 'u17/ram1_data_reg__0i_95'
+INFO: [Synth 8-3886] merging instance 'u17/ram1_data_reg__0i_95' (FDE) to 'u17/ram1_data_reg__0i_94'
+INFO: [Synth 8-3886] merging instance 'u17/ram1_data_reg__0i_94' (FDE) to 'u17/ram1_data_reg__0i_93'
+INFO: [Synth 8-3886] merging instance 'u17/ram1_data_reg__0i_93' (FDE) to 'u17/ram1_data_reg__0i_92'
+INFO: [Synth 8-3886] merging instance 'u17/ram1_data_reg__0i_92' (FDE) to 'u17/ram1_data_reg__0i_91'
+INFO: [Synth 8-3886] merging instance 'u17/ram1_data_reg__0i_90' (FDE) to 'u17/ram1_data_reg__0i_89'
+INFO: [Synth 8-3886] merging instance 'u17/ram1_data_retimed_reg[8]' (FDE) to 'u17/ram1_data_retimed_reg[9]'
+INFO: [Synth 8-3886] merging instance 'u17/ram1_data_reg__0i_89' (FDE) to 'u17/ram1_data_reg__0i_88'
+INFO: [Synth 8-3886] merging instance 'u17/ram1_data_retimed_reg[9]' (FDE) to 'u17/ram1_data_retimed_reg[10]'
+INFO: [Synth 8-3886] merging instance 'u17/ram1_data_reg__0i_88' (FDE) to 'u17/ram1_data_reg__0i_87'
+INFO: [Synth 8-3886] merging instance 'u17/ram1_data_retimed_reg[10]' (FDE) to 'u17/ram1_data_retimed_reg[11]'
+INFO: [Synth 8-3886] merging instance 'u17/ram1_data_reg__0i_87' (FDE) to 'u17/ram1_data_reg__0i_86'
+INFO: [Synth 8-3886] merging instance 'u17/ram1_data_retimed_reg[11]' (FDE) to 'u17/ram1_data_retimed_reg[12]'
+INFO: [Synth 8-3886] merging instance 'u17/ram1_data_reg__0i_86' (FDE) to 'u17/ram1_data_reg__0i_85'
+INFO: [Synth 8-3886] merging instance 'u17/ram1_data_retimed_reg[12]' (FDE) to 'u17/ram1_data_retimed_reg[13]'
+INFO: [Synth 8-3886] merging instance 'u17/ram1_data_reg__0i_85' (FDE) to 'u17/ram1_data_reg__0i_84'
+INFO: [Synth 8-3886] merging instance 'u17/ram1_data_retimed_reg[13]' (FDE) to 'u17/ram1_data_retimed_reg[14]'
+INFO: [Synth 8-3886] merging instance 'u17/ram1_data_reg__0i_84' (FDE) to 'u17/ram1_data_reg__0i_83'
+INFO: [Synth 8-3886] merging instance 'u17/ram1_data_retimed_reg[14]' (FDE) to 'u17/ram1_data_retimed_reg[15]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u17/\ram1_data_retimed_reg[15] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (u17/flash_byte_reg)
+INFO: [Synth 8-3886] merging instance 'u17/flash_addr_reg[0]' (FDE) to 'u17/flash_addr_reg[17]'
+INFO: [Synth 8-3886] merging instance 'u17/flash_addr_reg[17]' (FDE) to 'u17/flash_addr_reg[18]'
+INFO: [Synth 8-3886] merging instance 'u17/flash_addr_reg[18]' (FDE) to 'u17/flash_addr_reg[19]'
+INFO: [Synth 8-3886] merging instance 'u17/flash_addr_reg[19]' (FDE) to 'u17/flash_addr_reg[20]'
+INFO: [Synth 8-3886] merging instance 'u17/flash_addr_reg[20]' (FDE) to 'u17/flash_addr_reg[21]'
+INFO: [Synth 8-3886] merging instance 'u17/flash_addr_reg[21]' (FDE) to 'u17/flash_addr_reg[22]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u17/\flash_addr_reg[22] )
+INFO: [Synth 8-3886] merging instance 'u23/bt_reg[0]' (FDCE) to 'u23/bt_reg[1]'
+INFO: [Synth 8-3886] merging instance 'u23/rt_reg[0]' (FDCE) to 'u23/rt_reg[1]'
+INFO: [Synth 8-3886] merging instance 'u23/rt_reg[1]' (FDCE) to 'u23/rt_reg[2]'
+INFO: [Synth 8-3886] merging instance 'u17/ram2_addr_reg[16]' (FDCE) to 'u17/ram2_addr_reg[17]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u17/\ram2_addr_reg[17] )
+INFO: [Synth 8-3886] merging instance 'u17/ram1_addr_reg[0]' (FDCE) to 'u17/ram1_addr_reg[17]'
+INFO: [Synth 8-3886] merging instance 'u17/ram1_addr_reg[1]' (FDCE) to 'u17/ram1_addr_reg[17]'
+INFO: [Synth 8-3886] merging instance 'u17/ram1_addr_reg[2]' (FDCE) to 'u17/ram1_addr_reg[17]'
+INFO: [Synth 8-3886] merging instance 'u17/ram1_addr_reg[3]' (FDCE) to 'u17/ram1_addr_reg[17]'
+INFO: [Synth 8-3886] merging instance 'u17/ram1_addr_reg[4]' (FDCE) to 'u17/ram1_addr_reg[17]'
+INFO: [Synth 8-3886] merging instance 'u17/ram1_addr_reg[5]' (FDCE) to 'u17/ram1_addr_reg[17]'
+INFO: [Synth 8-3886] merging instance 'u17/ram1_addr_reg[6]' (FDCE) to 'u17/ram1_addr_reg[17]'
+INFO: [Synth 8-3886] merging instance 'u17/ram1_addr_reg[7]' (FDCE) to 'u17/ram1_addr_reg[17]'
+INFO: [Synth 8-3886] merging instance 'u17/ram1_addr_reg[8]' (FDCE) to 'u17/ram1_addr_reg[17]'
+INFO: [Synth 8-3886] merging instance 'u17/ram1_addr_reg[9]' (FDCE) to 'u17/ram1_addr_reg[17]'
+INFO: [Synth 8-3886] merging instance 'u17/ram1_addr_reg[10]' (FDCE) to 'u17/ram1_addr_reg[17]'
+INFO: [Synth 8-3886] merging instance 'u17/ram1_addr_reg[11]' (FDCE) to 'u17/ram1_addr_reg[17]'
+INFO: [Synth 8-3886] merging instance 'u17/ram1_addr_reg[12]' (FDCE) to 'u17/ram1_addr_reg[17]'
+INFO: [Synth 8-3886] merging instance 'u17/ram1_addr_reg[13]' (FDCE) to 'u17/ram1_addr_reg[17]'
+INFO: [Synth 8-3886] merging instance 'u17/ram1_addr_reg[14]' (FDCE) to 'u17/ram1_addr_reg[17]'
+INFO: [Synth 8-3886] merging instance 'u17/ram1_addr_reg[15]' (FDCE) to 'u17/ram1_addr_reg[17]'
+INFO: [Synth 8-3886] merging instance 'u17/ram1_addr_reg[16]' (FDCE) to 'u17/ram1_addr_reg[17]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u17/\ram1_addr_reg[17] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (u17/ram1_en_reg)
+INFO: [Synth 8-3886] merging instance 'u8/immeOut_reg[11]' (FDCE) to 'u8/immeOut_reg[12]'
+INFO: [Synth 8-3886] merging instance 'u8/immeOut_reg[12]' (FDCE) to 'u8/immeOut_reg[13]'
+INFO: [Synth 8-3886] merging instance 'u8/immeOut_reg[13]' (FDCE) to 'u8/immeOut_reg[14]'
+INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+WARNING: [Synth 8-3332] Sequential element (ReadData2_reg[15]) is unused and will be removed from module Registers.
+WARNING: [Synth 8-3332] Sequential element (ReadData2_reg[14]) is unused and will be removed from module Registers.
+WARNING: [Synth 8-3332] Sequential element (ReadData2_reg[13]) is unused and will be removed from module Registers.
+WARNING: [Synth 8-3332] Sequential element (ReadData2_reg[12]) is unused and will be removed from module Registers.
+WARNING: [Synth 8-3332] Sequential element (ReadData2_reg[11]) is unused and will be removed from module Registers.
+WARNING: [Synth 8-3332] Sequential element (ReadData2_reg[10]) is unused and will be removed from module Registers.
+WARNING: [Synth 8-3332] Sequential element (ReadData2_reg[9]) is unused and will be removed from module Registers.
+WARNING: [Synth 8-3332] Sequential element (ReadData2_reg[8]) is unused and will be removed from module Registers.
+WARNING: [Synth 8-3332] Sequential element (ReadData2_reg[7]) is unused and will be removed from module Registers.
+WARNING: [Synth 8-3332] Sequential element (ReadData2_reg[6]) is unused and will be removed from module Registers.
+WARNING: [Synth 8-3332] Sequential element (ReadData2_reg[5]) is unused and will be removed from module Registers.
+WARNING: [Synth 8-3332] Sequential element (ReadData2_reg[4]) is unused and will be removed from module Registers.
+WARNING: [Synth 8-3332] Sequential element (ReadData2_reg[3]) is unused and will be removed from module Registers.
+WARNING: [Synth 8-3332] Sequential element (ReadData2_reg[2]) is unused and will be removed from module Registers.
+WARNING: [Synth 8-3332] Sequential element (ReadData2_reg[1]) is unused and will be removed from module Registers.
+WARNING: [Synth 8-3332] Sequential element (ReadData2_reg[0]) is unused and will be removed from module Registers.
+WARNING: [Synth 8-3332] Sequential element (ram1_data_retimed_reg[15]) is unused and will be removed from module MemoryUnit.
+WARNING: [Synth 8-3332] Sequential element (flash_data_retimed_reg[15]) is unused and will be removed from module MemoryUnit.
+WARNING: [Synth 8-3332] Sequential element (flash_data_retimed_reg[7]) is unused and will be removed from module MemoryUnit.
+WARNING: [Synth 8-3332] Sequential element (ram1_addr_reg[17]) is unused and will be removed from module MemoryUnit.
+WARNING: [Synth 8-3332] Sequential element (ram2_addr_reg[17]) is unused and will be removed from module MemoryUnit.
+WARNING: [Synth 8-3332] Sequential element (ram2AddrOutput_reg[15]) is unused and will be removed from module MemoryUnit.
+WARNING: [Synth 8-3332] Sequential element (ram2AddrOutput_reg[14]) is unused and will be removed from module MemoryUnit.
+WARNING: [Synth 8-3332] Sequential element (ram2AddrOutput_reg[13]) is unused and will be removed from module MemoryUnit.
+WARNING: [Synth 8-3332] Sequential element (ram2AddrOutput_reg[12]) is unused and will be removed from module MemoryUnit.
+WARNING: [Synth 8-3332] Sequential element (ram2AddrOutput_reg[11]) is unused and will be removed from module MemoryUnit.
+WARNING: [Synth 8-3332] Sequential element (ram2AddrOutput_reg[10]) is unused and will be removed from module MemoryUnit.
+WARNING: [Synth 8-3332] Sequential element (ram2AddrOutput_reg[9]) is unused and will be removed from module MemoryUnit.
+WARNING: [Synth 8-3332] Sequential element (ram2AddrOutput_reg[8]) is unused and will be removed from module MemoryUnit.
+WARNING: [Synth 8-3332] Sequential element (ram1_en_reg) is unused and will be removed from module MemoryUnit.
+WARNING: [Synth 8-3332] Sequential element (flash_addr_reg[22]) is unused and will be removed from module MemoryUnit.
+WARNING: [Synth 8-3332] Sequential element (flash_byte_reg) is unused and will be removed from module MemoryUnit.
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u23/\romAddr_reg[10] )
+WARNING: [Synth 8-3332] Sequential element (romAddr_reg[10]) is unused and will be removed from module VGA_Controller.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:33 ; elapsed = 00:00:35 . Memory (MB): peak = 734.461 ; gain = 449.617
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:47 ; elapsed = 00:00:49 . Memory (MB): peak = 734.461 ; gain = 449.617
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:47 ; elapsed = 00:00:49 . Memory (MB): peak = 734.461 ; gain = 449.617
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:48 ; elapsed = 00:00:50 . Memory (MB): peak = 735.977 ; gain = 451.133
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:49 ; elapsed = 00:00:51 . Memory (MB): peak = 735.977 ; gain = 451.133
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:49 ; elapsed = 00:00:51 . Memory (MB): peak = 735.977 ; gain = 451.133
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:49 ; elapsed = 00:00:51 . Memory (MB): peak = 735.977 ; gain = 451.133
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:49 ; elapsed = 00:00:51 . Memory (MB): peak = 735.977 ; gain = 451.133
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:49 ; elapsed = 00:00:51 . Memory (MB): peak = 735.977 ; gain = 451.133
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:49 ; elapsed = 00:00:51 . Memory (MB): peak = 735.977 ; gain = 451.133
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+--------------+----------+
+|      |BlackBox name |Instances |
++------+--------------+----------+
+|1     |fontRom       |         1|
++------+--------------+----------+
+
+Report Cell Usage: 
++------+-------------+------+
+|      |Cell         |Count |
++------+-------------+------+
+|1     |fontRom_bbox |     1|
+|2     |BUFG         |     7|
+|3     |CARRY4       |    42|
+|4     |DCM_SP       |     1|
+|5     |LUT1         |    95|
+|6     |LUT2         |   187|
+|7     |LUT3         |   214|
+|8     |LUT4         |   225|
+|9     |LUT5         |   238|
+|10    |LUT6         |   546|
+|11    |MUXF7        |    16|
+|12    |FDCE         |   432|
+|13    |FDPE         |    40|
+|14    |FDRE         |   100|
+|15    |FDSE         |     1|
+|16    |LD           |   110|
+|17    |LDC          |    20|
+|18    |IBUF         |     7|
+|19    |IOBUF        |    40|
+|20    |OBUF         |   115|
+|21    |OBUFT        |    14|
++------+-------------+------+
+
+Report Instance Areas: 
++------+---------+-------------------+------+
+|      |Instance |Module             |Cells |
++------+---------+-------------------+------+
+|1     |top      |                   |  2458|
+|2     |  u1     |PCRegister         |    59|
+|3     |  u10    |BMux               |   144|
+|4     |  u12    |ALU                |    53|
+|5     |  u13    |ExMemRegisters     |    51|
+|6     |  u14    |MemWbRegisters     |    48|
+|7     |  u16    |PCMux              |    16|
+|8     |  u17    |MemoryUnit         |   409|
+|9     |  u18    |clock              |     5|
+|10    |  u2     |PCAdder            |    17|
+|11    |  u20    |MFPCMux            |    16|
+|12    |  u23    |VGA_Controller     |   225|
+|13    |  u26    |WriteDataMux       |    16|
+|14    |  u27    |xil_defaultlib_dcm |     6|
+|15    |  u3     |IfIdRegisters      |   135|
+|16    |  u4     |RdMux              |     3|
+|17    |  u5     |Controller         |    51|
+|18    |  u6     |Registers          |   604|
+|19    |  u7     |ImmeExtendUnit     |    25|
+|20    |  u8     |IdExRegisters      |   252|
+|21    |  u9     |AMux               |   129|
++------+---------+-------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:49 ; elapsed = 00:00:51 . Memory (MB): peak = 735.977 ; gain = 451.133
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 133 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:34 ; elapsed = 00:00:42 . Memory (MB): peak = 735.977 ; gain = 138.688
+Synthesis Optimization Complete : Time (s): cpu = 00:00:50 ; elapsed = 00:00:51 . Memory (MB): peak = 735.977 ; gain = 451.133
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 220 Unisim elements for replacement
+WARNING: [Netlist 29-365] DCM_ADV instance 'u27/DCM_SP_INST' has been transformed into an MMCM. Please check the output clock waveforms for correctness. If the output clocks are incorrect, modify your design to use the MMCME<#>_ADV native to the target architecture.
+WARNING: [Netlist 29-365] DCM_ADV instance 'u27/DCM_SP_INST' has been transformed into an MMCM. Please check the output clock waveforms for correctness. If the output clocks are incorrect, modify your design to use the MMCME<#>_ADV native to the target architecture.
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 171 instances were transformed.
+  DCM_SP => MMCME2_ADV (inverted pins: PSINCDEC): 1 instances
+  IOBUF => IOBUF (IBUF, OBUFT): 40 instances
+  LD => LDCE: 110 instances
+  LDC => LDCE: 20 instances
+
+344 Infos, 238 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:52 ; elapsed = 00:00:55 . Memory (MB): peak = 735.977 ; gain = 455.805
+INFO: [Common 17-1381] The checkpoint 'E:/project_fz/project_fz.runs/synth_1/cpu.dcp' has been generated.
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.036 . Memory (MB): peak = 735.977 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Wed Nov 29 23:38:18 2017...

@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="synth_1" LaunchPart="xc7a100tlfgg676-2L" LaunchTime="1511973433">
+  <File Type="RDS-PROPCONSTRS" Name="cpu_drc_synth.rpt"/>
+  <File Type="PA-TCL" Name="cpu.tcl"/>
+  <File Type="RDS-RDS" Name="cpu.vds"/>
+  <File Type="RDS-UTIL" Name="cpu_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="cpu_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="cpu.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="cpu_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="cpu_timing_summary_synth.pb"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/imports/cpu_fz/ALU.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../cpu_fz/ALU.vhd"/>
+        <Attr Name="ImportTime" Val="1480171900"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/cpu_fz/AMux.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../cpu_fz/AMux.vhd"/>
+        <Attr Name="ImportTime" Val="1480171880"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/cpu_fz/BMux.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../cpu_fz/BMux.vhd"/>
+        <Attr Name="ImportTime" Val="1480171886"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/cpu_fz/Controller.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../cpu_fz/Controller.vhd"/>
+        <Attr Name="ImportTime" Val="1480132450"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/cpu_fz/ExMemRegisters.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../cpu_fz/ExMemRegisters.vhd"/>
+        <Attr Name="ImportTime" Val="1480336142"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/cpu_fz/ForwardController.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../cpu_fz/ForwardController.vhd"/>
+        <Attr Name="ImportTime" Val="1480171894"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/cpu_fz/HazardDetectionUnit.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../cpu_fz/HazardDetectionUnit.vhd"/>
+        <Attr Name="ImportTime" Val="1480171914"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/cpu_fz/IdExRegisters.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../cpu_fz/IdExRegisters.vhd"/>
+        <Attr Name="ImportTime" Val="1480336142"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/cpu_fz/IfIdRegisters.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../cpu_fz/IfIdRegisters.vhd"/>
+        <Attr Name="ImportTime" Val="1480336142"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/cpu_fz/ImmeExtendUnit.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../cpu_fz/ImmeExtendUnit.vhd"/>
+        <Attr Name="ImportTime" Val="1480171858"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/cpu_fz/MFPCMux.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../cpu_fz/MFPCMux.vhd"/>
+        <Attr Name="ImportTime" Val="1479901486"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/cpu_fz/MemWbRegisters.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../cpu_fz/MemWbRegisters.vhd"/>
+        <Attr Name="ImportTime" Val="1480336142"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/cpu_fz/MemoryUnit.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../cpu_fz/MemoryUnit.vhd"/>
+        <Attr Name="ImportTime" Val="1481206330"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/cpu_fz/PCAdder.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../cpu_fz/PCAdder.vhd"/>
+        <Attr Name="ImportTime" Val="1480171826"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/cpu_fz/PCMux.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../cpu_fz/PCMux.vhd"/>
+        <Attr Name="ImportTime" Val="1479998842"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/cpu_fz/PCRegister.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../cpu_fz/PCRegister.vhd"/>
+        <Attr Name="ImportTime" Val="1480336142"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/cpu_fz/RdMux.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../cpu_fz/RdMux.vhd"/>
+        <Attr Name="ImportTime" Val="1480171840"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/cpu_fz/ReadReg1Mux.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../cpu_fz/ReadReg1Mux.vhd"/>
+        <Attr Name="ImportTime" Val="1479901486"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/cpu_fz/ReadReg2Mux.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../cpu_fz/ReadReg2Mux.vhd"/>
+        <Attr Name="ImportTime" Val="1479982050"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/cpu_fz/Registers.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../cpu_fz/Registers.vhd"/>
+        <Attr Name="ImportTime" Val="1481116996"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/cpu_fz/StructConflictUnit.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../cpu_fz/StructConflictUnit.vhd"/>
+        <Attr Name="ImportTime" Val="1480413942"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/cpu_fz/VGA_Controller.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../cpu_fz/VGA_Controller.vhd"/>
+        <Attr Name="ImportTime" Val="1480486900"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/cpu_fz/WriteDataMux.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../cpu_fz/WriteDataMux.vhd"/>
+        <Attr Name="ImportTime" Val="1480166356"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/cpu_fz/clock.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../cpu_fz/clock.vhd"/>
+        <Attr Name="ImportTime" Val="1480436076"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/cpu_fz/dcm.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../cpu_fz/dcm.vhd"/>
+        <Attr Name="ImportTime" Val="1480436738"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/cpu_fz/cpu.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../cpu_fz/cpu.vhd"/>
+        <Attr Name="ImportTime" Val="1481190738"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="cpu"/>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <File Path="$PSRCDIR/constrs_1/new/cpu.xdc">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2017">
+      <Desc>Vivado Synthesis Defaults</Desc>
+    </StratHandle>
+    <Step Id="synth_design"/>
+  </Strategy>
+  <BlockFileSet Type="BlockSrcs" Name="fontRom"/>
+</GenRun>

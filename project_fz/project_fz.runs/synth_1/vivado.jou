@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2017.1 (64-bit)
+# SW Build 1846317 on Fri Apr 14 18:55:03 MDT 2017
+# IP Build 1846188 on Fri Apr 14 20:52:08 MDT 2017
+# Start of session at: Wed Nov 29 23:37:16 2017
+# Process ID: 1608
+# Current directory: E:/project_fz/project_fz.runs/synth_1
+# Command line: vivado.exe -log cpu.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source cpu.tcl
+# Log file: E:/project_fz/project_fz.runs/synth_1/cpu.vds
+# Journal file: E:/project_fz/project_fz.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source cpu.tcl -notrace
