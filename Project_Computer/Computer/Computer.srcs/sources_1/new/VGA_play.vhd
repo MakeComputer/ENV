@@ -156,7 +156,7 @@ process(CLK_0)
 begin
 	if(CLK_0'event and CLK_0 = '1') then
 		clk <= not clk;
-		_clk <= clk;
+		v_clk <= clk;
 	end if;
 end process;
 

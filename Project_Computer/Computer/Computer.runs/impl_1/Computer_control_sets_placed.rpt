@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2017.1 (win64) Build 1846317 Fri Apr 14 18:55:03 MDT 2017
-| Date         : Tue Nov 28 19:38:09 2017
+| Date         : Sat Dec  2 03:33:04 2017
 | Host         : samsung running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file Computer_control_sets_placed.rpt
 | Design       : Computer
@@ -22,8 +22,8 @@ Table of Contents
 +----------------------------------------------------------+-------+
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
-| Number of unique control sets                            |    67 |
-| Unused register locations in slices containing registers |   396 |
+| Number of unique control sets                            |    14 |
+| Unused register locations in slices containing registers |    37 |
 +----------------------------------------------------------+-------+
 
 
@@ -33,100 +33,46 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |              20 |            8 |
-| No           | No                    | Yes                    |             195 |           85 |
-| No           | Yes                   | No                     |              16 |           16 |
-| Yes          | No                    | No                     |             124 |           45 |
-| Yes          | No                    | Yes                    |              97 |           42 |
-| Yes          | Yes                   | No                     |               8 |            1 |
+| No           | No                    | No                     |              17 |            8 |
+| No           | No                    | Yes                    |             167 |           53 |
+| No           | Yes                   | No                     |               1 |            1 |
+| Yes          | No                    | No                     |              26 |           10 |
+| Yes          | No                    | Yes                    |             128 |           31 |
+| Yes          | Yes                   | No                     |               0 |            0 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
 
 3. Detailed Control Set Information
 -----------------------------------
 
-+-----------------------------------------+---------------------------------------------------+----------------------------------------+------------------+----------------+
-|               Clock Signal              |                   Enable Signal                   |            Set/Reset Signal            | Slice Load Count | Bel Load Count |
-+-----------------------------------------+---------------------------------------------------+----------------------------------------+------------------+----------------+
-|  local_mem/toutput1_reg[10]_LDC_i_1_n_1 |                                                   | local_mem/toutput1_reg[10]_LDC_i_2_n_1 |                1 |              1 |
-|  local_mem/toutput1_reg[11]_LDC_i_1_n_1 |                                                   | local_mem/toutput1_reg[11]_LDC_i_2_n_1 |                1 |              1 |
-|  local_mem/toutput1_reg[12]_LDC_i_1_n_1 |                                                   | local_mem/toutput1_reg[12]_LDC_i_2_n_1 |                1 |              1 |
-|  local_mem/toutput1_reg[13]_LDC_i_1_n_1 |                                                   | local_mem/toutput1_reg[13]_LDC_i_2_n_1 |                1 |              1 |
-|  local_mem/toutput1_reg[14]_LDC_i_1_n_1 |                                                   | local_mem/toutput1_reg[14]_LDC_i_2_n_1 |                1 |              1 |
-|  local_mem/toutput1_reg[15]_LDC_i_1_n_1 |                                                   | local_mem/toutput1_reg[15]_LDC_i_2_n_1 |                1 |              1 |
-|  local_mem/toutput1_reg[1]_LDC_i_1_n_1  |                                                   | local_mem/toutput1_reg[1]_LDC_i_2_n_1  |                1 |              1 |
-|  local_mem/toutput1_reg[2]_LDC_i_1_n_1  |                                                   | local_mem/toutput1_reg[2]_LDC_i_2_n_1  |                1 |              1 |
-|  local_mem/toutput1_reg[0]_LDC_i_1_n_1  |                                                   | local_mem/toutput1_reg[0]_LDC_i_2_n_1  |                1 |              1 |
-|  local_mem/toutput1_reg[5]_LDC_i_1_n_1  |                                                   | local_mem/toutput1_reg[5]_LDC_i_2_n_1  |                1 |              1 |
-|  local_mem/toutput1_reg[6]_LDC_i_1_n_1  |                                                   | local_mem/toutput1_reg[6]_LDC_i_2_n_1  |                1 |              1 |
-|  local_mem/toutput1_reg[7]_LDC_i_1_n_1  |                                                   | local_mem/toutput1_reg[7]_LDC_i_2_n_1  |                1 |              1 |
-|  local_mem/toutput1_reg[4]_LDC_i_1_n_1  |                                                   | local_mem/toutput1_reg[4]_LDC_i_2_n_1  |                1 |              1 |
-|  local_mem/toutput1_reg[8]_LDC_i_1_n_1  |                                                   | local_mem/toutput1_reg[8]_LDC_i_2_n_1  |                1 |              1 |
-|  local_mem/toutput1_reg[9]_LDC_i_1_n_1  |                                                   | local_mem/toutput1_reg[9]_LDC_i_2_n_1  |                1 |              1 |
-|  local_mem/toutput1_reg[3]_LDC_i_1_n_1  |                                                   | local_mem/toutput1_reg[3]_LDC_i_2_n_1  |                1 |              1 |
-|  clk_in_IBUF_BUFG                       | local_mem/toutput1__16                            | local_mem/toutput1_reg[6]_LDC_i_1_n_1  |                1 |              1 |
-|  clk_in_IBUF_BUFG                       | local_mem/toutput1__16                            | local_mem/toutput1_reg[7]_LDC_i_1_n_1  |                1 |              1 |
-|  clk_in_IBUF_BUFG                       | local_mem/toutput1__16                            | local_mem/toutput1_reg[4]_LDC_i_1_n_1  |                1 |              1 |
-|  clk_in_IBUF_BUFG                       | local_mem/toutput1__16                            | local_mem/toutput1_reg[8]_LDC_i_1_n_1  |                1 |              1 |
-|  clk_in_IBUF_BUFG                       | local_mem/toutput1__16                            | local_mem/toutput1_reg[9]_LDC_i_1_n_1  |                1 |              1 |
-|  clk_in_IBUF_BUFG                       | local_mem/toutput1__16                            | local_mem/toutput1_reg[3]_LDC_i_1_n_1  |                1 |              1 |
-|  clk_in_IBUF_BUFG                       | local_mem/flash_local/flash_we1_out               | rst_IBUF                               |                1 |              1 |
-|  clk_in_IBUF_BUFG                       | local_mem/flash_local/flash_oe2_out               | rst_IBUF                               |                1 |              1 |
-|  clk_in_IBUF_BUFG                       |                                                   | local_mem/toutput1_reg[10]_LDC_i_2_n_1 |                1 |              1 |
-|  clk_in_IBUF_BUFG                       |                                                   | local_mem/toutput1_reg[11]_LDC_i_2_n_1 |                1 |              1 |
-|  clk_in_IBUF_BUFG                       |                                                   | local_mem/toutput1_reg[12]_LDC_i_2_n_1 |                1 |              1 |
-|  clk_in_IBUF_BUFG                       |                                                   | local_mem/toutput1_reg[13]_LDC_i_2_n_1 |                1 |              1 |
-|  clk_in_IBUF_BUFG                       |                                                   | local_mem/toutput1_reg[14]_LDC_i_2_n_1 |                1 |              1 |
-|  clk_in_IBUF_BUFG                       |                                                   | local_mem/toutput1_reg[15]_LDC_i_2_n_1 |                1 |              1 |
-|  clk_in_IBUF_BUFG                       |                                                   | local_mem/toutput1_reg[1]_LDC_i_2_n_1  |                1 |              1 |
-|  clk_in_IBUF_BUFG                       |                                                   | local_mem/toutput1_reg[2]_LDC_i_2_n_1  |                1 |              1 |
-|  clk_in_IBUF_BUFG                       |                                                   | local_mem/toutput1_reg[0]_LDC_i_2_n_1  |                1 |              1 |
-|  clk_in_IBUF_BUFG                       |                                                   | local_mem/toutput1_reg[5]_LDC_i_2_n_1  |                1 |              1 |
-|  clk_in_IBUF_BUFG                       |                                                   | local_mem/toutput1_reg[6]_LDC_i_2_n_1  |                1 |              1 |
-|  clk_in_IBUF_BUFG                       |                                                   | local_mem/toutput1_reg[8]_LDC_i_2_n_1  |                1 |              1 |
-|  clk_in_IBUF_BUFG                       |                                                   | local_mem/toutput1_reg[4]_LDC_i_2_n_1  |                1 |              1 |
-|  clk_in_IBUF_BUFG                       |                                                   | local_mem/toutput1_reg[3]_LDC_i_2_n_1  |                1 |              1 |
-|  clk_in_IBUF_BUFG                       |                                                   | local_mem/toutput1_reg[9]_LDC_i_2_n_1  |                1 |              1 |
-|  clk_in_IBUF_BUFG                       |                                                   | local_mem/toutput1_reg[7]_LDC_i_2_n_1  |                1 |              1 |
-|  clk_in_IBUF_BUFG                       | local_mem/toutput1__16                            | local_mem/toutput1_reg[10]_LDC_i_1_n_1 |                1 |              1 |
-|  clk_in_IBUF_BUFG                       | local_mem/toutput1__16                            | local_mem/toutput1_reg[11]_LDC_i_1_n_1 |                1 |              1 |
-|  clk_in_IBUF_BUFG                       | local_mem/toutput1__16                            | local_mem/toutput1_reg[12]_LDC_i_1_n_1 |                1 |              1 |
-|  clk_in_IBUF_BUFG                       | local_mem/toutput1__16                            | local_mem/toutput1_reg[13]_LDC_i_1_n_1 |                1 |              1 |
-|  clk_in_IBUF_BUFG                       | local_mem/toutput1__16                            | local_mem/toutput1_reg[14]_LDC_i_1_n_1 |                1 |              1 |
-|  clk_in_IBUF_BUFG                       | local_mem/toutput1__16                            | local_mem/toutput1_reg[15]_LDC_i_1_n_1 |                1 |              1 |
-|  clk_in_IBUF_BUFG                       | local_mem/toutput1__16                            | local_mem/toutput1_reg[1]_LDC_i_1_n_1  |                1 |              1 |
-|  clk_in_IBUF_BUFG                       | local_mem/toutput1__16                            | local_mem/toutput1_reg[2]_LDC_i_1_n_1  |                1 |              1 |
-|  clk_in_IBUF_BUFG                       | local_mem/toutput1__16                            | local_mem/toutput1_reg[0]_LDC_i_1_n_1  |                1 |              1 |
-|  clk_in_IBUF_BUFG                       | local_mem/toutput1__16                            | local_mem/toutput1_reg[5]_LDC_i_1_n_1  |                1 |              1 |
-|  clk_in_IBUF_BUFG                       |                                                   |                                        |                2 |              4 |
-|  clk_in_IBUF_BUFG                       |                                                   | rst_IBUF                               |                4 |              4 |
-|  clk_in_IBUF_BUFG                       | local_mem/flash_local/FSM_onehot_state[5]_i_1_n_1 | rst_IBUF                               |                1 |              6 |
-|  clk_in_IBUF_BUFG                       | local_mem/toutput20                               |                                        |                5 |              8 |
-|  clk_in_IBUF_BUFG                       | local_mem/toutput20                               | local_mem/toutput2[15]_i_1_n_1         |                1 |              8 |
-|  vga/video_clk_OBUF_BUFG                | vga/sel                                           | rst_IBUF                               |                3 |              9 |
-|  local_id/E[0]                          |                                                   |                                        |                6 |             16 |
-|  n_0_607_BUFG                           | local_exe/p_0_in                                  |                                        |                4 |             16 |
-| ~n_0_607_BUFG                           | local_mem_wb/s0_reg[0][0]                         | rst_IBUF                               |                8 |             16 |
-|  clk_in_IBUF_BUFG                       | local_mem/tflash_data0                            |                                        |                5 |             16 |
-|  clk_in_IBUF_BUFG                       | local_mem/flash_local/dataout[15]_i_1_n_1         | rst_IBUF                               |                4 |             16 |
-|  vga/video_clk_OBUF_BUFG                |                                                   | rst_IBUF                               |                8 |             17 |
-|  clk_in_IBUF_BUFG                       | local_mem/flash_local/flash_addr0                 |                                        |                4 |             17 |
-|  n_0_607_BUFG                           | local_exe/p_0_in                                  | local_exe/AR[0]                        |                8 |             32 |
-|  clk_in_IBUF_BUFG                       | local_mem/flash_addr_input0                       |                                        |                9 |             33 |
-|  clk_in_IBUF_BUFG                       | local_mem/flash_read_i_1_n_1                      |                                        |               18 |             34 |
-|  n_0_607_BUFG                           |                                                   | rst_IBUF                               |               57 |            158 |
-+-----------------------------------------+---------------------------------------------------+----------------------------------------+------------------+----------------+
++-----------------------+-------------------------------------------+----------------------+------------------+----------------+
+|      Clock Signal     |               Enable Signal               |   Set/Reset Signal   | Slice Load Count | Bel Load Count |
++-----------------------+-------------------------------------------+----------------------+------------------+----------------+
+|  clk_BUFG             |                                           |                      |                1 |              1 |
+|  clk_BUFG             |                                           | u17/flash_ce_i_1_n_0 |                1 |              1 |
+|  u18/count[1]_i_2_n_0 |                                           | rst_IBUF             |                1 |              4 |
+|  clk_BUFG             |                                           | rst_IBUF             |                3 |              7 |
+|  clk_BUFG             | local_exe_mem/ram1_data_retimed_reg[0][0] |                      |                4 |              9 |
+|  clk_BUFG             | local_exe_mem/ram2_addr_reg[0][0]         | rst_IBUF             |                3 |             16 |
+|  clk_BUFG             | local_exe_mem/dataOut_reg[15][0]          | rst_IBUF             |                3 |             16 |
+| ~clk_3_BUFG           | local_mem_wb/s0_reg[0][0]                 | rst_IBUF             |                4 |             16 |
+|  u18/clk__0           | local_exe/E[0]                            | rst_IBUF             |                4 |             16 |
+|  local_id/E[0]        |                                           |                      |                7 |             16 |
+|  clk_BUFG             | local_exe_mem/E[0]                        |                      |                6 |             17 |
+|  clk_BUFG             | u17/insOut[15]_i_1_n_0                    | rst_IBUF             |                7 |             32 |
+|  clk_3_BUFG           | local_exe/E[0]                            | local_exe/AR[0]      |               10 |             32 |
+|  clk_3_BUFG           |                                           | rst_IBUF             |               49 |            156 |
++-----------------------+-------------------------------------------+----------------------+------------------+----------------+
 
 
 +--------+-----------------------+
 | Fanout | Number of ControlSets |
 +--------+-----------------------+
-| 1      |                    50 |
-| 4      |                     2 |
-| 6      |                     1 |
-| 8      |                     2 |
+| 1      |                     2 |
+| 4      |                     1 |
+| 7      |                     1 |
 | 9      |                     1 |
-| 16+    |                    11 |
+| 16+    |                     9 |
 +--------+-----------------------+
 
 

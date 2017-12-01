@@ -35,10 +35,11 @@ use IEEE.STD_LOGIC_UNSIGNED.ALL;
 
 entity Computer is
     port (
-
-        --clk_hand : in std_logic;
+        
+        op:in std_logic;
+        clk_hand : in std_logic;
         clk_in,rst: in std_logic;
-        leds: out std_logic_vector(31 downto 0);
+        leds: out std_logic_vector(15 downto 0) := "0000000000000000";
         
         -- vga port
 --        R: out std_logic_vector(2 downto 0) := "000";
@@ -52,12 +53,12 @@ entity Computer is
         video_de: out std_logic := '0';
         
             
-        MemData1:inout STD_LOGIC_VECTOR(15 downto 0) := "0000000000000000"; 
-        MemAddr1:out STD_LOGIC_VECTOR(17 downto 0) := "000000000000000000";     
+		base_ram_data : inout std_logic_vector(31 downto 0) := "00000000000000000000000000000000";
+        base_ram_addr : out std_logic_vector(19 downto 0) := "00000000000000000000";    
         oe1,we1:out STD_LOGIC := '1';
         en1:out STD_LOGIC := '1';
-        MemData2:inout STD_LOGIC_VECTOR(15 downto 0) := "0000000000000000"; 
-        MemAddr2:out STD_LOGIC_VECTOR(17 downto 0) := "000000000000000000"; 
+		ext_ram_data : inout std_logic_vector(31 downto 0) := "00000000000000000000000000000000";
+        ext_ram_addr : out std_logic_vector(19 downto 0) := "00000000000000000000"; 
         oe2,we2:out STD_LOGIC := '1';
         en2:out STD_LOGIC := '1';   
         --chuan kou 
@@ -73,7 +74,7 @@ entity Computer is
         flash_oe : out STD_LOGIC := '1'; --读使能
         flash_we : out STD_LOGIC := '1'; --写使能
         flash_rp : out STD_LOGIC := '1'; --工作模式，1为工作
-        flash_addr : out STD_LOGIC_VECTOR( 22 downto 1 ) := "0000000000000000000000"; --flash内存地址
+        flash_addr : out STD_LOGIC_VECTOR( 22 downto 0 ) := "00000000000000000000000"; --flash内存地址
         flash_data : inout STD_LOGIC_VECTOR( 15 downto 0 )--flash输出信号
  
 
@@ -214,17 +215,15 @@ architecture Computer_beh of Computer is
         
         ramAddr : in std_logic_vector(15 downto 0);     --读DM/写DM/写IM时，地址输入
         PCOut : in std_logic_vector(15 downto 0);           --读IM时，地址输入
-        PCMuxOut : in std_logic_vector(15 downto 0);    
-        PCKeep : in std_logic;
         dataOut : out std_logic_vector(15 downto 0);        --读DM时，读出来的数据/读出的串口状态
         insOut : out std_logic_vector(15 downto 0);     --读IM时，出来的指令
         
-        ram1_addr : out std_logic_vector(17 downto 0);  --RAM1地址总线
-        ram2_addr : out std_logic_vector(17 downto 0);  --RAM2地址总线
+        ram1_addr : out std_logic_vector(19 downto 0);  --RAM1地址总线
+        ram2_addr : out std_logic_vector(19 downto 0);  --RAM2地址总线
         ram1_data : inout std_logic_vector(15 downto 0);--RAM1数据总线
         ram2_data : inout std_logic_vector(15 downto 0);--RAM2数据总线
         
-        ram2AddrOutput : out std_logic_vector(17 downto 0);
+--        ram2AddrOutput : out std_logic_vector(17 downto 0);
         
         ram1_en : out std_logic;        --RAM1使能，='1'禁止
         ram1_oe : out std_logic;        --RAM1读使能，='1'禁止；
@@ -233,10 +232,7 @@ architecture Computer_beh of Computer is
         ram2_oe : out std_logic;        --RAM2读使能，='1'禁止
         ram2_we : out std_logic;        --RAM2写使能，='1'禁止
         
-        MemoryState : out std_logic_vector(1 downto 0);
-        FlashStateOut : out std_logic_vector(2 downto 0);
-        flashFinished : out std_logic;
-        
+   
         --Flash
         flash_addr : out std_logic_vector(22 downto 0);     --flash地址线
         flash_data : inout std_logic_vector(15 downto 0);   --flash数据线
@@ -401,8 +397,8 @@ architecture Computer_beh of Computer is
     --        wrn : out STD_LOGIC;
     --        rdn : out STD_LOGIC;
     --        dataready : in std_logic;
-    --        MemData1:inout STD_LOGIC_VECTOR(15 downto 0) := "0000000000000000"; --从内存中读取数据进该元件RAM2存数据
-    --        MemAddr1:out STD_LOGIC_VECTOR(17 downto 0) := "000000000000000000"; --输入到RAM2的内存地址
+    --        base_ram_data:inout STD_LOGIC_VECTOR(15 downto 0) := "0000000000000000"; --从内存中读取数据进该元件RAM2存数据
+    --        base_ram_addr:out STD_LOGIC_VECTOR(17 downto 0) := "000000000000000000"; --输入到RAM2的内存地址
     --        oe1,we1:out STD_LOGIC := '1';--RAM1和RAM2的使能信号.RAM1存指令，RAM2存数据
     --        en1:out STD_LOGIC := '1'--初始使能为1
     --        );
@@ -480,6 +476,7 @@ architecture Computer_beh of Computer is
 signal clk_3 : std_logic;
 signal clk_registers : std_logic;
 signal clk : std_logic;
+signal clkIn_clock : std_logic;
 
 
 signal s_pc_mux:std_logic_vector(15 downto 0);
@@ -567,7 +564,7 @@ begin
 
     u18 : Clock
     port map(
-        rst => touch_btn(5),
+        rst => rst,
         clk => clkIn_clock,
         
         clkout => clk,
@@ -578,13 +575,13 @@ begin
     u17 : MemoryUnit
         port map( 
             clk => clk,
-            rst => touch_btn(5),
+            rst => rst,
             
-            data_ready => uart_dataready,
-            tbre => uart_tbre,
-            tsre => uart_tsre,
-            wrn => uart_wrn,
-            rdn => uart_rdn,
+            data_ready => dataready,
+            tbre => tbre,
+            tsre => tsre,
+            wrn => wrn,
+            rdn => rdn,
               
             MemRead => s_exe_memread_out,
             MemWrite => s_exe_memwrite_out,
@@ -597,28 +594,28 @@ begin
             dataOut => s_memout_mem,---
             insOut => s_instruction,---
             
-            ram1_addr => base_ram_addr(17 downto 0),
-            ram2_addr => ext_ram_addr(17 downto 0),
+            ram1_addr => base_ram_addr(19 downto 0),
+            ram2_addr => ext_ram_addr(19 downto 0),
             ram1_data => base_ram_data(15 downto 0),
             ram2_data => ext_ram_data(15 downto 0),
             
-            ram1_en => base_ram_ce_n,
-            ram1_oe => base_ram_oe_n,
-            ram1_we => base_ram_we_n,
-            ram2_en => ext_ram_ce_n,
-            ram2_oe => ext_ram_oe_n,
-            ram2_we => ext_ram_we_n,
+            ram1_en => en1,
+            ram1_oe => oe1,
+            ram1_we => we1,
+            ram2_en => en2,
+            ram2_oe => oe2,
+            ram2_we => we2,
             
             
-            flash_addr => flash_a,
+            flash_addr => flash_addr,
             flash_data => flash_data,
             
-            flash_byte => flash_byte_n,
+            flash_byte => flash_byte,
             flash_vpen => flash_vpen,
-            flash_rp => flash_rp_n,
-            flash_ce => flash_ce_n,
-            flash_oe => flash_oe_n,
-            flash_we => flash_we_n
+            flash_rp => flash_rp,
+            flash_ce => flash_ce,
+            flash_oe => flash_oe,
+            flash_we => flash_we
         );
   
 
@@ -636,8 +633,8 @@ begin
         );
 
     local_pc_reg:  PCRegister port map(   
-            rst => s_reset_out,
-            clk => clk_3,
+            rst => rst,
+            clk => clk_registers,
             PCHold => s_bubble,
             PCIn => s_pc_mux,
             PCOut => s_pc_reg
@@ -809,7 +806,7 @@ begin
     --    --内存读写部分的信号
 
     --    dataWrite =>  s_exe_memdata_out,--要写的数据
-    --    memoryAddr => MemAddr2,
+    --    memoryAddr => ext_ram_addr,
     --    MemWrite => s_exe_memwrite_out,--内存写信号
     --    MemRead => s_exe_memread_out, --内存读信号
 
@@ -819,7 +816,7 @@ begin
 
         
     --    --扩展数据线
-    --    extendDatabus =>MemData2,        
+    --    extendDatabus =>ext_ram_data,        
     --    --串口和VGA部分的信号
     --    serial_wrn =>wrn,
     --    serial_rdn =>rdn,
@@ -827,7 +824,7 @@ begin
     --    serial_tsre =>tsre,
     --    serial_tbre =>tbre,
 
-    --    basicdatabus => MemData1(7 downto 0),
+    --    basicdatabus => base_ram_data(7 downto 0),
     --    ram1_en =>en1,
     --    reset =>rst,
         
@@ -882,11 +879,30 @@ begin
 
     );
  
-
-    oe1<='1';
-    we1<='1';
-    leds(15 downto 0) <= s_instruction;
-    leds(31 downto 16) <= s_pc_reg;
+    --clk_chooser
+        process(clk_in, clk_hand, op,rst)
+        begin
+            if op = '1' then
+                if rst = '1' then
+                    clkIn_clock <= '0';
+                else
+                    clkIn_clock <=clk_in;
+                end if;
+            else
+                if rst = '1' then
+                    clkIn_clock <= '0';
+                else 
+                    clkIn_clock <= clk_hand;
+                end if;
+            end if;
+        end process;
+         
+    
+   
+ --   leds(13 downto 8) <= base_ram_addr(19 downto 14);
+--    leds(15 downto 8) <= s_instruction(15 downto 8);
+--    leds(7 downto 0) <= s_pc_reg(7 downto 0);
+    leds(15 downto 0) <= s_instruction(15 downto 0);
 
     --locla_if: IRMemory  port map( 
     --        clk => clk_mem,
@@ -895,8 +911,8 @@ begin
             
     --        --Op:in STD_LOGIC; --操作类型，0表示读，否则什么都不做
             
-    --        MemData1:inout STD_LOGIC_VECTOR(15 downto 0) := "0000000000000000"; --从内存中读取指令进该元件 RAM1存指令
-    --        MemAddr1:out STD_LOGIC_VECTOR(17 downto 0) := "000000000000000000"; --输入到RAM1的内存地址 RAM1存放地址
+    --        base_ram_data:inout STD_LOGIC_VECTOR(15 downto 0) := "0000000000000000"; --从内存中读取指令进该元件 RAM1存指令
+    --        base_ram_addr:out STD_LOGIC_VECTOR(17 downto 0) := "000000000000000000"; --输入到RAM1的内存地址 RAM1存放地址
             
     --        MemOut:out STD_LOGIC_VECTOR(15 downto 0):="0000100000000000"; --把数据输出给其他元件
             

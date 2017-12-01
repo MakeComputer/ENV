@@ -279,7 +279,7 @@ begin
 	exe_select_goal <= s_select_goal;
 	
 	
-	process(reset, clock, pause)
+	process(reset, clock, pause,flush)
 	begin
 		
 		if reset = '1' or flush = '1' then

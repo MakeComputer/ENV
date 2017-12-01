@@ -19,7 +19,7 @@ begin
 		if (branch = '0') then
 			PCOut <= PCNext;
 		else
-			PCOut <= PCJump;
+			PCOut <= PCJump;    -- some problems in PCJump
 		end if;
 	end process;
 

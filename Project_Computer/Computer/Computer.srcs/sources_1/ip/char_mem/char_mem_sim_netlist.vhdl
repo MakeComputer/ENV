@@ -1,10 +1,10 @@
 -- Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2017.1 (win64) Build 1846317 Fri Apr 14 18:55:03 MDT 2017
--- Date        : Mon Nov 27 18:25:06 2017
+-- Date        : Mon Nov 27 18:25:05 2017
 -- Host        : samsung running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode funcsim
---               e:/GitHub/Computer/Computer.srcs/sources_1/ip/char_mem/char_mem_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim -rename_top char_mem -prefix
+--               char_mem_ char_mem_sim_netlist.vhdl
 -- Design      : char_mem
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -20,8 +20,6 @@ entity char_mem_blk_mem_gen_prim_wrapper is
     clka : in STD_LOGIC;
     addra : in STD_LOGIC_VECTOR ( 14 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of char_mem_blk_mem_gen_prim_wrapper : entity is "blk_mem_gen_prim_wrapper";
 end char_mem_blk_mem_gen_prim_wrapper;
 
 architecture STRUCTURE of char_mem_blk_mem_gen_prim_wrapper is
@@ -263,8 +261,6 @@ entity char_mem_blk_mem_gen_prim_width is
     clka : in STD_LOGIC;
     addra : in STD_LOGIC_VECTOR ( 14 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of char_mem_blk_mem_gen_prim_width : entity is "blk_mem_gen_prim_width";
 end char_mem_blk_mem_gen_prim_width;
 
 architecture STRUCTURE of char_mem_blk_mem_gen_prim_width is
@@ -286,8 +282,6 @@ entity char_mem_blk_mem_gen_generic_cstr is
     clka : in STD_LOGIC;
     addra : in STD_LOGIC_VECTOR ( 14 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of char_mem_blk_mem_gen_generic_cstr : entity is "blk_mem_gen_generic_cstr";
 end char_mem_blk_mem_gen_generic_cstr;
 
 architecture STRUCTURE of char_mem_blk_mem_gen_generic_cstr is
@@ -309,8 +303,6 @@ entity char_mem_blk_mem_gen_top is
     clka : in STD_LOGIC;
     addra : in STD_LOGIC_VECTOR ( 14 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of char_mem_blk_mem_gen_top : entity is "blk_mem_gen_top";
 end char_mem_blk_mem_gen_top;
 
 architecture STRUCTURE of char_mem_blk_mem_gen_top is
@@ -332,8 +324,6 @@ entity char_mem_blk_mem_gen_v8_3_6_synth is
     clka : in STD_LOGIC;
     addra : in STD_LOGIC_VECTOR ( 14 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of char_mem_blk_mem_gen_v8_3_6_synth : entity is "blk_mem_gen_v8_3_6_synth";
 end char_mem_blk_mem_gen_v8_3_6_synth;
 
 architecture STRUCTURE of char_mem_blk_mem_gen_v8_3_6_synth is
@@ -561,8 +551,6 @@ entity char_mem_blk_mem_gen_v8_3_6 is
   attribute C_WRITE_WIDTH_B of char_mem_blk_mem_gen_v8_3_6 : entity is 1;
   attribute C_XDEVICEFAMILY : string;
   attribute C_XDEVICEFAMILY of char_mem_blk_mem_gen_v8_3_6 : entity is "artix7";
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of char_mem_blk_mem_gen_v8_3_6 : entity is "blk_mem_gen_v8_3_6";
   attribute downgradeipidentifiedwarnings : string;
   attribute downgradeipidentifiedwarnings of char_mem_blk_mem_gen_v8_3_6 : entity is "yes";
 end char_mem_blk_mem_gen_v8_3_6;

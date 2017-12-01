@@ -3,8 +3,8 @@
 -- Tool Version: Vivado v.2017.1 (win64) Build 1846317 Fri Apr 14 18:55:03 MDT 2017
 -- Date        : Mon Nov 27 18:27:41 2017
 -- Host        : samsung running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode funcsim
---               e:/GitHub/Computer/Computer.srcs/sources_1/ip/fifo_mem/fifo_mem_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim -rename_top fifo_mem -prefix
+--               fifo_mem_ fifo_mem_sim_netlist.vhdl
 -- Design      : fifo_mem
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -24,8 +24,6 @@ entity fifo_mem_blk_mem_gen_prim_wrapper is
     addrb : in STD_LOGIC_VECTOR ( 10 downto 0 );
     dina : in STD_LOGIC_VECTOR ( 7 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of fifo_mem_blk_mem_gen_prim_wrapper : entity is "blk_mem_gen_prim_wrapper";
 end fifo_mem_blk_mem_gen_prim_wrapper;
 
 architecture STRUCTURE of fifo_mem_blk_mem_gen_prim_wrapper is
@@ -183,8 +181,6 @@ entity fifo_mem_blk_mem_gen_prim_width is
     addrb : in STD_LOGIC_VECTOR ( 10 downto 0 );
     dina : in STD_LOGIC_VECTOR ( 7 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of fifo_mem_blk_mem_gen_prim_width : entity is "blk_mem_gen_prim_width";
 end fifo_mem_blk_mem_gen_prim_width;
 
 architecture STRUCTURE of fifo_mem_blk_mem_gen_prim_width is
@@ -214,8 +210,6 @@ entity fifo_mem_blk_mem_gen_generic_cstr is
     addrb : in STD_LOGIC_VECTOR ( 10 downto 0 );
     dina : in STD_LOGIC_VECTOR ( 7 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of fifo_mem_blk_mem_gen_generic_cstr : entity is "blk_mem_gen_generic_cstr";
 end fifo_mem_blk_mem_gen_generic_cstr;
 
 architecture STRUCTURE of fifo_mem_blk_mem_gen_generic_cstr is
@@ -245,8 +239,6 @@ entity fifo_mem_blk_mem_gen_top is
     addrb : in STD_LOGIC_VECTOR ( 10 downto 0 );
     dina : in STD_LOGIC_VECTOR ( 7 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of fifo_mem_blk_mem_gen_top : entity is "blk_mem_gen_top";
 end fifo_mem_blk_mem_gen_top;
 
 architecture STRUCTURE of fifo_mem_blk_mem_gen_top is
@@ -276,8 +268,6 @@ entity fifo_mem_blk_mem_gen_v8_3_6_synth is
     addrb : in STD_LOGIC_VECTOR ( 10 downto 0 );
     dina : in STD_LOGIC_VECTOR ( 7 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of fifo_mem_blk_mem_gen_v8_3_6_synth : entity is "blk_mem_gen_v8_3_6_synth";
 end fifo_mem_blk_mem_gen_v8_3_6_synth;
 
 architecture STRUCTURE of fifo_mem_blk_mem_gen_v8_3_6_synth is
@@ -509,8 +499,6 @@ entity fifo_mem_blk_mem_gen_v8_3_6 is
   attribute C_WRITE_WIDTH_B of fifo_mem_blk_mem_gen_v8_3_6 : entity is 8;
   attribute C_XDEVICEFAMILY : string;
   attribute C_XDEVICEFAMILY of fifo_mem_blk_mem_gen_v8_3_6 : entity is "artix7";
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of fifo_mem_blk_mem_gen_v8_3_6 : entity is "blk_mem_gen_v8_3_6";
   attribute downgradeipidentifiedwarnings : string;
   attribute downgradeipidentifiedwarnings of fifo_mem_blk_mem_gen_v8_3_6 : entity is "yes";
 end fifo_mem_blk_mem_gen_v8_3_6;

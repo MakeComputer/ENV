@@ -6,7 +6,7 @@ use IEEE.STD_LOGIC_UNSIGNED.ALL;
 entity PCAdder is    
 	port( 
 			adderIn : in std_logic_vector(15 downto 0);
-			adderOut : out std_logic_vector(15 downto 0)
+			adderOut : out std_logic_vector(15 downto 0):="0000000000000000"
 		);
 end PCAdder;
 

@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2017.1 (win64) Build 1846317 Fri Apr 14 18:55:03 MDT 2017
-| Date             : Tue Nov 28 19:38:57 2017
+| Date             : Sat Dec  2 03:33:59 2017
 | Host             : samsung running 64-bit major release  (build 9200)
 | Command          : report_power -file Computer_power_routed.rpt -pb Computer_power_summary_routed.pb -rpx Computer_power_routed.rpx
 | Design           : Computer
@@ -30,8 +30,8 @@ Table of Contents
 ----------
 
 +--------------------------+-------+
-| Total On-Chip Power (W)  | 0.132 |
-| Dynamic (W)              | 0.035 |
+| Total On-Chip Power (W)  | 0.108 |
+| Dynamic (W)              | 0.011 |
 | Device Static (W)        | 0.097 |
 | Effective TJA (C/W)      | 2.6   |
 | Max Ambient (C)          | 99.7  |
@@ -49,18 +49,17 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
-| Clocks         |     0.001 |        3 |       --- |             --- |
-| Slice Logic    |     0.002 |     1189 |       --- |             --- |
-|   LUT as Logic |     0.002 |      587 |     63400 |            0.93 |
-|   Register     |    <0.001 |      460 |    126800 |            0.36 |
-|   CARRY4       |    <0.001 |       24 |     15850 |            0.15 |
-|   BUFG         |    <0.001 |        2 |        32 |            6.25 |
-|   Others       |     0.000 |       21 |       --- |             --- |
-| Signals        |     0.003 |     1008 |       --- |             --- |
-| Block RAM      |    <0.001 |      1.5 |       135 |            1.11 |
-| I/O            |     0.029 |      145 |       300 |           48.33 |
+| Clocks         |    <0.001 |        3 |       --- |             --- |
+| Slice Logic    |     0.001 |      897 |       --- |             --- |
+|   LUT as Logic |    <0.001 |      412 |     63400 |            0.65 |
+|   Register     |    <0.001 |      339 |    126800 |            0.27 |
+|   CARRY4       |    <0.001 |       12 |     15850 |            0.08 |
+|   BUFG         |    <0.001 |        1 |        32 |            3.13 |
+|   Others       |     0.000 |       29 |       --- |             --- |
+| Signals        |     0.001 |      753 |       --- |             --- |
+| I/O            |     0.008 |      160 |       300 |           53.33 |
 | Static Power   |     0.097 |          |           |                 |
-| Total          |     0.132 |          |           |                 |
+| Total          |     0.108 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -70,9 +69,9 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.021 |       0.006 |      0.015 |
-| Vccaux    |       1.800 |     0.019 |       0.001 |      0.018 |
-| Vcco33    |       3.300 |     0.012 |       0.008 |      0.004 |
+| Vccint    |       1.000 |     0.018 |       0.003 |      0.015 |
+| Vccaux    |       1.800 |     0.018 |       0.000 |      0.018 |
+| Vcco33    |       3.300 |     0.006 |       0.002 |      0.004 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
@@ -136,76 +135,44 @@ Table of Contents
 3.1 By Hierarchy
 ----------------
 
-+------------------------------------------------+-----------+
-| Name                                           | Power (W) |
-+------------------------------------------------+-----------+
-| Computer                                       |     0.035 |
-|   MemData1_IOBUF[0]_inst                       |    <0.001 |
-|   MemData1_IOBUF[1]_inst                       |    <0.001 |
-|   MemData1_IOBUF[2]_inst                       |    <0.001 |
-|   MemData1_IOBUF[3]_inst                       |    <0.001 |
-|   MemData1_IOBUF[4]_inst                       |    <0.001 |
-|   MemData1_IOBUF[5]_inst                       |    <0.001 |
-|   MemData1_IOBUF[6]_inst                       |    <0.001 |
-|   MemData1_IOBUF[7]_inst                       |    <0.001 |
-|   MemData2_IOBUF[0]_inst                       |    <0.001 |
-|   MemData2_IOBUF[10]_inst                      |    <0.001 |
-|   MemData2_IOBUF[11]_inst                      |    <0.001 |
-|   MemData2_IOBUF[12]_inst                      |    <0.001 |
-|   MemData2_IOBUF[13]_inst                      |    <0.001 |
-|   MemData2_IOBUF[14]_inst                      |    <0.001 |
-|   MemData2_IOBUF[15]_inst                      |    <0.001 |
-|   MemData2_IOBUF[1]_inst                       |    <0.001 |
-|   MemData2_IOBUF[2]_inst                       |    <0.001 |
-|   MemData2_IOBUF[3]_inst                       |    <0.001 |
-|   MemData2_IOBUF[4]_inst                       |    <0.001 |
-|   MemData2_IOBUF[5]_inst                       |    <0.001 |
-|   MemData2_IOBUF[6]_inst                       |    <0.001 |
-|   MemData2_IOBUF[7]_inst                       |    <0.001 |
-|   MemData2_IOBUF[8]_inst                       |    <0.001 |
-|   MemData2_IOBUF[9]_inst                       |    <0.001 |
-|   flash_data_IOBUF[0]_inst                     |     0.000 |
-|   flash_data_IOBUF[10]_inst                    |     0.000 |
-|   flash_data_IOBUF[11]_inst                    |     0.000 |
-|   flash_data_IOBUF[12]_inst                    |     0.000 |
-|   flash_data_IOBUF[13]_inst                    |     0.000 |
-|   flash_data_IOBUF[14]_inst                    |     0.000 |
-|   flash_data_IOBUF[15]_inst                    |     0.000 |
-|   flash_data_IOBUF[1]_inst                     |     0.000 |
-|   flash_data_IOBUF[2]_inst                     |     0.000 |
-|   flash_data_IOBUF[3]_inst                     |     0.000 |
-|   flash_data_IOBUF[4]_inst                     |     0.000 |
-|   flash_data_IOBUF[5]_inst                     |     0.000 |
-|   flash_data_IOBUF[6]_inst                     |     0.000 |
-|   flash_data_IOBUF[7]_inst                     |     0.000 |
-|   flash_data_IOBUF[8]_inst                     |     0.000 |
-|   flash_data_IOBUF[9]_inst                     |     0.000 |
-|   local_exe                                    |     0.002 |
-|     adder_instance                             |    <0.001 |
-|     alu_instance                               |    <0.001 |
-|   local_exe_mem                                |    <0.001 |
-|   local_forward                                |    <0.001 |
-|   local_id                                     |    <0.001 |
-|     heap_instance                              |    <0.001 |
-|   local_mem                                    |     0.002 |
-|     flash_local                                |    <0.001 |
-|   local_mem_wb                                 |    <0.001 |
-|   local_pc_reg                                 |    <0.001 |
-|   vga                                          |    <0.001 |
-|     cache                                      |    <0.001 |
-|       U0                                       |    <0.001 |
-|         inst_blk_mem_gen                       |    <0.001 |
-|           gnbram.gnativebmg.native_blk_mem_gen |    <0.001 |
-|             valid.cstr                         |    <0.001 |
-|               ramloop[0].ram.r                 |    <0.001 |
-|                 prim_noinit.ram                |    <0.001 |
-|     ram                                        |    <0.001 |
-|       U0                                       |    <0.001 |
-|         inst_blk_mem_gen                       |    <0.001 |
-|           gnbram.gnativebmg.native_blk_mem_gen |    <0.001 |
-|             valid.cstr                         |    <0.001 |
-|               ramloop[0].ram.r                 |    <0.001 |
-|                 prim_noinit.ram                |    <0.001 |
-+------------------------------------------------+-----------+
++-------------------------------+-----------+
+| Name                          | Power (W) |
++-------------------------------+-----------+
+| Computer                      |     0.011 |
+|   base_ram_data_IOBUF[0]_inst |     0.000 |
+|   base_ram_data_IOBUF[1]_inst |     0.000 |
+|   base_ram_data_IOBUF[2]_inst |     0.000 |
+|   base_ram_data_IOBUF[3]_inst |     0.000 |
+|   base_ram_data_IOBUF[4]_inst |     0.000 |
+|   base_ram_data_IOBUF[5]_inst |     0.000 |
+|   base_ram_data_IOBUF[6]_inst |     0.000 |
+|   base_ram_data_IOBUF[7]_inst |     0.000 |
+|   ext_ram_data_IOBUF[0]_inst  |    <0.001 |
+|   ext_ram_data_IOBUF[10]_inst |    <0.001 |
+|   ext_ram_data_IOBUF[11]_inst |    <0.001 |
+|   ext_ram_data_IOBUF[12]_inst |    <0.001 |
+|   ext_ram_data_IOBUF[13]_inst |    <0.001 |
+|   ext_ram_data_IOBUF[14]_inst |    <0.001 |
+|   ext_ram_data_IOBUF[15]_inst |    <0.001 |
+|   ext_ram_data_IOBUF[1]_inst  |    <0.001 |
+|   ext_ram_data_IOBUF[2]_inst  |    <0.001 |
+|   ext_ram_data_IOBUF[3]_inst  |    <0.001 |
+|   ext_ram_data_IOBUF[4]_inst  |    <0.001 |
+|   ext_ram_data_IOBUF[5]_inst  |    <0.001 |
+|   ext_ram_data_IOBUF[6]_inst  |    <0.001 |
+|   ext_ram_data_IOBUF[7]_inst  |    <0.001 |
+|   ext_ram_data_IOBUF[8]_inst  |    <0.001 |
+|   ext_ram_data_IOBUF[9]_inst  |    <0.001 |
+|   local_exe                   |     0.002 |
+|     alu_instance              |    <0.001 |
+|   local_exe_mem               |    <0.001 |
+|   local_forward               |    <0.001 |
+|   local_id                    |    <0.001 |
+|     heap_instance             |    <0.001 |
+|   local_mem_wb                |    <0.001 |
+|   local_pc_reg                |    <0.001 |
+|   u17                         |    <0.001 |
+|   u18                         |    <0.001 |
++-------------------------------+-----------+
 
 

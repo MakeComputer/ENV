@@ -2,58 +2,42 @@
 # Vivado v2017.1 (64-bit)
 # SW Build 1846317 on Fri Apr 14 18:55:03 MDT 2017
 # IP Build 1846188 on Fri Apr 14 20:52:08 MDT 2017
-# Start of session at: Tue Nov 28 07:37:08 2017
-# Process ID: 7288
-# Current directory: E:/GitHub/Computer
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent11740 E:\GitHub\Computer\Computer.xpr
-# Log file: E:/GitHub/Computer/vivado.log
-# Journal file: E:/GitHub/Computer\vivado.jou
+# Start of session at: Fri Dec  1 22:21:50 2017
+# Process ID: 5820
+# Current directory: E:/GitHub/ENV/Project_Computer/Computer
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent1260 E:\GitHub\ENV\Project_Computer\Computer\Computer.xpr
+# Log file: E:/GitHub/ENV/Project_Computer/Computer/vivado.log
+# Journal file: E:/GitHub/ENV/Project_Computer/Computer\vivado.jou
 #-----------------------------------------------------------
 start_gui
-open_project E:/GitHub/Computer/Computer.xpr
-launch_runs synth_1 -jobs 2
-wait_on_run synth_1
+open_project E:/GitHub/ENV/Project_Computer/Computer/Computer.xpr
+import_files -norecurse {E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/clock.vhd E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/MemoryUnit.vhd}
 reset_run synth_1
-launch_runs synth_1 -jobs 2
-wait_on_run synth_1
-reset_run synth_1
-launch_runs synth_1 -jobs 2
-wait_on_run synth_1
-reset_run synth_1
-launch_runs synth_1 -jobs 2
-wait_on_run synth_1
-reset_run synth_1
-launch_runs synth_1 -jobs 2
-wait_on_run synth_1
-reset_run synth_1
-launch_runs synth_1 -jobs 2
-wait_on_run synth_1
-reset_run synth_1
-launch_runs synth_1 -jobs 2
-wait_on_run synth_1
-remove_files  E:/GitHub/Computer/Computer.srcs/sources_1/new/DataMemory.vhd
-file delete -force E:/GitHub/Computer/Computer.srcs/sources_1/new/DataMemory.vhd
-reset_run synth_1
-launch_runs synth_1 -jobs 2
-wait_on_run synth_1
-reset_run synth_1
-launch_runs synth_1 -jobs 2
-wait_on_run synth_1
-reset_run synth_1
-launch_runs synth_1 -jobs 2
-wait_on_run synth_1
-launch_runs impl_1 -jobs 2
+reset_run char_mem_synth_1
+reset_run fifo_mem_synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
 wait_on_run impl_1
-open_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1
 reset_run synth_1
 launch_runs impl_1 -to_step write_bitstream -jobs 2
 wait_on_run impl_1
 reset_run synth_1
 launch_runs impl_1 -to_step write_bitstream -jobs 2
 wait_on_run impl_1
-close_design
-launch_simulation -mode post-implementation -type functional
-source id.tcl
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1
 reset_run synth_1
 launch_runs impl_1 -to_step write_bitstream -jobs 2
 wait_on_run impl_1
@@ -78,10 +62,6 @@ wait_on_run impl_1
 reset_run synth_1
 launch_runs impl_1 -to_step write_bitstream -jobs 2
 wait_on_run impl_1
-reset_run impl_1 -prev_step 
-launch_runs impl_1 -to_step write_bitstream -jobs 2
-wait_on_run impl_1
-reset_run impl_1 -prev_step 
 reset_run synth_1
 launch_runs impl_1 -to_step write_bitstream -jobs 2
 wait_on_run impl_1
@@ -91,4 +71,27 @@ wait_on_run impl_1
 reset_run synth_1
 launch_runs impl_1 -to_step write_bitstream -jobs 2
 wait_on_run impl_1
-close_sim
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1

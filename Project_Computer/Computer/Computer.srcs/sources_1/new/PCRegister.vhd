@@ -8,7 +8,7 @@ entity PCRegister is
 			rst,clk : in std_logic;
 			PCHold : in std_logic;
 			PCIn : in std_logic_vector(15 downto 0);
-			PCOut : out std_logic_vector(15 downto 0)
+			PCOut : out std_logic_vector(15 downto 0):="0000000000000000"
 		);
 end PCRegister;
 

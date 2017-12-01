@@ -1,10 +1,10 @@
 // Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2017.1 (win64) Build 1846317 Fri Apr 14 18:55:03 MDT 2017
-// Date        : Mon Nov 27 18:25:06 2017
+// Date        : Mon Nov 27 18:25:05 2017
 // Host        : samsung running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode synth_stub
-//               e:/GitHub/Computer/Computer.srcs/sources_1/ip/char_mem/char_mem_stub.v
+// Command     : write_verilog -force -mode synth_stub -rename_top char_mem -prefix
+//               char_mem_ char_mem_stub.v
 // Design      : char_mem
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xc7a100tfgg676-2L

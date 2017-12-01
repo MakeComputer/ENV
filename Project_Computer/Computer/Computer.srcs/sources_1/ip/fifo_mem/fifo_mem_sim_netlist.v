@@ -3,8 +3,8 @@
 // Tool Version: Vivado v.2017.1 (win64) Build 1846317 Fri Apr 14 18:55:03 MDT 2017
 // Date        : Mon Nov 27 18:27:41 2017
 // Host        : samsung running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode funcsim
-//               e:/GitHub/Computer/Computer.srcs/sources_1/ip/fifo_mem/fifo_mem_sim_netlist.v
+// Command     : write_verilog -force -mode funcsim -rename_top fifo_mem -prefix
+//               fifo_mem_ fifo_mem_sim_netlist.v
 // Design      : fifo_mem
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -198,7 +198,6 @@ module fifo_mem
         .web(1'b0));
 endmodule
 
-(* ORIG_REF_NAME = "blk_mem_gen_generic_cstr" *) 
 module fifo_mem_blk_mem_gen_generic_cstr
    (doutb,
     clka,
@@ -233,7 +232,6 @@ module fifo_mem_blk_mem_gen_generic_cstr
         .wea(wea));
 endmodule
 
-(* ORIG_REF_NAME = "blk_mem_gen_prim_width" *) 
 module fifo_mem_blk_mem_gen_prim_width
    (doutb,
     clka,
@@ -268,7 +266,6 @@ module fifo_mem_blk_mem_gen_prim_width
         .wea(wea));
 endmodule
 
-(* ORIG_REF_NAME = "blk_mem_gen_prim_wrapper" *) 
 module fifo_mem_blk_mem_gen_prim_wrapper
    (doutb,
     clka,
@@ -424,7 +421,6 @@ module fifo_mem_blk_mem_gen_prim_wrapper
         .WEBWE({1'b0,1'b0,1'b0,1'b0}));
 endmodule
 
-(* ORIG_REF_NAME = "blk_mem_gen_top" *) 
 module fifo_mem_blk_mem_gen_top
    (doutb,
     clka,
@@ -483,7 +479,7 @@ endmodule
 (* C_USE_URAM = "0" *) (* C_WEA_WIDTH = "1" *) (* C_WEB_WIDTH = "1" *) 
 (* C_WRITE_DEPTH_A = "2048" *) (* C_WRITE_DEPTH_B = "2048" *) (* C_WRITE_MODE_A = "NO_CHANGE" *) 
 (* C_WRITE_MODE_B = "WRITE_FIRST" *) (* C_WRITE_WIDTH_A = "8" *) (* C_WRITE_WIDTH_B = "8" *) 
-(* C_XDEVICEFAMILY = "artix7" *) (* ORIG_REF_NAME = "blk_mem_gen_v8_3_6" *) (* downgradeipidentifiedwarnings = "yes" *) 
+(* C_XDEVICEFAMILY = "artix7" *) (* downgradeipidentifiedwarnings = "yes" *) 
 module fifo_mem_blk_mem_gen_v8_3_6
    (clka,
     rsta,
@@ -695,7 +691,6 @@ module fifo_mem_blk_mem_gen_v8_3_6
         .wea(wea));
 endmodule
 
-(* ORIG_REF_NAME = "blk_mem_gen_v8_3_6_synth" *) 
 module fifo_mem_blk_mem_gen_v8_3_6_synth
    (doutb,
     clka,

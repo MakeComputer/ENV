@@ -3,8 +3,8 @@
 -- Tool Version: Vivado v.2017.1 (win64) Build 1846317 Fri Apr 14 18:55:03 MDT 2017
 -- Date        : Mon Nov 27 18:27:41 2017
 -- Host        : samsung running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode synth_stub
---               e:/GitHub/Computer/Computer.srcs/sources_1/ip/fifo_mem/fifo_mem_stub.vhdl
+-- Command     : write_vhdl -force -mode synth_stub -rename_top fifo_mem -prefix
+--               fifo_mem_ fifo_mem_stub.vhdl
 -- Design      : fifo_mem
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xc7a100tfgg676-2L
