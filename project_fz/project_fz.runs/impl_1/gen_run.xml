@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7a100tlfgg676-2L" LaunchTime="1511973433">
+<GenRun Id="impl_1" LaunchPart="xc7a100tlfgg676-2L" LaunchTime="1512133030">
   <File Type="PWROPT-DRC" Name="cpu_drc_pwropted.rpt"/>
   <File Type="OPT-METHODOLOGY-DRC" Name="cpu_methodology_drc_opted.rpt"/>
   <File Type="INIT-TIMING" Name="cpu_timing_summary_init.rpt"/>
@@ -270,6 +270,12 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PPRDIR/fontRom.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
       <Option Name="TopModule" Val="cpu"/>
@@ -289,9 +295,7 @@
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2017">
-      <Desc>Default settings for Implementation.</Desc>
-    </StratHandle>
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2017"/>
     <Step Id="init_design"/>
     <Step Id="opt_design"/>
     <Step Id="power_opt_design"/>

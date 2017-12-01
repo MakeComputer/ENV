@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2017.1 (win64) Build 1846317 Fri Apr 14 18:55:03 MDT 2017
-| Date         : Wed Nov 29 23:38:18 2017
+| Date         : Fri Dec  1 19:58:17 2017
 | Host         : samsung running 64-bit major release  (build 9200)
 | Command      : report_utilization -file cpu_utilization_synth.rpt -pb cpu_utilization_synth.pb
 | Design       : cpu
@@ -156,10 +156,10 @@ Table of Contents
 | LUT3       |  214 |                 LUT |
 | LUT2       |  187 |                 LUT |
 | LDCE       |  130 |        Flop & Latch |
-| OBUF       |  115 |                  IO |
+| OBUF       |  121 |                  IO |
 | FDRE       |  100 |        Flop & Latch |
 | LUT1       |   95 |                 LUT |
-| OBUFT      |   54 |                  IO |
+| OBUFT      |   48 |                  IO |
 | IBUF       |   47 |                  IO |
 | CARRY4     |   42 |          CarryLogic |
 | FDPE       |   40 |        Flop & Latch |

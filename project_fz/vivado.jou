@@ -1,0 +1,36 @@
+#-----------------------------------------------------------
+# Vivado v2017.1 (64-bit)
+# SW Build 1846317 on Fri Apr 14 18:55:03 MDT 2017
+# IP Build 1846188 on Fri Apr 14 20:52:08 MDT 2017
+# Start of session at: Fri Dec  1 15:20:48 2017
+# Process ID: 4460
+# Current directory: E:/project_fz
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent228 E:\project_fz\project_fz.xpr
+# Log file: E:/project_fz/vivado.log
+# Journal file: E:/project_fz\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project E:/project_fz/project_fz.xpr
+update_compile_order -fileset sources_1
+set_property -dict [list CONFIG.Load_Init_File {true} CONFIG.Coe_File {E:/project_fz/fontRom.coe}] [get_ips fontRom]
+generate_target all [get_files  E:/project_fz/project_fz.srcs/sources_1/ip/fontRom/fontRom.xci]
+catch { config_ip_cache -export [get_ips -all fontRom] }
+export_ip_user_files -of_objects [get_files E:/project_fz/project_fz.srcs/sources_1/ip/fontRom/fontRom.xci] -no_script -sync -force -quiet
+reset_run fontRom_synth_1
+launch_runs -jobs 2 fontRom_synth_1
+export_simulation -of_objects [get_files E:/project_fz/project_fz.srcs/sources_1/ip/fontRom/fontRom.xci] -directory E:/project_fz/project_fz.ip_user_files/sim_scripts -ip_user_files_dir E:/project_fz/project_fz.ip_user_files -ipstatic_source_dir E:/project_fz/project_fz.ip_user_files/ipstatic -lib_map_path [list {modelsim=E:/project_fz/project_fz.cache/compile_simlib/modelsim} {questa=E:/project_fz/project_fz.cache/compile_simlib/questa} {riviera=E:/project_fz/project_fz.cache/compile_simlib/riviera} {activehdl=E:/project_fz/project_fz.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1

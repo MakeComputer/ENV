@@ -56,8 +56,8 @@ set rc [catch {
   set_property ip_cache_permissions {read write} [current_project]
   set_property XPM_LIBRARIES XPM_MEMORY [current_project]
   add_files -quiet E:/project_fz/project_fz.runs/synth_1/cpu.dcp
-  read_ip -quiet e:/project_fz/project_fz.srcs/sources_1/ip/fontRom/fontRom.xci
-  set_property is_locked true [get_files e:/project_fz/project_fz.srcs/sources_1/ip/fontRom/fontRom.xci]
+  read_ip -quiet E:/project_fz/project_fz.srcs/sources_1/ip/fontRom/fontRom.xci
+  set_property is_locked true [get_files E:/project_fz/project_fz.srcs/sources_1/ip/fontRom/fontRom.xci]
   read_xdc E:/project_fz/project_fz.srcs/constrs_1/new/cpu.xdc
   link_design -top cpu -part xc7a100tlfgg676-2L
   close_msg_db -file init_design.pb

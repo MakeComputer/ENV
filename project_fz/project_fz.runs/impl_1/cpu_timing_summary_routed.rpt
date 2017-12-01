@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2017.1 (win64) Build 1846317 Fri Apr 14 18:55:03 MDT 2017
-| Date         : Wed Nov 29 23:40:26 2017
+| Date         : Fri Dec  1 20:00:29 2017
 | Host         : samsung running 64-bit major release  (build 9200)
 | Command      : report_timing_summary -warn_on_violation -max_paths 10 -file cpu_timing_summary_routed.rpt -rpx cpu_timing_summary_routed.rpx
 | Design       : cpu
@@ -516,8 +516,8 @@ Period(ns):         20.000
 Sources:            { clk_in }
 
 Check Type        Corner  Lib Pin             Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location         Pin
-Min Period        n/a     RAMB18E1/CLKARDCLK  n/a            3.168         20.000      16.832     RAMB18_X0Y60     u25/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM18.ram/CLKARDCLK
-Min Period        n/a     RAMB18E1/CLKBWRCLK  n/a            3.168         20.000      16.832     RAMB18_X0Y60     u25/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM18.ram/CLKBWRCLK
+Min Period        n/a     RAMB18E1/CLKARDCLK  n/a            3.168         20.000      16.832     RAMB18_X0Y60     u25/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM18.ram/CLKARDCLK
+Min Period        n/a     RAMB18E1/CLKBWRCLK  n/a            3.168         20.000      16.832     RAMB18_X0Y60     u25/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM18.ram/CLKBWRCLK
 Min Period        n/a     BUFG/I              n/a            2.538         20.000      17.462     BUFGCTRL_X0Y16   clk_in_IBUF_BUFG_inst/I
 Min Period        n/a     MMCME2_ADV/CLKIN1   n/a            1.249         20.000      18.751     MMCME2_ADV_X0Y0  u27/DCM_SP_INST/CLKIN1
 Min Period        n/a     FDRE/C              n/a            1.000         20.000      19.000     SLICE_X52Y96     u23/CLK_2_reg/C
@@ -2086,16 +2086,16 @@ Period(ns):         5.000
 Sources:            { u27/DCM_SP_INST/CLKOUT0 }
 
 Check Type        Corner  Lib Pin             Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location         Pin
-Min Period        n/a     BUFG/I              n/a            2.538         5.000       2.462      BUFGCTRL_X0Y3    u27/CLKFX_BUFG_INST/I
 Min Period        n/a     BUFG/I              n/a            2.538         5.000       2.462      BUFGCTRL_X0Y0    clk_BUFG_inst/I
+Min Period        n/a     BUFG/I              n/a            2.538         5.000       2.462      BUFGCTRL_X0Y3    u27/CLKFX_BUFG_INST/I
 Min Period        n/a     MMCME2_ADV/CLKOUT0  n/a            1.249         5.000       3.751      MMCME2_ADV_X0Y0  u27/DCM_SP_INST/CLKOUT0
-Min Period        n/a     FDRE/C              n/a            1.000         5.000       4.000      SLICE_X7Y136     u17/cnt_reg[12]/C
 Min Period        n/a     FDRE/C              n/a            1.000         5.000       4.000      SLICE_X6Y135     u17/cnt_reg[13]/C
 Min Period        n/a     FDRE/C              n/a            1.000         5.000       4.000      SLICE_X6Y135     u17/cnt_reg[14]/C
 Min Period        n/a     FDRE/C              n/a            1.000         5.000       4.000      SLICE_X6Y136     u17/cnt_reg[15]/C
 Min Period        n/a     FDRE/C              n/a            1.000         5.000       4.000      SLICE_X6Y135     u17/cnt_reg[16]/C
 Min Period        n/a     FDRE/C              n/a            1.000         5.000       4.000      SLICE_X6Y135     u17/cnt_reg[17]/C
 Min Period        n/a     FDRE/C              n/a            1.000         5.000       4.000      SLICE_X6Y135     u17/cnt_reg[18]/C
+Min Period        n/a     FDRE/C              n/a            1.000         5.000       4.000      SLICE_X7Y135     u17/cnt_reg[19]/C
 Max Period        n/a     MMCME2_ADV/CLKOUT0  n/a            213.360       5.000       208.360    MMCME2_ADV_X0Y0  u27/DCM_SP_INST/CLKOUT0
 Low Pulse Width   Fast    FDCE/C              n/a            0.500         2.500       2.000      SLICE_X7Y131     u17/ram2_addr_reg[13]/C
 Low Pulse Width   Fast    FDCE/C              n/a            0.500         2.500       2.000      SLICE_X7Y131     u17/ram2_addr_reg[14]/C
@@ -2110,13 +2110,13 @@ Low Pulse Width   Fast    FDRE/C              n/a            0.500         2.500
 High Pulse Width  Fast    FDCE/C              n/a            0.500         2.500       2.000      SLICE_X14Y118    u18/clk1_reg/C
 High Pulse Width  Fast    FDCE/C              n/a            0.500         2.500       2.000      SLICE_X14Y118    u18/count_reg[0]/C
 High Pulse Width  Fast    FDCE/C              n/a            0.500         2.500       2.000      SLICE_X14Y118    u18/count_reg[1]/C
-High Pulse Width  Slow    FDRE/C              n/a            0.500         2.500       2.000      SLICE_X7Y136     u17/cnt_reg[12]/C
-High Pulse Width  Fast    FDRE/C              n/a            0.500         2.500       2.000      SLICE_X7Y136     u17/cnt_reg[12]/C
 High Pulse Width  Slow    FDRE/C              n/a            0.500         2.500       2.000      SLICE_X6Y135     u17/cnt_reg[13]/C
 High Pulse Width  Fast    FDRE/C              n/a            0.500         2.500       2.000      SLICE_X6Y135     u17/cnt_reg[13]/C
 High Pulse Width  Slow    FDRE/C              n/a            0.500         2.500       2.000      SLICE_X6Y135     u17/cnt_reg[14]/C
 High Pulse Width  Fast    FDRE/C              n/a            0.500         2.500       2.000      SLICE_X6Y135     u17/cnt_reg[14]/C
 High Pulse Width  Slow    FDRE/C              n/a            0.500         2.500       2.000      SLICE_X6Y136     u17/cnt_reg[15]/C
+High Pulse Width  Fast    FDRE/C              n/a            0.500         2.500       2.000      SLICE_X6Y136     u17/cnt_reg[15]/C
+High Pulse Width  Slow    FDRE/C              n/a            0.500         2.500       2.000      SLICE_X6Y135     u17/cnt_reg[16]/C
 
 
 

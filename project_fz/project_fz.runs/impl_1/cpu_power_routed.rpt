@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2017.1 (win64) Build 1846317 Fri Apr 14 18:55:03 MDT 2017
-| Date             : Wed Nov 29 23:40:25 2017
+| Date             : Fri Dec  1 20:00:28 2017
 | Host             : samsung running 64-bit major release  (build 9200)
 | Command          : report_power -file cpu_power_routed.rpt -pb cpu_power_summary_routed.pb -rpx cpu_power_routed.rpx
 | Design           : cpu
@@ -201,7 +201,7 @@ Table of Contents
 |         gnbram.gnativebmg.native_blk_mem_gen |    <0.001 |
 |           valid.cstr                         |    <0.001 |
 |             ramloop[0].ram.r                 |    <0.001 |
-|               prim_noinit.ram                |    <0.001 |
+|               prim_init.ram                  |    <0.001 |
 |   u26                                        |     0.000 |
 |   u27                                        |     0.097 |
 |   u3                                         |    <0.001 |

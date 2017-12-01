@@ -15,6 +15,7 @@ set_property default_lib xil_defaultlib [current_project]
 set_property target_language VHDL [current_project]
 set_property ip_output_repo e:/project_fz/project_fz.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
+add_files e:/project_fz/fontRom.coe
 read_vhdl -library xil_defaultlib {
   E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/ALU.vhd
   E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/AMux.vhd
@@ -43,9 +44,9 @@ read_vhdl -library xil_defaultlib {
   E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/dcm.vhd
   E:/project_fz/project_fz.srcs/sources_1/imports/cpu_fz/cpu.vhd
 }
-read_ip -quiet e:/project_fz/project_fz.srcs/sources_1/ip/fontRom/fontRom.xci
+read_ip -quiet E:/project_fz/project_fz.srcs/sources_1/ip/fontRom/fontRom.xci
 set_property used_in_implementation false [get_files -all e:/project_fz/project_fz.srcs/sources_1/ip/fontRom/fontRom_ooc.xdc]
-set_property is_locked true [get_files e:/project_fz/project_fz.srcs/sources_1/ip/fontRom/fontRom.xci]
+set_property is_locked true [get_files E:/project_fz/project_fz.srcs/sources_1/ip/fontRom/fontRom.xci]
 
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the

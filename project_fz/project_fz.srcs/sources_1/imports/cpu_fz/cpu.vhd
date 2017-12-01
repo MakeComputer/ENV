@@ -31,8 +31,8 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 entity cpu is
 	port(
-			touch_btn : in std_logic_vector(5 downto 0);
-			dip_sw : in std_logic_vector(31 downto 0);
+			touch_btn : in std_logic_vector(5 downto 0) := "000000";
+			dip_sw : in std_logic_vector(31 downto 0) := "00000000000000000000000000000000";
 			--touch_btn(5) : in std_logic; --reset
 			--touch_btn(4) : in std_logic; --时钟源  默认为50M  可以通过修改绑定管脚来改变
 			clk_in : in std_logic;
@@ -43,41 +43,41 @@ entity cpu is
 			uart_dataready : in std_logic;   
 			uart_tbre : in std_logic;
 			uart_tsre : in std_logic;
-			uart_rdn : inout std_logic;
-			uart_wrn : inout std_logic;
+			uart_rdn : inout std_logic := '0'; 
+			uart_wrn : inout std_logic := '0';
 			
 			--RAM1  存放数据
-			base_ram_ce_n : out std_logic;
-			base_ram_we_n : out std_logic;
-			base_ram_oe_n : out std_logic;
-			base_ram_data : inout std_logic_vector(31 downto 0);
-			base_ram_addr : out std_logic_vector(19 downto 0);
+			base_ram_ce_n : out std_logic := '1';
+			base_ram_we_n : out std_logic := '1' ;
+			base_ram_oe_n : out std_logic := '1';
+			base_ram_data : inout std_logic_vector(31 downto 0) := "00000000000000000000000000000000";
+			base_ram_addr : out std_logic_vector(19 downto 0) := "00000000000000000000";
 			
 			--RAM2 存放程序和指令
-			ext_ram_ce_n : out std_logic;
-			ext_ram_we_n : out std_logic;
-			ext_ram_oe_n : out std_logic;
-			ext_ram_data : inout std_logic_vector(31 downto 0);
-			ext_ram_addr : out std_logic_vector(19 downto 0);
+			ext_ram_ce_n : out std_logic := '1';
+			ext_ram_we_n : out std_logic := '1';
+			ext_ram_oe_n : out std_logic := '1';
+			ext_ram_data : inout std_logic_vector(31 downto 0) := "00000000000000000000000000000000";
+			ext_ram_addr : out std_logic_vector(19 downto 0) := "00000000000000000000";
 			
 			--debug  digit1、digit2显示PC值，led显示当前指令的编码
-			leds : out std_logic_vector(31 downto 0);
+			leds : out std_logic_vector(31 downto 0) := "00000000000000000000000000000000";
 			
-			video_hsync,video_vsync : out std_logic;
-			video_pixel : out std_logic_vector(7 downto 0);
-			video_de : out std_logic;
+			video_hsync,video_vsync : out std_logic := '0';
+			video_pixel : out std_logic_vector(7 downto 0) := "00000000";
+			video_de : out std_logic := '0';
 			video_clk : out std_logic;
 		
 			--Flash
-			flash_a : out std_logic_vector(22 downto 0);		--flash地址线
-			flash_data : inout std_logic_vector(15 downto 0);	--flash数据线
+			flash_a : out std_logic_vector(22 downto 0) := "00000000000000000000000";		--flash地址线
+			flash_data : inout std_logic_vector(15 downto 0) := "0000000000000000";	--flash数据线
 			
-			flash_byte_n : out std_logic;	--flash操作模式，常置'1'
-			flash_vpen : out std_logic;	--flash写保护，常置'1'
-			flash_rp_n : out std_logic;	--'1'表示flash工作，常置'1'
-			flash_ce_n : out std_logic;	--flash使能
-			flash_oe_n : out std_logic;	--flash读使能，'0'有效，每次读操作后置'1'
-			flash_we_n : out std_logic		--flash写使能
+			flash_byte_n : out std_logic := '1';	--flash操作模式，常置'1'
+			flash_vpen : out std_logic := '1';	--flash写保护，常置'1'
+			flash_rp_n : out std_logic := '1';	--'1'表示flash工作，常置'1'
+			flash_ce_n : out std_logic := '1';	--flash使能
+			flash_oe_n : out std_logic := '1';	--flash读使能，'0'有效，每次读操作后置'1'
+			flash_we_n : out std_logic := '1'		--flash写使能
 	);
 			
 end cpu;
@@ -987,7 +987,7 @@ begin
 			FlashStateOut => FlashStateOut,
 			flashFinished => flashFinished,
 			
-			ram1_addr => base_ram_addr(17 downto 0),
+		    ram1_addr => base_ram_addr(17 downto 0),
 			ram2_addr => ext_ram_addr(17 downto 0),
 			ram1_data => base_ram_data(15 downto 0),
 			ram2_data => ext_ram_data(15 downto 0),
@@ -1071,6 +1071,7 @@ begin
 		hs => video_hsync,
 		vs => video_vsync,
 		color => video_pixel,
+--		color1 => leds(7 downto 0),
 		de => video_de,
 		v_clk => video_clk,
 	--RAM side

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="fontRom_synth_1" LaunchPart="xc7a100tlfgg676-2L" LaunchTime="1511957027">
+<GenRun Id="fontRom_synth_1" LaunchPart="xc7a100tlfgg676-2L" LaunchTime="1512119100">
   <File Type="RDS-PROPCONSTRS" Name="fontRom_drc_synth.rpt"/>
   <File Type="PA-TCL" Name="fontRom.tcl"/>
   <File Type="RDS-RDS" Name="fontRom.vds"/>
@@ -35,9 +35,7 @@
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2017">
-      <Desc>Vivado Synthesis Defaults</Desc>
-    </StratHandle>
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2017"/>
     <Step Id="synth_design"/>
   </Strategy>
 </GenRun>

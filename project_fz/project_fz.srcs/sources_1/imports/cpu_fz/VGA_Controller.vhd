@@ -18,13 +18,13 @@ entity VGA_Controller is
 		IHdata : in std_logic_vector(15 downto 0);
 		
 	-- font rom
-		romAddr : out std_logic_vector(10 downto 0);
+		romAddr : out std_logic_vector(10 downto 0) := "00000000000";
 		romData : in std_logic_vector(7 downto 0);
 	--VGA Side
-		hs,vs	: out std_logic;		--行同步、场同步信号
-		color: out std_logic_vector(7 downto 0);
-		de: out std_logic := '0';
-		v_clk: out std_logic
+		hs,vs	: out std_logic := '0';		--行同步、场同步信号
+		color: out std_logic_vector(7 downto 0) := "00000000" ;
+        v_clk: out std_logic;
+		de: out std_logic := '0'
 --		oRed	: out std_logic_vector (2 downto 0);
 --		oGreen	: out std_logic_vector (2 downto 0);
 --		oBlue	: out std_logic_vector (2 downto 0)
@@ -49,6 +49,7 @@ CLK<=CLK_2;
  -----------------------------------------------------------------------
 	process (CLK_in)
 	begin
+--        v_clk <= CLK_in;
 		if CLK_in'event and CLK_in = '1' then	--对50M输入信号二分频
 			CLK_2 <= not CLK_2;
 			v_clk <= CLK_2;
