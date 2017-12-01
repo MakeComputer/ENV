@@ -123,38 +123,6 @@ architecture Computer_beh of Computer is
     end component PCRegister;
 
 
-    --component IRMemory is
-    --        port( 
-    --        clk:in STD_LOGIC; --脉冲信号,注意这里的时钟信号比较捉鸡
-    --        rst:in STD_LOGIC; --复位信号
-    --        address:in STD_LOGIC_VECTOR(15 downto 0); --要读取的16位内存地址
-            
-    --        MemData1:inout STD_LOGIC_VECTOR(15 downto 0) := "0000000000000000"; --从内存中读取指令进该元件 RAM1存指令
-    --        MemAddr1:out STD_LOGIC_VECTOR(17 downto 0) := "000000000000000000"; --输入到RAM1的内存地址 RAM1存放地址
-            
-    --        MemOut:out STD_LOGIC_VECTOR(15 downto 0):="0000100000000000"; --把数据输出给其他元件
-            
-    --        oe1,we1:out STD_LOGIC := '1';--RAM1的使能信号.RAM1存指令
-    --        en1:out STD_LOGIC := '1';--初始使能为1
-            
-    --        loadfinish:out STD_LOGIC := '0'; --flash加载完成信号
-            
-    --        --stateout:out STD_LOGIC_VECTOR(6 downto 0) := "0000000";--测试用输出
-            
-    --        rdn:out STD_LOGIC := '1';  --串口使能信号，置为1，关闭串口
-    --        wrn:out STD_LOGIC := '1'; --串口写信号，置为1，关闭串口
-    --        ---------------------------------------------------
-    --        --Flash的相关信号
-    --        flash_byte : out STD_LOGIC := '1'; --操作模式,采用字模式
-    --        flash_vpen : out STD_LOGIC := '1'; --写保护，置为1
-    --        flash_ce : out STD_LOGIC := '0' ; --使能信号,该模块只负责flash的读，故ce置为0即可
-    --        flash_oe : out STD_LOGIC := '1'; --读使能
-    --        flash_we : out STD_LOGIC := '1'; --写使能
-    --        flash_rp : out STD_LOGIC := '1'; --工作模式，1为工作
-    --        flash_addr : out STD_LOGIC_VECTOR( 22 downto 1 ) := "0000000000000000000000"; --flash内存地址
-    --        flash_data : inout STD_LOGIC_VECTOR( 15 downto 0 ) --flash输出信号
-    --        );
-    --end component IRMemory;
    component  VGA_play is
         Port(
             -- common port
@@ -178,57 +146,122 @@ architecture Computer_beh of Computer is
         );
     end component VGA_play;
 
-    component MemoryController is
-    Port(
-        address1 : in  STD_LOGIC_VECTOR (15 downto 0); --1为指令内存地址和数据
-        output1 : out  STD_LOGIC_VECTOR (15 downto 0);
-        address2 : in  STD_LOGIC_VECTOR (15 downto 0);--2为数据内存地址和数据，用于访存阶段
-        output2 : out  STD_LOGIC_VECTOR (15 downto 0);
-        clk: in STD_LOGIC;--一个高频时钟
-        cpuclock : out STD_LOGIC;--时钟四分频后输出
+    --component MemoryController is
+    --Port(
+    --    address1 : in  STD_LOGIC_VECTOR (15 downto 0); --1为指令内存地址和数据
+    --    output1 : out  STD_LOGIC_VECTOR (15 downto 0);
+    --    address2 : in  STD_LOGIC_VECTOR (15 downto 0);--2为数据内存地址和数据，用于访存阶段
+    --    output2 : out  STD_LOGIC_VECTOR (15 downto 0);
+    --    clk: in STD_LOGIC;--一个高频时钟
+    --    cpuclock : out STD_LOGIC;--时钟四分频后输出
         
-        --flash部分的信号，只是接到上层例化用于管脚绑定，在这一层实际上木有用
-        flash_byte : out std_logic;
-        flash_vpen : out std_logic;
-        flash_ce : out std_logic;
-        flash_oe : out std_logic;
-        flash_we : out std_logic;
-        flash_rp : out std_logic;
-        flash_addr : out std_logic_vector(22 downto 1);
-        flash_data : inout std_logic_vector(15 downto 0);
+    --    --flash部分的信号，只是接到上层例化用于管脚绑定，在这一层实际上木有用
+    --    flash_byte : out std_logic;
+    --    flash_vpen : out std_logic;
+    --    flash_ce : out std_logic;
+    --    flash_oe : out std_logic;
+    --    flash_we : out std_logic;
+    --    flash_rp : out std_logic;
+    --    flash_addr : out std_logic_vector(22 downto 1);
+    --    flash_data : inout std_logic_vector(15 downto 0);
         
-        --内存读写部分的信号
-        dataWrite : in  STD_LOGIC_VECTOR (15 downto 0); --要写的数据
-        memoryAddr : out STD_LOGIC_VECTOR (17 downto 0);
-        MemWrite : in STD_LOGIC; --内存写信号
-        MemRead : in STD_LOGIC; --内存读信号
-        memoryEN : out STD_LOGIC;
-        memoryOE : out STD_LOGIC;
-        memoryRW : out STD_LOGIC;
+    --    --内存读写部分的信号
+    --    dataWrite : in  STD_LOGIC_VECTOR (15 downto 0); --要写的数据
+    --    memoryAddr : out STD_LOGIC_VECTOR (17 downto 0);
+    --    MemWrite : in STD_LOGIC; --内存写信号
+    --    MemRead : in STD_LOGIC; --内存读信号
+    --    memoryEN : out STD_LOGIC;
+    --    memoryOE : out STD_LOGIC;
+    --    memoryRW : out STD_LOGIC;
         
-        --扩展数据线
-        extendDatabus : inout STD_LOGIC_VECTOR(15 downto 0);
+    --    --扩展数据线
+    --    extendDatabus : inout STD_LOGIC_VECTOR(15 downto 0);
         
-        --串口和VGA部分的信号
-        serial_wrn : out STD_LOGIC;
-        serial_rdn : out STD_LOGIC;
-        serial_dataready : in STD_LOGIC;
-        serial_tsre : in STD_LOGIC;
-        serial_tbre : in STD_LOGIC;
-        basicdatabus : inout STD_LOGIC_VECTOR(7 downto 0);
-        ram1_en : out STD_LOGIC;
-        reset : in STD_LOGIC;
-        VGA_addr : out std_logic_vector(10 downto 0);
-        VGA_write : out std_LOGIC_vector(0 downto 0);
-        VGA_char : out std_logic_vector(7 downto 0)
+    --    --串口和VGA部分的信号
+    --    serial_wrn : out STD_LOGIC;
+    --    serial_rdn : out STD_LOGIC;
+    --    serial_dataready : in STD_LOGIC;
+    --    serial_tsre : in STD_LOGIC;
+    --    serial_tbre : in STD_LOGIC;
+    --    basicdatabus : inout STD_LOGIC_VECTOR(7 downto 0);
+    --    ram1_en : out STD_LOGIC;
+    --    reset : in STD_LOGIC;
+    --    VGA_addr : out std_logic_vector(10 downto 0);
+    --    VGA_write : out std_LOGIC_vector(0 downto 0);
+    --    VGA_char : out std_logic_vector(7 downto 0)
+    --);
+    --end component MemoryController;
+
+   component MemoryUnit
+    port(
+        --时钟
+        clk : in std_logic;
+        rst : in std_logic;
+        
+        --串口
+        data_ready : in std_logic;      --数据准备信号，='1'表示串口的数据已准备好（读串口成功，可显示读到的data）
+        tbre : in std_logic;                --发送数据标志
+        tsre : in std_logic;                --数据发送完毕标志，tsre and uart_tbre = '1'时写串口完毕
+        wrn : out std_logic;                --写串口，初始化为'1'，先置为'0'并把RAM1data赋好，再置为'1'写串口
+        rdn : out std_logic;                --读串口，初始化为'1'并将RAM1data赋为"ZZ..Z"，
+                                                --若data_ready='1'，则把rdn置为'0'即可读串口（读出数据在RAM1data上）
+        
+        --RAM1（DM）和RAM2（IM）
+        MemRead : in std_logic;         --控制读DM的信号，='1'代表需要读
+        MemWrite : in std_logic;        --控制写DM的信号，='1'代表需要写
+        
+        dataIn : in std_logic_vector(15 downto 0);      --写内存时，要写入DM或IM的数据
+        
+        ramAddr : in std_logic_vector(15 downto 0);     --读DM/写DM/写IM时，地址输入
+        PCOut : in std_logic_vector(15 downto 0);           --读IM时，地址输入
+        PCMuxOut : in std_logic_vector(15 downto 0);    
+        PCKeep : in std_logic;
+        dataOut : out std_logic_vector(15 downto 0);        --读DM时，读出来的数据/读出的串口状态
+        insOut : out std_logic_vector(15 downto 0);     --读IM时，出来的指令
+        
+        ram1_addr : out std_logic_vector(17 downto 0);  --RAM1地址总线
+        ram2_addr : out std_logic_vector(17 downto 0);  --RAM2地址总线
+        ram1_data : inout std_logic_vector(15 downto 0);--RAM1数据总线
+        ram2_data : inout std_logic_vector(15 downto 0);--RAM2数据总线
+        
+        ram2AddrOutput : out std_logic_vector(17 downto 0);
+        
+        ram1_en : out std_logic;        --RAM1使能，='1'禁止
+        ram1_oe : out std_logic;        --RAM1读使能，='1'禁止；
+        ram1_we : out std_logic;        --RAM1写使能，='1'禁止
+        ram2_en : out std_logic;        --RAM2使能，='1'禁止
+        ram2_oe : out std_logic;        --RAM2读使能，='1'禁止
+        ram2_we : out std_logic;        --RAM2写使能，='1'禁止
+        
+        MemoryState : out std_logic_vector(1 downto 0);
+        FlashStateOut : out std_logic_vector(2 downto 0);
+        flashFinished : out std_logic;
+        
+        --Flash
+        flash_addr : out std_logic_vector(22 downto 0);     --flash地址线
+        flash_data : inout std_logic_vector(15 downto 0);   --flash数据线
+        
+        flash_byte : out std_logic; --flash操作模式，常置'1'
+        flash_vpen : out std_logic; --flash写保护，常置'1'
+        flash_rp : out std_logic;       --'1'表示flash工作，常置'1'
+        flash_ce : out std_logic;       --flash使能
+        flash_oe : out std_logic;       --flash读使能，'0'有效，每次读操作后置'1'
+        flash_we : out std_logic        --flash写使能
     );
-    end component MemoryController;
+    end component;
+    
 
-    --if -- end;
-
-    --component IFID is
-
-    --end  component IFID;
+    --时钟
+    component Clock
+    port ( 
+        rst : in STD_LOGIC;
+        clk : in  STD_LOGIC;
+        
+        clkout :out STD_LOGIC;
+        clk1 : out  STD_LOGIC;
+        clk2 : out STD_LOGIC
+    );
+    end component;
 
     component id is
         port(
@@ -444,7 +477,9 @@ architecture Computer_beh of Computer is
 
 -----clock---
 
-signal cpuclk:std_logic;
+signal clk_3 : std_logic;
+signal clk_registers : std_logic;
+signal clk : std_logic;
 
 
 signal s_pc_mux:std_logic_vector(15 downto 0);
@@ -523,7 +558,68 @@ signal s_forward_data:std_logic_vector(15 downto 0);
 
 begin
 
+    --u25 : fontRom
+    --port map(
+    --    clka => clk_in,
+    --    addra => fontRomAddr,
+    --    douta => fontRomData
+    --    );
 
+    u18 : Clock
+    port map(
+        rst => touch_btn(5),
+        clk => clkIn_clock,
+        
+        clkout => clk,
+        clk1 => clk_3,
+        clk2 => clk_registers
+    );
+
+    u17 : MemoryUnit
+        port map( 
+            clk => clk,
+            rst => touch_btn(5),
+            
+            data_ready => uart_dataready,
+            tbre => uart_tbre,
+            tsre => uart_tsre,
+            wrn => uart_wrn,
+            rdn => uart_rdn,
+              
+            MemRead => s_exe_memread_out,
+            MemWrite => s_exe_memwrite_out,
+            
+            dataIn => s_exe_memdata_out,
+            
+            ramAddr => s_exe_memadress_out,
+            PCOut => s_pc_reg, --- 
+           
+            dataOut => s_memout_mem,---
+            insOut => s_instruction,---
+            
+            ram1_addr => base_ram_addr(17 downto 0),
+            ram2_addr => ext_ram_addr(17 downto 0),
+            ram1_data => base_ram_data(15 downto 0),
+            ram2_data => ext_ram_data(15 downto 0),
+            
+            ram1_en => base_ram_ce_n,
+            ram1_oe => base_ram_oe_n,
+            ram1_we => base_ram_we_n,
+            ram2_en => ext_ram_ce_n,
+            ram2_oe => ext_ram_oe_n,
+            ram2_we => ext_ram_we_n,
+            
+            
+            flash_addr => flash_a,
+            flash_data => flash_data,
+            
+            flash_byte => flash_byte_n,
+            flash_vpen => flash_vpen,
+            flash_rp => flash_rp_n,
+            flash_ce => flash_ce_n,
+            flash_oe => flash_oe_n,
+            flash_we => flash_we_n
+        );
   
 
     local_pc_adder: PCAdder port map(
@@ -541,22 +637,15 @@ begin
 
     local_pc_reg:  PCRegister port map(   
             rst => s_reset_out,
-            clk => cpuclk,
+            clk => clk_3,
             PCHold => s_bubble,
             PCIn => s_pc_mux,
             PCOut => s_pc_reg
         );
 
---    local_rset: RestControler port map(
-
---        reset_in => rst,
---        load_finsh => s_flash_load_finsh,
---        reset_out => s_reset_out
---        );
-
 
     local_id: id port map(
-        clock => cpuclk,
+        clock => clk_3,
         reset => rst,
         pause => s_pause, 
         flush => s_exe_shouldJump,
@@ -601,7 +690,7 @@ begin
     );
     
     local_exe: exe port map(
-        clock => cpuclk,
+        clock => clk_3,
         reset => rst,
         --pause: in std_logic;
         from_wb_memory_or_alu_out => s_id_wb_memory_or_alu_out,
@@ -652,7 +741,7 @@ begin
     );
    
     local_exe_mem: exe_mem port map(
-        clk => cpuclk,
+        clk => clk_3,
         reset => rst,
         aluout_in => s_exe_alu_out,
         memwrite_in => s_exe_memoryWrite,
@@ -675,81 +764,81 @@ begin
 
    
 
-    vga : VGA_play port map(
-        CLK_0 => clk_in,
-        clkout=> clk_useless,
-        reset=> rst,
+--    vga : VGA_play port map(
+--        CLK_0 => clk_in,
+--        clkout=> clk_useless,
+--        reset=> rst,
 
-        -- vga port
---        R=> R,
---        G=> G,
---        B=> B,
-        color => video_color,
---        color1 => leds,
-        Hs=> Hs,
-        Vs=> Vs,
-        v_clk => video_clk,
-        de => video_de,
+--        -- vga port
+----        R=> R,
+----        G=> G,
+----        B=> B,
+--        color => video_color,
+----        color1 => leds,
+--        Hs=> Hs,
+--        Vs=> Vs,
+--        v_clk => video_clk,
+--        de => video_de,
 
-        -- fifo memory
-        wctrl=> vga_write,
-        waddr=> vga_addr,
-        wdata => vga_data
-        );
+--        -- fifo memory
+--        wctrl=> vga_write,
+--        waddr=> vga_addr,
+--        wdata => vga_data
+--        );
 
-    local_mem: MemoryController port map(
-        --1为指令内存地址和数据
-        address1 => s_pc_reg, 
-        output1 => s_instruction,
+    --local_mem: MemoryController port map(
+    --    --1为指令内存地址和数据
+    --    address1 => s_pc_reg, 
+    --    output1 => s_instruction,
 
-        --2为数据内存地址和数据，用于访存阶段
-        address2 => s_exe_memadress_out,
-        output2 => s_memout_mem,
-        clk => clk_in,--一个高频时钟
-        cpuclock => cpuclk,--时钟四分频后输出
+    --    --2为数据内存地址和数据，用于访存阶段
+    --    address2 => s_exe_memadress_out,
+    --    output2 => s_memout_mem,
+    --    clk => clk_in,--一个高频时钟
+    --    cpuclock => clk_3,--时钟四分频后输出
         
-        --flash部分的信号，只是接到上层例化用于管脚绑定，在这一层实际上木有用
-        flash_byte => flash_byte,
-        flash_vpen => flash_vpen,
-        flash_ce =>flash_ce,
-        flash_oe => flash_oe,
-        flash_we => flash_we,
-        flash_rp => flash_rp,
-        flash_addr => flash_addr,
-        flash_data => flash_data,
-        --内存读写部分的信号
+    --    --flash部分的信号，只是接到上层例化用于管脚绑定，在这一层实际上木有用
+    --    flash_byte => flash_byte,
+    --    flash_vpen => flash_vpen,
+    --    flash_ce =>flash_ce,
+    --    flash_oe => flash_oe,
+    --    flash_we => flash_we,
+    --    flash_rp => flash_rp,
+    --    flash_addr => flash_addr,
+    --    flash_data => flash_data,
+    --    --内存读写部分的信号
 
-        dataWrite =>  s_exe_memdata_out,--要写的数据
-        memoryAddr => MemAddr2,
-        MemWrite => s_exe_memwrite_out,--内存写信号
-        MemRead => s_exe_memread_out, --内存读信号
+    --    dataWrite =>  s_exe_memdata_out,--要写的数据
+    --    memoryAddr => MemAddr2,
+    --    MemWrite => s_exe_memwrite_out,--内存写信号
+    --    MemRead => s_exe_memread_out, --内存读信号
 
-        memoryEN =>en2,
-        memoryOE =>oe2,
-        memoryRW =>we2,
+    --    memoryEN =>en2,
+    --    memoryOE =>oe2,
+    --    memoryRW =>we2,
 
         
-        --扩展数据线
-        extendDatabus =>MemData2,        
-        --串口和VGA部分的信号
-        serial_wrn =>wrn,
-        serial_rdn =>rdn,
-        serial_dataready =>dataready,
-        serial_tsre =>tsre,
-        serial_tbre =>tbre,
+    --    --扩展数据线
+    --    extendDatabus =>MemData2,        
+    --    --串口和VGA部分的信号
+    --    serial_wrn =>wrn,
+    --    serial_rdn =>rdn,
+    --    serial_dataready =>dataready,
+    --    serial_tsre =>tsre,
+    --    serial_tbre =>tbre,
 
-        basicdatabus => MemData1(7 downto 0),
-        ram1_en =>en1,
-        reset =>rst,
+    --    basicdatabus => MemData1(7 downto 0),
+    --    ram1_en =>en1,
+    --    reset =>rst,
         
-        VGA_addr =>vga_addr,
-        VGA_char =>vga_data,
-        vga_write=>VGA_write
+    --    VGA_addr =>vga_addr,
+    --    VGA_char =>vga_data,
+    --    vga_write=>VGA_write
         
-    );
+    --);
 
     local_mem_wb: mem_wb port map(
-        clk => cpuclk,
+        clk => clk_3,
         reset => rst,
         memtoreg_in => s_exe_memtoreg_out,
         regwrite_in => s_exe_regwrite_out,
