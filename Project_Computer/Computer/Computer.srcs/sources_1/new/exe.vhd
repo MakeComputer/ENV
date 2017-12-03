@@ -24,8 +24,8 @@ entity exe is
 		memoryData: out std_logic_vector(15 downto 0);
 		
 		fromBranch: in std_logic_vector(2 downto 0);
-		shouldJump: out std_logic;
-		jumpAddress: out std_logic_vector(15 downto 0);
+		shouldJump: out std_logic := '0';
+		jumpAddress: out std_logic_vector(15 downto 0) := x"0000";
 		
 		rx: in std_logic_vector(15 downto 0);
 		ry: in std_logic_vector(15 downto 0);

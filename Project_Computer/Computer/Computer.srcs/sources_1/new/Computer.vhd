@@ -39,7 +39,7 @@ entity Computer is
         op:in std_logic;
         clk_hand : in std_logic;
         clk_in,rst: in std_logic;
-        leds: out std_logic_vector(15 downto 0) := "0000000000000000";
+        leds: out std_logic_vector(16 downto 0) := "00000000000000000";
         
         -- vga port
 --        R: out std_logic_vector(2 downto 0) := "000";
@@ -903,6 +903,7 @@ begin
 --    leds(15 downto 8) <= s_instruction(15 downto 8);
 --    leds(7 downto 0) <= s_pc_reg(7 downto 0);
     leds(15 downto 0) <= s_instruction(15 downto 0);
+    leds(16) <= s_exe_shouldJump;
 
     --locla_if: IRMemory  port map( 
     --        clk => clk_mem,

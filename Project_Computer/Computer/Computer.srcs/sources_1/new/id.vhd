@@ -14,31 +14,31 @@ entity id is
 		writeData: in std_logic_vector(15 downto 0);
 		writeAddress: in std_logic_vector(3 downto 0);
 	
-		memoryRead: out std_logic;
-		memoryWrite: out std_logic;
-		registerWrite: out std_logic;
-		where: out std_logic;
-		wb_memory_or_alu_out: out std_logic_vector(1 downto 0);
-		branch: out std_logic_vector(2 downto 0);
+		memoryRead: out std_logic := '0';
+		memoryWrite: out std_logic := '0';
+		registerWrite: out std_logic := '0';
+		where: out std_logic := '0';
+		wb_memory_or_alu_out: out std_logic_vector(1 downto 0) := "00";
+		branch: out std_logic_vector(2 downto 0) := "000";
 		
-		pc: out std_logic_vector(15 downto 0);
+		pc: out std_logic_vector(15 downto 0) := "0000000000000000";
 		
-		immediate: out std_logic_vector(15 downto 0);
-		rx: out std_logic_vector(15 downto 0);
-		ry: out std_logic_vector(15 downto 0);
-		sp: out std_logic_vector(15 downto 0);
-		ra: out std_logic_vector(15 downto 0);
-		ih: out std_logic_vector(15 downto 0);
-		t: out std_logic_vector(15 downto 0);
+		immediate: out std_logic_vector(15 downto 0) := "0000000000000000";
+		rx: out std_logic_vector(15 downto 0) := "0000000000000000";
+		ry: out std_logic_vector(15 downto 0) := "0000000000000000";
+		sp: out std_logic_vector(15 downto 0) := "0000000000000000";
+		ra: out std_logic_vector(15 downto 0) := "0000000000000000";
+		ih: out std_logic_vector(15 downto 0) := "0000000000000000";
+		t: out std_logic_vector(15 downto 0) := "0000000000000000";
 		
-		exe_alu_op: out std_logic_vector(2 downto 0);
-		exe_alu_rx: out std_logic_vector(2 downto 0);
-		exe_alu_ry: out std_logic_vector(1 downto 0);
-		exe_address: out std_logic_vector(1 downto 0);
-		exe_select_goal: out std_logic_vector(2 downto 0);
-		r_x: out std_logic_vector(2 downto 0);
-		r_y: out std_logic_vector(2 downto 0);
-		r_z: out std_logic_vector(2 downto 0)
+		exe_alu_op: out std_logic_vector(2 downto 0) := "000";
+		exe_alu_rx: out std_logic_vector(2 downto 0) := "000";
+		exe_alu_ry: out std_logic_vector(1 downto 0) := "00";
+		exe_address: out std_logic_vector(1 downto 0) := "00";
+		exe_select_goal: out std_logic_vector(2 downto 0) := "000";
+		r_x: out std_logic_vector(2 downto 0) := "000";
+		r_y: out std_logic_vector(2 downto 0) := "000";
+		r_z: out std_logic_vector(2 downto 0) := "000"
 		
 	);
 end id;
@@ -287,7 +287,7 @@ begin
 			s_from_pc <= "0000000000000000";
 		elsif clock'event and clock = '1' and pause = '0' then
 			s_instruction <= instruction;
-			s_from_pc <= fromPC+"0000000000000001";
+			s_from_pc <= fromPC;
 		end if;
 	end process;
 

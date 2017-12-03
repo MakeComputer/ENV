@@ -115,7 +115,7 @@ begin
 		end case;
 	end process;
 
-	process(reset, clock)
+	process(reset, clock, writeRegister, writeData, writeAddress)
 	begin
 		if reset = '1' then
 			s0 <= "0000000000000000";

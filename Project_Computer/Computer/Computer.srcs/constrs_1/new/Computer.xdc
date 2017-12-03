@@ -105,6 +105,7 @@ set_property PACKAGE_PIN A18 [get_ports {leds[12]}]
 set_property PACKAGE_PIN A19 [get_ports {leds[13]}]
 set_property PACKAGE_PIN E17 [get_ports {leds[14]}]
 set_property PACKAGE_PIN E18 [get_ports {leds[15]}]
+set_property PACKAGE_PIN D16 [get_ports {leds[16]}]
 
 set_property IOSTANDARD LVCMOS33 [get_ports {dip_sw[*]}]
 set_property PACKAGE_PIN N3 [get_ports {dip_sw[0]}]

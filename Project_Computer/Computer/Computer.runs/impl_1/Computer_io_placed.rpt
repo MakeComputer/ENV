@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------
 | Tool Version              : Vivado v.2017.1 (win64) Build 1846317 Fri Apr 14 18:55:03 MDT 2017
-| Date                      : Sat Dec  2 03:33:04 2017
+| Date                      : Sun Dec  3 11:18:40 2017
 | Host                      : samsung running 64-bit major release  (build 9200)
 | Command                   : report_io -file Computer_io_placed.rpt
 | Design                    : Computer
@@ -25,7 +25,7 @@ Table of Contents
 +---------------+
 | Total User IO |
 +---------------+
-|           192 |
+|           193 |
 +---------------+
 
 
@@ -284,7 +284,7 @@ Table of Contents
 | D13        |                   |            | MGTAVCC_G11                  | Gigabit Power |             |         |            |      |                     |                      |         |            |           |          |      |                  |
 | D14        |                   |            | MGTPRXP1_216                 | Gigabit       |             |         |            |      |                     |                      |         |            |           |          |      |                  |
 | D15        |                   |            | GND                          | GND           |             |         |            |      |                     |                      |     0.0 |            |           |          |      |                  |
-| D16        |                   | High Range | IO_L8N_T1_16                 | User IO       |             |      16 |            |      |                     |                      |         |            |           |          |      |                  |
+| D16        | leds[16]          | High Range | IO_L8N_T1_16                 | OUTPUT        | LVCMOS33    |      16 |         12 | SLOW |                     |            FP_VTT_50 |         | FIXED      |           |          |      | NONE             |
 | D17        |                   |            | GND                          | GND           |             |         |            |      |                     |                      |     0.0 |            |           |          |      |                  |
 | D18        | clk_in            | High Range | IO_L12P_T1_MRCC_16           | INPUT         | LVCMOS33    |      16 |            |      |                     |                 NONE |         | FIXED      |           |          |      | NONE             |
 | D19        | leds[11]          | High Range | IO_L13P_T2_MRCC_16           | OUTPUT        | LVCMOS33    |      16 |         12 | SLOW |                     |            FP_VTT_50 |         | FIXED      |           |          |      | NONE             |

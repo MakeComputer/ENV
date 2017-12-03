@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="fifo_mem_synth_1" LaunchPart="xc7a100tfgg676-2L" LaunchTime="1512142772">
-  <File Type="RDS-PROPCONSTRS" Name="fifo_mem_drc_synth.rpt"/>
   <File Type="PA-TCL" Name="fifo_mem.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="fifo_mem_drc_synth.rpt"/>
   <File Type="RDS-RDS" Name="fifo_mem.vds"/>
   <File Type="RDS-UTIL" Name="fifo_mem_utilization_synth.rpt"/>
   <File Type="RDS-UTIL-PB" Name="fifo_mem_utilization_synth.pb"/>

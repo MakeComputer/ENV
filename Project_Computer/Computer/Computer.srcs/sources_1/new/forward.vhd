@@ -20,11 +20,11 @@ entity forward is
 		wb_registerWrite: in std_logic;
 		wb_toRegister: in std_logic_vector(15 downto 0);
 		
-		from_forward_datax: out std_logic;
-		from_forward_datay: out std_logic;
-		from_forward_address: out std_logic;
+		from_forward_datax: out std_logic := '0';
+		from_forward_datay: out std_logic := '0';
+		from_forward_address: out std_logic := '0';
 		
-		forward_data: out std_logic_vector(15 downto 0)
+		forward_data: out std_logic_vector(15 downto 0) := "0000000000000000"
 		
 	);
 end forward;

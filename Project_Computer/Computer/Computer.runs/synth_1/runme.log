@@ -14,9 +14,9 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t-fgg676'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t-fgg676'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 8664 
+INFO: Helper process launched with PID 8720 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 361.582 ; gain = 76.770
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 361.172 ; gain = 76.832
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'Computer' [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/Computer.vhd:84]
 INFO: [Synth 8-3491] module 'clock' declared at 'E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/imports/new/clock.vhd:32' bound to instance 'u18' of component 'Clock' [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/Computer.vhd:565]
@@ -132,23 +132,6 @@ WARNING: [Synth 8-3331] design extend has unconnected port number[14]
 WARNING: [Synth 8-3331] design extend has unconnected port number[13]
 WARNING: [Synth 8-3331] design extend has unconnected port number[12]
 WARNING: [Synth 8-3331] design extend has unconnected port number[11]
-WARNING: [Synth 8-3331] design PCMux has unconnected port branch
-WARNING: [Synth 8-3331] design PCMux has unconnected port PCJump[15]
-WARNING: [Synth 8-3331] design PCMux has unconnected port PCJump[14]
-WARNING: [Synth 8-3331] design PCMux has unconnected port PCJump[13]
-WARNING: [Synth 8-3331] design PCMux has unconnected port PCJump[12]
-WARNING: [Synth 8-3331] design PCMux has unconnected port PCJump[11]
-WARNING: [Synth 8-3331] design PCMux has unconnected port PCJump[10]
-WARNING: [Synth 8-3331] design PCMux has unconnected port PCJump[9]
-WARNING: [Synth 8-3331] design PCMux has unconnected port PCJump[8]
-WARNING: [Synth 8-3331] design PCMux has unconnected port PCJump[7]
-WARNING: [Synth 8-3331] design PCMux has unconnected port PCJump[6]
-WARNING: [Synth 8-3331] design PCMux has unconnected port PCJump[5]
-WARNING: [Synth 8-3331] design PCMux has unconnected port PCJump[4]
-WARNING: [Synth 8-3331] design PCMux has unconnected port PCJump[3]
-WARNING: [Synth 8-3331] design PCMux has unconnected port PCJump[2]
-WARNING: [Synth 8-3331] design PCMux has unconnected port PCJump[1]
-WARNING: [Synth 8-3331] design PCMux has unconnected port PCJump[0]
 WARNING: [Synth 8-3331] design Computer has unconnected port video_color[7]
 WARNING: [Synth 8-3331] design Computer has unconnected port video_color[6]
 WARNING: [Synth 8-3331] design Computer has unconnected port video_color[5]
@@ -191,7 +174,7 @@ WARNING: [Synth 8-3331] design Computer has unconnected port ext_ram_data[18]
 WARNING: [Synth 8-3331] design Computer has unconnected port ext_ram_data[17]
 WARNING: [Synth 8-3331] design Computer has unconnected port ext_ram_data[16]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 404.668 ; gain = 119.855
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 404.258 ; gain = 119.918
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -217,7 +200,7 @@ WARNING: [Synth 8-3295] tying undriven pin local_forward:address_wb[2] to consta
 WARNING: [Synth 8-3295] tying undriven pin local_forward:address_wb[1] to constant 0 [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/Computer.vhd:859]
 WARNING: [Synth 8-3295] tying undriven pin local_forward:address_wb[0] to constant 0 [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/Computer.vhd:859]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 404.668 ; gain = 119.855
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 404.258 ; gain = 119.918
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a100tfgg676-2L
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -372,131 +355,131 @@ Resolution: If [get_<value>] was used to populate the object, check to make sure
 WARNING: [Vivado 12-584] No ports matched 'dm9k_data[15]'. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:74]
 CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:74]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'dip_sw[*]'. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:109]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:109]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'dip_sw[0]'. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:110]
+WARNING: [Vivado 12-584] No ports matched 'dip_sw[*]'. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:110]
 CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:110]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'dip_sw[1]'. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:111]
+WARNING: [Vivado 12-584] No ports matched 'dip_sw[0]'. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:111]
 CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:111]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'dip_sw[2]'. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:112]
+WARNING: [Vivado 12-584] No ports matched 'dip_sw[1]'. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:112]
 CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:112]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'dip_sw[3]'. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:113]
+WARNING: [Vivado 12-584] No ports matched 'dip_sw[2]'. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:113]
 CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:113]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'dip_sw[4]'. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:114]
+WARNING: [Vivado 12-584] No ports matched 'dip_sw[3]'. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:114]
 CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:114]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'dip_sw[5]'. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:115]
+WARNING: [Vivado 12-584] No ports matched 'dip_sw[4]'. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:115]
 CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:115]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'dip_sw[6]'. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:116]
+WARNING: [Vivado 12-584] No ports matched 'dip_sw[5]'. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:116]
 CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:116]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'dip_sw[7]'. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:117]
+WARNING: [Vivado 12-584] No ports matched 'dip_sw[6]'. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:117]
 CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:117]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'dip_sw[8]'. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:118]
+WARNING: [Vivado 12-584] No ports matched 'dip_sw[7]'. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:118]
 CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:118]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'dip_sw[9]'. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:119]
+WARNING: [Vivado 12-584] No ports matched 'dip_sw[8]'. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:119]
 CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:119]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'dip_sw[10]'. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:120]
+WARNING: [Vivado 12-584] No ports matched 'dip_sw[9]'. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:120]
 CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:120]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'dip_sw[11]'. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:121]
+WARNING: [Vivado 12-584] No ports matched 'dip_sw[10]'. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:121]
 CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:121]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'dip_sw[12]'. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:122]
+WARNING: [Vivado 12-584] No ports matched 'dip_sw[11]'. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:122]
 CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:122]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'dip_sw[13]'. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:123]
+WARNING: [Vivado 12-584] No ports matched 'dip_sw[12]'. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:123]
 CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:123]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'dip_sw[14]'. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:124]
+WARNING: [Vivado 12-584] No ports matched 'dip_sw[13]'. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:124]
 CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:124]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'dip_sw[15]'. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:125]
+WARNING: [Vivado 12-584] No ports matched 'dip_sw[14]'. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:125]
 CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:125]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'dip_sw[16]'. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:126]
+WARNING: [Vivado 12-584] No ports matched 'dip_sw[15]'. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:126]
 CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:126]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'dip_sw[17]'. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:127]
+WARNING: [Vivado 12-584] No ports matched 'dip_sw[16]'. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:127]
 CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:127]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'dip_sw[18]'. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:128]
+WARNING: [Vivado 12-584] No ports matched 'dip_sw[17]'. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:128]
 CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:128]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'dip_sw[19]'. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:129]
+WARNING: [Vivado 12-584] No ports matched 'dip_sw[18]'. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:129]
 CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:129]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'dip_sw[20]'. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:130]
+WARNING: [Vivado 12-584] No ports matched 'dip_sw[19]'. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:130]
 CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:130]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'dip_sw[21]'. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:131]
+WARNING: [Vivado 12-584] No ports matched 'dip_sw[20]'. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:131]
 CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:131]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'dip_sw[22]'. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:132]
+WARNING: [Vivado 12-584] No ports matched 'dip_sw[21]'. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:132]
 CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:132]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'dip_sw[23]'. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:133]
+WARNING: [Vivado 12-584] No ports matched 'dip_sw[22]'. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:133]
 CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:133]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'dip_sw[24]'. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:134]
+WARNING: [Vivado 12-584] No ports matched 'dip_sw[23]'. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:134]
 CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:134]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'dip_sw[25]'. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:135]
+WARNING: [Vivado 12-584] No ports matched 'dip_sw[24]'. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:135]
 CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:135]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'dip_sw[26]'. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:136]
+WARNING: [Vivado 12-584] No ports matched 'dip_sw[25]'. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:136]
 CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:136]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'dip_sw[27]'. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:137]
+WARNING: [Vivado 12-584] No ports matched 'dip_sw[26]'. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:137]
 CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:137]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'dip_sw[28]'. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:138]
+WARNING: [Vivado 12-584] No ports matched 'dip_sw[27]'. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:138]
 CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:138]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'dip_sw[29]'. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:139]
+WARNING: [Vivado 12-584] No ports matched 'dip_sw[28]'. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:139]
 CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:139]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'dip_sw[30]'. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:140]
+WARNING: [Vivado 12-584] No ports matched 'dip_sw[29]'. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:140]
 CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:140]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'base_ram_be_n[*]'. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:221]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:221]
+WARNING: [Vivado 12-584] No ports matched 'dip_sw[30]'. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:141]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:141]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'base_ram_be_n[0]'. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:222]
+WARNING: [Vivado 12-584] No ports matched 'base_ram_be_n[*]'. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:222]
 CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:222]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'base_ram_be_n[1]'. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:223]
+WARNING: [Vivado 12-584] No ports matched 'base_ram_be_n[0]'. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:223]
 CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:223]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'base_ram_be_n[2]'. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:224]
+WARNING: [Vivado 12-584] No ports matched 'base_ram_be_n[1]'. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:224]
 CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:224]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'base_ram_be_n[3]'. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:225]
+WARNING: [Vivado 12-584] No ports matched 'base_ram_be_n[2]'. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:225]
 CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:225]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'ext_ram_be_n[*]'. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:287]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:287]
+WARNING: [Vivado 12-584] No ports matched 'base_ram_be_n[3]'. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:226]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:226]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'ext_ram_be_n[0]'. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:288]
+WARNING: [Vivado 12-584] No ports matched 'ext_ram_be_n[*]'. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:288]
 CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:288]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'ext_ram_be_n[1]'. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:289]
+WARNING: [Vivado 12-584] No ports matched 'ext_ram_be_n[0]'. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:289]
 CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:289]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'ext_ram_be_n[2]'. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:290]
+WARNING: [Vivado 12-584] No ports matched 'ext_ram_be_n[1]'. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:290]
 CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:290]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'ext_ram_be_n[3]'. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:291]
+WARNING: [Vivado 12-584] No ports matched 'ext_ram_be_n[2]'. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:291]
 CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:291]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'ext_ram_be_n[3]'. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:292]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:292]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
 Finished Parsing XDC File [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc]
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/Computer_propImpl.xdc].
@@ -506,22 +489,22 @@ Completed Processing XDC Constraints
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 722.117 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 721.711 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 722.117 ; gain = 437.305
+Finished Constraint Validation : Time (s): cpu = 00:00:19 ; elapsed = 00:00:29 . Memory (MB): peak = 721.711 ; gain = 437.371
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tfgg676-2L
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 722.117 ; gain = 437.305
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:19 ; elapsed = 00:00:29 . Memory (MB): peak = 721.711 ; gain = 437.371
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 722.117 ; gain = 437.305
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:19 ; elapsed = 00:00:29 . Memory (MB): peak = 721.711 ; gain = 437.371
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-4471] merging register 'ram1_oe_reg' into 'ram1_en_reg' [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/imports/new/MemoryUnit.vhd:152]
 INFO: [Synth 8-4471] merging register 'ram1_we_reg' into 'ram1_en_reg' [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/imports/new/MemoryUnit.vhd:153]
@@ -580,7 +563,7 @@ WARNING: [Synth 8-327] inferring latch for variable 'from_forward_datay_reg' [E:
 WARNING: [Synth 8-327] inferring latch for variable 'from_forward_address_reg' [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/forward.vhd:57]
 WARNING: [Synth 8-327] inferring latch for variable 'forward_data_reg' [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/forward.vhd:44]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 722.117 ; gain = 437.305
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:21 ; elapsed = 00:00:31 . Memory (MB): peak = 721.711 ; gain = 437.371
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -594,7 +577,7 @@ Start RTL Component Statistics
 Detailed RTL Component Info : 
 +---Adders : 
 	   2 Input     32 Bit       Adders := 1     
-	   2 Input     16 Bit       Adders := 3     
+	   2 Input     16 Bit       Adders := 2     
 	   3 Input     16 Bit       Adders := 1     
 	   2 Input      2 Bit       Adders := 1     
 +---Registers : 
@@ -610,7 +593,7 @@ Detailed RTL Component Info :
 	   2 Input     32 Bit        Muxes := 1     
 	   2 Input     20 Bit        Muxes := 1     
 	   4 Input     16 Bit        Muxes := 9     
-	   2 Input     16 Bit        Muxes := 36    
+	   2 Input     16 Bit        Muxes := 37    
 	   5 Input     16 Bit        Muxes := 1     
 	   8 Input     16 Bit        Muxes := 1     
 	   2 Input      8 Bit        Muxes := 1     
@@ -680,6 +663,10 @@ Module PCAdder
 Detailed RTL Component Info : 
 +---Adders : 
 	   2 Input     16 Bit       Adders := 1     
+Module PCMux 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 1     
 Module PCRegister 
 Detailed RTL Component Info : 
 +---Registers : 
@@ -717,8 +704,6 @@ Detailed RTL Component Info :
 	   2 Input     16 Bit        Muxes := 4     
 Module id 
 Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input     16 Bit       Adders := 1     
 +---Registers : 
 	               16 Bit    Registers := 2     
 Module mux_rx 
@@ -832,46 +817,57 @@ WARNING: [Synth 8-3331] design Computer has unconnected port base_ram_data[17]
 WARNING: [Synth 8-3331] design Computer has unconnected port base_ram_data[16]
 WARNING: [Synth 8-3331] design Computer has unconnected port ext_ram_data[31]
 WARNING: [Synth 8-3331] design Computer has unconnected port ext_ram_data[30]
-INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+WARNING: [Synth 8-3331] design Computer has unconnected port ext_ram_data[29]
+WARNING: [Synth 8-3331] design Computer has unconnected port ext_ram_data[28]
+WARNING: [Synth 8-3331] design Computer has unconnected port ext_ram_data[27]
+WARNING: [Synth 8-3331] design Computer has unconnected port ext_ram_data[26]
+WARNING: [Synth 8-3331] design Computer has unconnected port ext_ram_data[25]
+WARNING: [Synth 8-3331] design Computer has unconnected port ext_ram_data[24]
+WARNING: [Synth 8-3331] design Computer has unconnected port ext_ram_data[23]
+WARNING: [Synth 8-3331] design Computer has unconnected port ext_ram_data[22]
+WARNING: [Synth 8-3331] design Computer has unconnected port ext_ram_data[21]
+WARNING: [Synth 8-3331] design Computer has unconnected port ext_ram_data[20]
+WARNING: [Synth 8-3331] design Computer has unconnected port ext_ram_data[19]
+WARNING: [Synth 8-3331] design Computer has unconnected port ext_ram_data[18]
+WARNING: [Synth 8-3331] design Computer has unconnected port ext_ram_data[17]
+WARNING: [Synth 8-3331] design Computer has unconnected port ext_ram_data[16]
 INFO: [Synth 8-3886] merging instance 'local_exe/s_forward_address_reg[0]' (FDC) to 'local_exe/s_forward_datax_reg[0]'
+INFO: [Synth 8-3886] merging instance 'local_exe/s_forward_address_reg[1]' (FDC) to 'local_exe/s_forward_datax_reg[1]'
+INFO: [Synth 8-3886] merging instance 'local_exe/s_forward_address_reg[2]' (FDC) to 'local_exe/s_forward_datax_reg[2]'
+INFO: [Synth 8-3886] merging instance 'local_exe/s_forward_address_reg[3]' (FDC) to 'local_exe/s_forward_datax_reg[3]'
+INFO: [Synth 8-3886] merging instance 'local_exe/s_forward_address_reg[4]' (FDC) to 'local_exe/s_forward_datax_reg[4]'
+INFO: [Synth 8-3886] merging instance 'local_exe/s_forward_address_reg[5]' (FDC) to 'local_exe/s_forward_datax_reg[5]'
+INFO: [Synth 8-3886] merging instance 'local_exe/s_forward_address_reg[6]' (FDC) to 'local_exe/s_forward_datax_reg[6]'
+INFO: [Synth 8-3886] merging instance 'local_exe/s_forward_address_reg[7]' (FDC) to 'local_exe/s_forward_datax_reg[7]'
+INFO: [Synth 8-3886] merging instance 'local_exe/s_forward_address_reg[8]' (FDC) to 'local_exe/s_forward_datax_reg[8]'
+INFO: [Synth 8-3886] merging instance 'local_exe/s_forward_address_reg[9]' (FDC) to 'local_exe/s_forward_datax_reg[9]'
+INFO: [Synth 8-3886] merging instance 'local_exe/s_forward_address_reg[10]' (FDC) to 'local_exe/s_forward_datax_reg[10]'
+INFO: [Synth 8-3886] merging instance 'local_exe/s_forward_address_reg[11]' (FDC) to 'local_exe/s_forward_datax_reg[11]'
+INFO: [Synth 8-3886] merging instance 'local_exe/s_forward_address_reg[12]' (FDC) to 'local_exe/s_forward_datax_reg[12]'
+INFO: [Synth 8-3886] merging instance 'local_exe/s_forward_address_reg[13]' (FDC) to 'local_exe/s_forward_datax_reg[13]'
+INFO: [Synth 8-3886] merging instance 'local_exe/s_forward_address_reg[14]' (FDC) to 'local_exe/s_forward_datax_reg[14]'
+INFO: [Synth 8-3886] merging instance 'local_exe/s_forward_address_reg[15]' (FDC) to 'local_exe/s_forward_datax_reg[15]'
 INFO: [Synth 8-3886] merging instance 'local_exe/s_forward_datax_reg[0]' (FDC) to 'local_exe/s_forward_datay_reg[0]'
-INFO: [Synth 8-3886] merging instance 'local_exe/s_forward_address_reg[1]' (FDC) to 'local_exe/s_forward_datay_reg[1]'
 INFO: [Synth 8-3886] merging instance 'local_exe/s_forward_datay_reg[1]' (FDC) to 'local_exe/s_forward_datax_reg[1]'
-INFO: [Synth 8-3886] merging instance 'local_exe/s_forward_address_reg[2]' (FDC) to 'local_exe/s_forward_datay_reg[2]'
 INFO: [Synth 8-3886] merging instance 'local_exe/s_forward_datay_reg[2]' (FDC) to 'local_exe/s_forward_datax_reg[2]'
-INFO: [Synth 8-3886] merging instance 'local_exe/s_forward_address_reg[3]' (FDC) to 'local_exe/s_forward_datay_reg[3]'
 INFO: [Synth 8-3886] merging instance 'local_exe/s_forward_datay_reg[3]' (FDC) to 'local_exe/s_forward_datax_reg[3]'
-INFO: [Synth 8-3886] merging instance 'local_exe/s_forward_address_reg[4]' (FDC) to 'local_exe/s_forward_datay_reg[4]'
 INFO: [Synth 8-3886] merging instance 'local_exe/s_forward_datay_reg[4]' (FDC) to 'local_exe/s_forward_datax_reg[4]'
-INFO: [Synth 8-3886] merging instance 'local_exe/s_forward_address_reg[5]' (FDC) to 'local_exe/s_forward_datay_reg[5]'
 INFO: [Synth 8-3886] merging instance 'local_exe/s_forward_datay_reg[5]' (FDC) to 'local_exe/s_forward_datax_reg[5]'
-INFO: [Synth 8-3886] merging instance 'local_exe/s_forward_address_reg[6]' (FDC) to 'local_exe/s_forward_datay_reg[6]'
 INFO: [Synth 8-3886] merging instance 'local_exe/s_forward_datay_reg[6]' (FDC) to 'local_exe/s_forward_datax_reg[6]'
-INFO: [Synth 8-3886] merging instance 'local_exe/s_forward_address_reg[7]' (FDC) to 'local_exe/s_forward_datay_reg[7]'
 INFO: [Synth 8-3886] merging instance 'local_exe/s_forward_datay_reg[7]' (FDC) to 'local_exe/s_forward_datax_reg[7]'
-INFO: [Synth 8-3886] merging instance 'local_exe/s_forward_address_reg[8]' (FDC) to 'local_exe/s_forward_datay_reg[8]'
 INFO: [Synth 8-3886] merging instance 'local_exe/s_forward_datay_reg[8]' (FDC) to 'local_exe/s_forward_datax_reg[8]'
-INFO: [Synth 8-3886] merging instance 'local_exe/s_forward_address_reg[9]' (FDC) to 'local_exe/s_forward_datay_reg[9]'
 INFO: [Synth 8-3886] merging instance 'local_exe/s_forward_datay_reg[9]' (FDC) to 'local_exe/s_forward_datax_reg[9]'
-INFO: [Synth 8-3886] merging instance 'local_exe/s_forward_address_reg[10]' (FDC) to 'local_exe/s_forward_datay_reg[10]'
 INFO: [Synth 8-3886] merging instance 'local_exe/s_forward_datay_reg[10]' (FDC) to 'local_exe/s_forward_datax_reg[10]'
 INFO: [Synth 8-3886] merging instance 'local_exe/s_immediate_reg[10]' (FDC) to 'local_exe/s_immediate_reg[11]'
-INFO: [Synth 8-3886] merging instance 'local_exe/s_forward_address_reg[11]' (FDC) to 'local_exe/s_forward_datay_reg[11]'
 INFO: [Synth 8-3886] merging instance 'local_exe/s_forward_datay_reg[11]' (FDC) to 'local_exe/s_forward_datax_reg[11]'
 INFO: [Synth 8-3886] merging instance 'local_exe/s_immediate_reg[11]' (FDC) to 'local_exe/s_immediate_reg[12]'
-INFO: [Synth 8-3886] merging instance 'local_exe/s_forward_address_reg[12]' (FDC) to 'local_exe/s_forward_datay_reg[12]'
 INFO: [Synth 8-3886] merging instance 'local_exe/s_forward_datay_reg[12]' (FDC) to 'local_exe/s_forward_datax_reg[12]'
 INFO: [Synth 8-3886] merging instance 'local_exe/s_immediate_reg[12]' (FDC) to 'local_exe/s_immediate_reg[13]'
-INFO: [Synth 8-3886] merging instance 'local_exe/s_forward_address_reg[13]' (FDC) to 'local_exe/s_forward_datay_reg[13]'
 INFO: [Synth 8-3886] merging instance 'local_exe/s_forward_datay_reg[13]' (FDC) to 'local_exe/s_forward_datax_reg[13]'
 INFO: [Synth 8-3886] merging instance 'local_exe/s_immediate_reg[13]' (FDC) to 'local_exe/s_immediate_reg[14]'
-INFO: [Synth 8-3886] merging instance 'local_exe/s_forward_address_reg[14]' (FDC) to 'local_exe/s_forward_datay_reg[14]'
 INFO: [Synth 8-3886] merging instance 'local_exe/s_forward_datay_reg[14]' (FDC) to 'local_exe/s_forward_datax_reg[14]'
 INFO: [Synth 8-3886] merging instance 'local_exe/s_immediate_reg[14]' (FDC) to 'local_exe/s_immediate_reg[15]'
-INFO: [Synth 8-3886] merging instance 'local_exe/s_forward_address_reg[15]' (FDC) to 'local_exe/s_forward_datax_reg[15]'
 INFO: [Synth 8-3886] merging instance 'local_exe/s_forward_datax_reg[15]' (FDC) to 'local_exe/s_forward_datay_reg[15]'
-INFO: [Synth 8-3886] merging instance 'local_exe/s_from_forward_address_reg' (FDC) to 'local_exe/s_from_forwardx_reg'
-INFO: [Synth 8-3886] merging instance 'local_exe/s_from_forwardx_reg' (FDC) to 'local_exe/s_from_forwardy_reg'
 INFO: [Synth 8-3886] merging instance 'flash_data_reg__0i_98' (FDE) to 'flash_data_reg__0i_84'
 INFO: [Synth 8-3886] merging instance 'u17/flash_data_retimed_reg[0]' (FDE) to 'u17/flash_data_retimed_reg[6]'
 INFO: [Synth 8-3886] merging instance 'flash_data_reg__0i_97' (FDE) to 'flash_data_reg__0i_84'
@@ -935,6 +931,8 @@ INFO: [Synth 8-3886] merging instance 'ram1_data_reg__0i_55' (FDE) to 'ram1_data
 INFO: [Synth 8-3886] merging instance 'u17/ram1_data_retimed_reg[11]' (FDE) to 'u17/ram1_data_retimed_reg[12]'
 INFO: [Synth 8-3886] merging instance 'ram1_data_reg__0i_54' (FDE) to 'ram1_data_reg__0i_53'
 INFO: [Synth 8-3886] merging instance 'u17/ram1_data_retimed_reg[12]' (FDE) to 'u17/ram1_data_retimed_reg[13]'
+INFO: [Synth 8-3886] merging instance 'ram1_data_reg__0i_53' (FDE) to 'ram1_data_reg__0i_52'
+INFO: [Synth 8-3886] merging instance 'u17/ram1_data_retimed_reg[13]' (FDE) to 'u17/ram1_data_retimed_reg[14]'
 INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\u17/ram1_data_retimed_reg[15] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\u17/flash_addr_reg[22] )
@@ -950,8 +948,6 @@ WARNING: [Synth 8-3332] Sequential element (u17/ram2_addr_reg[19]) is unused and
 WARNING: [Synth 8-3332] Sequential element (u17/ram1_en_reg) is unused and will be removed from module Computer.
 WARNING: [Synth 8-3332] Sequential element (u17/flash_addr_reg[22]) is unused and will be removed from module Computer.
 WARNING: [Synth 8-3332] Sequential element (u17/flash_byte_reg) is unused and will be removed from module Computer.
-WARNING: [Synth 8-3332] Sequential element (local_exe/s_address_mux_reg[1]) is unused and will be removed from module Computer.
-WARNING: [Synth 8-3332] Sequential element (local_exe/s_address_mux_reg[0]) is unused and will be removed from module Computer.
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\local_mem_wb/t_wbadress_out_reg[0] )
 WARNING: [Synth 8-3332] Sequential element (local_id/heap_instance/s1_reg[15]) is unused and will be removed from module Computer.
 WARNING: [Synth 8-3332] Sequential element (local_id/heap_instance/s1_reg[14]) is unused and will be removed from module Computer.
@@ -1043,9 +1039,11 @@ WARNING: [Synth 8-3332] Sequential element (local_id/heap_instance/s6_reg[9]) is
 WARNING: [Synth 8-3332] Sequential element (local_id/heap_instance/s6_reg[8]) is unused and will be removed from module Computer.
 WARNING: [Synth 8-3332] Sequential element (local_id/heap_instance/s6_reg[7]) is unused and will be removed from module Computer.
 WARNING: [Synth 8-3332] Sequential element (local_id/heap_instance/s6_reg[6]) is unused and will be removed from module Computer.
+WARNING: [Synth 8-3332] Sequential element (local_id/heap_instance/s6_reg[5]) is unused and will be removed from module Computer.
+WARNING: [Synth 8-3332] Sequential element (local_id/heap_instance/s6_reg[4]) is unused and will be removed from module Computer.
 INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 722.117 ; gain = 437.305
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:29 ; elapsed = 00:00:39 . Memory (MB): peak = 721.711 ; gain = 437.371
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1057,13 +1055,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:38 ; elapsed = 00:00:40 . Memory (MB): peak = 722.117 ; gain = 437.305
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:41 ; elapsed = 00:00:52 . Memory (MB): peak = 721.711 ; gain = 437.371
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:44 ; elapsed = 00:00:45 . Memory (MB): peak = 790.074 ; gain = 505.262
+Finished Timing Optimization : Time (s): cpu = 00:00:50 ; elapsed = 00:01:01 . Memory (MB): peak = 834.781 ; gain = 550.441
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1124,7 +1122,7 @@ INFO: [Synth 8-3333] propagating constant 0 across sequential element (\u17/cnt_
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\u17/cnt_reg[26] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\u17/flash_addr_reg[16] )
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:44 ; elapsed = 00:00:46 . Memory (MB): peak = 790.074 ; gain = 505.262
+Finished Technology Mapping : Time (s): cpu = 00:00:51 ; elapsed = 00:01:01 . Memory (MB): peak = 834.781 ; gain = 550.441
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1148,7 +1146,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:45 ; elapsed = 00:00:47 . Memory (MB): peak = 790.074 ; gain = 505.262
+Finished IO Insertion : Time (s): cpu = 00:00:51 ; elapsed = 00:01:02 . Memory (MB): peak = 834.781 ; gain = 550.441
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -1161,7 +1159,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:45 ; elapsed = 00:00:47 . Memory (MB): peak = 790.074 ; gain = 505.262
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:51 ; elapsed = 00:01:02 . Memory (MB): peak = 834.781 ; gain = 550.441
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1173,25 +1171,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:45 ; elapsed = 00:00:47 . Memory (MB): peak = 790.074 ; gain = 505.262
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:52 ; elapsed = 00:01:02 . Memory (MB): peak = 834.781 ; gain = 550.441
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:45 ; elapsed = 00:00:47 . Memory (MB): peak = 790.074 ; gain = 505.262
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:52 ; elapsed = 00:01:02 . Memory (MB): peak = 834.781 ; gain = 550.441
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:45 ; elapsed = 00:00:47 . Memory (MB): peak = 790.074 ; gain = 505.262
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:52 ; elapsed = 00:01:02 . Memory (MB): peak = 834.781 ; gain = 550.441
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:45 ; elapsed = 00:00:47 . Memory (MB): peak = 790.074 ; gain = 505.262
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:52 ; elapsed = 00:01:02 . Memory (MB): peak = 834.781 ; gain = 550.441
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -1209,58 +1207,61 @@ Report Cell Usage:
 +------+-------+------+
 |1     |BUFG   |     2|
 |2     |CARRY4 |    12|
-|3     |LUT1   |    54|
-|4     |LUT2   |    36|
-|5     |LUT3   |   105|
-|6     |LUT4   |    90|
-|7     |LUT5   |    76|
-|8     |LUT6   |   206|
-|9     |FDCE   |   280|
+|3     |LUT1   |    22|
+|4     |LUT2   |    52|
+|5     |LUT3   |   122|
+|6     |LUT4   |    91|
+|7     |LUT5   |    75|
+|8     |LUT6   |   225|
+|9     |FDCE   |   285|
 |10    |FDPE   |     5|
 |11    |FDRE   |    28|
 |12    |FDSE   |     1|
 |13    |LD     |    16|
-|14    |IBUF   |     7|
-|15    |IOBUF  |    24|
-|16    |OBUF   |    96|
-|17    |OBUFT  |    33|
+|14    |LDP    |     3|
+|15    |IBUF   |     7|
+|16    |IOBUF  |    24|
+|17    |OBUF   |    97|
+|18    |OBUFT  |    33|
 +------+-------+------+
 
 Report Instance Areas: 
-+------+------------------+-----------+------+
-|      |Instance          |Module     |Cells |
-+------+------------------+-----------+------+
-|1     |top               |           |  1071|
-|2     |  local_exe       |exe        |   406|
-|3     |    alu_instance  |alu        |    51|
-|4     |  local_exe_mem   |exe_mem    |    74|
-|5     |  local_forward   |forward    |    16|
-|6     |  local_id        |id         |   184|
-|7     |    heap_instance |heap       |    48|
-|8     |  local_mem_wb    |mem_wb     |    17|
-|9     |  local_pc_reg    |PCRegister |    72|
-|10    |  u17             |MemoryUnit |   111|
-|11    |  u18             |clock      |     8|
-+------+------------------+-----------+------+
++------+-------------------+-----------+------+
+|      |Instance           |Module     |Cells |
++------+-------------------+-----------+------+
+|1     |top                |           |  1100|
+|2     |  local_exe        |exe        |   468|
+|3     |    adder_instance |adder      |    57|
+|4     |    alu_instance   |alu        |    51|
+|5     |  local_exe_mem    |exe_mem    |    74|
+|6     |  local_forward    |forward    |    19|
+|7     |  local_id         |id         |   187|
+|8     |    heap_instance  |heap       |    48|
+|9     |  local_mem_wb     |mem_wb     |    17|
+|10    |  local_pc_reg     |PCRegister |    32|
+|11    |  u17              |MemoryUnit |   111|
+|12    |  u18              |clock      |     8|
++------+-------------------+-----------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:45 ; elapsed = 00:00:47 . Memory (MB): peak = 790.074 ; gain = 505.262
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:52 ; elapsed = 00:01:02 . Memory (MB): peak = 834.781 ; gain = 550.441
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 350 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:31 ; elapsed = 00:00:38 . Memory (MB): peak = 790.074 ; gain = 187.813
-Synthesis Optimization Complete : Time (s): cpu = 00:00:45 ; elapsed = 00:00:47 . Memory (MB): peak = 790.074 ; gain = 505.262
+Synthesis finished with 0 errors, 0 critical warnings and 348 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:37 ; elapsed = 00:00:44 . Memory (MB): peak = 834.781 ; gain = 232.988
+Synthesis Optimization Complete : Time (s): cpu = 00:00:52 ; elapsed = 00:01:02 . Memory (MB): peak = 834.781 ; gain = 550.441
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 59 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 62 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 40 instances were transformed.
+  A total of 43 instances were transformed.
   IOBUF => IOBUF (IBUF, OBUFT): 24 instances
   LD => LDCE: 16 instances
+  LDP => LDPE: 3 instances
 
-276 Infos, 358 Warnings, 91 Critical Warnings and 0 Errors encountered.
+275 Infos, 355 Warnings, 91 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:47 ; elapsed = 00:00:51 . Memory (MB): peak = 790.074 ; gain = 509.652
+synth_design: Time (s): cpu = 00:00:55 ; elapsed = 00:01:07 . Memory (MB): peak = 834.781 ; gain = 554.785
 INFO: [Common 17-1381] The checkpoint 'E:/GitHub/ENV/Project_Computer/Computer/Computer.runs/synth_1/Computer.dcp' has been generated.
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.027 . Memory (MB): peak = 790.074 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Sat Dec  2 03:32:16 2017...
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.026 . Memory (MB): peak = 834.781 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Sun Dec  3 11:17:54 2017...

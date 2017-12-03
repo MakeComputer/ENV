@@ -9,8 +9,8 @@ entity hazard is
 		goal: in std_logic_vector(3 downto 0);
 		instruction: in std_logic_vector(15 downto 0);
 		
-		pause: out std_logic;
-		bubble: out std_logic
+		pause: out std_logic := '0';
+		bubble: out std_logic := '0'
 	);
 end entity;
 

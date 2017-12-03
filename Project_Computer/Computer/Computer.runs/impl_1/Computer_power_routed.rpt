@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2017.1 (win64) Build 1846317 Fri Apr 14 18:55:03 MDT 2017
-| Date             : Sat Dec  2 03:33:59 2017
+| Date             : Sun Dec  3 11:19:31 2017
 | Host             : samsung running 64-bit major release  (build 9200)
 | Command          : report_power -file Computer_power_routed.rpt -pb Computer_power_summary_routed.pb -rpx Computer_power_routed.rpx
 | Design           : Computer
@@ -30,8 +30,8 @@ Table of Contents
 ----------
 
 +--------------------------+-------+
-| Total On-Chip Power (W)  | 0.108 |
-| Dynamic (W)              | 0.011 |
+| Total On-Chip Power (W)  | 0.109 |
+| Dynamic (W)              | 0.012 |
 | Device Static (W)        | 0.097 |
 | Effective TJA (C/W)      | 2.6   |
 | Max Ambient (C)          | 99.7  |
@@ -50,16 +50,16 @@ Table of Contents
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
 | Clocks         |    <0.001 |        3 |       --- |             --- |
-| Slice Logic    |     0.001 |      897 |       --- |             --- |
-|   LUT as Logic |    <0.001 |      412 |     63400 |            0.65 |
-|   Register     |    <0.001 |      339 |    126800 |            0.27 |
+| Slice Logic    |    <0.001 |      955 |       --- |             --- |
+|   LUT as Logic |    <0.001 |      461 |     63400 |            0.73 |
+|   Register     |    <0.001 |      347 |    126800 |            0.27 |
 |   CARRY4       |    <0.001 |       12 |     15850 |            0.08 |
 |   BUFG         |    <0.001 |        1 |        32 |            3.13 |
 |   Others       |     0.000 |       29 |       --- |             --- |
-| Signals        |     0.001 |      753 |       --- |             --- |
-| I/O            |     0.008 |      160 |       300 |           53.33 |
+| Signals        |     0.001 |      796 |       --- |             --- |
+| I/O            |     0.009 |      161 |       300 |           53.67 |
 | Static Power   |     0.097 |          |           |                 |
-| Total          |     0.108 |          |           |                 |
+| Total          |     0.109 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -138,7 +138,7 @@ Table of Contents
 +-------------------------------+-----------+
 | Name                          | Power (W) |
 +-------------------------------+-----------+
-| Computer                      |     0.011 |
+| Computer                      |     0.012 |
 |   base_ram_data_IOBUF[0]_inst |     0.000 |
 |   base_ram_data_IOBUF[1]_inst |     0.000 |
 |   base_ram_data_IOBUF[2]_inst |     0.000 |
@@ -163,7 +163,8 @@ Table of Contents
 |   ext_ram_data_IOBUF[7]_inst  |    <0.001 |
 |   ext_ram_data_IOBUF[8]_inst  |    <0.001 |
 |   ext_ram_data_IOBUF[9]_inst  |    <0.001 |
-|   local_exe                   |     0.002 |
+|   local_exe                   |     0.001 |
+|     adder_instance            |    <0.001 |
 |     alu_instance              |    <0.001 |
 |   local_exe_mem               |    <0.001 |
 |   local_forward               |    <0.001 |
