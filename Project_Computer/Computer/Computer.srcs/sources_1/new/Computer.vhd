@@ -39,7 +39,7 @@ entity Computer is
         op:in std_logic;
         clk_hand : in std_logic;
         clk_in,rst: in std_logic;
-        leds: out std_logic_vector(16 downto 0) := "00000000000000000";
+        leds: out std_logic_vector(31 downto 0) := x"00000000";
         
         -- vga port
 --        R: out std_logic_vector(2 downto 0) := "000";
@@ -124,28 +124,62 @@ architecture Computer_beh of Computer is
     end component PCRegister;
 
 
-   component  VGA_play is
-        Port(
-            -- common port
-            CLK_0: in std_logic; -- must 50M
-            clkout: out std_logic; -- used to sync
-            reset: in std_logic;
+--   component  VGA_play is
+--        Port(
+--            -- common port
+--            CLK_0: in std_logic; -- must 50M
+--            clkout: out std_logic; -- used to sync
+--            reset: in std_logic;
             
             
-            -- vga port
-            color: out std_logic_vector(7 downto 0);
-            color1:out std_logic_vector(7 downto 0);
-            Hs: out std_logic := '0';
-            Vs: out std_logic := '0';
-            v_clk: out std_logic;
-            de: out std_logic := '0';
+--            -- vga port
+--            color: out std_logic_vector(7 downto 0);
+--            color1:out std_logic_vector(7 downto 0);
+--            Hs: out std_logic := '0';
+--            Vs: out std_logic := '0';
+--            v_clk: out std_logic;
+--            de: out std_logic := '0';
             
-            -- fifo memory
-            wctrl: in std_logic_vector(0 downto 0); -- 1 is write
-            waddr: in std_logic_vector(10 downto 0);
-            wdata : in std_logic_vector(7 downto 0)
+--            -- fifo memory
+--            wctrl: in std_logic_vector(0 downto 0); -- 1 is write
+--            waddr: in std_logic_vector(10 downto 0);
+--            wdata : in std_logic_vector(7 downto 0)
+--        );
+--    end component VGA_play;
+    
+    component fontRom
+        port (
+                clka : in std_logic;
+                addra : in std_logic_vector(10 downto 0);
+                douta : out std_logic_vector(7 downto 0)
         );
-    end component VGA_play;
+    end component;
+    
+	component VGA_Controller
+        port (
+        -- common port
+        RegPC: IN STD_LOGIC_VECTOR(15 DOWNTO 0);
+        RegR0: IN STD_LOGIC_VECTOR(15 DOWNTO 0);
+        RegR1: IN STD_LOGIC_VECTOR(15 DOWNTO 0);
+        RegR2: IN STD_LOGIC_VECTOR(15 DOWNTO 0);
+        RegR3: IN STD_LOGIC_VECTOR(15 DOWNTO 0);
+        RegR4: IN STD_LOGIC_VECTOR(15 DOWNTO 0);
+        RegR5: IN STD_LOGIC_VECTOR(15 DOWNTO 0);
+        RegR6: IN STD_LOGIC_VECTOR(15 DOWNTO 0);
+        RegR7: IN STD_LOGIC_VECTOR(15 DOWNTO 0);
+        RegSP: IN STD_LOGIC_VECTOR(15 DOWNTO 0);
+        RegIH: IN STD_LOGIC_VECTOR(15 DOWNTO 0);
+        RegT: IN STD_LOGIC_VECTOR(15 DOWNTO 0);
+        Clock: in std_logic; -- must 50M
+        reset: in std_logic;
+        video_vsync: OUT STD_LOGIC:= '0';
+        video_hsync: OUT STD_LOGIC:= '0';
+        video_pixel: OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
+        video_clk: OUT STD_LOGIC;
+        -- vga port
+        video_de: out std_logic := '0'
+    );    
+    end component;
 
     --component MemoryController is
     --Port(
@@ -262,6 +296,7 @@ architecture Computer_beh of Computer is
     component id is
         port(
         clock, reset, pause, flush: in std_logic;
+        clock_register: in std_logic;
         jump, bubble: in std_logic;
         instruction: in std_logic_vector(15 downto 0);
         fromPC: in std_logic_vector(15 downto 0);
@@ -286,6 +321,14 @@ architecture Computer_beh of Computer is
         ra: out std_logic_vector(15 downto 0);
         ih: out std_logic_vector(15 downto 0);
         t: out std_logic_vector(15 downto 0);
+        R0: out std_logic_vector(15 downto 0);
+        R1: out std_logic_vector(15 downto 0);
+        R2: out std_logic_vector(15 downto 0);
+        R3: out std_logic_vector(15 downto 0);
+        R4: out std_logic_vector(15 downto 0);
+        R5: out std_logic_vector(15 downto 0);
+        R6: out std_logic_vector(15 downto 0);
+        R7: out std_logic_vector(15 downto 0);
         
         exe_alu_op: out std_logic_vector(2 downto 0);
         exe_alu_rx: out std_logic_vector(2 downto 0);
@@ -321,6 +364,12 @@ architecture Computer_beh of Computer is
         fromWhere: in std_logic;
         --where: out std_logic;
         memoryData : out STD_LOGIC_VECTOR(15 downto 0);
+        
+                forward_exe_alu_rx: out std_logic_vector(2 downto 0);
+                        forward_exe_alu_ry: out std_logic_vector(1 downto 0);
+                        forward_exe_address: out  std_logic_vector(1 downto 0);
+                forward_r_x: out std_logic_vector(2 downto 0);
+                        forward_r_y: out std_logic_vector(2 downto 0);
 
         fromBranch: in std_logic_vector(2 downto 0);
         shouldJump: out std_logic;
@@ -380,29 +429,6 @@ architecture Computer_beh of Computer is
             rd_out : out std_logic_vector(3 downto 0)
         );
     end component;
-
-
-    --COMPONENT MemoryBlock
-    --port( 
-    --        Block_clk:in STD_LOGIC; --脉冲信号,注意这里的时钟信号比较捉鸡
-    --        Block_rst:in STD_LOGIC; --复位信号
-    --        Block_address:in STD_LOGIC_VECTOR(15 downto 0); --要写入/读取的16位内存地址
-    --        Block_data:in STD_LOGIC_VECTOR(15 downto 0); --输入的要写的数据
-    --        Block_MemRead:in STD_LOGIC;
-    --        Block_MemWrite:in STD_LOGIC;
-    --        Block_MemOut:out STD_LOGIC_VECTOR(15 downto 0);
-            
-    --        tsre : in STD_LOGIC;
-    --        tbre : in STD_LOGIC;
-    --        wrn : out STD_LOGIC;
-    --        rdn : out STD_LOGIC;
-    --        dataready : in std_logic;
-    --        base_ram_data:inout STD_LOGIC_VECTOR(15 downto 0) := "0000000000000000"; --从内存中读取数据进该元件RAM2存数据
-    --        base_ram_addr:out STD_LOGIC_VECTOR(17 downto 0) := "000000000000000000"; --输入到RAM2的内存地址
-    --        oe1,we1:out STD_LOGIC := '1';--RAM1和RAM2的使能信号.RAM1存指令，RAM2存数据
-    --        en1:out STD_LOGIC := '1'--初始使能为1
-    --        );
-    --END COMPONENT;
 
     component mem_wb is
         port(
@@ -473,11 +499,29 @@ architecture Computer_beh of Computer is
 
 -----clock---
 
+signal R0test:std_logic_vector(15 downto 0);
+signal R1test:std_logic_vector(15 downto 0);
+signal R2test:std_logic_vector(15 downto 0);
+signal R3test:std_logic_vector(15 downto 0);
+signal R4test:std_logic_vector(15 downto 0);
+signal R5test:std_logic_vector(15 downto 0);
+signal R6test:std_logic_vector(15 downto 0);
+signal R7test:std_logic_vector(15 downto 0);
+
+
 signal clk_3 : std_logic;
 signal clk_registers : std_logic;
 signal clk : std_logic;
 signal clkIn_clock : std_logic;
+signal clk_div4 : std_logic;
 
+
+signal s_forward_r_x: std_logic_vector(2 downto 0);
+signal s_forward_r_y: std_logic_vector(2 downto 0);
+
+signal s_forward_exe_alu_rx:std_logic_vector(2 downto 0);
+signal s_forward_exe_alu_ry:std_logic_vector(1 downto 0);
+signal s_forward_exe_address:std_logic_vector(1 downto 0);
 
 signal s_pc_mux:std_logic_vector(15 downto 0);
 signal s_pc_add_address:std_logic_vector(15 downto 0);
@@ -512,8 +556,8 @@ signal s_id_r_z:std_logic_vector(2 downto 0);
 signal s_exe_regwrite_out:std_logic;
 signal s_exe_aluout_out:STD_LOGIC_VECTOR(15 downto 0);
 
-signal s_mem_rd_in:std_logic_vector(3 downto 0);
-signal s_mem_rd_id_exe:std_logic_vector(3 downto 0);
+--signal s_mem_rd_in:std_logic_vector(3 downto 0);
+--signal s_mem_rd_id_exe:std_logic_vector(3 downto 0);
 
 
 signal  s_exe_wb_memory_or_alu_out:std_logic_vector(1 downto 0);
@@ -542,25 +586,23 @@ signal s_wb_write: std_logic;
 signal s_wb_writeData:  std_logic_vector(15 downto 0);
 signal s_wb_writeAddress:  std_logic_vector(3 downto 0);
 ----vga----
-signal clk_useless : std_logic;
+
 signal vga_data:std_logic_vector(7 downto 0):="00010001";
 signal vga_addr:std_logic_vector(10 downto 0):="00000000100";
 signal VGA_write : std_logic_vector(0 downto 0);
+signal count:natural range 0 to 3 := 0;
 
 signal s_from_forward_datax:std_logic;
 signal s_from_forward_datay:std_logic;
 signal s_from_forward_address:std_logic;
 signal s_forward_data:std_logic_vector(15 downto 0);
 
+--font rom
+signal fontRomAddr : std_logic_vector(10 downto 0);
+signal fontRomData : std_logic_vector(7 downto 0);
+
 
 begin
-
-    --u25 : fontRom
-    --port map(
-    --    clka => clk_in,
-    --    addra => fontRomAddr,
-    --    douta => fontRomData
-    --    );
 
     u18 : Clock
     port map(
@@ -634,7 +676,7 @@ begin
 
     local_pc_reg:  PCRegister port map(   
             rst => rst,
-            clk => clk_registers,
+            clk => clk_3,
             PCHold => s_bubble,
             PCIn => s_pc_mux,
             PCOut => s_pc_reg
@@ -642,6 +684,8 @@ begin
 
 
     local_id: id port map(
+        --clock_register => clk_registers,
+        clock_register => clk,
         clock => clk_3,
         reset => rst,
         pause => s_pause, 
@@ -674,6 +718,14 @@ begin
         ra =>s_id_ra,
         ih => s_id_ih,
         t => s_id_t,
+        R0 => R0test,
+        R1 => R1test,
+        R2 => R2test,
+        R3 => R3test,
+        R4 => R4test,
+        R5 => R5test,
+        R6 => R6test,
+        R7 => R7test,
         
         exe_alu_op => s_id_exe_alu_op,
         exe_alu_rx => s_id_exe_alu_rx,
@@ -687,6 +739,11 @@ begin
     );
     
     local_exe: exe port map(
+                forward_exe_alu_rx => s_forward_exe_alu_rx,
+            forward_exe_alu_ry => s_forward_exe_alu_ry,
+            forward_exe_address => s_forward_exe_address,
+            forward_r_x => s_forward_r_x,
+            forward_r_y => s_forward_r_y,
         clock => clk_3,
         reset => rst,
         --pause: in std_logic;
@@ -746,7 +803,8 @@ begin
         out_sw_in => s_exe_memData,
         regwrite_in => s_exe_registerWrite,
         memtoreg_in => s_exe_wb_memory_or_alu_out,
-        rd_in => s_mem_rd_id_exe,
+        --rd_in => s_mem_rd_id_exe,
+        rd_in => s_exe_goal,
         
         memadress_out => s_exe_memadress_out,
         memdata_out => s_exe_memdata_out,
@@ -757,6 +815,40 @@ begin
         aluout_out => s_exe_aluout_out,
         rd_out => s_exe_rd_out
     );
+    
+	u23 : VGA_Controller
+    port map(
+    --VGA Side
+        video_hsync => Hs,
+        video_vsync => Vs,
+        video_pixel => video_color,
+        video_de => video_de,
+        video_clk => video_clk,
+
+    -- data
+        RegR0 => R0test,
+        RegR1 => R1test,
+        RegR2 => R2test,
+        RegR3 => R3test,
+        RegR4 => R4test,
+        RegR5 => R5test,
+        RegR6 => R6test,
+        RegR7 => R7test,
+        RegPC => s_pc_reg,
+        RegT => s_id_t,
+        RegIH => s_id_ih,
+        RegSP => s_id_sp,
+    --Control Signals
+        reset    => rst,
+        Clock => clk_in
+    );    
+    
+--    u25 : fontRom
+--    port map(
+--        clka => clk_in,
+--        addra => fontRomAddr,
+--        douta => fontRomData
+--    );
    
 
    
@@ -767,9 +859,6 @@ begin
 --        reset=> rst,
 
 --        -- vga port
-----        R=> R,
-----        G=> G,
-----        B=> B,
 --        color => video_color,
 ----        color1 => leds,
 --        Hs=> Hs,
@@ -778,9 +867,9 @@ begin
 --        de => video_de,
 
 --        -- fifo memory
---        wctrl=> vga_write,
---        waddr=> vga_addr,
---        wdata => vga_data
+--        wctrl=> "0",
+--        waddr=> s_exe_memadress_out(10 downto 0),
+--        wdata => s_exe_memdata_out(7 downto 0)
 --        );
 
     --local_mem: MemoryController port map(
@@ -841,7 +930,8 @@ begin
         regwrite_in => s_exe_regwrite_out,
         aluout_in => s_exe_aluout_out,
         memout_in => s_memout_mem,
-        rd_in => s_mem_rd_in,
+        --rd_in => s_mem_rd_in,
+        rd_in => s_exe_rd_out,
         
         wbregwrite_out => s_wb_write,
         wbadress_out => s_wb_writeAddress,
@@ -857,18 +947,26 @@ begin
         bubble => s_bubble
     );
     local_forward: forward port map(
-        exe_alu_rx => s_id_exe_alu_rx,
-        exe_alu_ry =>s_id_exe_alu_ry,
-        exe_select_address => s_id_exe_address,
+--        exe_alu_rx => s_id_exe_alu_rx,
+--        exe_alu_ry =>s_id_exe_alu_ry,
+--        exe_select_address => s_id_exe_address,
 
-        rx => s_id_r_x,
-        ry => s_id_r_y,
+--        rx => s_id_r_x,
+--        ry => s_id_r_y,
 
-        address_memory => s_mem_rd_id_exe,
+exe_alu_rx => s_forward_exe_alu_rx,
+        exe_alu_ry =>s_forward_exe_alu_ry,
+        exe_select_address => s_forward_exe_address,
+
+        rx => s_forward_r_x,
+        ry => s_forward_r_y,
+
+        address_memory => s_exe_rd_out,
         mem_registerWrite => s_exe_regwrite_out,
         mem_aluout => s_exe_aluout_out,
 
-        address_wb => s_mem_rd_in,
+        --address_wb => s_mem_rd_in,
+        address_wb => s_wb_writeAddress,
         wb_registerWrite => s_wb_write,
         wb_toRegister => s_wb_writeData,
 
@@ -878,6 +976,14 @@ begin
         forward_data => s_forward_data
 
     );
+   
+    process (clk_in)
+    begin
+        if clk_in'event and clk_in = '1' then    --对50M输入信号二分频
+            clk_div4 <= not clk_div4;
+        end if;
+    end process;
+
  
     --clk_chooser
         process(clk_in, clk_hand, op,rst)
@@ -886,7 +992,7 @@ begin
                 if rst = '1' then
                     clkIn_clock <= '0';
                 else
-                    clkIn_clock <=clk_in;
+                    clkIn_clock <=clk_div4;
                 end if;
             else
                 if rst = '1' then
@@ -902,9 +1008,13 @@ begin
  --   leds(13 downto 8) <= base_ram_addr(19 downto 14);
 --    leds(15 downto 8) <= s_instruction(15 downto 8);
 --    leds(7 downto 0) <= s_pc_reg(7 downto 0);
-    leds(15 downto 0) <= s_instruction(15 downto 0);
+--    leds(7 downto 0) <= fontRomData(7 downto 0);
+leds(15 downto 0) <= s_instruction(15 downto 0);
     leds(16) <= s_exe_shouldJump;
-
+    leds(19 downto 17) <= s_id_branch;
+    leds(24) <= s_wb_write;
+    leds(25) <= s_from_forward_datax;
+    leds(26) <= s_exe_regwrite_out;
     --locla_if: IRMemory  port map( 
     --        clk => clk_mem,
     --        rst => rst --复位信号

@@ -2,12 +2,12 @@
 # Vivado v2017.1 (64-bit)
 # SW Build 1846317 on Fri Apr 14 18:55:03 MDT 2017
 # IP Build 1846188 on Fri Apr 14 20:52:08 MDT 2017
-# Start of session at: Sun Dec  3 11:16:40 2017
-# Process ID: 4740
-# Current directory: E:/GitHub/ENV/Project_Computer/Computer/Computer.runs/synth_1
+# Start of session at: Mon Dec  4 17:03:30 2017
+# Process ID: 6776
+# Current directory: E:/GitHub/TestVGA/Computer/Computer.runs/synth_1
 # Command line: vivado.exe -log Computer.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Computer.tcl
-# Log file: E:/GitHub/ENV/Project_Computer/Computer/Computer.runs/synth_1/Computer.vds
-# Journal file: E:/GitHub/ENV/Project_Computer/Computer/Computer.runs/synth_1\vivado.jou
+# Log file: E:/GitHub/TestVGA/Computer/Computer.runs/synth_1/Computer.vds
+# Journal file: E:/GitHub/TestVGA/Computer/Computer.runs/synth_1\vivado.jou
 #-----------------------------------------------------------
 source Computer.tcl -notrace
 Command: synth_design -top Computer -part xc7a100tfgg676-2L
@@ -15,109 +15,98 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t-fgg676'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t-fgg676'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 8720 
+INFO: Helper process launched with PID 6292 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 361.172 ; gain = 76.832
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 360.652 ; gain = 75.047
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'Computer' [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/Computer.vhd:84]
-INFO: [Synth 8-3491] module 'clock' declared at 'E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/imports/new/clock.vhd:32' bound to instance 'u18' of component 'Clock' [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/Computer.vhd:565]
-INFO: [Synth 8-638] synthesizing module 'clock' [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/imports/new/clock.vhd:43]
-INFO: [Synth 8-256] done synthesizing module 'clock' (1#1) [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/imports/new/clock.vhd:43]
-INFO: [Synth 8-3491] module 'MemoryUnit' declared at 'E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/imports/new/MemoryUnit.vhd:34' bound to instance 'u17' of component 'MemoryUnit' [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/Computer.vhd:575]
-INFO: [Synth 8-638] synthesizing module 'MemoryUnit' [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/imports/new/MemoryUnit.vhd:96]
-WARNING: [Synth 8-613] shared variable will be implemented as local to architecture [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/imports/new/MemoryUnit.vhd:106]
-INFO: [Synth 8-256] done synthesizing module 'MemoryUnit' (2#1) [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/imports/new/MemoryUnit.vhd:96]
-INFO: [Synth 8-3491] module 'PCAdder' declared at 'E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/PCAdder.vhd:6' bound to instance 'local_pc_adder' of component 'PCAdder' [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/Computer.vhd:622]
-INFO: [Synth 8-638] synthesizing module 'PCAdder' [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/PCAdder.vhd:13]
-INFO: [Synth 8-256] done synthesizing module 'PCAdder' (3#1) [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/PCAdder.vhd:13]
-INFO: [Synth 8-3491] module 'PCMux' declared at 'E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/PCMux.vhd:6' bound to instance 'local_pc_mux' of component 'PCMux' [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/Computer.vhd:627]
-INFO: [Synth 8-638] synthesizing module 'PCMux' [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/PCMux.vhd:15]
-INFO: [Synth 8-256] done synthesizing module 'PCMux' (4#1) [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/PCMux.vhd:15]
-INFO: [Synth 8-3491] module 'PCRegister' declared at 'E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/PCRegister.vhd:6' bound to instance 'local_pc_reg' of component 'PCRegister' [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/Computer.vhd:635]
-INFO: [Synth 8-638] synthesizing module 'PCRegister' [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/PCRegister.vhd:15]
-INFO: [Synth 8-256] done synthesizing module 'PCRegister' (5#1) [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/PCRegister.vhd:15]
-INFO: [Synth 8-3491] module 'id' declared at 'E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/id.vhd:6' bound to instance 'local_id' of component 'id' [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/Computer.vhd:644]
-INFO: [Synth 8-638] synthesizing module 'id' [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/id.vhd:46]
-INFO: [Synth 8-3491] module 'decoder' declared at 'E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/decoder.vhd:36' bound to instance 'decoder_instance' of component 'decoder' [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/id.vhd:175]
-INFO: [Synth 8-638] synthesizing module 'decoder' [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/decoder.vhd:57]
-WARNING: [Synth 8-6014] Unused sequential element where_reg was removed.  [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/decoder.vhd:73]
-INFO: [Synth 8-256] done synthesizing module 'decoder' (6#1) [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/decoder.vhd:57]
-INFO: [Synth 8-3491] module 'mux_control' declared at 'E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/mux_control.vhd:6' bound to instance 'mux_control_instance' of component 'mux_control' [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/id.vhd:193]
-INFO: [Synth 8-638] synthesizing module 'mux_control' [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/mux_control.vhd:38]
-INFO: [Synth 8-256] done synthesizing module 'mux_control' (7#1) [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/mux_control.vhd:38]
-INFO: [Synth 8-3491] module 'heap' declared at 'E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/heap.vhd:21' bound to instance 'heap_instance' of component 'heap' [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/id.vhd:222]
-INFO: [Synth 8-638] synthesizing module 'heap' [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/heap.vhd:40]
-INFO: [Synth 8-256] done synthesizing module 'heap' (8#1) [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/heap.vhd:40]
-INFO: [Synth 8-3491] module 'extend' declared at 'E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/extend.vhd:6' bound to instance 'extend_instance' of component 'extend' [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/id.vhd:240]
-INFO: [Synth 8-638] synthesizing module 'extend' [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/extend.vhd:14]
-INFO: [Synth 8-256] done synthesizing module 'extend' (9#1) [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/extend.vhd:14]
-INFO: [Synth 8-256] done synthesizing module 'id' (10#1) [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/id.vhd:46]
-INFO: [Synth 8-3491] module 'exe' declared at 'E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/exe.vhd:6' bound to instance 'local_exe' of component 'exe' [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/Computer.vhd:689]
-INFO: [Synth 8-638] synthesizing module 'exe' [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/exe.vhd:56]
-INFO: [Synth 8-3491] module 'mux_rx' declared at 'E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/mux_rx.vhd:6' bound to instance 'mux_rx_instance' of component 'mux_rx' [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/exe.vhd:163]
-INFO: [Synth 8-638] synthesizing module 'mux_rx' [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/mux_rx.vhd:23]
-INFO: [Synth 8-226] default block is never used [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/mux_rx.vhd:28]
-INFO: [Synth 8-256] done synthesizing module 'mux_rx' (11#1) [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/mux_rx.vhd:23]
-INFO: [Synth 8-3491] module 'mux_ry' declared at 'E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/mux_ry.vhd:6' bound to instance 'mux_ry_instance' of component 'mux_ry' [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/exe.vhd:178]
-INFO: [Synth 8-638] synthesizing module 'mux_ry' [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/mux_ry.vhd:18]
-INFO: [Synth 8-226] default block is never used [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/mux_ry.vhd:23]
-INFO: [Synth 8-256] done synthesizing module 'mux_ry' (12#1) [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/mux_ry.vhd:18]
-INFO: [Synth 8-3491] module 'adder' declared at 'E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/adder.vhd:6' bound to instance 'adder_instance' of component 'adder' [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/exe.vhd:188]
-INFO: [Synth 8-638] synthesizing module 'adder' [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/adder.vhd:14]
-INFO: [Synth 8-256] done synthesizing module 'adder' (13#1) [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/adder.vhd:14]
-INFO: [Synth 8-3491] module 'mux_address' declared at 'E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/mux_address.vhd:6' bound to instance 'mux_address_instance' of component 'mux_address' [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/exe.vhd:194]
-INFO: [Synth 8-638] synthesizing module 'mux_address' [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/mux_address.vhd:18]
-INFO: [Synth 8-256] done synthesizing module 'mux_address' (14#1) [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/mux_address.vhd:18]
-INFO: [Synth 8-3491] module 'alu' declared at 'E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/alu.vhd:6' bound to instance 'alu_instance' of component 'alu' [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/exe.vhd:204]
-INFO: [Synth 8-638] synthesizing module 'alu' [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/alu.vhd:15]
-INFO: [Synth 8-226] default block is never used [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/alu.vhd:20]
-INFO: [Synth 8-256] done synthesizing module 'alu' (15#1) [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/alu.vhd:15]
-INFO: [Synth 8-3491] module 'mux_goal' declared at 'E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/mux_goal.vhd:6' bound to instance 'mux_goal_instance' of component 'mux_goal' [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/exe.vhd:211]
-INFO: [Synth 8-638] synthesizing module 'mux_goal' [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/mux_goal.vhd:16]
-INFO: [Synth 8-256] done synthesizing module 'mux_goal' (16#1) [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/mux_goal.vhd:16]
-WARNING: [Synth 8-614] signal 's_rx' is read in the process but is not in the sensitivity list [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/exe.vhd:234]
-WARNING: [Synth 8-614] signal 's_ry' is read in the process but is not in the sensitivity list [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/exe.vhd:234]
-INFO: [Synth 8-256] done synthesizing module 'exe' (17#1) [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/exe.vhd:56]
-INFO: [Synth 8-3491] module 'exe_mem' declared at 'E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/exe_mem.vhd:13' bound to instance 'local_exe_mem' of component 'exe_mem' [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/Computer.vhd:740]
-INFO: [Synth 8-638] synthesizing module 'exe_mem' [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/exe_mem.vhd:38]
-WARNING: [Synth 8-613] shared variable will be implemented as local to architecture [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/exe_mem.vhd:40]
-WARNING: [Synth 8-613] shared variable will be implemented as local to architecture [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/exe_mem.vhd:41]
-WARNING: [Synth 8-613] shared variable will be implemented as local to architecture [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/exe_mem.vhd:42]
-WARNING: [Synth 8-613] shared variable will be implemented as local to architecture [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/exe_mem.vhd:43]
-WARNING: [Synth 8-613] shared variable will be implemented as local to architecture [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/exe_mem.vhd:44]
-WARNING: [Synth 8-613] shared variable will be implemented as local to architecture [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/exe_mem.vhd:45]
-WARNING: [Synth 8-613] shared variable will be implemented as local to architecture [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/exe_mem.vhd:46]
-WARNING: [Synth 8-613] shared variable will be implemented as local to architecture [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/exe_mem.vhd:47]
-INFO: [Synth 8-256] done synthesizing module 'exe_mem' (18#1) [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/exe_mem.vhd:38]
-INFO: [Synth 8-3491] module 'mem_wb' declared at 'E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/mem_wb.vhd:14' bound to instance 'local_mem_wb' of component 'mem_wb' [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/Computer.vhd:837]
-INFO: [Synth 8-638] synthesizing module 'mem_wb' [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/mem_wb.vhd:30]
-WARNING: [Synth 8-613] shared variable will be implemented as local to architecture [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/mem_wb.vhd:31]
-WARNING: [Synth 8-613] shared variable will be implemented as local to architecture [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/mem_wb.vhd:32]
-WARNING: [Synth 8-613] shared variable will be implemented as local to architecture [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/mem_wb.vhd:33]
-INFO: [Synth 8-256] done synthesizing module 'mem_wb' (19#1) [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/mem_wb.vhd:30]
-INFO: [Synth 8-3491] module 'hazard' declared at 'E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/hazard.vhd:6' bound to instance 'local_hazard' of component 'hazard' [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/Computer.vhd:851]
-INFO: [Synth 8-638] synthesizing module 'hazard' [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/hazard.vhd:17]
-WARNING: [Synth 8-6014] Unused sequential element bubble_reg was removed.  [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/hazard.vhd:24]
-INFO: [Synth 8-256] done synthesizing module 'hazard' (20#1) [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/hazard.vhd:17]
-INFO: [Synth 8-3491] module 'forward' declared at 'E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/forward.vhd:6' bound to instance 'local_forward' of component 'forward' [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/Computer.vhd:859]
-INFO: [Synth 8-638] synthesizing module 'forward' [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/forward.vhd:32]
-WARNING: [Synth 8-614] signal 'mem_registerWrite' is read in the process but is not in the sensitivity list [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/forward.vhd:34]
-WARNING: [Synth 8-614] signal 'rx' is read in the process but is not in the sensitivity list [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/forward.vhd:34]
-WARNING: [Synth 8-614] signal 'address_memory' is read in the process but is not in the sensitivity list [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/forward.vhd:34]
-WARNING: [Synth 8-614] signal 'ry' is read in the process but is not in the sensitivity list [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/forward.vhd:34]
-WARNING: [Synth 8-614] signal 'mem_aluout' is read in the process but is not in the sensitivity list [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/forward.vhd:34]
-WARNING: [Synth 8-614] signal 'wb_registerWrite' is read in the process but is not in the sensitivity list [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/forward.vhd:34]
-WARNING: [Synth 8-614] signal 'address_wb' is read in the process but is not in the sensitivity list [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/forward.vhd:34]
-WARNING: [Synth 8-614] signal 'wb_toRegister' is read in the process but is not in the sensitivity list [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/forward.vhd:34]
-INFO: [Synth 8-256] done synthesizing module 'forward' (21#1) [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/forward.vhd:32]
-WARNING: [Synth 8-3848] Net video_color in module/entity Computer does not have driver. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/Computer.vhd:48]
-WARNING: [Synth 8-3848] Net video_clk in module/entity Computer does not have driver. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/Computer.vhd:52]
-WARNING: [Synth 8-3848] Net s_mem_rd_id_exe in module/entity Computer does not have driver. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/Computer.vhd:516]
-WARNING: [Synth 8-3848] Net s_mem_rd_in in module/entity Computer does not have driver. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/Computer.vhd:515]
-INFO: [Synth 8-256] done synthesizing module 'Computer' (22#1) [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/Computer.vhd:84]
-WARNING: [Synth 8-3917] design Computer has port Hs driven by constant 0
-WARNING: [Synth 8-3917] design Computer has port Vs driven by constant 0
-WARNING: [Synth 8-3917] design Computer has port video_de driven by constant 0
+INFO: [Synth 8-638] synthesizing module 'Computer' [E:/GitHub/TestVGA/Computer/Computer.srcs/sources_1/new/Computer.vhd:84]
+INFO: [Synth 8-3491] module 'clock' declared at 'E:/GitHub/TestVGA/Computer/Computer.srcs/sources_1/imports/new/clock.vhd:32' bound to instance 'u18' of component 'Clock' [E:/GitHub/TestVGA/Computer/Computer.srcs/sources_1/new/Computer.vhd:607]
+INFO: [Synth 8-638] synthesizing module 'clock' [E:/GitHub/TestVGA/Computer/Computer.srcs/sources_1/imports/new/clock.vhd:43]
+INFO: [Synth 8-256] done synthesizing module 'clock' (1#1) [E:/GitHub/TestVGA/Computer/Computer.srcs/sources_1/imports/new/clock.vhd:43]
+INFO: [Synth 8-3491] module 'MemoryUnit' declared at 'E:/GitHub/TestVGA/Computer/Computer.srcs/sources_1/imports/new/MemoryUnit.vhd:34' bound to instance 'u17' of component 'MemoryUnit' [E:/GitHub/TestVGA/Computer/Computer.srcs/sources_1/new/Computer.vhd:617]
+INFO: [Synth 8-638] synthesizing module 'MemoryUnit' [E:/GitHub/TestVGA/Computer/Computer.srcs/sources_1/imports/new/MemoryUnit.vhd:96]
+WARNING: [Synth 8-613] shared variable will be implemented as local to architecture [E:/GitHub/TestVGA/Computer/Computer.srcs/sources_1/imports/new/MemoryUnit.vhd:106]
+INFO: [Synth 8-256] done synthesizing module 'MemoryUnit' (2#1) [E:/GitHub/TestVGA/Computer/Computer.srcs/sources_1/imports/new/MemoryUnit.vhd:96]
+INFO: [Synth 8-3491] module 'PCAdder' declared at 'E:/GitHub/TestVGA/Computer/Computer.srcs/sources_1/new/PCAdder.vhd:6' bound to instance 'local_pc_adder' of component 'PCAdder' [E:/GitHub/TestVGA/Computer/Computer.srcs/sources_1/new/Computer.vhd:664]
+INFO: [Synth 8-638] synthesizing module 'PCAdder' [E:/GitHub/TestVGA/Computer/Computer.srcs/sources_1/new/PCAdder.vhd:13]
+INFO: [Synth 8-256] done synthesizing module 'PCAdder' (3#1) [E:/GitHub/TestVGA/Computer/Computer.srcs/sources_1/new/PCAdder.vhd:13]
+INFO: [Synth 8-3491] module 'PCMux' declared at 'E:/GitHub/TestVGA/Computer/Computer.srcs/sources_1/new/PCMux.vhd:6' bound to instance 'local_pc_mux' of component 'PCMux' [E:/GitHub/TestVGA/Computer/Computer.srcs/sources_1/new/Computer.vhd:669]
+INFO: [Synth 8-638] synthesizing module 'PCMux' [E:/GitHub/TestVGA/Computer/Computer.srcs/sources_1/new/PCMux.vhd:15]
+INFO: [Synth 8-256] done synthesizing module 'PCMux' (4#1) [E:/GitHub/TestVGA/Computer/Computer.srcs/sources_1/new/PCMux.vhd:15]
+INFO: [Synth 8-3491] module 'PCRegister' declared at 'E:/GitHub/TestVGA/Computer/Computer.srcs/sources_1/new/PCRegister.vhd:6' bound to instance 'local_pc_reg' of component 'PCRegister' [E:/GitHub/TestVGA/Computer/Computer.srcs/sources_1/new/Computer.vhd:677]
+INFO: [Synth 8-638] synthesizing module 'PCRegister' [E:/GitHub/TestVGA/Computer/Computer.srcs/sources_1/new/PCRegister.vhd:15]
+INFO: [Synth 8-256] done synthesizing module 'PCRegister' (5#1) [E:/GitHub/TestVGA/Computer/Computer.srcs/sources_1/new/PCRegister.vhd:15]
+INFO: [Synth 8-3491] module 'id' declared at 'E:/GitHub/TestVGA/Computer/Computer.srcs/sources_1/new/id.vhd:6' bound to instance 'local_id' of component 'id' [E:/GitHub/TestVGA/Computer/Computer.srcs/sources_1/new/Computer.vhd:686]
+INFO: [Synth 8-638] synthesizing module 'id' [E:/GitHub/TestVGA/Computer/Computer.srcs/sources_1/new/id.vhd:55]
+INFO: [Synth 8-3491] module 'decoder' declared at 'E:/GitHub/TestVGA/Computer/Computer.srcs/sources_1/new/decoder.vhd:36' bound to instance 'decoder_instance' of component 'decoder' [E:/GitHub/TestVGA/Computer/Computer.srcs/sources_1/new/id.vhd:192]
+INFO: [Synth 8-638] synthesizing module 'decoder' [E:/GitHub/TestVGA/Computer/Computer.srcs/sources_1/new/decoder.vhd:57]
+WARNING: [Synth 8-6014] Unused sequential element where_reg was removed.  [E:/GitHub/TestVGA/Computer/Computer.srcs/sources_1/new/decoder.vhd:73]
+INFO: [Synth 8-256] done synthesizing module 'decoder' (6#1) [E:/GitHub/TestVGA/Computer/Computer.srcs/sources_1/new/decoder.vhd:57]
+INFO: [Synth 8-3491] module 'mux_control' declared at 'E:/GitHub/TestVGA/Computer/Computer.srcs/sources_1/new/mux_control.vhd:6' bound to instance 'mux_control_instance' of component 'mux_control' [E:/GitHub/TestVGA/Computer/Computer.srcs/sources_1/new/id.vhd:210]
+INFO: [Synth 8-638] synthesizing module 'mux_control' [E:/GitHub/TestVGA/Computer/Computer.srcs/sources_1/new/mux_control.vhd:38]
+INFO: [Synth 8-256] done synthesizing module 'mux_control' (7#1) [E:/GitHub/TestVGA/Computer/Computer.srcs/sources_1/new/mux_control.vhd:38]
+INFO: [Synth 8-3491] module 'heap' declared at 'E:/GitHub/TestVGA/Computer/Computer.srcs/sources_1/new/heap.vhd:21' bound to instance 'heap_instance' of component 'heap' [E:/GitHub/TestVGA/Computer/Computer.srcs/sources_1/new/id.vhd:239]
+INFO: [Synth 8-638] synthesizing module 'heap' [E:/GitHub/TestVGA/Computer/Computer.srcs/sources_1/new/heap.vhd:48]
+INFO: [Synth 8-256] done synthesizing module 'heap' (8#1) [E:/GitHub/TestVGA/Computer/Computer.srcs/sources_1/new/heap.vhd:48]
+INFO: [Synth 8-3491] module 'extend' declared at 'E:/GitHub/TestVGA/Computer/Computer.srcs/sources_1/new/extend.vhd:6' bound to instance 'extend_instance' of component 'extend' [E:/GitHub/TestVGA/Computer/Computer.srcs/sources_1/new/id.vhd:265]
+INFO: [Synth 8-638] synthesizing module 'extend' [E:/GitHub/TestVGA/Computer/Computer.srcs/sources_1/new/extend.vhd:14]
+INFO: [Synth 8-256] done synthesizing module 'extend' (9#1) [E:/GitHub/TestVGA/Computer/Computer.srcs/sources_1/new/extend.vhd:14]
+INFO: [Synth 8-256] done synthesizing module 'id' (10#1) [E:/GitHub/TestVGA/Computer/Computer.srcs/sources_1/new/id.vhd:55]
+INFO: [Synth 8-3491] module 'exe' declared at 'E:/GitHub/TestVGA/Computer/Computer.srcs/sources_1/new/exe.vhd:6' bound to instance 'local_exe' of component 'exe' [E:/GitHub/TestVGA/Computer/Computer.srcs/sources_1/new/Computer.vhd:741]
+INFO: [Synth 8-638] synthesizing module 'exe' [E:/GitHub/TestVGA/Computer/Computer.srcs/sources_1/new/exe.vhd:62]
+INFO: [Synth 8-3491] module 'mux_rx' declared at 'E:/GitHub/TestVGA/Computer/Computer.srcs/sources_1/new/mux_rx.vhd:6' bound to instance 'mux_rx_instance' of component 'mux_rx' [E:/GitHub/TestVGA/Computer/Computer.srcs/sources_1/new/exe.vhd:169]
+INFO: [Synth 8-638] synthesizing module 'mux_rx' [E:/GitHub/TestVGA/Computer/Computer.srcs/sources_1/new/mux_rx.vhd:23]
+INFO: [Synth 8-226] default block is never used [E:/GitHub/TestVGA/Computer/Computer.srcs/sources_1/new/mux_rx.vhd:28]
+INFO: [Synth 8-256] done synthesizing module 'mux_rx' (11#1) [E:/GitHub/TestVGA/Computer/Computer.srcs/sources_1/new/mux_rx.vhd:23]
+INFO: [Synth 8-3491] module 'mux_ry' declared at 'E:/GitHub/TestVGA/Computer/Computer.srcs/sources_1/new/mux_ry.vhd:6' bound to instance 'mux_ry_instance' of component 'mux_ry' [E:/GitHub/TestVGA/Computer/Computer.srcs/sources_1/new/exe.vhd:186]
+INFO: [Synth 8-638] synthesizing module 'mux_ry' [E:/GitHub/TestVGA/Computer/Computer.srcs/sources_1/new/mux_ry.vhd:18]
+INFO: [Synth 8-226] default block is never used [E:/GitHub/TestVGA/Computer/Computer.srcs/sources_1/new/mux_ry.vhd:23]
+INFO: [Synth 8-256] done synthesizing module 'mux_ry' (12#1) [E:/GitHub/TestVGA/Computer/Computer.srcs/sources_1/new/mux_ry.vhd:18]
+INFO: [Synth 8-3491] module 'adder' declared at 'E:/GitHub/TestVGA/Computer/Computer.srcs/sources_1/new/adder.vhd:6' bound to instance 'adder_instance' of component 'adder' [E:/GitHub/TestVGA/Computer/Computer.srcs/sources_1/new/exe.vhd:198]
+INFO: [Synth 8-638] synthesizing module 'adder' [E:/GitHub/TestVGA/Computer/Computer.srcs/sources_1/new/adder.vhd:14]
+INFO: [Synth 8-256] done synthesizing module 'adder' (13#1) [E:/GitHub/TestVGA/Computer/Computer.srcs/sources_1/new/adder.vhd:14]
+INFO: [Synth 8-3491] module 'mux_address' declared at 'E:/GitHub/TestVGA/Computer/Computer.srcs/sources_1/new/mux_address.vhd:6' bound to instance 'mux_address_instance' of component 'mux_address' [E:/GitHub/TestVGA/Computer/Computer.srcs/sources_1/new/exe.vhd:204]
+INFO: [Synth 8-638] synthesizing module 'mux_address' [E:/GitHub/TestVGA/Computer/Computer.srcs/sources_1/new/mux_address.vhd:18]
+INFO: [Synth 8-256] done synthesizing module 'mux_address' (14#1) [E:/GitHub/TestVGA/Computer/Computer.srcs/sources_1/new/mux_address.vhd:18]
+INFO: [Synth 8-3491] module 'alu' declared at 'E:/GitHub/TestVGA/Computer/Computer.srcs/sources_1/new/alu.vhd:6' bound to instance 'alu_instance' of component 'alu' [E:/GitHub/TestVGA/Computer/Computer.srcs/sources_1/new/exe.vhd:216]
+INFO: [Synth 8-638] synthesizing module 'alu' [E:/GitHub/TestVGA/Computer/Computer.srcs/sources_1/new/alu.vhd:15]
+INFO: [Synth 8-226] default block is never used [E:/GitHub/TestVGA/Computer/Computer.srcs/sources_1/new/alu.vhd:20]
+INFO: [Synth 8-256] done synthesizing module 'alu' (15#1) [E:/GitHub/TestVGA/Computer/Computer.srcs/sources_1/new/alu.vhd:15]
+INFO: [Synth 8-3491] module 'mux_goal' declared at 'E:/GitHub/TestVGA/Computer/Computer.srcs/sources_1/new/mux_goal.vhd:6' bound to instance 'mux_goal_instance' of component 'mux_goal' [E:/GitHub/TestVGA/Computer/Computer.srcs/sources_1/new/exe.vhd:223]
+INFO: [Synth 8-638] synthesizing module 'mux_goal' [E:/GitHub/TestVGA/Computer/Computer.srcs/sources_1/new/mux_goal.vhd:16]
+INFO: [Synth 8-256] done synthesizing module 'mux_goal' (16#1) [E:/GitHub/TestVGA/Computer/Computer.srcs/sources_1/new/mux_goal.vhd:16]
+INFO: [Synth 8-256] done synthesizing module 'exe' (17#1) [E:/GitHub/TestVGA/Computer/Computer.srcs/sources_1/new/exe.vhd:62]
+INFO: [Synth 8-3491] module 'exe_mem' declared at 'E:/GitHub/TestVGA/Computer/Computer.srcs/sources_1/new/exe_mem.vhd:13' bound to instance 'local_exe_mem' of component 'exe_mem' [E:/GitHub/TestVGA/Computer/Computer.srcs/sources_1/new/Computer.vhd:797]
+INFO: [Synth 8-638] synthesizing module 'exe_mem' [E:/GitHub/TestVGA/Computer/Computer.srcs/sources_1/new/exe_mem.vhd:38]
+WARNING: [Synth 8-613] shared variable will be implemented as local to architecture [E:/GitHub/TestVGA/Computer/Computer.srcs/sources_1/new/exe_mem.vhd:40]
+WARNING: [Synth 8-613] shared variable will be implemented as local to architecture [E:/GitHub/TestVGA/Computer/Computer.srcs/sources_1/new/exe_mem.vhd:41]
+WARNING: [Synth 8-613] shared variable will be implemented as local to architecture [E:/GitHub/TestVGA/Computer/Computer.srcs/sources_1/new/exe_mem.vhd:42]
+WARNING: [Synth 8-613] shared variable will be implemented as local to architecture [E:/GitHub/TestVGA/Computer/Computer.srcs/sources_1/new/exe_mem.vhd:43]
+WARNING: [Synth 8-613] shared variable will be implemented as local to architecture [E:/GitHub/TestVGA/Computer/Computer.srcs/sources_1/new/exe_mem.vhd:44]
+WARNING: [Synth 8-613] shared variable will be implemented as local to architecture [E:/GitHub/TestVGA/Computer/Computer.srcs/sources_1/new/exe_mem.vhd:45]
+WARNING: [Synth 8-613] shared variable will be implemented as local to architecture [E:/GitHub/TestVGA/Computer/Computer.srcs/sources_1/new/exe_mem.vhd:46]
+WARNING: [Synth 8-613] shared variable will be implemented as local to architecture [E:/GitHub/TestVGA/Computer/Computer.srcs/sources_1/new/exe_mem.vhd:47]
+INFO: [Synth 8-256] done synthesizing module 'exe_mem' (18#1) [E:/GitHub/TestVGA/Computer/Computer.srcs/sources_1/new/exe_mem.vhd:38]
+INFO: [Synth 8-3491] module 'VGA_Controller' declared at 'E:/GitHub/TestVGA/Computer/Computer.srcs/sources_1/new/VGA_Controller.vhd:5' bound to instance 'u23' of component 'VGA_Controller' [E:/GitHub/TestVGA/Computer/Computer.srcs/sources_1/new/Computer.vhd:819]
+INFO: [Synth 8-638] synthesizing module 'VGA_Controller' [E:/GitHub/TestVGA/Computer/Computer.srcs/sources_1/new/VGA_Controller.vhd:31]
+WARNING: [Synth 8-5863] Implementing Library version of Mod/Rem due to signed path. This typically leads to poor QOR. Check RTL to see if unsigned path for the operator is possible  [E:/GitHub/TestVGA/Computer/Computer.srcs/sources_1/new/VGA_Controller.vhd:423]
+WARNING: [Synth 8-5863] Implementing Library version of Mod/Rem due to signed path. This typically leads to poor QOR. Check RTL to see if unsigned path for the operator is possible  [E:/GitHub/TestVGA/Computer/Computer.srcs/sources_1/new/VGA_Controller.vhd:423]
+INFO: [Synth 8-256] done synthesizing module 'VGA_Controller' (19#1) [E:/GitHub/TestVGA/Computer/Computer.srcs/sources_1/new/VGA_Controller.vhd:31]
+INFO: [Synth 8-3491] module 'mem_wb' declared at 'E:/GitHub/TestVGA/Computer/Computer.srcs/sources_1/new/mem_wb.vhd:14' bound to instance 'local_mem_wb' of component 'mem_wb' [E:/GitHub/TestVGA/Computer/Computer.srcs/sources_1/new/Computer.vhd:926]
+INFO: [Synth 8-638] synthesizing module 'mem_wb' [E:/GitHub/TestVGA/Computer/Computer.srcs/sources_1/new/mem_wb.vhd:30]
+WARNING: [Synth 8-613] shared variable will be implemented as local to architecture [E:/GitHub/TestVGA/Computer/Computer.srcs/sources_1/new/mem_wb.vhd:31]
+WARNING: [Synth 8-613] shared variable will be implemented as local to architecture [E:/GitHub/TestVGA/Computer/Computer.srcs/sources_1/new/mem_wb.vhd:32]
+WARNING: [Synth 8-613] shared variable will be implemented as local to architecture [E:/GitHub/TestVGA/Computer/Computer.srcs/sources_1/new/mem_wb.vhd:33]
+INFO: [Synth 8-256] done synthesizing module 'mem_wb' (20#1) [E:/GitHub/TestVGA/Computer/Computer.srcs/sources_1/new/mem_wb.vhd:30]
+INFO: [Synth 8-3491] module 'hazard' declared at 'E:/GitHub/TestVGA/Computer/Computer.srcs/sources_1/new/hazard.vhd:6' bound to instance 'local_hazard' of component 'hazard' [E:/GitHub/TestVGA/Computer/Computer.srcs/sources_1/new/Computer.vhd:941]
+INFO: [Synth 8-638] synthesizing module 'hazard' [E:/GitHub/TestVGA/Computer/Computer.srcs/sources_1/new/hazard.vhd:17]
+WARNING: [Synth 8-6014] Unused sequential element bubble_reg was removed.  [E:/GitHub/TestVGA/Computer/Computer.srcs/sources_1/new/hazard.vhd:24]
+INFO: [Synth 8-256] done synthesizing module 'hazard' (21#1) [E:/GitHub/TestVGA/Computer/Computer.srcs/sources_1/new/hazard.vhd:17]
+INFO: [Synth 8-3491] module 'forward' declared at 'E:/GitHub/TestVGA/Computer/Computer.srcs/sources_1/new/forward.vhd:6' bound to instance 'local_forward' of component 'forward' [E:/GitHub/TestVGA/Computer/Computer.srcs/sources_1/new/Computer.vhd:949]
+INFO: [Synth 8-638] synthesizing module 'forward' [E:/GitHub/TestVGA/Computer/Computer.srcs/sources_1/new/forward.vhd:32]
+INFO: [Synth 8-256] done synthesizing module 'forward' (22#1) [E:/GitHub/TestVGA/Computer/Computer.srcs/sources_1/new/forward.vhd:32]
+WARNING: [Synth 8-614] signal 'clk_div4' is read in the process but is not in the sensitivity list [E:/GitHub/TestVGA/Computer/Computer.srcs/sources_1/new/Computer.vhd:989]
+INFO: [Synth 8-256] done synthesizing module 'Computer' (23#1) [E:/GitHub/TestVGA/Computer/Computer.srcs/sources_1/new/Computer.vhd:84]
 WARNING: [Synth 8-3331] design hazard has unconnected port instruction[15]
 WARNING: [Synth 8-3331] design hazard has unconnected port instruction[14]
 WARNING: [Synth 8-3331] design hazard has unconnected port instruction[13]
@@ -133,15 +122,15 @@ WARNING: [Synth 8-3331] design extend has unconnected port number[14]
 WARNING: [Synth 8-3331] design extend has unconnected port number[13]
 WARNING: [Synth 8-3331] design extend has unconnected port number[12]
 WARNING: [Synth 8-3331] design extend has unconnected port number[11]
-WARNING: [Synth 8-3331] design Computer has unconnected port video_color[7]
-WARNING: [Synth 8-3331] design Computer has unconnected port video_color[6]
-WARNING: [Synth 8-3331] design Computer has unconnected port video_color[5]
-WARNING: [Synth 8-3331] design Computer has unconnected port video_color[4]
-WARNING: [Synth 8-3331] design Computer has unconnected port video_color[3]
-WARNING: [Synth 8-3331] design Computer has unconnected port video_color[2]
-WARNING: [Synth 8-3331] design Computer has unconnected port video_color[1]
-WARNING: [Synth 8-3331] design Computer has unconnected port video_color[0]
-WARNING: [Synth 8-3331] design Computer has unconnected port video_clk
+WARNING: [Synth 8-3331] design Computer has unconnected port leds[31]
+WARNING: [Synth 8-3331] design Computer has unconnected port leds[30]
+WARNING: [Synth 8-3331] design Computer has unconnected port leds[29]
+WARNING: [Synth 8-3331] design Computer has unconnected port leds[28]
+WARNING: [Synth 8-3331] design Computer has unconnected port leds[27]
+WARNING: [Synth 8-3331] design Computer has unconnected port leds[23]
+WARNING: [Synth 8-3331] design Computer has unconnected port leds[22]
+WARNING: [Synth 8-3331] design Computer has unconnected port leds[21]
+WARNING: [Synth 8-3331] design Computer has unconnected port leds[20]
 WARNING: [Synth 8-3331] design Computer has unconnected port base_ram_data[31]
 WARNING: [Synth 8-3331] design Computer has unconnected port base_ram_data[30]
 WARNING: [Synth 8-3331] design Computer has unconnected port base_ram_data[29]
@@ -175,7 +164,7 @@ WARNING: [Synth 8-3331] design Computer has unconnected port ext_ram_data[18]
 WARNING: [Synth 8-3331] design Computer has unconnected port ext_ram_data[17]
 WARNING: [Synth 8-3331] design Computer has unconnected port ext_ram_data[16]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 404.258 ; gain = 119.918
+Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 408.746 ; gain = 123.141
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -184,339 +173,323 @@ Report Check Netlist:
 +------+------------------+-------+---------+-------+------------------+
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
-WARNING: [Synth 8-3295] tying undriven pin local_exe_mem:rd_in[3] to constant 0 [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/Computer.vhd:740]
-WARNING: [Synth 8-3295] tying undriven pin local_exe_mem:rd_in[2] to constant 0 [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/Computer.vhd:740]
-WARNING: [Synth 8-3295] tying undriven pin local_exe_mem:rd_in[1] to constant 0 [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/Computer.vhd:740]
-WARNING: [Synth 8-3295] tying undriven pin local_exe_mem:rd_in[0] to constant 0 [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/Computer.vhd:740]
-WARNING: [Synth 8-3295] tying undriven pin local_mem_wb:rd_in[3] to constant 0 [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/Computer.vhd:837]
-WARNING: [Synth 8-3295] tying undriven pin local_mem_wb:rd_in[2] to constant 0 [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/Computer.vhd:837]
-WARNING: [Synth 8-3295] tying undriven pin local_mem_wb:rd_in[1] to constant 0 [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/Computer.vhd:837]
-WARNING: [Synth 8-3295] tying undriven pin local_mem_wb:rd_in[0] to constant 0 [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/Computer.vhd:837]
-WARNING: [Synth 8-3295] tying undriven pin local_forward:address_memory[3] to constant 0 [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/Computer.vhd:859]
-WARNING: [Synth 8-3295] tying undriven pin local_forward:address_memory[2] to constant 0 [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/Computer.vhd:859]
-WARNING: [Synth 8-3295] tying undriven pin local_forward:address_memory[1] to constant 0 [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/Computer.vhd:859]
-WARNING: [Synth 8-3295] tying undriven pin local_forward:address_memory[0] to constant 0 [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/Computer.vhd:859]
-WARNING: [Synth 8-3295] tying undriven pin local_forward:address_wb[3] to constant 0 [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/Computer.vhd:859]
-WARNING: [Synth 8-3295] tying undriven pin local_forward:address_wb[2] to constant 0 [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/Computer.vhd:859]
-WARNING: [Synth 8-3295] tying undriven pin local_forward:address_wb[1] to constant 0 [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/Computer.vhd:859]
-WARNING: [Synth 8-3295] tying undriven pin local_forward:address_wb[0] to constant 0 [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/Computer.vhd:859]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 404.258 ; gain = 119.918
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 408.746 ; gain = 123.141
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a100tfgg676-2L
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc]
-WARNING: [Vivado 12-584] No ports matched 'clk_uart_in'. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:3]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:3]
+Parsing XDC File [E:/GitHub/TestVGA/Computer/Computer.srcs/constrs_1/new/Computer.xdc]
+WARNING: [Vivado 12-584] No ports matched 'clk_uart_in'. [E:/GitHub/TestVGA/Computer/Computer.srcs/constrs_1/new/Computer.xdc:3]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/TestVGA/Computer/Computer.srcs/constrs_1/new/Computer.xdc:3]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-507] No nets matched 'clk_uart_in_IBUF'. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:4]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:4]
+WARNING: [Vivado 12-507] No nets matched 'clk_uart_in_IBUF'. [E:/GitHub/TestVGA/Computer/Computer.srcs/constrs_1/new/Computer.xdc:4]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/TestVGA/Computer/Computer.srcs/constrs_1/new/Computer.xdc:4]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'clk_uart_in'. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:7]
-CRITICAL WARNING: [Vivado 12-4739] create_clock:No valid object(s) found for '-objects [get_ports clk_uart_in]'. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:7]
+WARNING: [Vivado 12-584] No ports matched 'clk_uart_in'. [E:/GitHub/TestVGA/Computer/Computer.srcs/constrs_1/new/Computer.xdc:7]
+CRITICAL WARNING: [Vivado 12-4739] create_clock:No valid object(s) found for '-objects [get_ports clk_uart_in]'. [E:/GitHub/TestVGA/Computer/Computer.srcs/constrs_1/new/Computer.xdc:7]
 Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
-WARNING: [Vivado 12-584] No ports matched 'touch_btn[*]'. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:10]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:10]
+WARNING: [Vivado 12-584] No ports matched 'touch_btn[*]'. [E:/GitHub/TestVGA/Computer/Computer.srcs/constrs_1/new/Computer.xdc:10]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/TestVGA/Computer/Computer.srcs/constrs_1/new/Computer.xdc:10]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'touch_btn[0]'. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:11]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:11]
+WARNING: [Vivado 12-584] No ports matched 'touch_btn[0]'. [E:/GitHub/TestVGA/Computer/Computer.srcs/constrs_1/new/Computer.xdc:11]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/TestVGA/Computer/Computer.srcs/constrs_1/new/Computer.xdc:11]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'touch_btn[1]'. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:12]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:12]
+WARNING: [Vivado 12-584] No ports matched 'touch_btn[1]'. [E:/GitHub/TestVGA/Computer/Computer.srcs/constrs_1/new/Computer.xdc:12]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/TestVGA/Computer/Computer.srcs/constrs_1/new/Computer.xdc:12]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'touch_btn[2]'. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:13]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:13]
+WARNING: [Vivado 12-584] No ports matched 'touch_btn[2]'. [E:/GitHub/TestVGA/Computer/Computer.srcs/constrs_1/new/Computer.xdc:13]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/TestVGA/Computer/Computer.srcs/constrs_1/new/Computer.xdc:13]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'touch_btn[3]'. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:14]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:14]
+WARNING: [Vivado 12-584] No ports matched 'touch_btn[3]'. [E:/GitHub/TestVGA/Computer/Computer.srcs/constrs_1/new/Computer.xdc:14]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/TestVGA/Computer/Computer.srcs/constrs_1/new/Computer.xdc:14]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-507] No nets matched 'clk_hand_IBUF'. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:17]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:17]
+WARNING: [Vivado 12-507] No nets matched 'clk_hand_IBUF'. [E:/GitHub/TestVGA/Computer/Computer.srcs/constrs_1/new/Computer.xdc:17]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/TestVGA/Computer/Computer.srcs/constrs_1/new/Computer.xdc:17]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'txd'. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:31]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:31]
+WARNING: [Vivado 12-584] No ports matched 'txd'. [E:/GitHub/TestVGA/Computer/Computer.srcs/constrs_1/new/Computer.xdc:31]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/TestVGA/Computer/Computer.srcs/constrs_1/new/Computer.xdc:31]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'rxd'. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:32]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:32]
+WARNING: [Vivado 12-584] No ports matched 'rxd'. [E:/GitHub/TestVGA/Computer/Computer.srcs/constrs_1/new/Computer.xdc:32]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/TestVGA/Computer/Computer.srcs/constrs_1/new/Computer.xdc:32]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sl811_a0'. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:35]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:35]
+WARNING: [Vivado 12-584] No ports matched 'sl811_a0'. [E:/GitHub/TestVGA/Computer/Computer.srcs/constrs_1/new/Computer.xdc:35]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/TestVGA/Computer/Computer.srcs/constrs_1/new/Computer.xdc:35]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sl811_we_n'. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:36]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:36]
+WARNING: [Vivado 12-584] No ports matched 'sl811_we_n'. [E:/GitHub/TestVGA/Computer/Computer.srcs/constrs_1/new/Computer.xdc:36]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/TestVGA/Computer/Computer.srcs/constrs_1/new/Computer.xdc:36]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sl811_rd_n'. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:37]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:37]
+WARNING: [Vivado 12-584] No ports matched 'sl811_rd_n'. [E:/GitHub/TestVGA/Computer/Computer.srcs/constrs_1/new/Computer.xdc:37]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/TestVGA/Computer/Computer.srcs/constrs_1/new/Computer.xdc:37]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sl811_cs_n'. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:38]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:38]
+WARNING: [Vivado 12-584] No ports matched 'sl811_cs_n'. [E:/GitHub/TestVGA/Computer/Computer.srcs/constrs_1/new/Computer.xdc:38]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/TestVGA/Computer/Computer.srcs/constrs_1/new/Computer.xdc:38]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sl811_rst_n'. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:39]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:39]
+WARNING: [Vivado 12-584] No ports matched 'sl811_rst_n'. [E:/GitHub/TestVGA/Computer/Computer.srcs/constrs_1/new/Computer.xdc:39]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/TestVGA/Computer/Computer.srcs/constrs_1/new/Computer.xdc:39]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sl811_drq'. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:40]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:40]
+WARNING: [Vivado 12-584] No ports matched 'sl811_drq'. [E:/GitHub/TestVGA/Computer/Computer.srcs/constrs_1/new/Computer.xdc:40]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/TestVGA/Computer/Computer.srcs/constrs_1/new/Computer.xdc:40]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sl811_dack'. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:41]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:41]
+WARNING: [Vivado 12-584] No ports matched 'sl811_dack'. [E:/GitHub/TestVGA/Computer/Computer.srcs/constrs_1/new/Computer.xdc:41]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/TestVGA/Computer/Computer.srcs/constrs_1/new/Computer.xdc:41]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sl811_int'. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:42]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:42]
+WARNING: [Vivado 12-584] No ports matched 'sl811_int'. [E:/GitHub/TestVGA/Computer/Computer.srcs/constrs_1/new/Computer.xdc:42]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/TestVGA/Computer/Computer.srcs/constrs_1/new/Computer.xdc:42]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sl811_data[0]'. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:43]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:43]
+WARNING: [Vivado 12-584] No ports matched 'sl811_data[0]'. [E:/GitHub/TestVGA/Computer/Computer.srcs/constrs_1/new/Computer.xdc:43]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/TestVGA/Computer/Computer.srcs/constrs_1/new/Computer.xdc:43]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sl811_data[1]'. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:44]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:44]
+WARNING: [Vivado 12-584] No ports matched 'sl811_data[1]'. [E:/GitHub/TestVGA/Computer/Computer.srcs/constrs_1/new/Computer.xdc:44]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/TestVGA/Computer/Computer.srcs/constrs_1/new/Computer.xdc:44]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sl811_data[2]'. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:45]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:45]
+WARNING: [Vivado 12-584] No ports matched 'sl811_data[2]'. [E:/GitHub/TestVGA/Computer/Computer.srcs/constrs_1/new/Computer.xdc:45]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/TestVGA/Computer/Computer.srcs/constrs_1/new/Computer.xdc:45]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sl811_data[3]'. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:46]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:46]
+WARNING: [Vivado 12-584] No ports matched 'sl811_data[3]'. [E:/GitHub/TestVGA/Computer/Computer.srcs/constrs_1/new/Computer.xdc:46]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/TestVGA/Computer/Computer.srcs/constrs_1/new/Computer.xdc:46]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sl811_data[4]'. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:47]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:47]
+WARNING: [Vivado 12-584] No ports matched 'sl811_data[4]'. [E:/GitHub/TestVGA/Computer/Computer.srcs/constrs_1/new/Computer.xdc:47]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/TestVGA/Computer/Computer.srcs/constrs_1/new/Computer.xdc:47]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sl811_data[5]'. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:48]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:48]
+WARNING: [Vivado 12-584] No ports matched 'sl811_data[5]'. [E:/GitHub/TestVGA/Computer/Computer.srcs/constrs_1/new/Computer.xdc:48]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/TestVGA/Computer/Computer.srcs/constrs_1/new/Computer.xdc:48]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sl811_data[6]'. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:49]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:49]
+WARNING: [Vivado 12-584] No ports matched 'sl811_data[6]'. [E:/GitHub/TestVGA/Computer/Computer.srcs/constrs_1/new/Computer.xdc:49]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/TestVGA/Computer/Computer.srcs/constrs_1/new/Computer.xdc:49]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sl811_data[7]'. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:50]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:50]
+WARNING: [Vivado 12-584] No ports matched 'sl811_data[7]'. [E:/GitHub/TestVGA/Computer/Computer.srcs/constrs_1/new/Computer.xdc:50]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/TestVGA/Computer/Computer.srcs/constrs_1/new/Computer.xdc:50]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'dm9k_we_n'. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:53]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:53]
+WARNING: [Vivado 12-584] No ports matched 'dm9k_we_n'. [E:/GitHub/TestVGA/Computer/Computer.srcs/constrs_1/new/Computer.xdc:53]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/TestVGA/Computer/Computer.srcs/constrs_1/new/Computer.xdc:53]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'dm9k_rd_n'. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:54]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:54]
+WARNING: [Vivado 12-584] No ports matched 'dm9k_rd_n'. [E:/GitHub/TestVGA/Computer/Computer.srcs/constrs_1/new/Computer.xdc:54]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/TestVGA/Computer/Computer.srcs/constrs_1/new/Computer.xdc:54]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'dm9k_cs_n'. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:55]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:55]
+WARNING: [Vivado 12-584] No ports matched 'dm9k_cs_n'. [E:/GitHub/TestVGA/Computer/Computer.srcs/constrs_1/new/Computer.xdc:55]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/TestVGA/Computer/Computer.srcs/constrs_1/new/Computer.xdc:55]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'dm9k_rst_n'. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:56]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:56]
+WARNING: [Vivado 12-584] No ports matched 'dm9k_rst_n'. [E:/GitHub/TestVGA/Computer/Computer.srcs/constrs_1/new/Computer.xdc:56]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/TestVGA/Computer/Computer.srcs/constrs_1/new/Computer.xdc:56]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'dm9k_int'. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:57]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:57]
+WARNING: [Vivado 12-584] No ports matched 'dm9k_int'. [E:/GitHub/TestVGA/Computer/Computer.srcs/constrs_1/new/Computer.xdc:57]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/TestVGA/Computer/Computer.srcs/constrs_1/new/Computer.xdc:57]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'dm9k_cmd'. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:58]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:58]
+WARNING: [Vivado 12-584] No ports matched 'dm9k_cmd'. [E:/GitHub/TestVGA/Computer/Computer.srcs/constrs_1/new/Computer.xdc:58]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/TestVGA/Computer/Computer.srcs/constrs_1/new/Computer.xdc:58]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'dm9k_data[0]'. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:59]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:59]
+WARNING: [Vivado 12-584] No ports matched 'dm9k_data[0]'. [E:/GitHub/TestVGA/Computer/Computer.srcs/constrs_1/new/Computer.xdc:59]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/TestVGA/Computer/Computer.srcs/constrs_1/new/Computer.xdc:59]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'dm9k_data[1]'. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:60]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:60]
+WARNING: [Vivado 12-584] No ports matched 'dm9k_data[1]'. [E:/GitHub/TestVGA/Computer/Computer.srcs/constrs_1/new/Computer.xdc:60]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/TestVGA/Computer/Computer.srcs/constrs_1/new/Computer.xdc:60]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'dm9k_data[2]'. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:61]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:61]
+WARNING: [Vivado 12-584] No ports matched 'dm9k_data[2]'. [E:/GitHub/TestVGA/Computer/Computer.srcs/constrs_1/new/Computer.xdc:61]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/TestVGA/Computer/Computer.srcs/constrs_1/new/Computer.xdc:61]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'dm9k_data[3]'. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:62]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:62]
+WARNING: [Vivado 12-584] No ports matched 'dm9k_data[3]'. [E:/GitHub/TestVGA/Computer/Computer.srcs/constrs_1/new/Computer.xdc:62]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/TestVGA/Computer/Computer.srcs/constrs_1/new/Computer.xdc:62]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'dm9k_data[4]'. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:63]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:63]
+WARNING: [Vivado 12-584] No ports matched 'dm9k_data[4]'. [E:/GitHub/TestVGA/Computer/Computer.srcs/constrs_1/new/Computer.xdc:63]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/TestVGA/Computer/Computer.srcs/constrs_1/new/Computer.xdc:63]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'dm9k_data[5]'. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:64]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:64]
+WARNING: [Vivado 12-584] No ports matched 'dm9k_data[5]'. [E:/GitHub/TestVGA/Computer/Computer.srcs/constrs_1/new/Computer.xdc:64]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/TestVGA/Computer/Computer.srcs/constrs_1/new/Computer.xdc:64]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'dm9k_data[6]'. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:65]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:65]
+WARNING: [Vivado 12-584] No ports matched 'dm9k_data[6]'. [E:/GitHub/TestVGA/Computer/Computer.srcs/constrs_1/new/Computer.xdc:65]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/TestVGA/Computer/Computer.srcs/constrs_1/new/Computer.xdc:65]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'dm9k_data[7]'. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:66]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:66]
+WARNING: [Vivado 12-584] No ports matched 'dm9k_data[7]'. [E:/GitHub/TestVGA/Computer/Computer.srcs/constrs_1/new/Computer.xdc:66]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/TestVGA/Computer/Computer.srcs/constrs_1/new/Computer.xdc:66]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'dm9k_data[8]'. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:67]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:67]
+WARNING: [Vivado 12-584] No ports matched 'dm9k_data[8]'. [E:/GitHub/TestVGA/Computer/Computer.srcs/constrs_1/new/Computer.xdc:67]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/TestVGA/Computer/Computer.srcs/constrs_1/new/Computer.xdc:67]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'dm9k_data[9]'. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:68]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:68]
+WARNING: [Vivado 12-584] No ports matched 'dm9k_data[9]'. [E:/GitHub/TestVGA/Computer/Computer.srcs/constrs_1/new/Computer.xdc:68]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/TestVGA/Computer/Computer.srcs/constrs_1/new/Computer.xdc:68]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'dm9k_data[10]'. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:69]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:69]
+WARNING: [Vivado 12-584] No ports matched 'dm9k_data[10]'. [E:/GitHub/TestVGA/Computer/Computer.srcs/constrs_1/new/Computer.xdc:69]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/TestVGA/Computer/Computer.srcs/constrs_1/new/Computer.xdc:69]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'dm9k_data[11]'. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:70]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:70]
+WARNING: [Vivado 12-584] No ports matched 'dm9k_data[11]'. [E:/GitHub/TestVGA/Computer/Computer.srcs/constrs_1/new/Computer.xdc:70]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/TestVGA/Computer/Computer.srcs/constrs_1/new/Computer.xdc:70]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'dm9k_data[12]'. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:71]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:71]
+WARNING: [Vivado 12-584] No ports matched 'dm9k_data[12]'. [E:/GitHub/TestVGA/Computer/Computer.srcs/constrs_1/new/Computer.xdc:71]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/TestVGA/Computer/Computer.srcs/constrs_1/new/Computer.xdc:71]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'dm9k_data[13]'. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:72]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:72]
+WARNING: [Vivado 12-584] No ports matched 'dm9k_data[13]'. [E:/GitHub/TestVGA/Computer/Computer.srcs/constrs_1/new/Computer.xdc:72]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/TestVGA/Computer/Computer.srcs/constrs_1/new/Computer.xdc:72]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'dm9k_data[14]'. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:73]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:73]
+WARNING: [Vivado 12-584] No ports matched 'dm9k_data[14]'. [E:/GitHub/TestVGA/Computer/Computer.srcs/constrs_1/new/Computer.xdc:73]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/TestVGA/Computer/Computer.srcs/constrs_1/new/Computer.xdc:73]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'dm9k_data[15]'. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:74]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:74]
+WARNING: [Vivado 12-584] No ports matched 'dm9k_data[15]'. [E:/GitHub/TestVGA/Computer/Computer.srcs/constrs_1/new/Computer.xdc:74]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/TestVGA/Computer/Computer.srcs/constrs_1/new/Computer.xdc:74]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'dip_sw[*]'. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:110]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:110]
+WARNING: [Vivado 12-584] No ports matched 'dip_sw[*]'. [E:/GitHub/TestVGA/Computer/Computer.srcs/constrs_1/new/Computer.xdc:127]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/TestVGA/Computer/Computer.srcs/constrs_1/new/Computer.xdc:127]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'dip_sw[0]'. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:111]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:111]
+WARNING: [Vivado 12-584] No ports matched 'dip_sw[0]'. [E:/GitHub/TestVGA/Computer/Computer.srcs/constrs_1/new/Computer.xdc:128]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/TestVGA/Computer/Computer.srcs/constrs_1/new/Computer.xdc:128]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'dip_sw[1]'. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:112]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:112]
+WARNING: [Vivado 12-584] No ports matched 'dip_sw[1]'. [E:/GitHub/TestVGA/Computer/Computer.srcs/constrs_1/new/Computer.xdc:129]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/TestVGA/Computer/Computer.srcs/constrs_1/new/Computer.xdc:129]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'dip_sw[2]'. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:113]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:113]
+WARNING: [Vivado 12-584] No ports matched 'dip_sw[2]'. [E:/GitHub/TestVGA/Computer/Computer.srcs/constrs_1/new/Computer.xdc:130]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/TestVGA/Computer/Computer.srcs/constrs_1/new/Computer.xdc:130]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'dip_sw[3]'. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:114]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:114]
+WARNING: [Vivado 12-584] No ports matched 'dip_sw[3]'. [E:/GitHub/TestVGA/Computer/Computer.srcs/constrs_1/new/Computer.xdc:131]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/TestVGA/Computer/Computer.srcs/constrs_1/new/Computer.xdc:131]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'dip_sw[4]'. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:115]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:115]
+WARNING: [Vivado 12-584] No ports matched 'dip_sw[4]'. [E:/GitHub/TestVGA/Computer/Computer.srcs/constrs_1/new/Computer.xdc:132]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/TestVGA/Computer/Computer.srcs/constrs_1/new/Computer.xdc:132]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'dip_sw[5]'. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:116]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:116]
+WARNING: [Vivado 12-584] No ports matched 'dip_sw[5]'. [E:/GitHub/TestVGA/Computer/Computer.srcs/constrs_1/new/Computer.xdc:133]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/TestVGA/Computer/Computer.srcs/constrs_1/new/Computer.xdc:133]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'dip_sw[6]'. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:117]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:117]
+WARNING: [Vivado 12-584] No ports matched 'dip_sw[6]'. [E:/GitHub/TestVGA/Computer/Computer.srcs/constrs_1/new/Computer.xdc:134]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/TestVGA/Computer/Computer.srcs/constrs_1/new/Computer.xdc:134]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'dip_sw[7]'. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:118]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:118]
+WARNING: [Vivado 12-584] No ports matched 'dip_sw[7]'. [E:/GitHub/TestVGA/Computer/Computer.srcs/constrs_1/new/Computer.xdc:135]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/TestVGA/Computer/Computer.srcs/constrs_1/new/Computer.xdc:135]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'dip_sw[8]'. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:119]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:119]
+WARNING: [Vivado 12-584] No ports matched 'dip_sw[8]'. [E:/GitHub/TestVGA/Computer/Computer.srcs/constrs_1/new/Computer.xdc:136]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/TestVGA/Computer/Computer.srcs/constrs_1/new/Computer.xdc:136]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'dip_sw[9]'. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:120]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:120]
+WARNING: [Vivado 12-584] No ports matched 'dip_sw[9]'. [E:/GitHub/TestVGA/Computer/Computer.srcs/constrs_1/new/Computer.xdc:137]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/TestVGA/Computer/Computer.srcs/constrs_1/new/Computer.xdc:137]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'dip_sw[10]'. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:121]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:121]
+WARNING: [Vivado 12-584] No ports matched 'dip_sw[10]'. [E:/GitHub/TestVGA/Computer/Computer.srcs/constrs_1/new/Computer.xdc:138]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/TestVGA/Computer/Computer.srcs/constrs_1/new/Computer.xdc:138]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'dip_sw[11]'. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:122]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:122]
+WARNING: [Vivado 12-584] No ports matched 'dip_sw[11]'. [E:/GitHub/TestVGA/Computer/Computer.srcs/constrs_1/new/Computer.xdc:139]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/TestVGA/Computer/Computer.srcs/constrs_1/new/Computer.xdc:139]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'dip_sw[12]'. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:123]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:123]
+WARNING: [Vivado 12-584] No ports matched 'dip_sw[12]'. [E:/GitHub/TestVGA/Computer/Computer.srcs/constrs_1/new/Computer.xdc:140]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/TestVGA/Computer/Computer.srcs/constrs_1/new/Computer.xdc:140]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'dip_sw[13]'. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:124]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:124]
+WARNING: [Vivado 12-584] No ports matched 'dip_sw[13]'. [E:/GitHub/TestVGA/Computer/Computer.srcs/constrs_1/new/Computer.xdc:141]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/TestVGA/Computer/Computer.srcs/constrs_1/new/Computer.xdc:141]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'dip_sw[14]'. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:125]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:125]
+WARNING: [Vivado 12-584] No ports matched 'dip_sw[14]'. [E:/GitHub/TestVGA/Computer/Computer.srcs/constrs_1/new/Computer.xdc:142]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/TestVGA/Computer/Computer.srcs/constrs_1/new/Computer.xdc:142]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'dip_sw[15]'. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:126]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:126]
+WARNING: [Vivado 12-584] No ports matched 'dip_sw[15]'. [E:/GitHub/TestVGA/Computer/Computer.srcs/constrs_1/new/Computer.xdc:143]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/TestVGA/Computer/Computer.srcs/constrs_1/new/Computer.xdc:143]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'dip_sw[16]'. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:127]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:127]
+WARNING: [Vivado 12-584] No ports matched 'dip_sw[16]'. [E:/GitHub/TestVGA/Computer/Computer.srcs/constrs_1/new/Computer.xdc:144]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/TestVGA/Computer/Computer.srcs/constrs_1/new/Computer.xdc:144]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'dip_sw[17]'. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:128]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:128]
+WARNING: [Vivado 12-584] No ports matched 'dip_sw[17]'. [E:/GitHub/TestVGA/Computer/Computer.srcs/constrs_1/new/Computer.xdc:145]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/TestVGA/Computer/Computer.srcs/constrs_1/new/Computer.xdc:145]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'dip_sw[18]'. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:129]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:129]
+WARNING: [Vivado 12-584] No ports matched 'dip_sw[18]'. [E:/GitHub/TestVGA/Computer/Computer.srcs/constrs_1/new/Computer.xdc:146]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/TestVGA/Computer/Computer.srcs/constrs_1/new/Computer.xdc:146]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'dip_sw[19]'. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:130]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:130]
+WARNING: [Vivado 12-584] No ports matched 'dip_sw[19]'. [E:/GitHub/TestVGA/Computer/Computer.srcs/constrs_1/new/Computer.xdc:147]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/TestVGA/Computer/Computer.srcs/constrs_1/new/Computer.xdc:147]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'dip_sw[20]'. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:131]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:131]
+WARNING: [Vivado 12-584] No ports matched 'dip_sw[20]'. [E:/GitHub/TestVGA/Computer/Computer.srcs/constrs_1/new/Computer.xdc:148]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/TestVGA/Computer/Computer.srcs/constrs_1/new/Computer.xdc:148]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'dip_sw[21]'. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:132]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:132]
+WARNING: [Vivado 12-584] No ports matched 'dip_sw[21]'. [E:/GitHub/TestVGA/Computer/Computer.srcs/constrs_1/new/Computer.xdc:149]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/TestVGA/Computer/Computer.srcs/constrs_1/new/Computer.xdc:149]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'dip_sw[22]'. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:133]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:133]
+WARNING: [Vivado 12-584] No ports matched 'dip_sw[22]'. [E:/GitHub/TestVGA/Computer/Computer.srcs/constrs_1/new/Computer.xdc:150]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/TestVGA/Computer/Computer.srcs/constrs_1/new/Computer.xdc:150]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'dip_sw[23]'. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:134]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:134]
+WARNING: [Vivado 12-584] No ports matched 'dip_sw[23]'. [E:/GitHub/TestVGA/Computer/Computer.srcs/constrs_1/new/Computer.xdc:151]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/TestVGA/Computer/Computer.srcs/constrs_1/new/Computer.xdc:151]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'dip_sw[24]'. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:135]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:135]
+WARNING: [Vivado 12-584] No ports matched 'dip_sw[24]'. [E:/GitHub/TestVGA/Computer/Computer.srcs/constrs_1/new/Computer.xdc:152]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/TestVGA/Computer/Computer.srcs/constrs_1/new/Computer.xdc:152]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'dip_sw[25]'. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:136]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:136]
+WARNING: [Vivado 12-584] No ports matched 'dip_sw[25]'. [E:/GitHub/TestVGA/Computer/Computer.srcs/constrs_1/new/Computer.xdc:153]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/TestVGA/Computer/Computer.srcs/constrs_1/new/Computer.xdc:153]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'dip_sw[26]'. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:137]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:137]
+WARNING: [Vivado 12-584] No ports matched 'dip_sw[26]'. [E:/GitHub/TestVGA/Computer/Computer.srcs/constrs_1/new/Computer.xdc:154]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/TestVGA/Computer/Computer.srcs/constrs_1/new/Computer.xdc:154]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'dip_sw[27]'. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:138]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:138]
+WARNING: [Vivado 12-584] No ports matched 'dip_sw[27]'. [E:/GitHub/TestVGA/Computer/Computer.srcs/constrs_1/new/Computer.xdc:155]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/TestVGA/Computer/Computer.srcs/constrs_1/new/Computer.xdc:155]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'dip_sw[28]'. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:139]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:139]
+WARNING: [Vivado 12-584] No ports matched 'dip_sw[28]'. [E:/GitHub/TestVGA/Computer/Computer.srcs/constrs_1/new/Computer.xdc:156]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/TestVGA/Computer/Computer.srcs/constrs_1/new/Computer.xdc:156]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'dip_sw[29]'. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:140]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:140]
+WARNING: [Vivado 12-584] No ports matched 'dip_sw[29]'. [E:/GitHub/TestVGA/Computer/Computer.srcs/constrs_1/new/Computer.xdc:157]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/TestVGA/Computer/Computer.srcs/constrs_1/new/Computer.xdc:157]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'dip_sw[30]'. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:141]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:141]
+WARNING: [Vivado 12-584] No ports matched 'dip_sw[30]'. [E:/GitHub/TestVGA/Computer/Computer.srcs/constrs_1/new/Computer.xdc:158]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/TestVGA/Computer/Computer.srcs/constrs_1/new/Computer.xdc:158]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'base_ram_be_n[*]'. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:222]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:222]
+WARNING: [Vivado 12-584] No ports matched 'base_ram_be_n[*]'. [E:/GitHub/TestVGA/Computer/Computer.srcs/constrs_1/new/Computer.xdc:239]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/TestVGA/Computer/Computer.srcs/constrs_1/new/Computer.xdc:239]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'base_ram_be_n[0]'. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:223]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:223]
+WARNING: [Vivado 12-584] No ports matched 'base_ram_be_n[0]'. [E:/GitHub/TestVGA/Computer/Computer.srcs/constrs_1/new/Computer.xdc:240]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/TestVGA/Computer/Computer.srcs/constrs_1/new/Computer.xdc:240]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'base_ram_be_n[1]'. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:224]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:224]
+WARNING: [Vivado 12-584] No ports matched 'base_ram_be_n[1]'. [E:/GitHub/TestVGA/Computer/Computer.srcs/constrs_1/new/Computer.xdc:241]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/TestVGA/Computer/Computer.srcs/constrs_1/new/Computer.xdc:241]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'base_ram_be_n[2]'. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:225]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:225]
+WARNING: [Vivado 12-584] No ports matched 'base_ram_be_n[2]'. [E:/GitHub/TestVGA/Computer/Computer.srcs/constrs_1/new/Computer.xdc:242]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/TestVGA/Computer/Computer.srcs/constrs_1/new/Computer.xdc:242]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'base_ram_be_n[3]'. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:226]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:226]
+WARNING: [Vivado 12-584] No ports matched 'base_ram_be_n[3]'. [E:/GitHub/TestVGA/Computer/Computer.srcs/constrs_1/new/Computer.xdc:243]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/TestVGA/Computer/Computer.srcs/constrs_1/new/Computer.xdc:243]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'ext_ram_be_n[*]'. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:288]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:288]
+WARNING: [Vivado 12-584] No ports matched 'ext_ram_be_n[*]'. [E:/GitHub/TestVGA/Computer/Computer.srcs/constrs_1/new/Computer.xdc:305]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/TestVGA/Computer/Computer.srcs/constrs_1/new/Computer.xdc:305]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'ext_ram_be_n[0]'. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:289]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:289]
+WARNING: [Vivado 12-584] No ports matched 'ext_ram_be_n[0]'. [E:/GitHub/TestVGA/Computer/Computer.srcs/constrs_1/new/Computer.xdc:306]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/TestVGA/Computer/Computer.srcs/constrs_1/new/Computer.xdc:306]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'ext_ram_be_n[1]'. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:290]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:290]
+WARNING: [Vivado 12-584] No ports matched 'ext_ram_be_n[1]'. [E:/GitHub/TestVGA/Computer/Computer.srcs/constrs_1/new/Computer.xdc:307]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/TestVGA/Computer/Computer.srcs/constrs_1/new/Computer.xdc:307]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'ext_ram_be_n[2]'. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:291]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:291]
+WARNING: [Vivado 12-584] No ports matched 'ext_ram_be_n[2]'. [E:/GitHub/TestVGA/Computer/Computer.srcs/constrs_1/new/Computer.xdc:308]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/TestVGA/Computer/Computer.srcs/constrs_1/new/Computer.xdc:308]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'ext_ram_be_n[3]'. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:292]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc:292]
+WARNING: [Vivado 12-584] No ports matched 'ext_ram_be_n[3]'. [E:/GitHub/TestVGA/Computer/Computer.srcs/constrs_1/new/Computer.xdc:309]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/GitHub/TestVGA/Computer/Computer.srcs/constrs_1/new/Computer.xdc:309]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-Finished Parsing XDC File [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc]
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/Computer_propImpl.xdc].
+Finished Parsing XDC File [E:/GitHub/TestVGA/Computer/Computer.srcs/constrs_1/new/Computer.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [E:/GitHub/TestVGA/Computer/Computer.srcs/constrs_1/new/Computer.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/Computer_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/Computer_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 721.711 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 726.227 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:19 ; elapsed = 00:00:29 . Memory (MB): peak = 721.711 ; gain = 437.371
+Finished Constraint Validation : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 726.227 ; gain = 440.621
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tfgg676-2L
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:19 ; elapsed = 00:00:29 . Memory (MB): peak = 721.711 ; gain = 437.371
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 726.227 ; gain = 440.621
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:19 ; elapsed = 00:00:29 . Memory (MB): peak = 721.711 ; gain = 437.371
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 726.227 ; gain = 440.621
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-4471] merging register 'ram1_oe_reg' into 'ram1_en_reg' [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/imports/new/MemoryUnit.vhd:152]
-INFO: [Synth 8-4471] merging register 'ram1_we_reg' into 'ram1_en_reg' [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/imports/new/MemoryUnit.vhd:153]
-INFO: [Synth 8-4471] merging register 'flash_vpen_reg' into 'flash_byte_reg' [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/imports/new/MemoryUnit.vhd:148]
-INFO: [Synth 8-4471] merging register 'flash_rp_reg' into 'flash_byte_reg' [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/imports/new/MemoryUnit.vhd:149]
-WARNING: [Synth 8-6014] Unused sequential element flash_vpen_reg was removed.  [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/imports/new/MemoryUnit.vhd:148]
-WARNING: [Synth 8-6014] Unused sequential element flash_rp_reg was removed.  [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/imports/new/MemoryUnit.vhd:149]
-WARNING: [Synth 8-6014] Unused sequential element ram1_oe_reg was removed.  [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/imports/new/MemoryUnit.vhd:152]
-WARNING: [Synth 8-6014] Unused sequential element ram1_we_reg was removed.  [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/imports/new/MemoryUnit.vhd:153]
+INFO: [Synth 8-4471] merging register 'ram1_oe_reg' into 'ram1_en_reg' [E:/GitHub/TestVGA/Computer/Computer.srcs/sources_1/imports/new/MemoryUnit.vhd:152]
+INFO: [Synth 8-4471] merging register 'ram1_we_reg' into 'ram1_en_reg' [E:/GitHub/TestVGA/Computer/Computer.srcs/sources_1/imports/new/MemoryUnit.vhd:153]
+INFO: [Synth 8-4471] merging register 'flash_vpen_reg' into 'flash_byte_reg' [E:/GitHub/TestVGA/Computer/Computer.srcs/sources_1/imports/new/MemoryUnit.vhd:148]
+INFO: [Synth 8-4471] merging register 'flash_rp_reg' into 'flash_byte_reg' [E:/GitHub/TestVGA/Computer/Computer.srcs/sources_1/imports/new/MemoryUnit.vhd:149]
+WARNING: [Synth 8-6014] Unused sequential element flash_vpen_reg was removed.  [E:/GitHub/TestVGA/Computer/Computer.srcs/sources_1/imports/new/MemoryUnit.vhd:148]
+WARNING: [Synth 8-6014] Unused sequential element flash_rp_reg was removed.  [E:/GitHub/TestVGA/Computer/Computer.srcs/sources_1/imports/new/MemoryUnit.vhd:149]
+WARNING: [Synth 8-6014] Unused sequential element ram1_oe_reg was removed.  [E:/GitHub/TestVGA/Computer/Computer.srcs/sources_1/imports/new/MemoryUnit.vhd:152]
+WARNING: [Synth 8-6014] Unused sequential element ram1_we_reg was removed.  [E:/GitHub/TestVGA/Computer/Computer.srcs/sources_1/imports/new/MemoryUnit.vhd:153]
 INFO: [Synth 8-802] inferred FSM for state register 'flashstate_reg' in module 'MemoryUnit'
-WARNING: [Synth 8-6014] Unused sequential element flashstate_reg was removed.  [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/imports/new/MemoryUnit.vhd:141]
+WARNING: [Synth 8-6014] Unused sequential element flashstate_reg was removed.  [E:/GitHub/TestVGA/Computer/Computer.srcs/sources_1/imports/new/MemoryUnit.vhd:141]
 INFO: [Synth 8-5545] ROM "cnt" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "cnt" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "flashstate" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
@@ -530,7 +503,7 @@ INFO: [Synth 8-5544] ROM "flash_data" won't be mapped to Block RAM because addre
 INFO: [Synth 8-5544] ROM "flash_addr" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "current_addr" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "flashstate" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
-WARNING: [Synth 8-6014] Unused sequential element current_addr_reg was removed.  [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/imports/new/MemoryUnit.vhd:143]
+WARNING: [Synth 8-6014] Unused sequential element current_addr_reg was removed.  [E:/GitHub/TestVGA/Computer/Computer.srcs/sources_1/imports/new/MemoryUnit.vhd:143]
 INFO: [Synth 8-5544] ROM "branch" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
 INFO: [Synth 8-5546] ROM "wb_memory_or_alu_out" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5544] ROM "exe_select_goal" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
@@ -541,12 +514,40 @@ INFO: [Synth 8-5544] ROM "exe_alu_rx" won't be mapped to Block RAM because addre
 INFO: [Synth 8-5546] ROM "exe_alu_rx" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5544] ROM "registerWrite" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
 INFO: [Synth 8-5546] ROM "registerWrite" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/alu.vhd:20]
-INFO: [Synth 8-4471] merging register 't_memadress_out_reg[15:0]' into 't_aluout_out_reg[15:0]' [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/exe_mem.vhd:54]
-WARNING: [Synth 8-6014] Unused sequential element t_memadress_out_reg was removed.  [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/exe_mem.vhd:54]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [E:/GitHub/TestVGA/Computer/Computer.srcs/sources_1/new/alu.vhd:20]
+INFO: [Synth 8-4471] merging register 'forward_exe_alu_rx_reg[2:0]' into 's_alu_mux_rx_reg[2:0]' [E:/GitHub/TestVGA/Computer/Computer.srcs/sources_1/new/exe.vhd:299]
+INFO: [Synth 8-4471] merging register 'forward_exe_alu_ry_reg[1:0]' into 's_alu_mux_ry_reg[1:0]' [E:/GitHub/TestVGA/Computer/Computer.srcs/sources_1/new/exe.vhd:300]
+INFO: [Synth 8-4471] merging register 'forward_exe_address_reg[1:0]' into 's_address_mux_reg[1:0]' [E:/GitHub/TestVGA/Computer/Computer.srcs/sources_1/new/exe.vhd:301]
+INFO: [Synth 8-4471] merging register 'forward_r_x_reg[2:0]' into 's_r_x_reg[2:0]' [E:/GitHub/TestVGA/Computer/Computer.srcs/sources_1/new/exe.vhd:303]
+INFO: [Synth 8-4471] merging register 'forward_r_y_reg[2:0]' into 's_r_y_reg[2:0]' [E:/GitHub/TestVGA/Computer/Computer.srcs/sources_1/new/exe.vhd:304]
+WARNING: [Synth 8-6014] Unused sequential element forward_exe_alu_rx_reg was removed.  [E:/GitHub/TestVGA/Computer/Computer.srcs/sources_1/new/exe.vhd:299]
+WARNING: [Synth 8-6014] Unused sequential element forward_exe_alu_ry_reg was removed.  [E:/GitHub/TestVGA/Computer/Computer.srcs/sources_1/new/exe.vhd:300]
+WARNING: [Synth 8-6014] Unused sequential element forward_exe_address_reg was removed.  [E:/GitHub/TestVGA/Computer/Computer.srcs/sources_1/new/exe.vhd:301]
+WARNING: [Synth 8-6014] Unused sequential element forward_r_x_reg was removed.  [E:/GitHub/TestVGA/Computer/Computer.srcs/sources_1/new/exe.vhd:303]
+WARNING: [Synth 8-6014] Unused sequential element forward_r_y_reg was removed.  [E:/GitHub/TestVGA/Computer/Computer.srcs/sources_1/new/exe.vhd:304]
+INFO: [Synth 8-4471] merging register 't_memadress_out_reg[15:0]' into 't_aluout_out_reg[15:0]' [E:/GitHub/TestVGA/Computer/Computer.srcs/sources_1/new/exe_mem.vhd:54]
+WARNING: [Synth 8-6014] Unused sequential element t_memadress_out_reg was removed.  [E:/GitHub/TestVGA/Computer/Computer.srcs/sources_1/new/exe_mem.vhd:54]
+INFO: [Synth 8-5544] ROM "symbolr" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "symboli" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "symbols" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "symbolt" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "symbolp2" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "zero" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "one" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "two" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "three" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "four" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "five" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "six" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "seven" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "symbolh" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "symbolp" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "symbolc" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+WARNING: [Synth 8-6014] Unused sequential element vector_x_reg was removed.  [E:/GitHub/TestVGA/Computer/Computer.srcs/sources_1/new/VGA_Controller.vhd:350]
+WARNING: [Synth 8-6014] Unused sequential element vector_y_reg was removed.  [E:/GitHub/TestVGA/Computer/Computer.srcs/sources_1/new/VGA_Controller.vhd:363]
 INFO: [Synth 8-5546] ROM "t_wbregdata_out" won't be mapped to RAM because it is too sparse
-WARNING: [Synth 8-6014] Unused sequential element flashstate_reg was removed.  [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/imports/new/MemoryUnit.vhd:141]
-WARNING: [Synth 8-6014] Unused sequential element flashstate_reg was removed.  [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/imports/new/MemoryUnit.vhd:141]
+WARNING: [Synth 8-6014] Unused sequential element flashstate_reg was removed.  [E:/GitHub/TestVGA/Computer/Computer.srcs/sources_1/imports/new/MemoryUnit.vhd:141]
+WARNING: [Synth 8-6014] Unused sequential element flashstate_reg was removed.  [E:/GitHub/TestVGA/Computer/Computer.srcs/sources_1/imports/new/MemoryUnit.vhd:141]
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
 ---------------------------------------------------------------------------------------------------
@@ -558,13 +559,9 @@ WARNING: [Synth 8-6014] Unused sequential element flashstate_reg was removed.  [
                  iSTATE4 |                           100000 |                              110
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'flashstate_reg' using encoding 'one-hot' in module 'MemoryUnit'
-WARNING: [Synth 8-6014] Unused sequential element flashstate_reg was removed.  [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/imports/new/MemoryUnit.vhd:141]
-WARNING: [Synth 8-327] inferring latch for variable 'from_forward_datax_reg' [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/forward.vhd:43]
-WARNING: [Synth 8-327] inferring latch for variable 'from_forward_datay_reg' [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/forward.vhd:50]
-WARNING: [Synth 8-327] inferring latch for variable 'from_forward_address_reg' [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/forward.vhd:57]
-WARNING: [Synth 8-327] inferring latch for variable 'forward_data_reg' [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/forward.vhd:44]
+WARNING: [Synth 8-6014] Unused sequential element flashstate_reg was removed.  [E:/GitHub/TestVGA/Computer/Computer.srcs/sources_1/imports/new/MemoryUnit.vhd:141]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:21 ; elapsed = 00:00:31 . Memory (MB): peak = 721.711 ; gain = 437.371
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 726.227 ; gain = 440.621
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -580,38 +577,50 @@ Detailed RTL Component Info :
 	   2 Input     32 Bit       Adders := 1     
 	   2 Input     16 Bit       Adders := 2     
 	   3 Input     16 Bit       Adders := 1     
+	   2 Input     13 Bit       Adders := 1     
+	   2 Input     12 Bit       Adders := 1     
+	   2 Input     11 Bit       Adders := 2     
+	   2 Input     10 Bit       Adders := 3     
+	   2 Input      9 Bit       Adders := 1     
+	   2 Input      5 Bit       Adders := 4     
 	   2 Input      2 Bit       Adders := 1     
 +---Registers : 
 	               32 Bit    Registers := 1     
 	               23 Bit    Registers := 1     
 	               20 Bit    Registers := 2     
-	               16 Bit    Registers := 19    
+	               16 Bit    Registers := 16    
+	               10 Bit    Registers := 1     
+	                9 Bit    Registers := 1     
 	                4 Bit    Registers := 2     
-	                3 Bit    Registers := 7     
-	                2 Bit    Registers := 6     
-	                1 Bit    Registers := 25    
+	                3 Bit    Registers := 9     
+	                2 Bit    Registers := 7     
+	                1 Bit    Registers := 31    
 +---Muxes : 
 	   2 Input     32 Bit        Muxes := 1     
 	   2 Input     20 Bit        Muxes := 1     
 	   4 Input     16 Bit        Muxes := 9     
-	   2 Input     16 Bit        Muxes := 37    
+	   2 Input     16 Bit        Muxes := 34    
 	   5 Input     16 Bit        Muxes := 1     
 	   8 Input     16 Bit        Muxes := 1     
-	   2 Input      8 Bit        Muxes := 1     
+	  17 Input     16 Bit        Muxes := 16    
+	   2 Input     12 Bit        Muxes := 1     
+	   2 Input     10 Bit        Muxes := 2     
+	   2 Input      8 Bit        Muxes := 2     
+	   2 Input      5 Bit        Muxes := 8     
 	   8 Input      4 Bit        Muxes := 1     
 	  21 Input      3 Bit        Muxes := 1     
 	   4 Input      3 Bit        Muxes := 2     
 	  10 Input      3 Bit        Muxes := 4     
 	  19 Input      3 Bit        Muxes := 4     
-	   2 Input      3 Bit        Muxes := 10    
+	   2 Input      3 Bit        Muxes := 12    
 	   3 Input      3 Bit        Muxes := 1     
-	   2 Input      2 Bit        Muxes := 4     
+	   2 Input      2 Bit        Muxes := 5     
 	   4 Input      2 Bit        Muxes := 3     
 	  24 Input      2 Bit        Muxes := 1     
 	  28 Input      2 Bit        Muxes := 1     
 	  10 Input      2 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 28    
-	   6 Input      1 Bit        Muxes := 6     
+	   2 Input      1 Bit        Muxes := 70    
+	   6 Input      1 Bit        Muxes := 5     
 	   4 Input      1 Bit        Muxes := 9     
 	   3 Input      1 Bit        Muxes := 2     
 	  19 Input      1 Bit        Muxes := 3     
@@ -626,6 +635,8 @@ Start RTL Hierarchical Component Statistics
 Hierarchical RTL Component report 
 Module Computer 
 Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
 +---Muxes : 
 	   2 Input      1 Bit        Muxes := 1     
 Module clock 
@@ -739,10 +750,10 @@ Detailed RTL Component Info :
 Module exe 
 Detailed RTL Component Info : 
 +---Registers : 
-	               16 Bit    Registers := 11    
+	               16 Bit    Registers := 8     
 	                3 Bit    Registers := 7     
 	                2 Bit    Registers := 3     
-	                1 Bit    Registers := 7     
+	                1 Bit    Registers := 4     
 +---Muxes : 
 	   2 Input     16 Bit        Muxes := 1     
 Module exe_mem 
@@ -752,6 +763,30 @@ Detailed RTL Component Info :
 	                4 Bit    Registers := 1     
 	                2 Bit    Registers := 1     
 	                1 Bit    Registers := 3     
+Module VGA_Controller 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     13 Bit       Adders := 1     
+	   2 Input     12 Bit       Adders := 1     
+	   2 Input     11 Bit       Adders := 2     
+	   2 Input     10 Bit       Adders := 3     
+	   2 Input      9 Bit       Adders := 1     
+	   2 Input      5 Bit       Adders := 4     
++---Registers : 
+	               10 Bit    Registers := 1     
+	                9 Bit    Registers := 1     
+	                3 Bit    Registers := 2     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 8     
++---Muxes : 
+	  17 Input     16 Bit        Muxes := 16    
+	   2 Input     12 Bit        Muxes := 1     
+	   2 Input     10 Bit        Muxes := 2     
+	   2 Input      8 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 8     
+	   2 Input      3 Bit        Muxes := 2     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 39    
 Module mem_wb 
 Detailed RTL Component Info : 
 +---Registers : 
@@ -764,8 +799,7 @@ Detailed RTL Component Info :
 Module forward 
 Detailed RTL Component Info : 
 +---Muxes : 
-	   2 Input     16 Bit        Muxes := 3     
-	   6 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
 ---------------------------------------------------------------------------------
 Finished RTL Hierarchical Component Statistics
 ---------------------------------------------------------------------------------
@@ -784,22 +818,21 @@ Start Cross Boundary and Area Optimization
 INFO: [Synth 8-5545] ROM "cnt" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "cnt" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "flashstate" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-WARNING: [Synth 8-6014] Unused sequential element current_addr_reg was removed.  [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/imports/new/MemoryUnit.vhd:143]
+WARNING: [Synth 8-6014] Unused sequential element current_addr_reg was removed.  [E:/GitHub/TestVGA/Computer/Computer.srcs/sources_1/imports/new/MemoryUnit.vhd:143]
+WARNING: [Synth 8-6014] Unused sequential element vector_x_reg was removed.  [E:/GitHub/TestVGA/Computer/Computer.srcs/sources_1/new/VGA_Controller.vhd:350]
+WARNING: [Synth 8-6014] Unused sequential element vector_y_reg was removed.  [E:/GitHub/TestVGA/Computer/Computer.srcs/sources_1/new/VGA_Controller.vhd:363]
 INFO: [Synth 8-5546] ROM "t_wbregdata_out" won't be mapped to RAM because it is too sparse
-WARNING: [Synth 8-6014] Unused sequential element local_exe_mem/t_rd_out_reg was removed.  [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/exe_mem.vhd:60]
-WARNING: [Synth 8-6014] Unused sequential element local_pc_reg/PCOut_reg was removed.  [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/PCRegister.vhd:21]
-WARNING: [Synth 8-3917] design Computer has port Hs driven by constant 0
-WARNING: [Synth 8-3917] design Computer has port Vs driven by constant 0
-WARNING: [Synth 8-3917] design Computer has port video_de driven by constant 0
-WARNING: [Synth 8-3331] design Computer has unconnected port video_color[7]
-WARNING: [Synth 8-3331] design Computer has unconnected port video_color[6]
-WARNING: [Synth 8-3331] design Computer has unconnected port video_color[5]
-WARNING: [Synth 8-3331] design Computer has unconnected port video_color[4]
-WARNING: [Synth 8-3331] design Computer has unconnected port video_color[3]
-WARNING: [Synth 8-3331] design Computer has unconnected port video_color[2]
-WARNING: [Synth 8-3331] design Computer has unconnected port video_color[1]
-WARNING: [Synth 8-3331] design Computer has unconnected port video_color[0]
-WARNING: [Synth 8-3331] design Computer has unconnected port video_clk
+WARNING: [Synth 8-6014] Unused sequential element u18/clk2_reg was removed.  [E:/GitHub/TestVGA/Computer/Computer.srcs/sources_1/imports/new/clock.vhd:53]
+WARNING: [Synth 8-6014] Unused sequential element local_pc_reg/PCOut_reg was removed.  [E:/GitHub/TestVGA/Computer/Computer.srcs/sources_1/new/PCRegister.vhd:21]
+WARNING: [Synth 8-3917] design Computer has port leds[31] driven by constant 0
+WARNING: [Synth 8-3917] design Computer has port leds[30] driven by constant 0
+WARNING: [Synth 8-3917] design Computer has port leds[29] driven by constant 0
+WARNING: [Synth 8-3917] design Computer has port leds[28] driven by constant 0
+WARNING: [Synth 8-3917] design Computer has port leds[27] driven by constant 0
+WARNING: [Synth 8-3917] design Computer has port leds[23] driven by constant 0
+WARNING: [Synth 8-3917] design Computer has port leds[22] driven by constant 0
+WARNING: [Synth 8-3917] design Computer has port leds[21] driven by constant 0
+WARNING: [Synth 8-3917] design Computer has port leds[20] driven by constant 0
 WARNING: [Synth 8-3331] design Computer has unconnected port base_ram_data[31]
 WARNING: [Synth 8-3331] design Computer has unconnected port base_ram_data[30]
 WARNING: [Synth 8-3331] design Computer has unconnected port base_ram_data[29]
@@ -832,219 +865,125 @@ WARNING: [Synth 8-3331] design Computer has unconnected port ext_ram_data[19]
 WARNING: [Synth 8-3331] design Computer has unconnected port ext_ram_data[18]
 WARNING: [Synth 8-3331] design Computer has unconnected port ext_ram_data[17]
 WARNING: [Synth 8-3331] design Computer has unconnected port ext_ram_data[16]
-INFO: [Synth 8-3886] merging instance 'local_exe/s_forward_address_reg[0]' (FDC) to 'local_exe/s_forward_datax_reg[0]'
-INFO: [Synth 8-3886] merging instance 'local_exe/s_forward_address_reg[1]' (FDC) to 'local_exe/s_forward_datax_reg[1]'
-INFO: [Synth 8-3886] merging instance 'local_exe/s_forward_address_reg[2]' (FDC) to 'local_exe/s_forward_datax_reg[2]'
-INFO: [Synth 8-3886] merging instance 'local_exe/s_forward_address_reg[3]' (FDC) to 'local_exe/s_forward_datax_reg[3]'
-INFO: [Synth 8-3886] merging instance 'local_exe/s_forward_address_reg[4]' (FDC) to 'local_exe/s_forward_datax_reg[4]'
-INFO: [Synth 8-3886] merging instance 'local_exe/s_forward_address_reg[5]' (FDC) to 'local_exe/s_forward_datax_reg[5]'
-INFO: [Synth 8-3886] merging instance 'local_exe/s_forward_address_reg[6]' (FDC) to 'local_exe/s_forward_datax_reg[6]'
-INFO: [Synth 8-3886] merging instance 'local_exe/s_forward_address_reg[7]' (FDC) to 'local_exe/s_forward_datax_reg[7]'
-INFO: [Synth 8-3886] merging instance 'local_exe/s_forward_address_reg[8]' (FDC) to 'local_exe/s_forward_datax_reg[8]'
-INFO: [Synth 8-3886] merging instance 'local_exe/s_forward_address_reg[9]' (FDC) to 'local_exe/s_forward_datax_reg[9]'
-INFO: [Synth 8-3886] merging instance 'local_exe/s_forward_address_reg[10]' (FDC) to 'local_exe/s_forward_datax_reg[10]'
-INFO: [Synth 8-3886] merging instance 'local_exe/s_forward_address_reg[11]' (FDC) to 'local_exe/s_forward_datax_reg[11]'
-INFO: [Synth 8-3886] merging instance 'local_exe/s_forward_address_reg[12]' (FDC) to 'local_exe/s_forward_datax_reg[12]'
-INFO: [Synth 8-3886] merging instance 'local_exe/s_forward_address_reg[13]' (FDC) to 'local_exe/s_forward_datax_reg[13]'
-INFO: [Synth 8-3886] merging instance 'local_exe/s_forward_address_reg[14]' (FDC) to 'local_exe/s_forward_datax_reg[14]'
-INFO: [Synth 8-3886] merging instance 'local_exe/s_forward_address_reg[15]' (FDC) to 'local_exe/s_forward_datax_reg[15]'
-INFO: [Synth 8-3886] merging instance 'local_exe/s_forward_datax_reg[0]' (FDC) to 'local_exe/s_forward_datay_reg[0]'
-INFO: [Synth 8-3886] merging instance 'local_exe/s_forward_datay_reg[1]' (FDC) to 'local_exe/s_forward_datax_reg[1]'
-INFO: [Synth 8-3886] merging instance 'local_exe/s_forward_datay_reg[2]' (FDC) to 'local_exe/s_forward_datax_reg[2]'
-INFO: [Synth 8-3886] merging instance 'local_exe/s_forward_datay_reg[3]' (FDC) to 'local_exe/s_forward_datax_reg[3]'
-INFO: [Synth 8-3886] merging instance 'local_exe/s_forward_datay_reg[4]' (FDC) to 'local_exe/s_forward_datax_reg[4]'
-INFO: [Synth 8-3886] merging instance 'local_exe/s_forward_datay_reg[5]' (FDC) to 'local_exe/s_forward_datax_reg[5]'
-INFO: [Synth 8-3886] merging instance 'local_exe/s_forward_datay_reg[6]' (FDC) to 'local_exe/s_forward_datax_reg[6]'
-INFO: [Synth 8-3886] merging instance 'local_exe/s_forward_datay_reg[7]' (FDC) to 'local_exe/s_forward_datax_reg[7]'
-INFO: [Synth 8-3886] merging instance 'local_exe/s_forward_datay_reg[8]' (FDC) to 'local_exe/s_forward_datax_reg[8]'
-INFO: [Synth 8-3886] merging instance 'local_exe/s_forward_datay_reg[9]' (FDC) to 'local_exe/s_forward_datax_reg[9]'
-INFO: [Synth 8-3886] merging instance 'local_exe/s_forward_datay_reg[10]' (FDC) to 'local_exe/s_forward_datax_reg[10]'
 INFO: [Synth 8-3886] merging instance 'local_exe/s_immediate_reg[10]' (FDC) to 'local_exe/s_immediate_reg[11]'
-INFO: [Synth 8-3886] merging instance 'local_exe/s_forward_datay_reg[11]' (FDC) to 'local_exe/s_forward_datax_reg[11]'
 INFO: [Synth 8-3886] merging instance 'local_exe/s_immediate_reg[11]' (FDC) to 'local_exe/s_immediate_reg[12]'
-INFO: [Synth 8-3886] merging instance 'local_exe/s_forward_datay_reg[12]' (FDC) to 'local_exe/s_forward_datax_reg[12]'
 INFO: [Synth 8-3886] merging instance 'local_exe/s_immediate_reg[12]' (FDC) to 'local_exe/s_immediate_reg[13]'
-INFO: [Synth 8-3886] merging instance 'local_exe/s_forward_datay_reg[13]' (FDC) to 'local_exe/s_forward_datax_reg[13]'
 INFO: [Synth 8-3886] merging instance 'local_exe/s_immediate_reg[13]' (FDC) to 'local_exe/s_immediate_reg[14]'
-INFO: [Synth 8-3886] merging instance 'local_exe/s_forward_datay_reg[14]' (FDC) to 'local_exe/s_forward_datax_reg[14]'
 INFO: [Synth 8-3886] merging instance 'local_exe/s_immediate_reg[14]' (FDC) to 'local_exe/s_immediate_reg[15]'
-INFO: [Synth 8-3886] merging instance 'local_exe/s_forward_datax_reg[15]' (FDC) to 'local_exe/s_forward_datay_reg[15]'
-INFO: [Synth 8-3886] merging instance 'flash_data_reg__0i_98' (FDE) to 'flash_data_reg__0i_84'
+INFO: [Synth 8-3886] merging instance 'u17/flash_data_reg__0i_130' (FDE) to 'u17/flash_data_reg__0i_116'
 INFO: [Synth 8-3886] merging instance 'u17/flash_data_retimed_reg[0]' (FDE) to 'u17/flash_data_retimed_reg[6]'
-INFO: [Synth 8-3886] merging instance 'flash_data_reg__0i_97' (FDE) to 'flash_data_reg__0i_84'
+INFO: [Synth 8-3886] merging instance 'u17/flash_data_reg__0i_129' (FDE) to 'u17/flash_data_reg__0i_116'
 INFO: [Synth 8-3886] merging instance 'u17/flash_data_retimed_reg[1]' (FDE) to 'u17/flash_data_retimed_reg[6]'
-INFO: [Synth 8-3886] merging instance 'flash_data_reg__0i_96' (FDE) to 'flash_data_reg__0i_84'
+INFO: [Synth 8-3886] merging instance 'u17/flash_data_reg__0i_128' (FDE) to 'u17/flash_data_reg__0i_116'
 INFO: [Synth 8-3886] merging instance 'u17/flash_data_retimed_reg[2]' (FDE) to 'u17/flash_data_retimed_reg[6]'
-INFO: [Synth 8-3886] merging instance 'flash_data_reg__0i_95' (FDE) to 'flash_data_reg__0i_84'
+INFO: [Synth 8-3886] merging instance 'u17/flash_data_reg__0i_127' (FDE) to 'u17/flash_data_reg__0i_116'
 INFO: [Synth 8-3886] merging instance 'u17/flash_data_retimed_reg[3]' (FDE) to 'u17/flash_data_retimed_reg[6]'
-INFO: [Synth 8-3886] merging instance 'flash_data_reg__0i_94' (FDE) to 'flash_data_reg__0i_84'
+INFO: [Synth 8-3886] merging instance 'u17/flash_data_reg__0i_126' (FDE) to 'u17/flash_data_reg__0i_116'
 INFO: [Synth 8-3886] merging instance 'u17/flash_data_retimed_reg[4]' (FDE) to 'u17/flash_data_retimed_reg[6]'
-INFO: [Synth 8-3886] merging instance 'flash_data_reg__0i_93' (FDE) to 'flash_data_reg__0i_84'
+INFO: [Synth 8-3886] merging instance 'u17/flash_data_reg__0i_125' (FDE) to 'u17/flash_data_reg__0i_116'
 INFO: [Synth 8-3886] merging instance 'u17/flash_data_retimed_reg[5]' (FDE) to 'u17/flash_data_retimed_reg[6]'
-INFO: [Synth 8-3886] merging instance 'flash_data_reg__0i_92' (FDE) to 'flash_data_reg__0i_84'
+INFO: [Synth 8-3886] merging instance 'u17/flash_data_reg__0i_124' (FDE) to 'u17/flash_data_reg__0i_116'
 INFO: [Synth 8-3886] merging instance 'u17/flash_data_retimed_reg[6]' (FDE) to 'u17/flash_data_retimed_reg[7]'
-INFO: [Synth 8-3886] merging instance 'flash_data_reg__0i_91' (FDE) to 'flash_data_reg__0i_84'
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (\u17/flash_data_retimed_reg[7] )
-INFO: [Synth 8-3886] merging instance 'flash_data_reg__0i_90' (FDE) to 'flash_data_reg__0i_84'
+INFO: [Synth 8-3886] merging instance 'u17/flash_data_reg__0i_123' (FDE) to 'u17/flash_data_reg__0i_116'
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (u17/\flash_data_retimed_reg[7] )
+INFO: [Synth 8-3886] merging instance 'u17/flash_data_reg__0i_122' (FDE) to 'u17/flash_data_reg__0i_116'
 INFO: [Synth 8-3886] merging instance 'u17/flash_data_retimed_reg[8]' (FDE) to 'u17/flash_data_retimed_reg[14]'
-INFO: [Synth 8-3886] merging instance 'flash_data_reg__0i_89' (FDE) to 'flash_data_reg__0i_84'
+INFO: [Synth 8-3886] merging instance 'u17/flash_data_reg__0i_121' (FDE) to 'u17/flash_data_reg__0i_116'
 INFO: [Synth 8-3886] merging instance 'u17/flash_data_retimed_reg[9]' (FDE) to 'u17/flash_data_retimed_reg[14]'
-INFO: [Synth 8-3886] merging instance 'flash_data_reg__0i_88' (FDE) to 'flash_data_reg__0i_84'
+INFO: [Synth 8-3886] merging instance 'u17/flash_data_reg__0i_120' (FDE) to 'u17/flash_data_reg__0i_116'
 INFO: [Synth 8-3886] merging instance 'u17/flash_data_retimed_reg[10]' (FDE) to 'u17/flash_data_retimed_reg[14]'
-INFO: [Synth 8-3886] merging instance 'flash_data_reg__0i_87' (FDE) to 'flash_data_reg__0i_84'
+INFO: [Synth 8-3886] merging instance 'u17/flash_data_reg__0i_119' (FDE) to 'u17/flash_data_reg__0i_116'
 INFO: [Synth 8-3886] merging instance 'u17/flash_data_retimed_reg[11]' (FDE) to 'u17/flash_data_retimed_reg[14]'
-INFO: [Synth 8-3886] merging instance 'flash_data_reg__0i_86' (FDE) to 'flash_data_reg__0i_84'
+INFO: [Synth 8-3886] merging instance 'u17/flash_data_reg__0i_118' (FDE) to 'u17/flash_data_reg__0i_116'
 INFO: [Synth 8-3886] merging instance 'u17/flash_data_retimed_reg[12]' (FDE) to 'u17/flash_data_retimed_reg[14]'
-INFO: [Synth 8-3886] merging instance 'flash_data_reg__0i_85' (FDE) to 'flash_data_reg__0i_84'
+INFO: [Synth 8-3886] merging instance 'u17/flash_data_reg__0i_117' (FDE) to 'u17/flash_data_reg__0i_116'
 INFO: [Synth 8-3886] merging instance 'u17/flash_data_retimed_reg[13]' (FDE) to 'u17/flash_data_retimed_reg[14]'
-INFO: [Synth 8-3886] merging instance 'flash_data_reg__0i_84' (FDE) to 'flash_data_reg__0i_83'
+INFO: [Synth 8-3886] merging instance 'u17/flash_data_reg__0i_116' (FDE) to 'u17/flash_data_reg__0i_115'
 INFO: [Synth 8-3886] merging instance 'u17/flash_data_retimed_reg[14]' (FDE) to 'u17/flash_data_retimed_reg[15]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\u17/flash_data_retimed_reg[15] )
-INFO: [Synth 8-3886] merging instance 'ram2_data_reg__0i_34' (FDE) to 'ram2_data_reg__0i_20'
-INFO: [Synth 8-3886] merging instance 'ram2_data_reg__0i_33' (FDE) to 'ram2_data_reg__0i_20'
-INFO: [Synth 8-3886] merging instance 'ram2_data_reg__0i_32' (FDE) to 'ram2_data_reg__0i_20'
-INFO: [Synth 8-3886] merging instance 'ram2_data_reg__0i_31' (FDE) to 'ram2_data_reg__0i_20'
-INFO: [Synth 8-3886] merging instance 'ram2_data_reg__0i_30' (FDE) to 'ram2_data_reg__0i_20'
-INFO: [Synth 8-3886] merging instance 'ram2_data_reg__0i_29' (FDE) to 'ram2_data_reg__0i_20'
-INFO: [Synth 8-3886] merging instance 'ram2_data_reg__0i_28' (FDE) to 'ram2_data_reg__0i_20'
-INFO: [Synth 8-3886] merging instance 'ram2_data_reg__0i_27' (FDE) to 'ram2_data_reg__0i_20'
-INFO: [Synth 8-3886] merging instance 'ram2_data_reg__0i_26' (FDE) to 'ram2_data_reg__0i_20'
-INFO: [Synth 8-3886] merging instance 'ram2_data_reg__0i_25' (FDE) to 'ram2_data_reg__0i_20'
-INFO: [Synth 8-3886] merging instance 'ram2_data_reg__0i_24' (FDE) to 'ram2_data_reg__0i_20'
-INFO: [Synth 8-3886] merging instance 'ram2_data_reg__0i_23' (FDE) to 'ram2_data_reg__0i_20'
-INFO: [Synth 8-3886] merging instance 'ram2_data_reg__0i_22' (FDE) to 'ram2_data_reg__0i_20'
-INFO: [Synth 8-3886] merging instance 'ram2_data_reg__0i_21' (FDE) to 'ram2_data_reg__0i_20'
-INFO: [Synth 8-3886] merging instance 'ram2_data_reg__0i_20' (FDE) to 'ram2_data_reg__0i_19'
-INFO: [Synth 8-3886] merging instance 'ram1_data_reg__0i_66' (FDE) to 'ram1_data_reg__0i_65'
-INFO: [Synth 8-3886] merging instance 'ram1_data_reg__0i_65' (FDE) to 'ram1_data_reg__0i_64'
-INFO: [Synth 8-3886] merging instance 'ram1_data_reg__0i_64' (FDE) to 'ram1_data_reg__0i_63'
-INFO: [Synth 8-3886] merging instance 'ram1_data_reg__0i_63' (FDE) to 'ram1_data_reg__0i_62'
-INFO: [Synth 8-3886] merging instance 'ram1_data_reg__0i_62' (FDE) to 'ram1_data_reg__0i_61'
-INFO: [Synth 8-3886] merging instance 'ram1_data_reg__0i_61' (FDE) to 'ram1_data_reg__0i_60'
-INFO: [Synth 8-3886] merging instance 'ram1_data_reg__0i_60' (FDE) to 'ram1_data_reg__0i_59'
-INFO: [Synth 8-3886] merging instance 'ram1_data_reg__0i_58' (FDE) to 'ram1_data_reg__0i_57'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u17/\flash_data_retimed_reg[15] )
+INFO: [Synth 8-3886] merging instance 'u17/ram2_data_reg__0i_62' (FDE) to 'u17/ram2_data_reg__0i_48'
+INFO: [Synth 8-3886] merging instance 'u17/ram2_data_reg__0i_61' (FDE) to 'u17/ram2_data_reg__0i_48'
+INFO: [Synth 8-3886] merging instance 'u17/ram2_data_reg__0i_60' (FDE) to 'u17/ram2_data_reg__0i_48'
+INFO: [Synth 8-3886] merging instance 'u17/ram2_data_reg__0i_59' (FDE) to 'u17/ram2_data_reg__0i_48'
+INFO: [Synth 8-3886] merging instance 'u17/ram2_data_reg__0i_58' (FDE) to 'u17/ram2_data_reg__0i_48'
+INFO: [Synth 8-3886] merging instance 'u17/ram2_data_reg__0i_57' (FDE) to 'u17/ram2_data_reg__0i_48'
+INFO: [Synth 8-3886] merging instance 'u17/ram2_data_reg__0i_56' (FDE) to 'u17/ram2_data_reg__0i_48'
+INFO: [Synth 8-3886] merging instance 'u17/ram2_data_reg__0i_55' (FDE) to 'u17/ram2_data_reg__0i_48'
+INFO: [Synth 8-3886] merging instance 'u17/ram2_data_reg__0i_54' (FDE) to 'u17/ram2_data_reg__0i_48'
+INFO: [Synth 8-3886] merging instance 'u17/ram2_data_reg__0i_53' (FDE) to 'u17/ram2_data_reg__0i_48'
+INFO: [Synth 8-3886] merging instance 'u17/ram2_data_reg__0i_52' (FDE) to 'u17/ram2_data_reg__0i_48'
+INFO: [Synth 8-3886] merging instance 'u17/ram2_data_reg__0i_51' (FDE) to 'u17/ram2_data_reg__0i_48'
+INFO: [Synth 8-3886] merging instance 'u17/ram2_data_reg__0i_50' (FDE) to 'u17/ram2_data_reg__0i_48'
+INFO: [Synth 8-3886] merging instance 'u17/ram2_data_reg__0i_49' (FDE) to 'u17/ram2_data_reg__0i_48'
+INFO: [Synth 8-3886] merging instance 'u17/ram2_data_reg__0i_48' (FDE) to 'u17/ram2_data_reg__0i_47'
+INFO: [Synth 8-3886] merging instance 'u17/ram1_data_reg__0i_96' (FDE) to 'u17/ram1_data_reg__0i_95'
+INFO: [Synth 8-3886] merging instance 'u17/ram1_data_reg__0i_95' (FDE) to 'u17/ram1_data_reg__0i_94'
+INFO: [Synth 8-3886] merging instance 'u17/ram1_data_reg__0i_94' (FDE) to 'u17/ram1_data_reg__0i_93'
+INFO: [Synth 8-3886] merging instance 'u17/ram1_data_reg__0i_93' (FDE) to 'u17/ram1_data_reg__0i_92'
+INFO: [Synth 8-3886] merging instance 'u17/ram1_data_reg__0i_92' (FDE) to 'u17/ram1_data_reg__0i_91'
+INFO: [Synth 8-3886] merging instance 'u17/ram1_data_reg__0i_91' (FDE) to 'u17/ram1_data_reg__0i_90'
+INFO: [Synth 8-3886] merging instance 'u17/ram1_data_reg__0i_90' (FDE) to 'u17/ram1_data_reg__0i_89'
+INFO: [Synth 8-3886] merging instance 'u17/ram1_data_reg__0i_88' (FDE) to 'u17/ram1_data_reg__0i_87'
 INFO: [Synth 8-3886] merging instance 'u17/ram1_data_retimed_reg[8]' (FDE) to 'u17/ram1_data_retimed_reg[9]'
-INFO: [Synth 8-3886] merging instance 'ram1_data_reg__0i_57' (FDE) to 'ram1_data_reg__0i_56'
+INFO: [Synth 8-3886] merging instance 'u17/ram1_data_reg__0i_87' (FDE) to 'u17/ram1_data_reg__0i_86'
 INFO: [Synth 8-3886] merging instance 'u17/ram1_data_retimed_reg[9]' (FDE) to 'u17/ram1_data_retimed_reg[10]'
-INFO: [Synth 8-3886] merging instance 'ram1_data_reg__0i_56' (FDE) to 'ram1_data_reg__0i_55'
+INFO: [Synth 8-3886] merging instance 'u17/ram1_data_reg__0i_86' (FDE) to 'u17/ram1_data_reg__0i_85'
 INFO: [Synth 8-3886] merging instance 'u17/ram1_data_retimed_reg[10]' (FDE) to 'u17/ram1_data_retimed_reg[11]'
-INFO: [Synth 8-3886] merging instance 'ram1_data_reg__0i_55' (FDE) to 'ram1_data_reg__0i_54'
+INFO: [Synth 8-3886] merging instance 'u17/ram1_data_reg__0i_85' (FDE) to 'u17/ram1_data_reg__0i_84'
 INFO: [Synth 8-3886] merging instance 'u17/ram1_data_retimed_reg[11]' (FDE) to 'u17/ram1_data_retimed_reg[12]'
-INFO: [Synth 8-3886] merging instance 'ram1_data_reg__0i_54' (FDE) to 'ram1_data_reg__0i_53'
+INFO: [Synth 8-3886] merging instance 'u17/ram1_data_reg__0i_84' (FDE) to 'u17/ram1_data_reg__0i_83'
 INFO: [Synth 8-3886] merging instance 'u17/ram1_data_retimed_reg[12]' (FDE) to 'u17/ram1_data_retimed_reg[13]'
-INFO: [Synth 8-3886] merging instance 'ram1_data_reg__0i_53' (FDE) to 'ram1_data_reg__0i_52'
+INFO: [Synth 8-3886] merging instance 'u17/ram1_data_reg__0i_83' (FDE) to 'u17/ram1_data_reg__0i_82'
 INFO: [Synth 8-3886] merging instance 'u17/ram1_data_retimed_reg[13]' (FDE) to 'u17/ram1_data_retimed_reg[14]'
+INFO: [Synth 8-3886] merging instance 'u17/ram1_data_reg__0i_82' (FDE) to 'u17/ram1_data_reg__0i_81'
+INFO: [Synth 8-3886] merging instance 'u17/ram1_data_retimed_reg[14]' (FDE) to 'u17/ram1_data_retimed_reg[15]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u17/\ram1_data_retimed_reg[15] )
+INFO: [Synth 8-3886] merging instance 'u17/flash_addr_reg[0]' (FDE) to 'u17/flash_addr_reg[17]'
+INFO: [Synth 8-3886] merging instance 'u17/flash_addr_reg[17]' (FDE) to 'u17/flash_addr_reg[18]'
+INFO: [Synth 8-3886] merging instance 'u17/flash_addr_reg[18]' (FDE) to 'u17/flash_addr_reg[19]'
+INFO: [Synth 8-3886] merging instance 'u17/flash_addr_reg[19]' (FDE) to 'u17/flash_addr_reg[20]'
+INFO: [Synth 8-3886] merging instance 'u17/flash_addr_reg[20]' (FDE) to 'u17/flash_addr_reg[21]'
+INFO: [Synth 8-3886] merging instance 'u17/flash_addr_reg[21]' (FDE) to 'u17/flash_addr_reg[22]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u17/\flash_addr_reg[22] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (u17/flash_byte_reg)
+INFO: [Synth 8-3886] merging instance 'u17/ram2_addr_reg[16]' (FDCE) to 'u17/ram2_addr_reg[17]'
+INFO: [Synth 8-3886] merging instance 'u17/ram2_addr_reg[17]' (FDCE) to 'u17/ram2_addr_reg[18]'
+INFO: [Synth 8-3886] merging instance 'u17/ram2_addr_reg[18]' (FDCE) to 'u17/ram2_addr_reg[19]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u17/\ram2_addr_reg[19] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (u17/ram1_en_reg)
+INFO: [Synth 8-3886] merging instance 'u17/ram1_addr_reg[0]' (FDCE) to 'u17/ram1_addr_reg[19]'
+INFO: [Synth 8-3886] merging instance 'u17/ram1_addr_reg[1]' (FDCE) to 'u17/ram1_addr_reg[19]'
+INFO: [Synth 8-3886] merging instance 'u17/ram1_addr_reg[2]' (FDCE) to 'u17/ram1_addr_reg[19]'
+INFO: [Synth 8-3886] merging instance 'u17/ram1_addr_reg[3]' (FDCE) to 'u17/ram1_addr_reg[19]'
+INFO: [Synth 8-3886] merging instance 'u17/ram1_addr_reg[4]' (FDCE) to 'u17/ram1_addr_reg[19]'
+INFO: [Synth 8-3886] merging instance 'u17/ram1_addr_reg[5]' (FDCE) to 'u17/ram1_addr_reg[19]'
+INFO: [Synth 8-3886] merging instance 'u17/ram1_addr_reg[6]' (FDCE) to 'u17/ram1_addr_reg[19]'
+INFO: [Synth 8-3886] merging instance 'u17/ram1_addr_reg[7]' (FDCE) to 'u17/ram1_addr_reg[19]'
+INFO: [Synth 8-3886] merging instance 'u17/ram1_addr_reg[8]' (FDCE) to 'u17/ram1_addr_reg[19]'
+INFO: [Synth 8-3886] merging instance 'u17/ram1_addr_reg[9]' (FDCE) to 'u17/ram1_addr_reg[19]'
+INFO: [Synth 8-3886] merging instance 'u17/ram1_addr_reg[10]' (FDCE) to 'u17/ram1_addr_reg[19]'
+INFO: [Synth 8-3886] merging instance 'u17/ram1_addr_reg[11]' (FDCE) to 'u17/ram1_addr_reg[19]'
+INFO: [Synth 8-3886] merging instance 'u17/ram1_addr_reg[12]' (FDCE) to 'u17/ram1_addr_reg[19]'
+INFO: [Synth 8-3886] merging instance 'u17/ram1_addr_reg[13]' (FDCE) to 'u17/ram1_addr_reg[19]'
+INFO: [Synth 8-3886] merging instance 'u17/ram1_addr_reg[14]' (FDCE) to 'u17/ram1_addr_reg[19]'
+INFO: [Synth 8-3886] merging instance 'u17/ram1_addr_reg[15]' (FDCE) to 'u17/ram1_addr_reg[19]'
+INFO: [Synth 8-3886] merging instance 'u17/ram1_addr_reg[16]' (FDCE) to 'u17/ram1_addr_reg[19]'
+INFO: [Synth 8-3886] merging instance 'u17/ram1_addr_reg[17]' (FDCE) to 'u17/ram1_addr_reg[19]'
+INFO: [Synth 8-3886] merging instance 'u17/ram1_addr_reg[18]' (FDCE) to 'u17/ram1_addr_reg[19]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u17/\ram1_addr_reg[19] )
+INFO: [Synth 8-3886] merging instance 'u23/b0_reg[0]' (FDC) to 'u23/g0_reg[0]'
+INFO: [Synth 8-3886] merging instance 'u23/g0_reg[1]' (FDC) to 'u23/g0_reg[2]'
 INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\u17/ram1_data_retimed_reg[15] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\u17/flash_addr_reg[22] )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (\u17/flash_byte_reg )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\u17/ram2_addr_reg[19] )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (\u17/ram1_en_reg )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\u17/ram1_addr_reg[19] )
-WARNING: [Synth 8-3332] Sequential element (u17/ram1_data_retimed_reg[15]) is unused and will be removed from module Computer.
-WARNING: [Synth 8-3332] Sequential element (u17/flash_data_retimed_reg[15]) is unused and will be removed from module Computer.
-WARNING: [Synth 8-3332] Sequential element (u17/flash_data_retimed_reg[7]) is unused and will be removed from module Computer.
-WARNING: [Synth 8-3332] Sequential element (u17/ram1_addr_reg[19]) is unused and will be removed from module Computer.
-WARNING: [Synth 8-3332] Sequential element (u17/ram2_addr_reg[19]) is unused and will be removed from module Computer.
-WARNING: [Synth 8-3332] Sequential element (u17/ram1_en_reg) is unused and will be removed from module Computer.
-WARNING: [Synth 8-3332] Sequential element (u17/flash_addr_reg[22]) is unused and will be removed from module Computer.
-WARNING: [Synth 8-3332] Sequential element (u17/flash_byte_reg) is unused and will be removed from module Computer.
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\local_mem_wb/t_wbadress_out_reg[0] )
-WARNING: [Synth 8-3332] Sequential element (local_id/heap_instance/s1_reg[15]) is unused and will be removed from module Computer.
-WARNING: [Synth 8-3332] Sequential element (local_id/heap_instance/s1_reg[14]) is unused and will be removed from module Computer.
-WARNING: [Synth 8-3332] Sequential element (local_id/heap_instance/s1_reg[13]) is unused and will be removed from module Computer.
-WARNING: [Synth 8-3332] Sequential element (local_id/heap_instance/s1_reg[12]) is unused and will be removed from module Computer.
-WARNING: [Synth 8-3332] Sequential element (local_id/heap_instance/s1_reg[11]) is unused and will be removed from module Computer.
-WARNING: [Synth 8-3332] Sequential element (local_id/heap_instance/s1_reg[10]) is unused and will be removed from module Computer.
-WARNING: [Synth 8-3332] Sequential element (local_id/heap_instance/s1_reg[9]) is unused and will be removed from module Computer.
-WARNING: [Synth 8-3332] Sequential element (local_id/heap_instance/s1_reg[8]) is unused and will be removed from module Computer.
-WARNING: [Synth 8-3332] Sequential element (local_id/heap_instance/s1_reg[7]) is unused and will be removed from module Computer.
-WARNING: [Synth 8-3332] Sequential element (local_id/heap_instance/s1_reg[6]) is unused and will be removed from module Computer.
-WARNING: [Synth 8-3332] Sequential element (local_id/heap_instance/s1_reg[5]) is unused and will be removed from module Computer.
-WARNING: [Synth 8-3332] Sequential element (local_id/heap_instance/s1_reg[4]) is unused and will be removed from module Computer.
-WARNING: [Synth 8-3332] Sequential element (local_id/heap_instance/s1_reg[3]) is unused and will be removed from module Computer.
-WARNING: [Synth 8-3332] Sequential element (local_id/heap_instance/s1_reg[2]) is unused and will be removed from module Computer.
-WARNING: [Synth 8-3332] Sequential element (local_id/heap_instance/s1_reg[1]) is unused and will be removed from module Computer.
-WARNING: [Synth 8-3332] Sequential element (local_id/heap_instance/s1_reg[0]) is unused and will be removed from module Computer.
-WARNING: [Synth 8-3332] Sequential element (local_id/heap_instance/s2_reg[15]) is unused and will be removed from module Computer.
-WARNING: [Synth 8-3332] Sequential element (local_id/heap_instance/s2_reg[14]) is unused and will be removed from module Computer.
-WARNING: [Synth 8-3332] Sequential element (local_id/heap_instance/s2_reg[13]) is unused and will be removed from module Computer.
-WARNING: [Synth 8-3332] Sequential element (local_id/heap_instance/s2_reg[12]) is unused and will be removed from module Computer.
-WARNING: [Synth 8-3332] Sequential element (local_id/heap_instance/s2_reg[11]) is unused and will be removed from module Computer.
-WARNING: [Synth 8-3332] Sequential element (local_id/heap_instance/s2_reg[10]) is unused and will be removed from module Computer.
-WARNING: [Synth 8-3332] Sequential element (local_id/heap_instance/s2_reg[9]) is unused and will be removed from module Computer.
-WARNING: [Synth 8-3332] Sequential element (local_id/heap_instance/s2_reg[8]) is unused and will be removed from module Computer.
-WARNING: [Synth 8-3332] Sequential element (local_id/heap_instance/s2_reg[7]) is unused and will be removed from module Computer.
-WARNING: [Synth 8-3332] Sequential element (local_id/heap_instance/s2_reg[6]) is unused and will be removed from module Computer.
-WARNING: [Synth 8-3332] Sequential element (local_id/heap_instance/s2_reg[5]) is unused and will be removed from module Computer.
-WARNING: [Synth 8-3332] Sequential element (local_id/heap_instance/s2_reg[4]) is unused and will be removed from module Computer.
-WARNING: [Synth 8-3332] Sequential element (local_id/heap_instance/s2_reg[3]) is unused and will be removed from module Computer.
-WARNING: [Synth 8-3332] Sequential element (local_id/heap_instance/s2_reg[2]) is unused and will be removed from module Computer.
-WARNING: [Synth 8-3332] Sequential element (local_id/heap_instance/s2_reg[1]) is unused and will be removed from module Computer.
-WARNING: [Synth 8-3332] Sequential element (local_id/heap_instance/s2_reg[0]) is unused and will be removed from module Computer.
-WARNING: [Synth 8-3332] Sequential element (local_id/heap_instance/s3_reg[15]) is unused and will be removed from module Computer.
-WARNING: [Synth 8-3332] Sequential element (local_id/heap_instance/s3_reg[14]) is unused and will be removed from module Computer.
-WARNING: [Synth 8-3332] Sequential element (local_id/heap_instance/s3_reg[13]) is unused and will be removed from module Computer.
-WARNING: [Synth 8-3332] Sequential element (local_id/heap_instance/s3_reg[12]) is unused and will be removed from module Computer.
-WARNING: [Synth 8-3332] Sequential element (local_id/heap_instance/s3_reg[11]) is unused and will be removed from module Computer.
-WARNING: [Synth 8-3332] Sequential element (local_id/heap_instance/s3_reg[10]) is unused and will be removed from module Computer.
-WARNING: [Synth 8-3332] Sequential element (local_id/heap_instance/s3_reg[9]) is unused and will be removed from module Computer.
-WARNING: [Synth 8-3332] Sequential element (local_id/heap_instance/s3_reg[8]) is unused and will be removed from module Computer.
-WARNING: [Synth 8-3332] Sequential element (local_id/heap_instance/s3_reg[7]) is unused and will be removed from module Computer.
-WARNING: [Synth 8-3332] Sequential element (local_id/heap_instance/s3_reg[6]) is unused and will be removed from module Computer.
-WARNING: [Synth 8-3332] Sequential element (local_id/heap_instance/s3_reg[5]) is unused and will be removed from module Computer.
-WARNING: [Synth 8-3332] Sequential element (local_id/heap_instance/s3_reg[4]) is unused and will be removed from module Computer.
-WARNING: [Synth 8-3332] Sequential element (local_id/heap_instance/s3_reg[3]) is unused and will be removed from module Computer.
-WARNING: [Synth 8-3332] Sequential element (local_id/heap_instance/s3_reg[2]) is unused and will be removed from module Computer.
-WARNING: [Synth 8-3332] Sequential element (local_id/heap_instance/s3_reg[1]) is unused and will be removed from module Computer.
-WARNING: [Synth 8-3332] Sequential element (local_id/heap_instance/s3_reg[0]) is unused and will be removed from module Computer.
-WARNING: [Synth 8-3332] Sequential element (local_id/heap_instance/s4_reg[15]) is unused and will be removed from module Computer.
-WARNING: [Synth 8-3332] Sequential element (local_id/heap_instance/s4_reg[14]) is unused and will be removed from module Computer.
-WARNING: [Synth 8-3332] Sequential element (local_id/heap_instance/s4_reg[13]) is unused and will be removed from module Computer.
-WARNING: [Synth 8-3332] Sequential element (local_id/heap_instance/s4_reg[12]) is unused and will be removed from module Computer.
-WARNING: [Synth 8-3332] Sequential element (local_id/heap_instance/s4_reg[11]) is unused and will be removed from module Computer.
-WARNING: [Synth 8-3332] Sequential element (local_id/heap_instance/s4_reg[10]) is unused and will be removed from module Computer.
-WARNING: [Synth 8-3332] Sequential element (local_id/heap_instance/s4_reg[9]) is unused and will be removed from module Computer.
-WARNING: [Synth 8-3332] Sequential element (local_id/heap_instance/s4_reg[8]) is unused and will be removed from module Computer.
-WARNING: [Synth 8-3332] Sequential element (local_id/heap_instance/s4_reg[7]) is unused and will be removed from module Computer.
-WARNING: [Synth 8-3332] Sequential element (local_id/heap_instance/s4_reg[6]) is unused and will be removed from module Computer.
-WARNING: [Synth 8-3332] Sequential element (local_id/heap_instance/s4_reg[5]) is unused and will be removed from module Computer.
-WARNING: [Synth 8-3332] Sequential element (local_id/heap_instance/s4_reg[4]) is unused and will be removed from module Computer.
-WARNING: [Synth 8-3332] Sequential element (local_id/heap_instance/s4_reg[3]) is unused and will be removed from module Computer.
-WARNING: [Synth 8-3332] Sequential element (local_id/heap_instance/s4_reg[2]) is unused and will be removed from module Computer.
-WARNING: [Synth 8-3332] Sequential element (local_id/heap_instance/s4_reg[1]) is unused and will be removed from module Computer.
-WARNING: [Synth 8-3332] Sequential element (local_id/heap_instance/s4_reg[0]) is unused and will be removed from module Computer.
-WARNING: [Synth 8-3332] Sequential element (local_id/heap_instance/s5_reg[15]) is unused and will be removed from module Computer.
-WARNING: [Synth 8-3332] Sequential element (local_id/heap_instance/s5_reg[14]) is unused and will be removed from module Computer.
-WARNING: [Synth 8-3332] Sequential element (local_id/heap_instance/s5_reg[13]) is unused and will be removed from module Computer.
-WARNING: [Synth 8-3332] Sequential element (local_id/heap_instance/s5_reg[12]) is unused and will be removed from module Computer.
-WARNING: [Synth 8-3332] Sequential element (local_id/heap_instance/s5_reg[11]) is unused and will be removed from module Computer.
-WARNING: [Synth 8-3332] Sequential element (local_id/heap_instance/s5_reg[10]) is unused and will be removed from module Computer.
-WARNING: [Synth 8-3332] Sequential element (local_id/heap_instance/s5_reg[9]) is unused and will be removed from module Computer.
-WARNING: [Synth 8-3332] Sequential element (local_id/heap_instance/s5_reg[8]) is unused and will be removed from module Computer.
-WARNING: [Synth 8-3332] Sequential element (local_id/heap_instance/s5_reg[7]) is unused and will be removed from module Computer.
-WARNING: [Synth 8-3332] Sequential element (local_id/heap_instance/s5_reg[6]) is unused and will be removed from module Computer.
-WARNING: [Synth 8-3332] Sequential element (local_id/heap_instance/s5_reg[5]) is unused and will be removed from module Computer.
-WARNING: [Synth 8-3332] Sequential element (local_id/heap_instance/s5_reg[4]) is unused and will be removed from module Computer.
-WARNING: [Synth 8-3332] Sequential element (local_id/heap_instance/s5_reg[3]) is unused and will be removed from module Computer.
-WARNING: [Synth 8-3332] Sequential element (local_id/heap_instance/s5_reg[2]) is unused and will be removed from module Computer.
-WARNING: [Synth 8-3332] Sequential element (local_id/heap_instance/s5_reg[1]) is unused and will be removed from module Computer.
-WARNING: [Synth 8-3332] Sequential element (local_id/heap_instance/s5_reg[0]) is unused and will be removed from module Computer.
-WARNING: [Synth 8-3332] Sequential element (local_id/heap_instance/s6_reg[15]) is unused and will be removed from module Computer.
-WARNING: [Synth 8-3332] Sequential element (local_id/heap_instance/s6_reg[14]) is unused and will be removed from module Computer.
-WARNING: [Synth 8-3332] Sequential element (local_id/heap_instance/s6_reg[13]) is unused and will be removed from module Computer.
-WARNING: [Synth 8-3332] Sequential element (local_id/heap_instance/s6_reg[12]) is unused and will be removed from module Computer.
-WARNING: [Synth 8-3332] Sequential element (local_id/heap_instance/s6_reg[11]) is unused and will be removed from module Computer.
-WARNING: [Synth 8-3332] Sequential element (local_id/heap_instance/s6_reg[10]) is unused and will be removed from module Computer.
-WARNING: [Synth 8-3332] Sequential element (local_id/heap_instance/s6_reg[9]) is unused and will be removed from module Computer.
-WARNING: [Synth 8-3332] Sequential element (local_id/heap_instance/s6_reg[8]) is unused and will be removed from module Computer.
-WARNING: [Synth 8-3332] Sequential element (local_id/heap_instance/s6_reg[7]) is unused and will be removed from module Computer.
-WARNING: [Synth 8-3332] Sequential element (local_id/heap_instance/s6_reg[6]) is unused and will be removed from module Computer.
-WARNING: [Synth 8-3332] Sequential element (local_id/heap_instance/s6_reg[5]) is unused and will be removed from module Computer.
-WARNING: [Synth 8-3332] Sequential element (local_id/heap_instance/s6_reg[4]) is unused and will be removed from module Computer.
-INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+WARNING: [Synth 8-3332] Sequential element (ram1_data_retimed_reg[15]) is unused and will be removed from module MemoryUnit.
+WARNING: [Synth 8-3332] Sequential element (flash_data_retimed_reg[15]) is unused and will be removed from module MemoryUnit.
+WARNING: [Synth 8-3332] Sequential element (flash_data_retimed_reg[7]) is unused and will be removed from module MemoryUnit.
+WARNING: [Synth 8-3332] Sequential element (ram1_addr_reg[19]) is unused and will be removed from module MemoryUnit.
+WARNING: [Synth 8-3332] Sequential element (ram2_addr_reg[19]) is unused and will be removed from module MemoryUnit.
+WARNING: [Synth 8-3332] Sequential element (ram1_en_reg) is unused and will be removed from module MemoryUnit.
+WARNING: [Synth 8-3332] Sequential element (flash_addr_reg[22]) is unused and will be removed from module MemoryUnit.
+WARNING: [Synth 8-3332] Sequential element (flash_byte_reg) is unused and will be removed from module MemoryUnit.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:29 ; elapsed = 00:00:39 . Memory (MB): peak = 721.711 ; gain = 437.371
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:42 ; elapsed = 00:00:43 . Memory (MB): peak = 726.227 ; gain = 440.621
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1056,13 +995,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:41 ; elapsed = 00:00:52 . Memory (MB): peak = 721.711 ; gain = 437.371
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:58 ; elapsed = 00:01:01 . Memory (MB): peak = 726.227 ; gain = 440.621
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:50 ; elapsed = 00:01:01 . Memory (MB): peak = 834.781 ; gain = 550.441
+Finished Timing Optimization : Time (s): cpu = 00:00:59 ; elapsed = 00:01:01 . Memory (MB): peak = 726.227 ; gain = 440.621
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1073,6 +1012,8 @@ Report RTL Partitions:
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
+WARNING: [Synth 8-3332] Sequential element (flash_data_reg__0i_52) is unused and will be removed from module Computer.
+WARNING: [Synth 8-3332] Sequential element (u17/flash_finished_reg) is unused and will be removed from module Computer.
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\u17/current_addr_reg[0] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\u17/current_addr_reg[1] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\u17/current_addr_reg[2] )
@@ -1090,10 +1031,10 @@ INFO: [Synth 8-3333] propagating constant 0 across sequential element (\u17/curr
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\u17/current_addr_reg[14] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\u17/current_addr_reg[15] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\u17/cnt_reg[27] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\u17/cnt_reg[29] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\u17/cnt_reg[28] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\u17/cnt_reg[30] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\u17/cnt_reg[31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\u17/cnt_reg[29] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\u17/cnt_reg[28] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\u17/cnt_reg[7] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\u17/cnt_reg[6] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\u17/cnt_reg[8] )
@@ -1122,8 +1063,59 @@ INFO: [Synth 8-3333] propagating constant 0 across sequential element (\u17/cnt_
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\u17/cnt_reg[25] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\u17/cnt_reg[26] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\u17/flash_addr_reg[16] )
+WARNING: [Synth 8-3332] Sequential element (u17/cnt_reg[31]) is unused and will be removed from module Computer.
+WARNING: [Synth 8-3332] Sequential element (u17/cnt_reg[30]) is unused and will be removed from module Computer.
+WARNING: [Synth 8-3332] Sequential element (u17/cnt_reg[29]) is unused and will be removed from module Computer.
+WARNING: [Synth 8-3332] Sequential element (u17/cnt_reg[28]) is unused and will be removed from module Computer.
+WARNING: [Synth 8-3332] Sequential element (u17/cnt_reg[27]) is unused and will be removed from module Computer.
+WARNING: [Synth 8-3332] Sequential element (u17/cnt_reg[26]) is unused and will be removed from module Computer.
+WARNING: [Synth 8-3332] Sequential element (u17/cnt_reg[25]) is unused and will be removed from module Computer.
+WARNING: [Synth 8-3332] Sequential element (u17/cnt_reg[24]) is unused and will be removed from module Computer.
+WARNING: [Synth 8-3332] Sequential element (u17/cnt_reg[23]) is unused and will be removed from module Computer.
+WARNING: [Synth 8-3332] Sequential element (u17/cnt_reg[22]) is unused and will be removed from module Computer.
+WARNING: [Synth 8-3332] Sequential element (u17/cnt_reg[21]) is unused and will be removed from module Computer.
+WARNING: [Synth 8-3332] Sequential element (u17/cnt_reg[20]) is unused and will be removed from module Computer.
+WARNING: [Synth 8-3332] Sequential element (u17/cnt_reg[19]) is unused and will be removed from module Computer.
+WARNING: [Synth 8-3332] Sequential element (u17/cnt_reg[18]) is unused and will be removed from module Computer.
+WARNING: [Synth 8-3332] Sequential element (u17/cnt_reg[17]) is unused and will be removed from module Computer.
+WARNING: [Synth 8-3332] Sequential element (u17/cnt_reg[16]) is unused and will be removed from module Computer.
+WARNING: [Synth 8-3332] Sequential element (u17/cnt_reg[15]) is unused and will be removed from module Computer.
+WARNING: [Synth 8-3332] Sequential element (u17/cnt_reg[14]) is unused and will be removed from module Computer.
+WARNING: [Synth 8-3332] Sequential element (u17/cnt_reg[13]) is unused and will be removed from module Computer.
+WARNING: [Synth 8-3332] Sequential element (u17/cnt_reg[12]) is unused and will be removed from module Computer.
+WARNING: [Synth 8-3332] Sequential element (u17/cnt_reg[11]) is unused and will be removed from module Computer.
+WARNING: [Synth 8-3332] Sequential element (u17/cnt_reg[10]) is unused and will be removed from module Computer.
+WARNING: [Synth 8-3332] Sequential element (u17/cnt_reg[9]) is unused and will be removed from module Computer.
+WARNING: [Synth 8-3332] Sequential element (u17/cnt_reg[8]) is unused and will be removed from module Computer.
+WARNING: [Synth 8-3332] Sequential element (u17/cnt_reg[7]) is unused and will be removed from module Computer.
+WARNING: [Synth 8-3332] Sequential element (u17/cnt_reg[6]) is unused and will be removed from module Computer.
+WARNING: [Synth 8-3332] Sequential element (u17/cnt_reg[5]) is unused and will be removed from module Computer.
+WARNING: [Synth 8-3332] Sequential element (u17/cnt_reg[4]) is unused and will be removed from module Computer.
+WARNING: [Synth 8-3332] Sequential element (u17/cnt_reg[3]) is unused and will be removed from module Computer.
+WARNING: [Synth 8-3332] Sequential element (u17/cnt_reg[2]) is unused and will be removed from module Computer.
+WARNING: [Synth 8-3332] Sequential element (u17/cnt_reg[1]) is unused and will be removed from module Computer.
+WARNING: [Synth 8-3332] Sequential element (u17/cnt_reg[0]) is unused and will be removed from module Computer.
+WARNING: [Synth 8-3332] Sequential element (u17/ram2_en_reg) is unused and will be removed from module Computer.
+WARNING: [Synth 8-3332] Sequential element (u17/flash_addr_reg[16]) is unused and will be removed from module Computer.
+WARNING: [Synth 8-3332] Sequential element (u17/current_addr_reg[0]) is unused and will be removed from module Computer.
+WARNING: [Synth 8-3332] Sequential element (u17/current_addr_reg[1]) is unused and will be removed from module Computer.
+WARNING: [Synth 8-3332] Sequential element (u17/current_addr_reg[2]) is unused and will be removed from module Computer.
+WARNING: [Synth 8-3332] Sequential element (u17/current_addr_reg[3]) is unused and will be removed from module Computer.
+WARNING: [Synth 8-3332] Sequential element (u17/current_addr_reg[4]) is unused and will be removed from module Computer.
+WARNING: [Synth 8-3332] Sequential element (u17/current_addr_reg[5]) is unused and will be removed from module Computer.
+WARNING: [Synth 8-3332] Sequential element (u17/current_addr_reg[6]) is unused and will be removed from module Computer.
+WARNING: [Synth 8-3332] Sequential element (u17/current_addr_reg[7]) is unused and will be removed from module Computer.
+WARNING: [Synth 8-3332] Sequential element (u17/current_addr_reg[8]) is unused and will be removed from module Computer.
+WARNING: [Synth 8-3332] Sequential element (u17/current_addr_reg[9]) is unused and will be removed from module Computer.
+WARNING: [Synth 8-3332] Sequential element (u17/current_addr_reg[10]) is unused and will be removed from module Computer.
+WARNING: [Synth 8-3332] Sequential element (u17/current_addr_reg[11]) is unused and will be removed from module Computer.
+WARNING: [Synth 8-3332] Sequential element (u17/current_addr_reg[12]) is unused and will be removed from module Computer.
+WARNING: [Synth 8-3332] Sequential element (u17/current_addr_reg[13]) is unused and will be removed from module Computer.
+WARNING: [Synth 8-3332] Sequential element (u17/current_addr_reg[14]) is unused and will be removed from module Computer.
+WARNING: [Synth 8-3332] Sequential element (u17/current_addr_reg[15]) is unused and will be removed from module Computer.
+WARNING: [Synth 8-3332] Sequential element (u17/flash_oe_reg) is unused and will be removed from module Computer.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:51 ; elapsed = 00:01:01 . Memory (MB): peak = 834.781 ; gain = 550.441
+Finished Technology Mapping : Time (s): cpu = 00:01:00 ; elapsed = 00:01:02 . Memory (MB): peak = 735.746 ; gain = 450.141
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1147,7 +1139,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:51 ; elapsed = 00:01:02 . Memory (MB): peak = 834.781 ; gain = 550.441
+Finished IO Insertion : Time (s): cpu = 00:01:01 ; elapsed = 00:01:03 . Memory (MB): peak = 735.746 ; gain = 450.141
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -1160,7 +1152,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:51 ; elapsed = 00:01:02 . Memory (MB): peak = 834.781 ; gain = 550.441
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:01 ; elapsed = 00:01:03 . Memory (MB): peak = 735.746 ; gain = 450.141
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1172,25 +1164,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:52 ; elapsed = 00:01:02 . Memory (MB): peak = 834.781 ; gain = 550.441
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:01 ; elapsed = 00:01:03 . Memory (MB): peak = 735.746 ; gain = 450.141
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:52 ; elapsed = 00:01:02 . Memory (MB): peak = 834.781 ; gain = 550.441
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:01 ; elapsed = 00:01:03 . Memory (MB): peak = 735.746 ; gain = 450.141
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:52 ; elapsed = 00:01:02 . Memory (MB): peak = 834.781 ; gain = 550.441
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:01 ; elapsed = 00:01:04 . Memory (MB): peak = 735.746 ; gain = 450.141
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:52 ; elapsed = 00:01:02 . Memory (MB): peak = 834.781 ; gain = 550.441
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:01 ; elapsed = 00:01:04 . Memory (MB): peak = 735.746 ; gain = 450.141
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -1206,63 +1198,62 @@ Report Cell Usage:
 +------+-------+------+
 |      |Cell   |Count |
 +------+-------+------+
-|1     |BUFG   |     2|
+|1     |BUFG   |     3|
 |2     |CARRY4 |    12|
-|3     |LUT1   |    22|
-|4     |LUT2   |    52|
+|3     |LUT1   |    36|
+|4     |LUT2   |    60|
 |5     |LUT3   |   122|
-|6     |LUT4   |    91|
-|7     |LUT5   |    75|
-|8     |LUT6   |   225|
-|9     |FDCE   |   285|
-|10    |FDPE   |     5|
-|11    |FDRE   |    28|
-|12    |FDSE   |     1|
-|13    |LD     |    16|
-|14    |LDP    |     3|
+|6     |LUT4   |   108|
+|7     |LUT5   |   162|
+|8     |LUT6   |   399|
+|9     |MUXF7  |    67|
+|10    |MUXF8  |    11|
+|11    |FDCE   |   522|
+|12    |FDPE   |    22|
+|13    |FDRE   |    32|
+|14    |FDSE   |     1|
 |15    |IBUF   |     7|
 |16    |IOBUF  |    24|
-|17    |OBUF   |    97|
-|18    |OBUFT  |    33|
+|17    |OBUF   |   121|
+|18    |OBUFT  |    24|
 +------+-------+------+
 
 Report Instance Areas: 
-+------+-------------------+-----------+------+
-|      |Instance           |Module     |Cells |
-+------+-------------------+-----------+------+
-|1     |top                |           |  1100|
-|2     |  local_exe        |exe        |   468|
-|3     |    adder_instance |adder      |    57|
-|4     |    alu_instance   |alu        |    51|
-|5     |  local_exe_mem    |exe_mem    |    74|
-|6     |  local_forward    |forward    |    19|
-|7     |  local_id         |id         |   187|
-|8     |    heap_instance  |heap       |    48|
-|9     |  local_mem_wb     |mem_wb     |    17|
-|10    |  local_pc_reg     |PCRegister |    32|
-|11    |  u17              |MemoryUnit |   111|
-|12    |  u18              |clock      |     8|
-+------+-------------------+-----------+------+
++------+----------------------+---------------+------+
+|      |Instance              |Module         |Cells |
++------+----------------------+---------------+------+
+|1     |top                   |               |  1733|
+|2     |  local_exe           |exe            |   381|
+|3     |    adder_instance    |adder          |    12|
+|4     |    alu_instance      |alu            |    24|
+|5     |    mux_goal_instance |mux_goal       |     3|
+|6     |  local_exe_mem       |exe_mem        |   131|
+|7     |  local_id            |id             |   487|
+|8     |    heap_instance     |heap           |   360|
+|9     |  local_mem_wb        |mem_wb         |   204|
+|10    |  local_pc_reg        |PCRegister     |    39|
+|11    |  u17                 |MemoryUnit     |   114|
+|12    |  u18                 |clock          |     6|
+|13    |  u23                 |VGA_Controller |   169|
++------+----------------------+---------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:52 ; elapsed = 00:01:02 . Memory (MB): peak = 834.781 ; gain = 550.441
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:01 ; elapsed = 00:01:04 . Memory (MB): peak = 735.746 ; gain = 450.141
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 348 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:37 ; elapsed = 00:00:44 . Memory (MB): peak = 834.781 ; gain = 232.988
-Synthesis Optimization Complete : Time (s): cpu = 00:00:52 ; elapsed = 00:01:02 . Memory (MB): peak = 834.781 ; gain = 550.441
+Synthesis finished with 0 errors, 0 critical warnings and 124 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:43 ; elapsed = 00:00:52 . Memory (MB): peak = 735.746 ; gain = 132.660
+Synthesis Optimization Complete : Time (s): cpu = 00:01:02 ; elapsed = 00:01:04 . Memory (MB): peak = 735.746 ; gain = 450.141
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 62 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 43 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 43 instances were transformed.
+  A total of 24 instances were transformed.
   IOBUF => IOBUF (IBUF, OBUFT): 24 instances
-  LD => LDCE: 16 instances
-  LDP => LDPE: 3 instances
 
-275 Infos, 355 Warnings, 91 Critical Warnings and 0 Errors encountered.
+297 Infos, 288 Warnings, 91 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:55 ; elapsed = 00:01:07 . Memory (MB): peak = 834.781 ; gain = 554.785
-INFO: [Common 17-1381] The checkpoint 'E:/GitHub/ENV/Project_Computer/Computer/Computer.runs/synth_1/Computer.dcp' has been generated.
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.026 . Memory (MB): peak = 834.781 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Sun Dec  3 11:17:54 2017...
+synth_design: Time (s): cpu = 00:01:05 ; elapsed = 00:01:08 . Memory (MB): peak = 735.746 ; gain = 456.570
+INFO: [Common 17-1381] The checkpoint 'E:/GitHub/TestVGA/Computer/Computer.runs/synth_1/Computer.dcp' has been generated.
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.037 . Memory (MB): peak = 735.746 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Mon Dec  4 17:04:47 2017...

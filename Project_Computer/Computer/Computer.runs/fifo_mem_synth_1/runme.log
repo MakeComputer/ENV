@@ -9,5 +9,4 @@
     ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 
 source fifo_mem.tcl -notrace
-create_project: Time (s): cpu = 00:00:01 ; elapsed = 00:00:11 . Memory (MB): peak = 261.453 ; gain = 41.227
-INFO: [IP_Flow 19-4838] Using cached IP synthesis design for IP fifo_mem, cache-ID = c00950230dc29609.
+INFO: [IP_Flow 19-4838] Using cached IP synthesis design for IP fifo_mem, cache-ID = 7dd0e330d622ef0f.

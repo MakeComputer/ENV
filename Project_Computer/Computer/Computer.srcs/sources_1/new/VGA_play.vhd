@@ -150,7 +150,7 @@ begin
 -- end process;
 
 -- 25 MHz Sync
-
+clkout <= clk;
 -- 50 MHz -> 25 MHz
 process(CLK_0)
 begin

@@ -50,17 +50,19 @@ set rc [catch {
   create_project -in_memory -part xc7a100tfgg676-2L
   set_property design_mode GateLvl [current_fileset]
   set_param project.singleFileAddWarning.threshold 0
-  set_property webtalk.parent_dir E:/GitHub/ENV/Project_Computer/Computer/Computer.cache/wt [current_project]
-  set_property parent.project_path E:/GitHub/ENV/Project_Computer/Computer/Computer.xpr [current_project]
-  set_property ip_output_repo E:/GitHub/ENV/Project_Computer/Computer/Computer.cache/ip [current_project]
+  set_property webtalk.parent_dir E:/GitHub/TestVGA/Computer/Computer.cache/wt [current_project]
+  set_property parent.project_path E:/GitHub/TestVGA/Computer/Computer.xpr [current_project]
+  set_property ip_output_repo E:/GitHub/TestVGA/Computer/Computer.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
   set_property XPM_LIBRARIES XPM_MEMORY [current_project]
-  add_files -quiet E:/GitHub/ENV/Project_Computer/Computer/Computer.runs/synth_1/Computer.dcp
-  read_ip -quiet E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/ip/char_mem/char_mem.xci
-  set_property is_locked true [get_files E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/ip/char_mem/char_mem.xci]
-  read_ip -quiet E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/ip/fifo_mem/fifo_mem.xci
-  set_property is_locked true [get_files E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/ip/fifo_mem/fifo_mem.xci]
-  read_xdc E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc
+  add_files -quiet E:/GitHub/TestVGA/Computer/Computer.runs/synth_1/Computer.dcp
+  read_ip -quiet E:/GitHub/TestVGA/Computer/Computer.srcs/sources_1/ip/char_mem/char_mem.xci
+  set_property is_locked true [get_files E:/GitHub/TestVGA/Computer/Computer.srcs/sources_1/ip/char_mem/char_mem.xci]
+  read_ip -quiet E:/GitHub/TestVGA/Computer/Computer.srcs/sources_1/ip/fifo_mem/fifo_mem.xci
+  set_property is_locked true [get_files E:/GitHub/TestVGA/Computer/Computer.srcs/sources_1/ip/fifo_mem/fifo_mem.xci]
+  read_ip -quiet e:/GitHub/TestVGA/Computer/Computer.srcs/sources_1/ip/fontRom/fontRom.xci
+  set_property is_locked true [get_files e:/GitHub/TestVGA/Computer/Computer.srcs/sources_1/ip/fontRom/fontRom.xci]
+  read_xdc E:/GitHub/TestVGA/Computer/Computer.srcs/constrs_1/new/Computer.xdc
   link_design -top Computer -part xc7a100tfgg676-2L
   close_msg_db -file init_design.pb
 } RESULT]

@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='E:/GitHub/ENV/Project_Computer/Computer/Computer.runs/fifo_mem_synth_1'
+HD_PWD='E:/GitHub/TestVGA/Computer/Computer.runs/fifo_mem_synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

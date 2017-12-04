@@ -33,6 +33,14 @@ entity heap is
 		SP: out std_logic_vector(15 downto 0);
 		RA: out std_logic_vector(15 downto 0);
 		IH: out std_logic_vector(15 downto 0);
+		R0:out std_logic_vector(15 downto 0);
+		R1:out std_logic_vector(15 downto 0);
+		R2:out std_logic_vector(15 downto 0);
+		R3:out std_logic_vector(15 downto 0);
+		R4:out std_logic_vector(15 downto 0);
+		R5:out std_logic_vector(15 downto 0);
+		R6:out std_logic_vector(15 downto 0);
+		R7:out std_logic_vector(15 downto 0);
 		T: out std_logic_vector(15 downto 0) 
 	);
 end heap;
@@ -167,6 +175,14 @@ begin
 	ra <= ras;
 	ih <= sih;
 	t <= st;
+	R0 <= s0;
+	R1 <= s1;
+	R2 <= s2;
+	R3 <= s3;
+	R4 <= s4;
+	R5 <= s5;
+	R6 <= s6;
+	R7 <= s7;
 
 end behavior;
 

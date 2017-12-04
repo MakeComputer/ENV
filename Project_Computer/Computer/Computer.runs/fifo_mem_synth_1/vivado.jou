@@ -2,11 +2,11 @@
 # Vivado v2017.1 (64-bit)
 # SW Build 1846317 on Fri Apr 14 18:55:03 MDT 2017
 # IP Build 1846188 on Fri Apr 14 20:52:08 MDT 2017
-# Start of session at: Fri Dec  1 22:39:39 2017
-# Process ID: 14068
-# Current directory: E:/GitHub/ENV/Project_Computer/Computer/Computer.runs/fifo_mem_synth_1
+# Start of session at: Mon Dec  4 10:57:31 2017
+# Process ID: 7736
+# Current directory: E:/GitHub/TestVGA/Computer/Computer.runs/fifo_mem_synth_1
 # Command line: vivado.exe -log fifo_mem.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source fifo_mem.tcl
-# Log file: E:/GitHub/ENV/Project_Computer/Computer/Computer.runs/fifo_mem_synth_1/fifo_mem.vds
-# Journal file: E:/GitHub/ENV/Project_Computer/Computer/Computer.runs/fifo_mem_synth_1\vivado.jou
+# Log file: E:/GitHub/TestVGA/Computer/Computer.runs/fifo_mem_synth_1/fifo_mem.vds
+# Journal file: E:/GitHub/TestVGA/Computer/Computer.runs/fifo_mem_synth_1\vivado.jou
 #-----------------------------------------------------------
 source fifo_mem.tcl -notrace

@@ -1,7 +1,7 @@
 -- Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2017.1 (win64) Build 1846317 Fri Apr 14 18:55:03 MDT 2017
--- Date        : Mon Nov 27 18:25:05 2017
+-- Date        : Mon Dec  4 10:30:06 2017
 -- Host        : samsung running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode synth_stub -rename_top char_mem -prefix
 --               char_mem_ char_mem_stub.vhdl

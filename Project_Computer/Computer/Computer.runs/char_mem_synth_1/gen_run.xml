@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="char_mem_synth_1" LaunchPart="xc7a100tfgg676-2L" LaunchTime="1512142772">
-  <File Type="PA-TCL" Name="char_mem.tcl"/>
+<GenRun Id="char_mem_synth_1" LaunchPart="xc7a100tfgg676-2L" LaunchTime="1512359821">
   <File Type="RDS-PROPCONSTRS" Name="char_mem_drc_synth.rpt"/>
+  <File Type="PA-TCL" Name="char_mem.tcl"/>
   <File Type="RDS-RDS" Name="char_mem.vds"/>
   <File Type="RDS-UTIL" Name="char_mem_utilization_synth.rpt"/>
   <File Type="RDS-UTIL-PB" Name="char_mem_utilization_synth.pb"/>

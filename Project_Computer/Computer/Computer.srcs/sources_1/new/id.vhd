@@ -6,6 +6,7 @@ use IEEE.STD_LOGIC_UNSIGNED.all;
 entity id is
 	port(
 		clock, reset, pause, flush: in std_logic;
+		clock_register: in std_logic;
 		jump, bubble: in std_logic;
 		instruction: in std_logic_vector(15 downto 0);
 		fromPC: in std_logic_vector(15 downto 0);
@@ -30,6 +31,14 @@ entity id is
 		ra: out std_logic_vector(15 downto 0) := "0000000000000000";
 		ih: out std_logic_vector(15 downto 0) := "0000000000000000";
 		t: out std_logic_vector(15 downto 0) := "0000000000000000";
+		R0:out std_logic_vector(15 downto 0) := "0000000000000000";
+		R1:out std_logic_vector(15 downto 0) := "0000000000000000";
+        R2:out std_logic_vector(15 downto 0) := "0000000000000000";
+        R3:out std_logic_vector(15 downto 0) := "0000000000000000";
+        R4:out std_logic_vector(15 downto 0) := "0000000000000000";
+        R5:out std_logic_vector(15 downto 0) := "0000000000000000";
+        R6:out std_logic_vector(15 downto 0) := "0000000000000000";
+        R7:out std_logic_vector(15 downto 0) := "0000000000000000";
 		
 		exe_alu_op: out std_logic_vector(2 downto 0) := "000";
 		exe_alu_rx: out std_logic_vector(2 downto 0) := "000";
@@ -116,7 +125,15 @@ component heap
 
 		writeAddress: in std_logic_vector(3 downto 0);
 		writeData: in std_logic_vector(15 downto 0);
-
+        
+        R0: out std_logic_vector(15 downto 0);
+		R1:out std_logic_vector(15 downto 0);
+        R2:out std_logic_vector(15 downto 0);
+        R3:out std_logic_vector(15 downto 0);
+        R4:out std_logic_vector(15 downto 0);
+        R5:out std_logic_vector(15 downto 0);
+        R6:out std_logic_vector(15 downto 0);
+        R7:out std_logic_vector(15 downto 0);        
 		SP: out std_logic_vector(15 downto 0);
 		RA: out std_logic_vector(15 downto 0);
 		IH: out std_logic_vector(15 downto 0);
@@ -221,7 +238,7 @@ begin
 	
 	heap_instance: heap port map(
 		reset => reset,
-		clock => clock,
+		clock => clock_register,
 		writeRegister => s_write_register,
 		readAddressA =>  s_readAddressA,
 		readAddressB => s_readAddressB,
@@ -231,6 +248,14 @@ begin
 		writeAddress => s_write_address,
 		writeData => s_write_data,
 
+		R0 => R0,
+		R1 => R1,
+		R2 => R2,
+		R3 => R3,
+		R4 => R4,
+		R5 => R5,
+		R6 => R6,
+		R7 => R7,
 		SP => s_sp,
 		RA => s_ra,
 		IH => s_ih,

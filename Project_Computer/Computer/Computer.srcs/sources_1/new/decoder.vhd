@@ -162,7 +162,7 @@ begin
 						wb_memory_or_alu_out <= "00";
 						exe_select_goal <= "011";
 						exe_alu_op <= "111";
-						exe_alu_rx <= "000";
+						exe_alu_rx <= "001";
 						exe_alu_ry <= "00";
 						exe_address <= "00";
 						memoryRead <= '0';

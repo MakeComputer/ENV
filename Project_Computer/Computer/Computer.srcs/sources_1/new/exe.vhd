@@ -42,6 +42,12 @@ entity exe is
 		
 		goal: out std_logic_vector(3 downto 0);
 		alu_out: out std_logic_vector(15 downto 0);
+		
+				forward_exe_alu_rx: out std_logic_vector(2 downto 0);
+                forward_exe_alu_ry: out std_logic_vector(1 downto 0);
+                forward_exe_address: out  std_logic_vector(1 downto 0);
+        		forward_r_x: out std_logic_vector(2 downto 0);
+                forward_r_y: out std_logic_vector(2 downto 0);
 
 		from_forwardx: in std_logic;
 		from_forwardy: in std_logic;
@@ -170,6 +176,8 @@ begin
 		t => s_t,
         forward_datax => s_forward_datax,
         from_forwardx => s_from_forwardx,
+--        forward_datax => forward_datax,
+--                from_forwardx => from_forwardx,
 		immediate => s_immediate,
 		alu_mux_rx => s_alu_mux_rx,
 		alu_rx => s_alu_rx
@@ -181,6 +189,8 @@ begin
 		rx => s_rx,
 		forward_datay => s_forward_datay,
 		from_forwardy => s_from_forwardy,
+--forward_datay => forward_datay,
+--		from_forwardy => from_forwardy,
 		alu_mux_ry => s_alu_mux_ry,
 		alu_ry => s_alu_ry
 	);
@@ -197,6 +207,8 @@ begin
 		ra => s_ra,
 		from_forward_address => s_from_forward_address,
 		forward_address => s_forward_address,
+--from_forward_address => from_forward_address,
+--		forward_address => forward_address,
 		address_mux => s_address_mux,
 		address => address_result
 	);
@@ -230,8 +242,19 @@ begin
 			shouldJump <= '0';
 		end if;			
 	end process;
+	
+	process(from_forwardx, from_forwardy, from_forward_address, forward_datax, forward_datay, forward_address)
+        begin
+                        s_from_forwardx <= from_forwardx;
+                        s_from_forwardy <= from_forwardy;
+                        s_from_forward_address <= from_forward_address;
+                        
+                        s_forward_datax <= forward_datax;
+                        s_forward_datay <= forward_datay;
+                        s_forward_address <= forward_address;    
+        end process;
 
-	process(s_where)
+	process(s_where,s_rx,s_ry)
 	begin
 		if s_where = '0' then
 			memoryData <= s_rx;
@@ -264,14 +287,21 @@ begin
 			s_r_y <= "000";
 			s_r_z <= "000";
 				
-			s_from_forwardx <= '0';
-			s_from_forwardy <= '0';
-			s_from_forward_address <= '0';
-			s_where <= '0';
+--			s_from_forwardx <= '0';
+--			s_from_forwardy <= '0';
+--			s_from_forward_address <= '0';
+--			s_where <= '0';
 				
-			s_forward_datax <= "0000000000000000";
-			s_forward_datay <= "0000000000000000";
-			s_forward_address <= "0000000000000000";	
+--			s_forward_datax <= "0000000000000000";
+--			s_forward_datay <= "0000000000000000";
+--			s_forward_address <= "0000000000000000";	
+			
+						forward_exe_alu_rx <= "000";
+                        forward_exe_alu_ry <= "00";
+                        forward_exe_address <= "00";
+                        
+                        forward_r_x <= "000";
+                        forward_r_y <= "000";
 
 			wb_memory_or_alu_out <= "00";
 			memoryRead <= '0';
@@ -303,13 +333,21 @@ begin
 				s_r_y <= r_y;
 				s_r_z <= r_z;
 				
-				s_from_forwardx <= from_forwardx;
-				s_from_forwardy <= from_forwardy;
-				s_from_forward_address <= from_forward_address;
+--				s_from_forwardx <= from_forwardx;
+--				s_from_forwardy <= from_forwardy;
+--				s_from_forward_address <= from_forward_address;
 				
-				s_forward_datax <= forward_datax;
-				s_forward_datay <= forward_datay;
-				s_forward_address <= forward_address;	
+--				s_forward_datax <= forward_datax;
+--				s_forward_datay <= forward_datay;
+--				s_forward_address <= forward_address;	
+
+				forward_exe_alu_rx <= exe_alu_rx;
+                forward_exe_alu_ry <= exe_alu_ry;
+                            forward_exe_address <= exe_address;
+                            
+                            forward_r_x <= r_x;
+                            forward_r_y <= r_y;
+
 
 				wb_memory_or_alu_out <= from_wb_memory_or_alu_out;
 				memoryRead <= from_memoryRead;

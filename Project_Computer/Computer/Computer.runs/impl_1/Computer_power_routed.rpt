@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2017.1 (win64) Build 1846317 Fri Apr 14 18:55:03 MDT 2017
-| Date             : Sun Dec  3 11:19:31 2017
+| Date             : Mon Dec  4 17:06:42 2017
 | Host             : samsung running 64-bit major release  (build 9200)
 | Command          : report_power -file Computer_power_routed.rpt -pb Computer_power_summary_routed.pb -rpx Computer_power_routed.rpx
 | Design           : Computer
@@ -30,8 +30,8 @@ Table of Contents
 ----------
 
 +--------------------------+-------+
-| Total On-Chip Power (W)  | 0.109 |
-| Dynamic (W)              | 0.012 |
+| Total On-Chip Power (W)  | 0.115 |
+| Dynamic (W)              | 0.018 |
 | Device Static (W)        | 0.097 |
 | Effective TJA (C/W)      | 2.6   |
 | Max Ambient (C)          | 99.7  |
@@ -50,16 +50,17 @@ Table of Contents
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
 | Clocks         |    <0.001 |        3 |       --- |             --- |
-| Slice Logic    |    <0.001 |      955 |       --- |             --- |
-|   LUT as Logic |    <0.001 |      461 |     63400 |            0.73 |
-|   Register     |    <0.001 |      347 |    126800 |            0.27 |
+| Slice Logic    |     0.001 |     1566 |       --- |             --- |
+|   LUT as Logic |     0.001 |      723 |     63400 |            1.14 |
+|   Register     |    <0.001 |      588 |    126800 |            0.46 |
 |   CARRY4       |    <0.001 |       12 |     15850 |            0.08 |
-|   BUFG         |    <0.001 |        1 |        32 |            3.13 |
-|   Others       |     0.000 |       29 |       --- |             --- |
-| Signals        |     0.001 |      796 |       --- |             --- |
-| I/O            |     0.009 |      161 |       300 |           53.67 |
+|   BUFG         |    <0.001 |        2 |        32 |            6.25 |
+|   F7/F8 Muxes  |    <0.001 |       78 |     63400 |            0.12 |
+|   Others       |     0.000 |       30 |       --- |             --- |
+| Signals        |     0.002 |     1227 |       --- |             --- |
+| I/O            |     0.014 |      176 |       300 |           58.67 |
 | Static Power   |     0.097 |          |           |                 |
-| Total          |     0.109 |          |           |                 |
+| Total          |     0.115 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -69,9 +70,9 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.018 |       0.003 |      0.015 |
-| Vccaux    |       1.800 |     0.018 |       0.000 |      0.018 |
-| Vcco33    |       3.300 |     0.006 |       0.002 |      0.004 |
+| Vccint    |       1.000 |     0.018 |       0.004 |      0.015 |
+| Vccaux    |       1.800 |     0.019 |       0.001 |      0.018 |
+| Vcco33    |       3.300 |     0.008 |       0.004 |      0.004 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
@@ -138,7 +139,7 @@ Table of Contents
 +-------------------------------+-----------+
 | Name                          | Power (W) |
 +-------------------------------+-----------+
-| Computer                      |     0.012 |
+| Computer                      |     0.018 |
 |   base_ram_data_IOBUF[0]_inst |     0.000 |
 |   base_ram_data_IOBUF[1]_inst |     0.000 |
 |   base_ram_data_IOBUF[2]_inst |     0.000 |
@@ -163,17 +164,18 @@ Table of Contents
 |   ext_ram_data_IOBUF[7]_inst  |    <0.001 |
 |   ext_ram_data_IOBUF[8]_inst  |    <0.001 |
 |   ext_ram_data_IOBUF[9]_inst  |    <0.001 |
-|   local_exe                   |     0.001 |
+|   local_exe                   |    <0.001 |
 |     adder_instance            |    <0.001 |
 |     alu_instance              |    <0.001 |
+|     mux_goal_instance         |    <0.001 |
 |   local_exe_mem               |    <0.001 |
-|   local_forward               |    <0.001 |
 |   local_id                    |    <0.001 |
 |     heap_instance             |    <0.001 |
-|   local_mem_wb                |    <0.001 |
+|   local_mem_wb                |     0.001 |
 |   local_pc_reg                |    <0.001 |
 |   u17                         |    <0.001 |
 |   u18                         |    <0.001 |
+|   u23                         |    <0.001 |
 +-------------------------------+-----------+
 
 
