@@ -126,7 +126,7 @@ begin
 	process(clk, rst)
 	begin
 	
-		if (rst = '0') then
+		if (rst = '1') then
 			ram2_oe <= '1';
 			ram2_we <= '1';
 			wrn <= '1';

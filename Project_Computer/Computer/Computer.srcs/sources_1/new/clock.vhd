@@ -47,7 +47,7 @@ begin
 	process (clk,rst)
 		begin
 			clkout <= clk;
-			if (rst = '0') then
+			if (rst = '1') then
 				clkout <= '0';
 				clk1 <= '0';
 				clk2 <= '0';
