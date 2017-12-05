@@ -8,55 +8,46 @@ set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
-set_property webtalk.parent_dir E:/GitHub/TestVGA/Computer/Computer.cache/wt [current_project]
-set_property parent.project_path E:/GitHub/TestVGA/Computer/Computer.xpr [current_project]
+set_property webtalk.parent_dir E:/GitHub/ENV/Project_Computer/Computer/Computer.cache/wt [current_project]
+set_property parent.project_path E:/GitHub/ENV/Project_Computer/Computer/Computer.xpr [current_project]
 set_property XPM_LIBRARIES XPM_MEMORY [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language VHDL [current_project]
-set_property ip_output_repo e:/GitHub/TestVGA/Computer/Computer.cache/ip [current_project]
+set_property ip_output_repo e:/GitHub/ENV/Project_Computer/Computer/Computer.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
-add_files e:/GitHub/TestVGA/Computer/char_mem.coe
-add_files e:/GitHub/TestVGA/Computer/fifo_mem.coe
-add_files e:/GitHub/project_fz/fontRom.coe
+add_files E:/GitHub/ENV/Project_Computer/Computer/char_mem.coe
+add_files E:/GitHub/ENV/Project_Computer/Computer/fifo_mem.coe
+add_files E:/GitHub/ENV/project_fz/fontRom.coe
 read_vhdl -library xil_defaultlib {
-  E:/GitHub/TestVGA/Computer/Computer.srcs/sources_1/new/decoder.vhd
-  E:/GitHub/TestVGA/Computer/Computer.srcs/sources_1/new/extend.vhd
-  E:/GitHub/TestVGA/Computer/Computer.srcs/sources_1/new/heap.vhd
-  E:/GitHub/TestVGA/Computer/Computer.srcs/sources_1/new/mux_control.vhd
-  E:/GitHub/TestVGA/Computer/Computer.srcs/sources_1/new/id.vhd
-  E:/GitHub/TestVGA/Computer/Computer.srcs/sources_1/new/adder.vhd
-  E:/GitHub/TestVGA/Computer/Computer.srcs/sources_1/new/mux_goal.vhd
-  E:/GitHub/TestVGA/Computer/Computer.srcs/sources_1/new/mux_rx.vhd
-  E:/GitHub/TestVGA/Computer/Computer.srcs/sources_1/new/mux_ry.vhd
-  E:/GitHub/TestVGA/Computer/Computer.srcs/sources_1/new/PCRegister.vhd
-  E:/GitHub/TestVGA/Computer/Computer.srcs/sources_1/new/exe_mem.vhd
-  E:/GitHub/TestVGA/Computer/Computer.srcs/sources_1/new/mem_wb.vhd
-  E:/GitHub/TestVGA/Computer/Computer.srcs/sources_1/new/mux_address.vhd
-  E:/GitHub/TestVGA/Computer/Computer.srcs/sources_1/new/MemoryController.vhd
-  E:/GitHub/TestVGA/Computer/Computer.srcs/sources_1/new/Flash.vhd
-  E:/GitHub/TestVGA/Computer/Computer.srcs/sources_1/new/hazard.vhd
-  E:/GitHub/TestVGA/Computer/Computer.srcs/sources_1/new/alu.vhd
-  E:/GitHub/TestVGA/Computer/Computer.srcs/sources_1/new/forward.vhd
-  E:/GitHub/TestVGA/Computer/Computer.srcs/sources_1/new/PCAdder.vhd
-  E:/GitHub/TestVGA/Computer/Computer.srcs/sources_1/new/PCMux.vhd
-  E:/GitHub/TestVGA/Computer/Computer.srcs/sources_1/new/exe.vhd
-  E:/GitHub/TestVGA/Computer/Computer.srcs/sources_1/new/VGA_play.vhd
-  E:/GitHub/TestVGA/Computer/Computer.srcs/sources_1/new/Computer.vhd
-  E:/GitHub/TestVGA/Computer/Computer.srcs/sources_1/imports/new/clock.vhd
-  E:/GitHub/TestVGA/Computer/Computer.srcs/sources_1/imports/new/MemoryUnit.vhd
-  E:/GitHub/TestVGA/Computer/Computer.srcs/sources_1/new/VGA_Controller.vhd
+  E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/decoder.vhd
+  E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/extend.vhd
+  E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/heap.vhd
+  E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/mux_control.vhd
+  E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/id.vhd
+  E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/adder.vhd
+  E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/mux_goal.vhd
+  E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/mux_rx.vhd
+  E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/mux_ry.vhd
+  E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/PCRegister.vhd
+  E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/exe_mem.vhd
+  E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/mem_wb.vhd
+  E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/mux_address.vhd
+  E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/MemoryController.vhd
+  E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/Flash.vhd
+  E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/hazard.vhd
+  E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/alu.vhd
+  E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/forward.vhd
+  E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/PCAdder.vhd
+  E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/PCMux.vhd
+  E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/exe.vhd
+  E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/Computer.vhd
+  E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/imports/new/clock.vhd
+  E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/imports/new/MemoryUnit.vhd
+  E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/VGA_Controller.vhd
 }
-read_ip -quiet E:/GitHub/TestVGA/Computer/Computer.srcs/sources_1/ip/char_mem/char_mem.xci
-set_property used_in_implementation false [get_files -all e:/GitHub/TestVGA/Computer/Computer.srcs/sources_1/ip/char_mem/char_mem_ooc.xdc]
-set_property is_locked true [get_files E:/GitHub/TestVGA/Computer/Computer.srcs/sources_1/ip/char_mem/char_mem.xci]
-
-read_ip -quiet E:/GitHub/TestVGA/Computer/Computer.srcs/sources_1/ip/fifo_mem/fifo_mem.xci
-set_property used_in_implementation false [get_files -all e:/GitHub/TestVGA/Computer/Computer.srcs/sources_1/ip/fifo_mem/fifo_mem_ooc.xdc]
-set_property is_locked true [get_files E:/GitHub/TestVGA/Computer/Computer.srcs/sources_1/ip/fifo_mem/fifo_mem.xci]
-
-read_ip -quiet e:/GitHub/TestVGA/Computer/Computer.srcs/sources_1/ip/fontRom/fontRom.xci
-set_property used_in_implementation false [get_files -all e:/GitHub/TestVGA/Computer/Computer.srcs/sources_1/ip/fontRom/fontRom_ooc.xdc]
-set_property is_locked true [get_files e:/GitHub/TestVGA/Computer/Computer.srcs/sources_1/ip/fontRom/fontRom.xci]
+read_ip -quiet E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/ip/fontRom/fontRom.xci
+set_property used_in_implementation false [get_files -all e:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/ip/fontRom/fontRom_ooc.xdc]
+set_property is_locked true [get_files E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/ip/fontRom/fontRom.xci]
 
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
@@ -66,8 +57,8 @@ set_property is_locked true [get_files e:/GitHub/TestVGA/Computer/Computer.srcs/
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc E:/GitHub/TestVGA/Computer/Computer.srcs/constrs_1/new/Computer.xdc
-set_property used_in_implementation false [get_files E:/GitHub/TestVGA/Computer/Computer.srcs/constrs_1/new/Computer.xdc]
+read_xdc E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc
+set_property used_in_implementation false [get_files E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc]
 
 
 synth_design -top Computer -part xc7a100tfgg676-2L

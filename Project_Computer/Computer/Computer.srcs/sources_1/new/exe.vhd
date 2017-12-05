@@ -20,7 +20,7 @@ entity exe is
 		from_registerWrite: in std_logic;
 		registerWrite: out std_logic;
 		fromWhere: in std_logic;
-		--where: out std_logic;
+		where: out std_logic;
 		memoryData: out std_logic_vector(15 downto 0);
 		
 		fromBranch: in std_logic_vector(2 downto 0);
@@ -48,6 +48,9 @@ entity exe is
                 forward_exe_address: out  std_logic_vector(1 downto 0);
         		forward_r_x: out std_logic_vector(2 downto 0);
                 forward_r_y: out std_logic_vector(2 downto 0);
+                
+                memory_data_forward: in std_logic;
+                forward_memory_data: in std_logic_vector(15 downto 0);
 
 		from_forwardx: in std_logic;
 		from_forwardy: in std_logic;
@@ -254,13 +257,17 @@ begin
                         s_forward_address <= forward_address;    
         end process;
 
-	process(s_where,s_rx,s_ry)
+	process(s_where,s_rx,s_ry, memory_data_forward, forward_memory_data)
 	begin
+	if memory_data_forward = '1' then
+	   memoryData <= forward_memory_data;
+	else
 		if s_where = '0' then
 			memoryData <= s_rx;
 		else
 			memoryData <= s_ry;
 		end if;
+    end if;
 	end process;
 	
 	process(reset, clock)
@@ -290,7 +297,7 @@ begin
 --			s_from_forwardx <= '0';
 --			s_from_forwardy <= '0';
 --			s_from_forward_address <= '0';
---			s_where <= '0';
+			s_where <= '0';
 				
 --			s_forward_datax <= "0000000000000000";
 --			s_forward_datay <= "0000000000000000";
@@ -307,7 +314,7 @@ begin
 			memoryRead <= '0';
 			memoryWrite <= '0';
 			registerWrite <= '0';
-			--where <= '0';
+			where <= '0';
 		else
 			if clock'event and clock = '1' then
 				s_rx <= rx;
@@ -353,7 +360,7 @@ begin
 				memoryRead <= from_memoryRead;
 				memoryWrite <= from_memoryWrite;
 				registerWrite <= from_registerWrite;
---				where <= fromWhere;
+				where <= fromWhere;
 			end if;
 		end if;
 	end process;	

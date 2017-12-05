@@ -312,7 +312,7 @@ begin
 			s_from_pc <= "0000000000000000";
 		elsif clock'event and clock = '1' and pause = '0' then
 			s_instruction <= instruction;
-			s_from_pc <= fromPC;
+			s_from_pc <= fromPC+"0000000000000001";
 		end if;
 	end process;
 

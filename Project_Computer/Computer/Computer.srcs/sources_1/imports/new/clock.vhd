@@ -42,9 +42,9 @@ end clock;
 
 architecture Behavioral of clock is
 	signal count:natural range 0 to 3 := 0;
-	
 begin
-	process (clk,rst)
+
+    process (rst,clk)
 		begin
 			clkout <= clk;
 			if (rst = '1') then

@@ -362,8 +362,11 @@ architecture Computer_beh of Computer is
         from_registerWrite: in std_logic;
         registerWrite: out std_logic;
         fromWhere: in std_logic;
-        --where: out std_logic;
+        where: out std_logic;
         memoryData : out STD_LOGIC_VECTOR(15 downto 0);
+        
+         memory_data_forward: in std_logic;
+                       forward_memory_data: in std_logic_vector(15 downto 0);
         
                 forward_exe_alu_rx: out std_logic_vector(2 downto 0);
                         forward_exe_alu_ry: out std_logic_vector(1 downto 0);
@@ -455,6 +458,9 @@ architecture Computer_beh of Computer is
             exe_alu_rx: in std_logic_vector(2 downto 0);
             exe_alu_ry: in std_logic_vector(1 downto 0);
             exe_select_address: in std_logic_vector(1 downto 0);
+            
+            memoryWrite: in std_logic;
+                    exe_where: in std_logic;
 
             rx: in std_logic_vector(2 downto 0);
             ry: in std_logic_vector(2 downto 0);
@@ -470,6 +476,10 @@ architecture Computer_beh of Computer is
             from_forward_datax: out std_logic;
             from_forward_datay: out std_logic;
             from_forward_address: out std_logic;
+            
+            from_forward_memory: out std_logic;
+            
+            forward_memory: out std_logic_vector(15 downto 0);
 
             forward_data: out std_logic_vector(15 downto 0)
 
@@ -513,7 +523,17 @@ signal clk_3 : std_logic;
 signal clk_registers : std_logic;
 signal clk : std_logic;
 signal clkIn_clock : std_logic;
-signal clk_div4 : std_logic;
+signal clk_div4 : std_logic:='0';
+signal clk_div8 : std_logic:='0';
+signal clk_div16 : std_logic:='0';
+signal clk_div32 : std_logic:='0';
+signal clk_div64 : std_logic:='0';
+signal clk_div128 : std_logic:='0';
+signal clk_div256: std_logic:='0';
+signal clk_div512: std_logic:='0';
+signal clk_div1024 : std_logic:='0';
+signal clk_div2048 : std_logic:='0';
+signal clk_div4096 : std_logic:='0';
 
 
 signal s_forward_r_x: std_logic_vector(2 downto 0);
@@ -564,7 +584,7 @@ signal  s_exe_wb_memory_or_alu_out:std_logic_vector(1 downto 0);
 signal  s_exe_memoryWrite:std_logic;
 signal  s_exe_memoryRead:std_logic;
 signal  s_exe_registerWrite:std_logic;
---signal  s_exe_where:std_logic;
+signal  s_exe_where:std_logic;
 signal  s_exe_memData : std_logic_vector (15 downto 0);
 signal  s_exe_shouldJump:std_logic;
 signal  s_exe_jumpAddress:std_logic_vector(15 downto 0);
@@ -600,6 +620,9 @@ signal s_forward_data:std_logic_vector(15 downto 0);
 --font rom
 signal fontRomAddr : std_logic_vector(10 downto 0);
 signal fontRomData : std_logic_vector(7 downto 0);
+
+signal s_forward_memory: std_logic;
+signal s_forward_memory_data:std_logic_vector(15 downto 0);
 
 
 begin
@@ -762,7 +785,7 @@ begin
 
         registerWrite => s_exe_registerWrite,
         fromWhere => s_id_where,
-        --where => s_exe_where,
+        where => s_exe_where,
         memoryData => s_exe_memData,
         
         fromBranch => s_id_branch,
@@ -788,6 +811,9 @@ begin
         from_forwardx => s_from_forward_datax,
         from_forwardy => s_from_forward_datay,
         from_forward_address => s_from_forward_address,
+        memory_data_forward => s_forward_memory,
+        forward_memory_data => s_forward_memory_data,
+        
         
         forward_datax => s_forward_data,
         forward_datay => s_forward_data,
@@ -835,93 +861,17 @@ begin
         RegR6 => R6test,
         RegR7 => R7test,
         RegPC => s_pc_reg,
-        RegT => s_id_t,
-        RegIH => s_id_ih,
-        RegSP => s_id_sp,
+--        RegT => s_id_t,
+        RegT => s_id_immediate,
+--        RegIH => s_id_ih,
+        RegIH => s_instruction,
+--        RegSP => s_id_sp,
+        RegSP => s_exe_alu_out,
     --Control Signals
         reset    => rst,
         Clock => clk_in
     );    
-    
---    u25 : fontRom
---    port map(
---        clka => clk_in,
---        addra => fontRomAddr,
---        douta => fontRomData
---    );
    
-
-   
-
---    vga : VGA_play port map(
---        CLK_0 => clk_in,
---        clkout=> clk_useless,
---        reset=> rst,
-
---        -- vga port
---        color => video_color,
-----        color1 => leds,
---        Hs=> Hs,
---        Vs=> Vs,
---        v_clk => video_clk,
---        de => video_de,
-
---        -- fifo memory
---        wctrl=> "0",
---        waddr=> s_exe_memadress_out(10 downto 0),
---        wdata => s_exe_memdata_out(7 downto 0)
---        );
-
-    --local_mem: MemoryController port map(
-    --    --1为指令内存地址和数据
-    --    address1 => s_pc_reg, 
-    --    output1 => s_instruction,
-
-    --    --2为数据内存地址和数据，用于访存阶段
-    --    address2 => s_exe_memadress_out,
-    --    output2 => s_memout_mem,
-    --    clk => clk_in,--一个高频时钟
-    --    cpuclock => clk_3,--时钟四分频后输出
-        
-    --    --flash部分的信号，只是接到上层例化用于管脚绑定，在这一层实际上木有用
-    --    flash_byte => flash_byte,
-    --    flash_vpen => flash_vpen,
-    --    flash_ce =>flash_ce,
-    --    flash_oe => flash_oe,
-    --    flash_we => flash_we,
-    --    flash_rp => flash_rp,
-    --    flash_addr => flash_addr,
-    --    flash_data => flash_data,
-    --    --内存读写部分的信号
-
-    --    dataWrite =>  s_exe_memdata_out,--要写的数据
-    --    memoryAddr => ext_ram_addr,
-    --    MemWrite => s_exe_memwrite_out,--内存写信号
-    --    MemRead => s_exe_memread_out, --内存读信号
-
-    --    memoryEN =>en2,
-    --    memoryOE =>oe2,
-    --    memoryRW =>we2,
-
-        
-    --    --扩展数据线
-    --    extendDatabus =>ext_ram_data,        
-    --    --串口和VGA部分的信号
-    --    serial_wrn =>wrn,
-    --    serial_rdn =>rdn,
-    --    serial_dataready =>dataready,
-    --    serial_tsre =>tsre,
-    --    serial_tbre =>tbre,
-
-    --    basicdatabus => base_ram_data(7 downto 0),
-    --    ram1_en =>en1,
-    --    reset =>rst,
-        
-    --    VGA_addr =>vga_addr,
-    --    VGA_char =>vga_data,
-    --    vga_write=>VGA_write
-        
-    --);
 
     local_mem_wb: mem_wb port map(
         clk => clk_3,
@@ -957,6 +907,9 @@ begin
 exe_alu_rx => s_forward_exe_alu_rx,
         exe_alu_ry =>s_forward_exe_alu_ry,
         exe_select_address => s_forward_exe_address,
+        
+        memoryWrite => s_exe_memoryWrite,
+                exe_where => s_exe_where,
 
         rx => s_forward_r_x,
         ry => s_forward_r_y,
@@ -973,6 +926,8 @@ exe_alu_rx => s_forward_exe_alu_rx,
         from_forward_datax => s_from_forward_datax,
         from_forward_datay => s_from_forward_datay,
         from_forward_address => s_from_forward_address,
+        from_forward_memory => s_forward_memory,
+        forward_memory => s_forward_memory_data,
         forward_data => s_forward_data
 
     );
@@ -983,8 +938,67 @@ exe_alu_rx => s_forward_exe_alu_rx,
             clk_div4 <= not clk_div4;
         end if;
     end process;
-
+    
+    process (clk_div4)
+      begin
+          if clk_div4'event and clk_div4 = '1' then    --对50M输入信号二分频
+              clk_div8 <= not clk_div8;
+          end if;
+    end process;
  
+ 
+    process (clk_div8)
+       begin
+           if clk_div8'event and clk_div8 = '1' then    --对50M输入信号二分频
+               clk_div16 <= not clk_div16;
+           end if;
+   end process;
+  
+   process (clk_div16)
+    begin
+        if clk_div16'event and clk_div16 = '1' then    --对50M输入信号二分频
+            clk_div32 <= not clk_div32;
+        end if;
+    end process;
+    
+   process (clk_div32)
+     begin
+         if clk_div32'event and clk_div32 = '1' then    --对50M输入信号二分频
+             clk_div64 <= not clk_div64;
+         end if;
+     end process;
+     
+   process (clk_div64)
+      begin
+          if clk_div64'event and clk_div64 = '1' then    --对50M输入信号二分频
+              clk_div128 <= not clk_div128;
+          end if;
+     end process;
+    process (clk_div128)
+           begin
+               if clk_div128'event and clk_div128 = '1' then    --对50M输入信号二分频
+                   clk_div256 <= not clk_div256;
+               end if;
+           end process;
+     process (clk_div256)
+        begin
+            if clk_div256'event and clk_div256 = '1' then    --对50M输入信号二分频
+                clk_div512 <= not clk_div512;
+            end if;
+    end process;
+      process (clk_div512)
+       begin
+           if clk_div512'event and clk_div512 = '1' then    --对50M输入信号二分频
+               clk_div1024 <= not clk_div1024;
+           end if;
+       end process;
+    process (clk_div1024)
+          begin
+              if clk_div1024'event and clk_div1024 = '1' then    --对50M输入信号二分频
+                  clk_div2048 <= not clk_div2048;
+              end if;
+          end process;                                                               
+                                                          
     --clk_chooser
         process(clk_in, clk_hand, op,rst)
         begin
@@ -992,7 +1006,7 @@ exe_alu_rx => s_forward_exe_alu_rx,
                 if rst = '1' then
                     clkIn_clock <= '0';
                 else
-                    clkIn_clock <=clk_div4;
+                    clkIn_clock <=clk_div2048;
                 end if;
             else
                 if rst = '1' then
@@ -1009,44 +1023,14 @@ exe_alu_rx => s_forward_exe_alu_rx,
 --    leds(15 downto 8) <= s_instruction(15 downto 8);
 --    leds(7 downto 0) <= s_pc_reg(7 downto 0);
 --    leds(7 downto 0) <= fontRomData(7 downto 0);
-leds(15 downto 0) <= s_instruction(15 downto 0);
+    leds(15 downto 0) <= s_forward_data;
+    leds(28) <= s_forward_memory;
+--leds(15 downto 0) <= s_instruction(15 downto 0);
     leds(16) <= s_exe_shouldJump;
     leds(19 downto 17) <= s_id_branch;
     leds(24) <= s_wb_write;
     leds(25) <= s_from_forward_datax;
     leds(26) <= s_exe_regwrite_out;
-    --locla_if: IRMemory  port map( 
-    --        clk => clk_mem,
-    --        rst => rst --复位信号
-    --        address => s_pc_reg;
-            
-    --        --Op:in STD_LOGIC; --操作类型，0表示读，否则什么都不做
-            
-    --        base_ram_data:inout STD_LOGIC_VECTOR(15 downto 0) := "0000000000000000"; --从内存中读取指令进该元件 RAM1存指令
-    --        base_ram_addr:out STD_LOGIC_VECTOR(17 downto 0) := "000000000000000000"; --输入到RAM1的内存地址 RAM1存放地址
-            
-    --        MemOut:out STD_LOGIC_VECTOR(15 downto 0):="0000100000000000"; --把数据输出给其他元件
-            
-    --        oe1,we1:out STD_LOGIC := '1';--RAM1的使能信号.RAM1存指令
-    --        en1:out STD_LOGIC := '1';--初始使能为1
-            
-    --        loadfinish:out STD_LOGIC := '0'; --flash加载完成信号
-            
-    --        --stateout:out STD_LOGIC_VECTOR(6 downto 0) := "0000000";--测试用输出
-            
-    --        rdn:out STD_LOGIC := '1';  --串口使能信号，置为1，关闭串口
-    --        wrn:out STD_LOGIC := '1'; --串口写信号，置为1，关闭串口
-    --        ---------------------------------------------------
-    --        --Flash的相关信号
-    --        flash_byte : out STD_LOGIC := '1'; --操作模式,采用字模式
-    --        flash_vpen : out STD_LOGIC := '1'; --写保护，置为1
-    --        flash_ce : out STD_LOGIC := '0' ; --使能信号,该模块只负责flash的读，故ce置为0即可
-    --        flash_oe : out STD_LOGIC := '1'; --读使能
-    --        flash_we : out STD_LOGIC := '1'; --写使能
-    --        flash_rp : out STD_LOGIC := '1'; --工作模式，1为工作
-    --        flash_addr : out STD_LOGIC_VECTOR( 22 downto 1 ) := "0000000000000000000000"; --flash内存地址
-    --        flash_data : inout STD_LOGIC_VECTOR( 15 downto 0 ) --flash输出信号
-    --        );
 
 
 end architecture ; -- Computer_beh

@@ -13,15 +13,16 @@ entity PCRegister is
 end PCRegister;
 
 architecture Behavioral of PCRegister is
-
+signal s_pc_in:std_logic_vector(15 downto 0);
 begin
-	process(clk,rst)
+	process(clk,rst,PCIn)
 	begin
+	   s_pc_in <= PCIn;
 		if (rst = '1') then 
 			PCOut <= "0000000000000000";
 		elsif clk'event and clk = '1'then
 			if PCHold = '0' then
-				PCOut <= PCIn;
+				PCOut <= s_pc_in;
 			end if;
 		end if;
 	end process;

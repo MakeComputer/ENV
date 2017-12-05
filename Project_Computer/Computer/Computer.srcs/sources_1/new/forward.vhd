@@ -9,6 +9,9 @@ entity forward is
 		exe_alu_ry: in std_logic_vector(1 downto 0);
 		exe_select_address: in std_logic_vector(1 downto 0);
 		
+		memoryWrite: in std_logic;
+		exe_where: in std_logic;
+		
 		rx: in std_logic_vector(2 downto 0);
 		ry: in std_logic_vector(2 downto 0);
 		
@@ -23,7 +26,9 @@ entity forward is
 		from_forward_datax: out std_logic := '0';
 		from_forward_datay: out std_logic := '0';
 		from_forward_address: out std_logic := '0';
+		from_forward_memory: out std_logic := '0';
 		
+		forward_memory: out std_logic_vector(15 downto 0) := "0000000000000000";
 		forward_data: out std_logic_vector(15 downto 0) := "0000000000000000"
 		
 	);
@@ -31,7 +36,7 @@ end forward;
 
 architecture behavior of forward is
 begin
-	process(exe_alu_rx,exe_alu_ry,exe_select_address,rx,ry,address_memory,mem_registerWrite,mem_aluout,address_wb,wb_registerWrite,wb_toRegister)
+	process(exe_alu_rx,exe_alu_ry,exe_select_address,rx,ry,address_memory,mem_registerWrite,mem_aluout,address_wb,memoryWrite,exe_where,wb_registerWrite,wb_toRegister)
 	begin
 		if wb_registerWrite = '1' and address_memory /= address_wb and
 			((exe_alu_rx = "000" and ("0" & rx) = address_wb) or  
@@ -43,6 +48,7 @@ begin
 			from_forward_datax <= '1';
 			from_forward_datay <= '0';
 			from_forward_address <= '0';
+--			from_forward_memory <= '0';
 			forward_data <= wb_toRegister;
 		--end if;
 		
@@ -52,6 +58,7 @@ begin
 			from_forward_datay <= '1';
 			from_forward_datax <= '0';
 			from_forward_address <= '0';
+--			from_forward_memory <= '0';
 			forward_data <= wb_toRegister;
 		--end if;
 		
@@ -61,6 +68,7 @@ begin
 			from_forward_address <= '1';
 			from_forward_datay <= '0';
 			from_forward_datax <= '0';
+--			from_forward_memory <= '0';
 			forward_data <= wb_toRegister;
 		--end if;
 		
@@ -74,6 +82,7 @@ begin
             from_forward_datax <= '1';
             from_forward_datay <= '0';
             from_forward_address <= '0';
+--            from_forward_memory <= '0';
             forward_data <= mem_aluout;
         --end if;
                 
@@ -83,6 +92,7 @@ begin
             from_forward_datay <= '1';
             from_forward_datax <= '0';
             from_forward_address <= '0';
+--            from_forward_memory <= '0';
             forward_data <= mem_aluout;
         --end if;
         
@@ -92,14 +102,50 @@ begin
             from_forward_address <= '1';
             from_forward_datay <= '0';
             from_forward_datax <= '0';
+--            from_forward_memory <= '0';
             forward_data <= mem_aluout;
-            
         else
             from_forward_datax <= '0';
             from_forward_datay <= '0';
             from_forward_address <= '0';
+            from_forward_memory <= '0';
             forward_data <= "0000000000000000";
         end if;
+        
+        
+        
+         if memoryWrite = '1' and exe_where = '1' and ("0" & ry = address_memory) and
+                   mem_registerWrite = '1' then
+                   from_forward_memory <= '1';
+--                   from_forward_datay <= '0';
+--                   from_forward_datax <= '0';
+--                   from_forward_address <= '0';
+                   forward_memory <= mem_aluout;
+               elsif memoryWrite = '1' and exe_where = '0' and ("0" & rx = address_memory) and
+                               mem_registerWrite = '1' then
+                               from_forward_memory <= '1';
+--                               from_forward_datay <= '0';
+--                               from_forward_datax <= '0';
+--                               from_forward_address <= '0';
+                               forward_memory <= mem_aluout;
+                elsif memoryWrite = '1' and exe_where = '0' and ("0" & rx = address_wb) and
+                      wb_registerWrite = '1' and address_memory /= address_wb then
+                       from_forward_memory <= '1';
+--                       from_forward_datay <= '0';
+--                       from_forward_datax <= '0';
+--                       from_forward_address <= '0';
+                       forward_memory <= wb_toRegister;
+               elsif memoryWrite = '1' and exe_where = '1' and ("0" & ry = address_wb) and
+                     wb_registerWrite = '1' and address_memory /= address_wb then
+                      from_forward_memory <= '1';
+--                      from_forward_datay <= '0';
+--                      from_forward_datax <= '0';
+--                      from_forward_address <= '0';
+                      forward_memory <= wb_toRegister;
+                else
+                    from_forward_memory <= '0';
+                    forward_memory <= "0000000000000000";
+             end if;                         
                 
 		
 	end process;

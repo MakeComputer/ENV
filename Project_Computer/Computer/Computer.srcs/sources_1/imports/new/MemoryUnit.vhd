@@ -121,7 +121,7 @@ begin
 	--flash_rp <= '1';
 	--flash_ce <= '0';
 	
-	process(clk, rst)
+	process(clk, rst,PCOut)
 	begin
 	
 		if (rst = '1') then

@@ -1,4 +1,4 @@
-set_property SRC_FILE_INFO {cfile:E:/GitHub/TestVGA/Computer/Computer.srcs/constrs_1/new/Computer.xdc rfile:../../../Computer.srcs/constrs_1/new/Computer.xdc id:1} [current_design]
+set_property SRC_FILE_INFO {cfile:E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/constrs_1/new/Computer.xdc rfile:../../../Computer.srcs/constrs_1/new/Computer.xdc id:1} [current_design]
 set_property src_info {type:XDC file:1 line:2 export:INPUT save:INPUT read:READ} [current_design]
 set_property -dict {PACKAGE_PIN D18 IOSTANDARD LVCMOS33} [get_ports clk_in]
 set_property src_info {type:XDC file:1 line:3 export:INPUT save:INPUT read:READ} [current_design]
