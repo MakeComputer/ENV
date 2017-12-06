@@ -188,6 +188,11 @@ signal s_bubble: std_logic;
 signal s_readAddressA: std_logic_vector(3 downto 0);
 signal s_readAddressB: std_logic_vector(3 downto 0);
 
+signal pause_instruction: std_logic_vector(15 downto 0);
+signal s_pause1: std_logic;
+signal s_pause2: std_logic;
+
+
 begin
 	decoder_instance: decoder port map(
 		instruction => s_instruction,
@@ -208,7 +213,7 @@ begin
 	);
 	
 	mux_control_instance: mux_control port map(
-		jump => s_jump,
+		jump => s_pause2,
 		bubble => s_bubble,
 		
 		fromMemoryRead => s_from_memoryRead,
@@ -304,16 +309,41 @@ begin
 	exe_select_goal <= s_select_goal;
 	
 	
-	process(reset, clock, pause,flush)
+	process(reset, clock, pause,flush,bubble)
 	begin
 		
-		if reset = '1' or flush = '1' then
+		if reset = '1'then  
 			s_instruction <= "0000000000000000";
 			s_from_pc <= "0000000000000000";
-		elsif clock'event and clock = '1' and pause = '0' then
+			pause_instruction <= "0000000000000000";
+			s_pause1 <= '0';
+			s_pause2 <= '0';
+		elsif clock'event and clock = '1'then
+		
+			
+		if bubble = '1' then
+		  pause_instruction <= instruction;
+          s_instruction <= "0000000000000000";
+          s_pause1 <= '1';
+--        end if;
+        
+        elsif s_pause1 = '1' then
+            s_instruction <= pause_instruction;
+            s_pause1 <= '0';
+            s_pause2 <= '1';
+       elsif s_pause2 = '1' then
+                   s_instruction <= pause_instruction;
+                   s_pause2 <= '0';
+--        end if;
+        elsif flush = '0' then
 			s_instruction <= instruction;
-			s_from_pc <= fromPC+"0000000000000001";
+			s_from_pc <= fromPC;
+		else
+			s_instruction <= "0000000000000000";
+			end if;        
+        
 		end if;
+		
 	end process;
 
 end behavior;

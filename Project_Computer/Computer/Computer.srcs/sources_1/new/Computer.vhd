@@ -265,7 +265,7 @@ architecture Computer_beh of Computer is
         ram2_en : out std_logic;        --RAM2使能，='1'禁止
         ram2_oe : out std_logic;        --RAM2读使能，='1'禁止
         ram2_we : out std_logic;        --RAM2写使能，='1'禁止
-        
+        MemoryState : out std_logic_vector(15 downto 0);
    
         --Flash
         flash_addr : out std_logic_vector(22 downto 0);     --flash地址线
@@ -468,6 +468,9 @@ architecture Computer_beh of Computer is
             address_memory: in std_logic_vector(3 downto 0);
             mem_registerWrite: in std_logic;
             mem_aluout: in std_logic_vector(15 downto 0);
+            
+            memory_which: in std_logic_vector(1 downto 0);
+            wb_memory_data: in std_logic_vector(15 downto 0);
 
             address_wb: in std_logic_vector(3 downto 0);
             wb_registerWrite: in std_logic;
@@ -489,8 +492,11 @@ architecture Computer_beh of Computer is
     component hazard is
         port(
         memoryRead: in std_logic;
-        goal: in std_logic_vector(3 downto 0);
+--        goal: in std_logic_vector(3 downto 0);
         instruction: in std_logic_vector(15 downto 0);
+        r_x: in std_logic_vector(2 downto 0);
+                r_y: in std_logic_vector(2 downto 0);
+                selection: in std_logic_vector(2 downto 0);
         
         pause: out std_logic;
         bubble: out std_logic
@@ -518,6 +524,7 @@ signal R5test:std_logic_vector(15 downto 0);
 signal R6test:std_logic_vector(15 downto 0);
 signal R7test:std_logic_vector(15 downto 0);
 
+signal mem_test_pc:std_logic_vector(15 downto 0);
 
 signal clk_3 : std_logic;
 signal clk_registers : std_logic;
@@ -670,7 +677,7 @@ begin
             ram2_en => en2,
             ram2_oe => oe2,
             ram2_we => we2,
-            
+            MemoryState => mem_test_pc,
             
             flash_addr => flash_addr,
             flash_data => flash_data,
@@ -860,9 +867,9 @@ begin
         RegR5 => R5test,
         RegR6 => R6test,
         RegR7 => R7test,
-        RegPC => s_pc_reg,
---        RegT => s_id_t,
-        RegT => s_id_immediate,
+        RegPC => mem_test_pc,
+        RegT => s_id_t,
+--        RegT => s_id_immediate,
 --        RegIH => s_id_ih,
         RegIH => s_instruction,
 --        RegSP => s_id_sp,
@@ -889,9 +896,12 @@ begin
     );
     
     local_hazard: hazard port map(
-        memoryRead => s_exe_memoryRead,
-        goal => s_exe_goal,
+        memoryRead => s_id_memoryRead,
+--        goal => s_exe_goal,
         instruction => s_instruction,
+        r_x =>s_id_r_x,
+        r_y =>s_id_r_y,
+        selection=>s_id_exe_select_goal,
         
         pause => s_pause,
         bubble => s_bubble
@@ -903,7 +913,8 @@ begin
 
 --        rx => s_id_r_x,
 --        ry => s_id_r_y,
-
+memory_which => s_exe_memtoreg_out,
+wb_memory_data =>s_exe_memdata_out,
 exe_alu_rx => s_forward_exe_alu_rx,
         exe_alu_ry =>s_forward_exe_alu_ry,
         exe_select_address => s_forward_exe_address,
@@ -1006,7 +1017,7 @@ exe_alu_rx => s_forward_exe_alu_rx,
                 if rst = '1' then
                     clkIn_clock <= '0';
                 else
-                    clkIn_clock <=clk_div2048;
+                    clkIn_clock <=clk_div256;
                 end if;
             else
                 if rst = '1' then

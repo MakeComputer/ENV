@@ -28,6 +28,10 @@ entity forward is
 		from_forward_address: out std_logic := '0';
 		from_forward_memory: out std_logic := '0';
 		
+		memory_which: in std_logic_vector(1 downto 0);
+--		wb_which: in std_logic_vector(1 downto 0);
+		wb_memory_data: in std_logic_vector(15 downto 0);
+		
 		forward_memory: out std_logic_vector(15 downto 0) := "0000000000000000";
 		forward_data: out std_logic_vector(15 downto 0) := "0000000000000000"
 		
@@ -36,7 +40,7 @@ end forward;
 
 architecture behavior of forward is
 begin
-	process(exe_alu_rx,exe_alu_ry,exe_select_address,rx,ry,address_memory,mem_registerWrite,mem_aluout,address_wb,memoryWrite,exe_where,wb_registerWrite,wb_toRegister)
+	process(memory_which,wb_memory_data,exe_alu_rx,exe_alu_ry,exe_select_address,rx,ry,address_memory,mem_registerWrite,mem_aluout,address_wb,memoryWrite,exe_where,wb_registerWrite,wb_toRegister)
 	begin
 		if wb_registerWrite = '1' and address_memory /= address_wb and
 			((exe_alu_rx = "000" and ("0" & rx) = address_wb) or  
@@ -49,6 +53,23 @@ begin
 			from_forward_datay <= '0';
 			from_forward_address <= '0';
 --			from_forward_memory <= '0';
+--            if	(wb_which="00") then
+--			forward_data<=wb_toRegister;
+--		elsif wb_which = "01" then
+--			forward_data<=wb_memory_data;
+--		elsif wb_which = "10" then 
+--			if wb_toRegister = "0000000000000000" then
+--				forward_data<="0000000000000000";
+--			else
+--				forward_data<="0000000000000001";
+--			end if;
+--		elsif wb_which = "11" then
+--			if wb_toRegister(15) = '0' then
+--				forward_data<="0000000000000000";
+--			else
+--				forward_data<="0000000000000001";
+--			end if;
+--		end if;
 			forward_data <= wb_toRegister;
 		--end if;
 		
@@ -60,6 +81,23 @@ begin
 			from_forward_address <= '0';
 --			from_forward_memory <= '0';
 			forward_data <= wb_toRegister;
+--if	(wb_which="00") then
+--			forward_data<=wb_toRegister;
+--		elsif wb_which = "01" then
+--			forward_data<=wb_memory_data;
+--		elsif wb_which = "10" then 
+--			if wb_toRegister = "0000000000000000" then
+--				forward_data<="0000000000000000";
+--			else
+--				forward_data<="0000000000000001";
+--			end if;
+--		elsif wb_which = "11" then
+--			if wb_toRegister(15) = '0' then
+--				forward_data<="0000000000000000";
+--			else
+--				forward_data<="0000000000000001";
+--			end if;
+--		end if;
 		--end if;
 		
 		elsif wb_registerWrite = '1' and address_memory /= address_wb and
@@ -70,6 +108,23 @@ begin
 			from_forward_datax <= '0';
 --			from_forward_memory <= '0';
 			forward_data <= wb_toRegister;
+--if	(wb_which="00") then
+--			forward_data<=wb_toRegister;
+--		elsif wb_which = "01" then
+--			forward_data<=wb_memory_data;
+--		elsif wb_which = "10" then 
+--			if wb_toRegister = "0000000000000000" then
+--				forward_data<="0000000000000000";
+--			else
+--				forward_data<="0000000000000001";
+--			end if;
+--		elsif wb_which = "11" then
+--			if wb_toRegister(15) = '0' then
+--				forward_data<="0000000000000000";
+--			else
+--				forward_data<="0000000000000001";
+--			end if;
+--		end if;
 		--end if;
 		
 		elsif mem_registerWrite = '1' and 
@@ -83,7 +138,25 @@ begin
             from_forward_datay <= '0';
             from_forward_address <= '0';
 --            from_forward_memory <= '0';
-            forward_data <= mem_aluout;
+--            forward_data <= mem_aluout;
+
+if	(memory_which="00") then
+			forward_data<=mem_aluout;
+--		elsif memory_which = "01" then
+--			forward_data<=wb_memory_data;
+		elsif memory_which = "10" then 
+			if mem_aluout = "0000000000000000" then
+				forward_data<="0000000000000000";
+			else
+				forward_data<="0000000000000001";
+			end if;
+		elsif memory_which = "11" then
+			if mem_aluout(15) = '0' then
+				forward_data<="0000000000000000";
+			else
+				forward_data<="0000000000000001";
+			end if;
+		end if;
         --end if;
                 
         elsif mem_registerWrite = '1' and 
@@ -93,7 +166,24 @@ begin
             from_forward_datax <= '0';
             from_forward_address <= '0';
 --            from_forward_memory <= '0';
-            forward_data <= mem_aluout;
+--            forward_data <= mem_aluout;
+if	(memory_which="00") then
+			forward_data<=mem_aluout;
+--		elsif memory_which = "01" then
+--			forward_data<=wb_memory_data;
+		elsif memory_which = "10" then 
+			if mem_aluout = "0000000000000000" then
+				forward_data<="0000000000000000";
+			else
+				forward_data<="0000000000000001";
+			end if;
+		elsif memory_which = "11" then
+			if mem_aluout(15) = '0' then
+				forward_data<="0000000000000000";
+			else
+				forward_data<="0000000000000001";
+			end if;
+		end if;
         --end if;
         
         elsif mem_registerWrite = '1' and 
@@ -103,7 +193,24 @@ begin
             from_forward_datay <= '0';
             from_forward_datax <= '0';
 --            from_forward_memory <= '0';
-            forward_data <= mem_aluout;
+--            forward_data <= mem_aluout;
+if	(memory_which="00") then
+			forward_data<=mem_aluout;
+--		elsif memory_which = "01" then
+--			forward_data<=wb_memory_data;
+		elsif memory_which = "10" then 
+			if mem_aluout = "0000000000000000" then
+				forward_data<="0000000000000000";
+			else
+				forward_data<="0000000000000001";
+			end if;
+		elsif memory_which = "11" then
+			if mem_aluout(15) = '0' then
+				forward_data<="0000000000000000";
+			else
+				forward_data<="0000000000000001";
+			end if;
+		end if;
         else
             from_forward_datax <= '0';
             from_forward_datay <= '0';

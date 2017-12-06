@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2017.1 (win64) Build 1846317 Fri Apr 14 18:55:03 MDT 2017
-| Date         : Tue Dec  5 22:01:11 2017
+| Date         : Wed Dec  6 21:39:12 2017
 | Host         : samsung running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file Computer_control_sets_placed.rpt
 | Design       : Computer
@@ -23,7 +23,7 @@ Table of Contents
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
 | Number of unique control sets                            |    37 |
-| Unused register locations in slices containing registers |   124 |
+| Unused register locations in slices containing registers |   109 |
 +----------------------------------------------------------+-------+
 
 
@@ -33,11 +33,11 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |              13 |           13 |
-| No           | No                    | Yes                    |             243 |          102 |
+| No           | No                    | No                     |              26 |           14 |
+| No           | No                    | Yes                    |             277 |          112 |
 | No           | Yes                   | No                     |               1 |            1 |
-| Yes          | No                    | No                     |              26 |            7 |
-| Yes          | No                    | Yes                    |             297 |           82 |
+| Yes          | No                    | No                     |              58 |           11 |
+| Yes          | No                    | Yes                    |             281 |           74 |
 | Yes          | Yes                   | No                     |               0 |            0 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
@@ -45,57 +45,57 @@ Table of Contents
 3. Detailed Control Set Information
 -----------------------------------
 
-+-----------------------+------------------------------------+----------------------+------------------+----------------+
-|      Clock Signal     |            Enable Signal           |   Set/Reset Signal   | Slice Load Count | Bel Load Count |
-+-----------------------+------------------------------------+----------------------+------------------+----------------+
-|  n_0_878_BUFG         |                                    | u17/flash_ce_i_1_n_1 |                1 |              1 |
-|  n_0_878_BUFG         |                                    |                      |                1 |              1 |
-|  clk_div1024          |                                    |                      |                1 |              1 |
-|  clk_div128           |                                    |                      |                1 |              1 |
-|  clk_div16            |                                    |                      |                1 |              1 |
-|  clk_div256           |                                    |                      |                1 |              1 |
-|  clk_div8             |                                    |                      |                1 |              1 |
-|  clk_in_IBUF_BUFG     |                                    | rst_IBUF             |                1 |              1 |
-|  clk_div32            |                                    |                      |                1 |              1 |
-|  clk_div4             |                                    |                      |                1 |              1 |
-|  clk_div512           |                                    |                      |                1 |              1 |
-|  clk_div64            |                                    |                      |                1 |              1 |
-|  u18/count[1]_i_2_n_1 |                                    | rst_IBUF             |                1 |              3 |
-|  clk_in_IBUF_BUFG     |                                    |                      |                3 |              3 |
-|  n_0_878_BUFG         |                                    | rst_IBUF             |                4 |              7 |
-|  u23/clk              | u23/sel                            | rst_IBUF             |                5 |              9 |
-|  n_0_878_BUFG         | local_exe_mem/E[0]                 |                      |                2 |              9 |
-|  clk_3_BUFG           | local_exe/p_1_in                   | rst_IBUF             |                4 |             16 |
-| ~n_0_878_BUFG         | local_mem_wb/E[0]                  | rst_IBUF             |                3 |             16 |
-|  n_0_878_BUFG         | local_exe_mem/ram2_addr_reg[15][0] | rst_IBUF             |                4 |             16 |
-|  n_0_878_BUFG         | local_exe_mem/dataOut_reg[15][0]   | rst_IBUF             |                3 |             16 |
-|  n_0_878_BUFG         | u17/insOut[15]_i_1_n_1             | rst_IBUF             |                4 |             16 |
-| ~n_0_878_BUFG         | local_mem_wb/s1_reg[15][0]         | rst_IBUF             |                2 |             16 |
-| ~n_0_878_BUFG         | local_mem_wb/s2_reg[15][0]         | rst_IBUF             |                3 |             16 |
-| ~n_0_878_BUFG         | local_mem_wb/s3_reg[15][0]         | rst_IBUF             |                4 |             16 |
-| ~n_0_878_BUFG         | local_mem_wb/s4_reg[15][0]         | rst_IBUF             |                5 |             16 |
-| ~n_0_878_BUFG         | local_mem_wb/s5_reg[15][0]         | rst_IBUF             |                6 |             16 |
-| ~n_0_878_BUFG         | local_mem_wb/s6_reg[15][0]         | rst_IBUF             |                3 |             16 |
-| ~n_0_878_BUFG         | local_mem_wb/s7_reg[15][0]         | rst_IBUF             |                6 |             16 |
-| ~n_0_878_BUFG         | local_mem_wb/sih_reg[15][0]        | rst_IBUF             |                3 |             16 |
-| ~n_0_878_BUFG         | local_mem_wb/ssp_reg[15][0]        | rst_IBUF             |                5 |             16 |
-| ~n_0_878_BUFG         | local_mem_wb/st_reg[15][0]         | rst_IBUF             |                8 |             16 |
-| ~n_0_878_BUFG         | local_mem_wb/ras_reg[15][0]        | rst_IBUF             |                6 |             16 |
-|  n_0_878_BUFG         | u17/E[0]                           |                      |                5 |             17 |
-|  u23/clk              |                                    | rst_IBUF             |                9 |             17 |
-|  clk_3_BUFG           | local_exe/p_1_in                   | local_exe/AR[0]      |                8 |             32 |
-|  clk_3_BUFG           |                                    | rst_IBUF             |               87 |            215 |
-+-----------------------+------------------------------------+----------------------+------------------+----------------+
++----------------------------------+-------------------------------------------+----------------------+------------------+----------------+
+|           Clock Signal           |               Enable Signal               |   Set/Reset Signal   | Slice Load Count | Bel Load Count |
++----------------------------------+-------------------------------------------+----------------------+------------------+----------------+
+|  n_0_942_BUFG                    |                                           |                      |                1 |              1 |
+|  n_0_942_BUFG                    |                                           | u17/flash_ce_i_1_n_1 |                1 |              1 |
+|  clk_div128                      |                                           |                      |                1 |              1 |
+|  clk_div16                       |                                           |                      |                1 |              1 |
+|  clk_div32                       |                                           |                      |                1 |              1 |
+|  clk_div4                        |                                           |                      |                1 |              1 |
+|  clk_div64                       |                                           |                      |                1 |              1 |
+|  clk_div8                        |                                           |                      |                1 |              1 |
+|  clk_in_IBUF_BUFG                |                                           | rst_IBUF             |                1 |              1 |
+|  clk_in_IBUF_BUFG                |                                           |                      |                3 |              3 |
+|  u18/count[1]_i_2_n_1            |                                           | rst_IBUF             |                1 |              3 |
+|  n_0_942_BUFG                    |                                           | rst_IBUF             |                2 |              7 |
+|  n_0_942_BUFG                    | local_exe_mem/ram1_data_retimed_reg[0][0] |                      |                2 |              9 |
+|  u23/clk                         | u23/sel                                   | rst_IBUF             |                5 |              9 |
+|  n_0_942_BUFG                    | u17/insOut[15]_i_1_n_1                    | rst_IBUF             |                4 |             16 |
+|  clk_3_BUFG                      | local_id/s_from_pc                        | rst_IBUF             |                4 |             16 |
+|  clk_3_BUFG                      | local_id/s_bubble                         | rst_IBUF             |                3 |             16 |
+|  local_exe_mem/PCOut_reg[0]_1[0] |                                           |                      |                4 |             16 |
+| ~n_0_942_BUFG                    | local_mem_wb/E[0]                         | rst_IBUF             |                4 |             16 |
+|  n_0_942_BUFG                    | u17/s_mem_state0                          |                      |                3 |             16 |
+|  n_0_942_BUFG                    | u17/MemoryState_reg[15]_0[0]              |                      |                3 |             16 |
+|  n_0_942_BUFG                    | local_exe_mem/dataOut_reg[15][0]          | rst_IBUF             |                3 |             16 |
+|  n_0_942_BUFG                    | local_exe_mem/E[0]                        | rst_IBUF             |                3 |             16 |
+| ~n_0_942_BUFG                    | local_mem_wb/ras_reg[15][0]               | rst_IBUF             |                5 |             16 |
+| ~n_0_942_BUFG                    | local_mem_wb/s1_reg[15][0]                | rst_IBUF             |                4 |             16 |
+| ~n_0_942_BUFG                    | local_mem_wb/s2_reg[15][0]                | rst_IBUF             |                3 |             16 |
+| ~n_0_942_BUFG                    | local_mem_wb/s3_reg[15][0]                | rst_IBUF             |                4 |             16 |
+| ~n_0_942_BUFG                    | local_mem_wb/s4_reg[15][0]                | rst_IBUF             |                3 |             16 |
+| ~n_0_942_BUFG                    | local_mem_wb/s5_reg[15][0]                | rst_IBUF             |                4 |             16 |
+| ~n_0_942_BUFG                    | local_mem_wb/s6_reg[15][0]                | rst_IBUF             |                3 |             16 |
+| ~n_0_942_BUFG                    | local_mem_wb/s7_reg[15][0]                | rst_IBUF             |                5 |             16 |
+| ~n_0_942_BUFG                    | local_mem_wb/sih_reg[15][0]               | rst_IBUF             |                9 |             16 |
+| ~n_0_942_BUFG                    | local_mem_wb/ssp_reg[15][0]               | rst_IBUF             |                5 |             16 |
+| ~n_0_942_BUFG                    | local_mem_wb/st_reg[15][0]                | rst_IBUF             |                3 |             16 |
+|  n_0_942_BUFG                    | u17/E[0]                                  |                      |                3 |             17 |
+|  u23/clk                         |                                           | rst_IBUF             |               11 |             17 |
+|  clk_3_BUFG                      |                                           | rst_IBUF             |               97 |            249 |
++----------------------------------+-------------------------------------------+----------------------+------------------+----------------+
 
 
 +--------+-----------------------+
 | Fanout | Number of ControlSets |
 +--------+-----------------------+
-| 1      |                    12 |
+| 1      |                     9 |
 | 3      |                     2 |
 | 7      |                     1 |
 | 9      |                     2 |
-| 16+    |                    20 |
+| 16+    |                    23 |
 +--------+-----------------------+
 
 

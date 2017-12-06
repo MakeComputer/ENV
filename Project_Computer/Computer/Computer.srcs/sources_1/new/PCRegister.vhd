@@ -15,7 +15,7 @@ end PCRegister;
 architecture Behavioral of PCRegister is
 signal s_pc_in:std_logic_vector(15 downto 0);
 begin
-	process(clk,rst,PCIn)
+	process(clk,rst,PCIn,PCHold)
 	begin
 	   s_pc_in <= PCIn;
 		if (rst = '1') then 
@@ -23,6 +23,8 @@ begin
 		elsif clk'event and clk = '1'then
 			if PCHold = '0' then
 				PCOut <= s_pc_in;
+	       else
+	           PCOut <= s_pc_in - "0000000000000010";
 			end if;
 		end if;
 	end process;

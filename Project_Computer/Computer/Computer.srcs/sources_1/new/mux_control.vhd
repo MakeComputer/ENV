@@ -40,7 +40,7 @@ begin
 	process(jump, bubble, fromMemoryRead, fromMemoryWrite, fromRegisterWrite, fromWhere, fromBranch,
 			from_wb_memory_or_aluout, from_alu_op, from_alu_rx, from_alu_ry, from_address, fromGoal)
 	begin
-		if jump = '1' or bubble = '1'then 
+		if jump = '1'then 
 			MemoryRead <= '0';
 			MemoryWrite <= '0';
 			RegisterWrite <= '0';

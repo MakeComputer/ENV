@@ -72,7 +72,7 @@ entity MemoryUnit is
 		ram2_oe : out std_logic;		--RAM2读使能，='1'禁止
 		ram2_we : out std_logic;		--RAM2写使能，='1'禁止
 		
-		--MemoryState : out std_logic_vector(1 downto 0);
+		MemoryState : out std_logic_vector(15 downto 0);
 		--FlashStateOut : out std_logic_vector(2 downto 0);
 		
 		--flashFinished : out std_logic := '0';
@@ -104,6 +104,8 @@ architecture Behavioral of MemoryUnit is
 	signal flashstate : std_logic_vector(2 downto 0) := "001";
 	signal current_addr : std_logic_vector(15 downto 0) := (others => '0');	--flash当前要读的地�?
 	shared variable cnt : integer := 0;	--用于削弱50M时钟频率�?1M
+	
+	signal s_mem_state : std_logic_vector(15 downto 0) := (others => '0');
 	
 begin
 	
@@ -165,6 +167,7 @@ begin
 						
 					when "00" =>		--准备读指�?
 						
+						s_mem_state <= PCOut;
 							
 						ram2_addr(15 downto 0) <= PCOut;
 						
@@ -176,6 +179,8 @@ begin
 						state <= "01";
 						
 					when "01" =>		--读出指令，准备读/�? 串口/内存
+						
+						MemoryState <= s_mem_state;
 						
 						insOut <= ram2_data;
 						ram2_oe <= '1';
