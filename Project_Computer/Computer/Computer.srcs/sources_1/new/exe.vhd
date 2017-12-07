@@ -235,10 +235,10 @@ begin
 	alu_out <= s_alu_out;
 	goal <= s_goal;
 	
-	process(s_branch, s_rx, s_t)
+	process(s_branch,s_alu_out)
 	begin
-		if s_branch = "001" or (s_branch = "010" and s_rx = X"0000") or 
-			(s_branch = "011" and s_rx /= X"0000") or (s_branch = "100" and s_t = X"0000") or
+		if s_branch = "001" or (s_branch = "010" and s_alu_out = X"0000") or 
+			(s_branch = "011" and s_alu_out /= X"0000") or (s_branch = "100" and s_alu_out = X"0000") or
 			s_branch = "101" or s_branch = "110" or s_branch = "111" then
 			shouldJump <= '1';
 		else

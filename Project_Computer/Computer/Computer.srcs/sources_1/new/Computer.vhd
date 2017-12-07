@@ -118,6 +118,7 @@ architecture Computer_beh of Computer is
     port(   
             rst,clk : in std_logic;
             PCHold : in std_logic;
+            PCHold2: in std_logic;
             PCIn : in std_logic_vector(15 downto 0);
             PCOut : out std_logic_vector(15 downto 0)
         );
@@ -493,6 +494,8 @@ architecture Computer_beh of Computer is
         port(
         memoryRead: in std_logic;
 --        goal: in std_logic_vector(3 downto 0);
+        exe_memory_read: in std_logic;
+		goal: in std_logic_vector(3 downto 0);
         instruction: in std_logic_vector(15 downto 0);
         r_x: in std_logic_vector(2 downto 0);
                 r_y: in std_logic_vector(2 downto 0);
@@ -646,7 +649,7 @@ begin
 
     u17 : MemoryUnit
         port map( 
-            clk => clk,
+            clk => clkIn_clock,
             rst => rst,
             
             data_ready => dataready,
@@ -677,6 +680,17 @@ begin
             ram2_en => en2,
             ram2_oe => oe2,
             ram2_we => we2,
+--            ram2_addr => base_ram_addr(19 downto 0),
+--            ram1_addr => ext_ram_addr(19 downto 0),
+--            ram2_data => base_ram_data(15 downto 0),
+--            ram1_data => ext_ram_data(15 downto 0),
+            
+--            ram2_en => en1,
+--            ram2_oe => oe1,
+--            ram2_we => we1,
+--            ram1_en => en2,
+--            ram1_oe => oe2,
+--            ram1_we => we2,
             MemoryState => mem_test_pc,
             
             flash_addr => flash_addr,
@@ -708,6 +722,7 @@ begin
             rst => rst,
             clk => clk_3,
             PCHold => s_bubble,
+            PCHold2 => s_pause,
             PCIn => s_pc_mux,
             PCOut => s_pc_reg
         );
@@ -896,8 +911,9 @@ begin
     );
     
     local_hazard: hazard port map(
+        exe_memory_read => s_exe_memoryRead,
         memoryRead => s_id_memoryRead,
---        goal => s_exe_goal,
+        goal => s_exe_goal,
         instruction => s_instruction,
         r_x =>s_id_r_x,
         r_y =>s_id_r_y,
@@ -1017,7 +1033,7 @@ exe_alu_rx => s_forward_exe_alu_rx,
                 if rst = '1' then
                     clkIn_clock <= '0';
                 else
-                    clkIn_clock <=clk_div256;
+                    clkIn_clock <=clk_in;
                 end if;
             else
                 if rst = '1' then

@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2017.1 (win64) Build 1846317 Fri Apr 14 18:55:03 MDT 2017
-| Date         : Wed Dec  6 21:39:04 2017
+| Date         : Thu Dec  7 22:08:07 2017
 | Host         : samsung running 64-bit major release  (build 9200)
 | Command      : report_drc -file Computer_drc_opted.rpt
 | Design       : Computer
@@ -24,25 +24,15 @@ Table of Contents
       Design limits: <entire design considered>
            Ruledeck: default
              Max violations: <unlimited>
-             Violations found: 25
-+-------------+----------+-------------------------------------------------------------+------------+
-| Rule        | Severity | Description                                                 | Violations |
-+-------------+----------+-------------------------------------------------------------+------------+
-| PLHOLDVIO-2 | Warning  | Non-Optimal connections which could lead to hold violations | 1          |
-| RPBF-3      | Warning  | IO port buffering is incomplete                             | 24         |
-+-------------+----------+-------------------------------------------------------------+------------+
+             Violations found: 24
++--------+----------+---------------------------------+------------+
+| Rule   | Severity | Description                     | Violations |
++--------+----------+---------------------------------+------------+
+| RPBF-3 | Warning  | IO port buffering is incomplete | 24         |
++--------+----------+---------------------------------+------------+
 
 2. REPORT DETAILS
 -----------------
-PLHOLDVIO-2#1 Warning
-Non-Optimal connections which could lead to hold violations  
-A LUT u18/count[1]_i_2 is driving clock pin of 3 cells. This could lead to large hold time violations. First few involved cells are:
-    u18/clk1_reg {FDCE}
-    u18/count_reg[0] {FDCE}
-    u18/count_reg[1] {FDCE}
-
-Related violations: <none>
-
 RPBF-3#1 Warning
 IO port buffering is incomplete  
 Device port base_ram_data[10] expects both input and output buffering but the buffers are incomplete.

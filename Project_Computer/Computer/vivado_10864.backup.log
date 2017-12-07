@@ -1,0 +1,46 @@
+#-----------------------------------------------------------
+# Vivado v2017.1 (64-bit)
+# SW Build 1846317 on Fri Apr 14 18:55:03 MDT 2017
+# IP Build 1846188 on Fri Apr 14 20:52:08 MDT 2017
+# Start of session at: Thu Dec  7 13:52:37 2017
+# Process ID: 10864
+# Current directory: E:/GitHub/ENV/Project_Computer/Computer
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent11164 E:\GitHub\ENV\Project_Computer\Computer\Computer.xpr
+# Log file: E:/GitHub/ENV/Project_Computer/Computer/vivado.log
+# Journal file: E:/GitHub/ENV/Project_Computer/Computer\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project E:/GitHub/ENV/Project_Computer/Computer/Computer.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'E:/Vivado/Vivado/2017.1/data/ip'.
+open_project: Time (s): cpu = 00:01:09 ; elapsed = 00:00:49 . Memory (MB): peak = 831.508 ; gain = 80.879
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+[Thu Dec  7 16:18:03 2017] Launched synth_1...
+Run output will be captured here: E:/GitHub/ENV/Project_Computer/Computer/Computer.runs/synth_1/runme.log
+[Thu Dec  7 16:18:04 2017] Launched impl_1...
+Run output will be captured here: E:/GitHub/ENV/Project_Computer/Computer/Computer.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:02 ; elapsed = 00:00:06 . Memory (MB): peak = 868.168 ; gain = 4.594
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+[Thu Dec  7 17:03:07 2017] Launched synth_1...
+Run output will be captured here: E:/GitHub/ENV/Project_Computer/Computer/Computer.runs/synth_1/runme.log
+[Thu Dec  7 17:03:07 2017] Launched impl_1...
+Run output will be captured here: E:/GitHub/ENV/Project_Computer/Computer/Computer.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+[Thu Dec  7 17:35:13 2017] Launched synth_1...
+Run output will be captured here: E:/GitHub/ENV/Project_Computer/Computer/Computer.runs/synth_1/runme.log
+[Thu Dec  7 17:35:13 2017] Launched impl_1...
+Run output will be captured here: E:/GitHub/ENV/Project_Computer/Computer/Computer.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+[Thu Dec  7 18:10:24 2017] Launched synth_1...
+Run output will be captured here: E:/GitHub/ENV/Project_Computer/Computer/Computer.runs/synth_1/runme.log
+[Thu Dec  7 18:10:24 2017] Launched impl_1...
+Run output will be captured here: E:/GitHub/ENV/Project_Computer/Computer/Computer.runs/impl_1/runme.log
+exit
+INFO: [Common 17-206] Exiting Vivado at Thu Dec  7 18:21:56 2017...

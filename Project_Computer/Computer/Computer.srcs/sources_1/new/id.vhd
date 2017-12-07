@@ -320,15 +320,19 @@ begin
 			s_pause2 <= '0';
 		elsif clock'event and clock = '1'then
 		
+		if pause = '1' then
+		 pause_instruction <= instruction;
+                  s_instruction <= "0000000000000000";
+                  s_pause2 <= '1';
 			
-		if bubble = '1' then
+		elsif bubble = '1' then
 		  pause_instruction <= instruction;
           s_instruction <= "0000000000000000";
           s_pause1 <= '1';
 --        end if;
         
         elsif s_pause1 = '1' then
-            s_instruction <= pause_instruction;
+            s_instruction <= "0000000000000000";
             s_pause1 <= '0';
             s_pause2 <= '1';
        elsif s_pause2 = '1' then
