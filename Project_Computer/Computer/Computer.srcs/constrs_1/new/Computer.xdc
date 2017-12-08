@@ -3,7 +3,7 @@ set_property -dict {PACKAGE_PIN D18 IOSTANDARD LVCMOS33} [get_ports clk_in]
 set_property -dict {PACKAGE_PIN C18 IOSTANDARD LVCMOS33} [get_ports clk_uart_in]
 set_property CLOCK_DEDICATED_ROUTE FALSE [get_nets clk_uart_in_IBUF]
 
-create_clock -period 20.000 -name clk_in -waveform {0.000 10.000} [get_ports clk_in]
+create_clock -period 10.000 -name clk_in -waveform {0.000 05.000} [get_ports clk_in]
 create_clock -period 90.422 -name clk_uart_in -waveform {0.000 45.211} [get_ports clk_uart_in]
 
 #Touch Button

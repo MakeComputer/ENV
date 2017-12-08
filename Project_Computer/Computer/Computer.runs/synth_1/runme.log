@@ -14,44 +14,44 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t-fgg676'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t-fgg676'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 6424 
+INFO: Helper process launched with PID 7568 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 360.559 ; gain = 76.051
+Starting RTL Elaboration : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 360.758 ; gain = 75.680
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'Computer' [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/Computer.vhd:84]
-INFO: [Synth 8-3491] module 'clock' declared at 'E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/imports/new/clock.vhd:32' bound to instance 'u18' of component 'Clock' [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/Computer.vhd:640]
+INFO: [Synth 8-3491] module 'clock' declared at 'E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/imports/new/clock.vhd:32' bound to instance 'u18' of component 'Clock' [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/Computer.vhd:634]
 INFO: [Synth 8-638] synthesizing module 'clock' [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/imports/new/clock.vhd:43]
 INFO: [Synth 8-256] done synthesizing module 'clock' (1#1) [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/imports/new/clock.vhd:43]
-INFO: [Synth 8-3491] module 'MemoryUnit' declared at 'E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/imports/new/MemoryUnit.vhd:34' bound to instance 'u17' of component 'MemoryUnit' [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/Computer.vhd:650]
+INFO: [Synth 8-3491] module 'MemoryUnit' declared at 'E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/imports/new/MemoryUnit.vhd:34' bound to instance 'u17' of component 'MemoryUnit' [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/Computer.vhd:644]
 INFO: [Synth 8-638] synthesizing module 'MemoryUnit' [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/imports/new/MemoryUnit.vhd:96]
 WARNING: [Synth 8-613] shared variable will be implemented as local to architecture [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/imports/new/MemoryUnit.vhd:106]
 INFO: [Synth 8-256] done synthesizing module 'MemoryUnit' (2#1) [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/imports/new/MemoryUnit.vhd:96]
-INFO: [Synth 8-3491] module 'PCAdder' declared at 'E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/PCAdder.vhd:6' bound to instance 'local_pc_adder' of component 'PCAdder' [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/Computer.vhd:708]
+INFO: [Synth 8-3491] module 'PCAdder' declared at 'E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/PCAdder.vhd:6' bound to instance 'local_pc_adder' of component 'PCAdder' [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/Computer.vhd:702]
 INFO: [Synth 8-638] synthesizing module 'PCAdder' [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/PCAdder.vhd:13]
 INFO: [Synth 8-256] done synthesizing module 'PCAdder' (3#1) [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/PCAdder.vhd:13]
-INFO: [Synth 8-3491] module 'PCMux' declared at 'E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/PCMux.vhd:6' bound to instance 'local_pc_mux' of component 'PCMux' [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/Computer.vhd:713]
+INFO: [Synth 8-3491] module 'PCMux' declared at 'E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/PCMux.vhd:6' bound to instance 'local_pc_mux' of component 'PCMux' [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/Computer.vhd:707]
 INFO: [Synth 8-638] synthesizing module 'PCMux' [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/PCMux.vhd:15]
 INFO: [Synth 8-256] done synthesizing module 'PCMux' (4#1) [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/PCMux.vhd:15]
-INFO: [Synth 8-3491] module 'PCRegister' declared at 'E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/PCRegister.vhd:6' bound to instance 'local_pc_reg' of component 'PCRegister' [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/Computer.vhd:721]
+INFO: [Synth 8-3491] module 'PCRegister' declared at 'E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/PCRegister.vhd:6' bound to instance 'local_pc_reg' of component 'PCRegister' [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/Computer.vhd:715]
 INFO: [Synth 8-638] synthesizing module 'PCRegister' [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/PCRegister.vhd:16]
 INFO: [Synth 8-256] done synthesizing module 'PCRegister' (5#1) [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/PCRegister.vhd:16]
-INFO: [Synth 8-3491] module 'id' declared at 'E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/id.vhd:6' bound to instance 'local_id' of component 'id' [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/Computer.vhd:731]
+INFO: [Synth 8-3491] module 'id' declared at 'E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/id.vhd:6' bound to instance 'local_id' of component 'id' [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/Computer.vhd:725]
 INFO: [Synth 8-638] synthesizing module 'id' [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/id.vhd:55]
-INFO: [Synth 8-3491] module 'decoder' declared at 'E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/decoder.vhd:36' bound to instance 'decoder_instance' of component 'decoder' [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/id.vhd:197]
+INFO: [Synth 8-3491] module 'decoder' declared at 'E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/decoder.vhd:36' bound to instance 'decoder_instance' of component 'decoder' [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/id.vhd:199]
 INFO: [Synth 8-638] synthesizing module 'decoder' [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/decoder.vhd:57]
 WARNING: [Synth 8-6014] Unused sequential element where_reg was removed.  [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/decoder.vhd:73]
 INFO: [Synth 8-256] done synthesizing module 'decoder' (6#1) [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/decoder.vhd:57]
-INFO: [Synth 8-3491] module 'mux_control' declared at 'E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/mux_control.vhd:6' bound to instance 'mux_control_instance' of component 'mux_control' [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/id.vhd:215]
+INFO: [Synth 8-3491] module 'mux_control' declared at 'E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/mux_control.vhd:6' bound to instance 'mux_control_instance' of component 'mux_control' [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/id.vhd:217]
 INFO: [Synth 8-638] synthesizing module 'mux_control' [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/mux_control.vhd:38]
 INFO: [Synth 8-256] done synthesizing module 'mux_control' (7#1) [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/mux_control.vhd:38]
-INFO: [Synth 8-3491] module 'heap' declared at 'E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/heap.vhd:21' bound to instance 'heap_instance' of component 'heap' [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/id.vhd:244]
+INFO: [Synth 8-3491] module 'heap' declared at 'E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/heap.vhd:21' bound to instance 'heap_instance' of component 'heap' [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/id.vhd:246]
 INFO: [Synth 8-638] synthesizing module 'heap' [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/heap.vhd:48]
 INFO: [Synth 8-256] done synthesizing module 'heap' (8#1) [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/heap.vhd:48]
-INFO: [Synth 8-3491] module 'extend' declared at 'E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/extend.vhd:6' bound to instance 'extend_instance' of component 'extend' [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/id.vhd:270]
+INFO: [Synth 8-3491] module 'extend' declared at 'E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/extend.vhd:6' bound to instance 'extend_instance' of component 'extend' [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/id.vhd:272]
 INFO: [Synth 8-638] synthesizing module 'extend' [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/extend.vhd:14]
 INFO: [Synth 8-256] done synthesizing module 'extend' (9#1) [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/extend.vhd:14]
 INFO: [Synth 8-256] done synthesizing module 'id' (10#1) [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/id.vhd:55]
-INFO: [Synth 8-3491] module 'exe' declared at 'E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/exe.vhd:6' bound to instance 'local_exe' of component 'exe' [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/Computer.vhd:786]
+INFO: [Synth 8-3491] module 'exe' declared at 'E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/exe.vhd:6' bound to instance 'local_exe' of component 'exe' [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/Computer.vhd:780]
 INFO: [Synth 8-638] synthesizing module 'exe' [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/exe.vhd:65]
 INFO: [Synth 8-3491] module 'mux_rx' declared at 'E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/mux_rx.vhd:6' bound to instance 'mux_rx_instance' of component 'mux_rx' [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/exe.vhd:172]
 INFO: [Synth 8-638] synthesizing module 'mux_rx' [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/mux_rx.vhd:23]
@@ -75,7 +75,7 @@ INFO: [Synth 8-3491] module 'mux_goal' declared at 'E:/GitHub/ENV/Project_Comput
 INFO: [Synth 8-638] synthesizing module 'mux_goal' [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/mux_goal.vhd:16]
 INFO: [Synth 8-256] done synthesizing module 'mux_goal' (16#1) [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/mux_goal.vhd:16]
 INFO: [Synth 8-256] done synthesizing module 'exe' (17#1) [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/exe.vhd:65]
-INFO: [Synth 8-3491] module 'exe_mem' declared at 'E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/exe_mem.vhd:13' bound to instance 'local_exe_mem' of component 'exe_mem' [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/Computer.vhd:845]
+INFO: [Synth 8-3491] module 'exe_mem' declared at 'E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/exe_mem.vhd:13' bound to instance 'local_exe_mem' of component 'exe_mem' [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/Computer.vhd:839]
 INFO: [Synth 8-638] synthesizing module 'exe_mem' [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/exe_mem.vhd:38]
 WARNING: [Synth 8-613] shared variable will be implemented as local to architecture [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/exe_mem.vhd:40]
 WARNING: [Synth 8-613] shared variable will be implemented as local to architecture [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/exe_mem.vhd:41]
@@ -86,33 +86,23 @@ WARNING: [Synth 8-613] shared variable will be implemented as local to architect
 WARNING: [Synth 8-613] shared variable will be implemented as local to architecture [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/exe_mem.vhd:46]
 WARNING: [Synth 8-613] shared variable will be implemented as local to architecture [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/exe_mem.vhd:47]
 INFO: [Synth 8-256] done synthesizing module 'exe_mem' (18#1) [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/exe_mem.vhd:38]
-INFO: [Synth 8-3491] module 'VGA_Controller' declared at 'E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/VGA_Controller.vhd:5' bound to instance 'u23' of component 'VGA_Controller' [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/Computer.vhd:867]
+INFO: [Synth 8-3491] module 'VGA_Controller' declared at 'E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/VGA_Controller.vhd:5' bound to instance 'u23' of component 'VGA_Controller' [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/Computer.vhd:861]
 INFO: [Synth 8-638] synthesizing module 'VGA_Controller' [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/VGA_Controller.vhd:31]
 WARNING: [Synth 8-5863] Implementing Library version of Mod/Rem due to signed path. This typically leads to poor QOR. Check RTL to see if unsigned path for the operator is possible  [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/VGA_Controller.vhd:423]
 WARNING: [Synth 8-5863] Implementing Library version of Mod/Rem due to signed path. This typically leads to poor QOR. Check RTL to see if unsigned path for the operator is possible  [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/VGA_Controller.vhd:423]
 INFO: [Synth 8-256] done synthesizing module 'VGA_Controller' (19#1) [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/VGA_Controller.vhd:31]
-INFO: [Synth 8-3491] module 'mem_wb' declared at 'E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/mem_wb.vhd:14' bound to instance 'local_mem_wb' of component 'mem_wb' [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/Computer.vhd:898]
+INFO: [Synth 8-3491] module 'mem_wb' declared at 'E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/mem_wb.vhd:14' bound to instance 'local_mem_wb' of component 'mem_wb' [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/Computer.vhd:892]
 INFO: [Synth 8-638] synthesizing module 'mem_wb' [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/mem_wb.vhd:30]
 WARNING: [Synth 8-613] shared variable will be implemented as local to architecture [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/mem_wb.vhd:31]
 WARNING: [Synth 8-613] shared variable will be implemented as local to architecture [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/mem_wb.vhd:32]
 WARNING: [Synth 8-613] shared variable will be implemented as local to architecture [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/mem_wb.vhd:33]
 INFO: [Synth 8-256] done synthesizing module 'mem_wb' (20#1) [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/mem_wb.vhd:30]
-INFO: [Synth 8-3491] module 'hazard' declared at 'E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/hazard.vhd:6' bound to instance 'local_hazard' of component 'hazard' [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/Computer.vhd:913]
+INFO: [Synth 8-3491] module 'hazard' declared at 'E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/hazard.vhd:6' bound to instance 'local_hazard' of component 'hazard' [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/Computer.vhd:907]
 INFO: [Synth 8-638] synthesizing module 'hazard' [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/hazard.vhd:21]
 INFO: [Synth 8-256] done synthesizing module 'hazard' (21#1) [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/hazard.vhd:21]
-INFO: [Synth 8-3491] module 'forward' declared at 'E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/forward.vhd:6' bound to instance 'local_forward' of component 'forward' [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/Computer.vhd:925]
-INFO: [Synth 8-638] synthesizing module 'forward' [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/forward.vhd:41]
-INFO: [Synth 8-256] done synthesizing module 'forward' (22#1) [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/forward.vhd:41]
-WARNING: [Synth 8-6014] Unused sequential element clk_div4_reg was removed.  [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/Computer.vhd:965]
-WARNING: [Synth 8-6014] Unused sequential element clk_div8_reg was removed.  [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/Computer.vhd:972]
-WARNING: [Synth 8-6014] Unused sequential element clk_div16_reg was removed.  [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/Computer.vhd:980]
-WARNING: [Synth 8-6014] Unused sequential element clk_div32_reg was removed.  [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/Computer.vhd:987]
-WARNING: [Synth 8-6014] Unused sequential element clk_div64_reg was removed.  [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/Computer.vhd:994]
-WARNING: [Synth 8-6014] Unused sequential element clk_div128_reg was removed.  [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/Computer.vhd:1001]
-WARNING: [Synth 8-6014] Unused sequential element clk_div256_reg was removed.  [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/Computer.vhd:1007]
-WARNING: [Synth 8-6014] Unused sequential element clk_div512_reg was removed.  [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/Computer.vhd:1013]
-WARNING: [Synth 8-6014] Unused sequential element clk_div1024_reg was removed.  [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/Computer.vhd:1019]
-WARNING: [Synth 8-6014] Unused sequential element clk_div2048_reg was removed.  [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/Computer.vhd:1025]
+INFO: [Synth 8-3491] module 'forward' declared at 'E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/forward.vhd:6' bound to instance 'local_forward' of component 'forward' [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/Computer.vhd:919]
+INFO: [Synth 8-638] synthesizing module 'forward' [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/forward.vhd:42]
+INFO: [Synth 8-256] done synthesizing module 'forward' (22#1) [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/forward.vhd:42]
 INFO: [Synth 8-256] done synthesizing module 'Computer' (23#1) [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/Computer.vhd:84]
 WARNING: [Synth 8-3331] design forward has unconnected port wb_memory_data[15]
 WARNING: [Synth 8-3331] design forward has unconnected port wb_memory_data[14]
@@ -188,7 +178,7 @@ WARNING: [Synth 8-3331] design Computer has unconnected port ext_ram_data[18]
 WARNING: [Synth 8-3331] design Computer has unconnected port ext_ram_data[17]
 WARNING: [Synth 8-3331] design Computer has unconnected port ext_ram_data[16]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:24 ; elapsed = 00:00:24 . Memory (MB): peak = 408.652 ; gain = 124.145
+Finished RTL Elaboration : Time (s): cpu = 00:00:22 ; elapsed = 00:00:22 . Memory (MB): peak = 408.852 ; gain = 123.773
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -198,7 +188,7 @@ Report Check Netlist:
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:25 ; elapsed = 00:00:25 . Memory (MB): peak = 408.652 ; gain = 124.145
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:23 ; elapsed = 00:00:23 . Memory (MB): peak = 408.852 ; gain = 123.773
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a100tfgg676-2L
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -487,22 +477,22 @@ Completed Processing XDC Constraints
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.019 . Memory (MB): peak = 726.063 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.070 . Memory (MB): peak = 726.277 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:01:07 ; elapsed = 00:01:09 . Memory (MB): peak = 726.063 ; gain = 441.555
+Finished Constraint Validation : Time (s): cpu = 00:01:01 ; elapsed = 00:01:10 . Memory (MB): peak = 726.277 ; gain = 441.199
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tfgg676-2L
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:01:07 ; elapsed = 00:01:09 . Memory (MB): peak = 726.063 ; gain = 441.555
+Finished Loading Part and Timing Information : Time (s): cpu = 00:01:01 ; elapsed = 00:01:10 . Memory (MB): peak = 726.277 ; gain = 441.199
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:01:07 ; elapsed = 00:01:10 . Memory (MB): peak = 726.063 ; gain = 441.555
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:01:01 ; elapsed = 00:01:10 . Memory (MB): peak = 726.277 ; gain = 441.199
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-4471] merging register 'ram1_oe_reg' into 'ram1_en_reg' [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/imports/new/MemoryUnit.vhd:154]
 INFO: [Synth 8-4471] merging register 'ram1_we_reg' into 'ram1_en_reg' [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/imports/new/MemoryUnit.vhd:155]
@@ -586,9 +576,10 @@ WARNING: [Synth 8-6014] Unused sequential element flashstate_reg was removed.  [
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'flashstate_reg' using encoding 'one-hot' in module 'MemoryUnit'
 WARNING: [Synth 8-6014] Unused sequential element flashstate_reg was removed.  [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/imports/new/MemoryUnit.vhd:143]
-WARNING: [Synth 8-327] inferring latch for variable 'forward_data_reg' [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/forward.vhd:73]
+WARNING: [Synth 8-327] inferring latch for variable 'forward_data_reg' [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/forward.vhd:54]
+WARNING: [Synth 8-327] inferring latch for variable 'forward_datay_reg' [E:/GitHub/ENV/Project_Computer/Computer/Computer.srcs/sources_1/new/forward.vhd:89]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:14 ; elapsed = 00:01:17 . Memory (MB): peak = 726.063 ; gain = 441.555
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:07 ; elapsed = 00:01:17 . Memory (MB): peak = 726.277 ; gain = 441.199
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -621,12 +612,12 @@ Detailed RTL Component Info :
 	                4 Bit    Registers := 2     
 	                3 Bit    Registers := 9     
 	                2 Bit    Registers := 7     
-	                1 Bit    Registers := 32    
+	                1 Bit    Registers := 33    
 +---Muxes : 
 	   2 Input     32 Bit        Muxes := 1     
 	   2 Input     20 Bit        Muxes := 1     
 	   4 Input     16 Bit        Muxes := 9     
-	   2 Input     16 Bit        Muxes := 41    
+	   2 Input     16 Bit        Muxes := 40    
 	   5 Input     16 Bit        Muxes := 2     
 	   8 Input     16 Bit        Muxes := 1     
 	  17 Input     16 Bit        Muxes := 16    
@@ -648,14 +639,13 @@ Detailed RTL Component Info :
 	  24 Input      2 Bit        Muxes := 1     
 	  28 Input      2 Bit        Muxes := 1     
 	  10 Input      2 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 81    
+	   2 Input      1 Bit        Muxes := 88    
 	   6 Input      1 Bit        Muxes := 5     
-	   4 Input      1 Bit        Muxes := 10    
+	   4 Input      1 Bit        Muxes := 11    
 	   3 Input      1 Bit        Muxes := 2     
 	  19 Input      1 Bit        Muxes := 3     
 	  10 Input      1 Bit        Muxes := 1     
 	  13 Input      1 Bit        Muxes := 12    
-	   7 Input      1 Bit        Muxes := 1     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -751,10 +741,9 @@ Module id
 Detailed RTL Component Info : 
 +---Registers : 
 	               16 Bit    Registers := 3     
-	                1 Bit    Registers := 2     
+	                1 Bit    Registers := 3     
 +---Muxes : 
-	   2 Input     16 Bit        Muxes := 5     
-	   2 Input      1 Bit        Muxes := 5     
+	   2 Input      1 Bit        Muxes := 6     
 Module mux_rx 
 Detailed RTL Component Info : 
 +---Muxes : 
@@ -837,9 +826,9 @@ Module forward
 Detailed RTL Component Info : 
 +---Muxes : 
 	   5 Input     16 Bit        Muxes := 1     
-	   2 Input     16 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 9     
-	   7 Input      1 Bit        Muxes := 1     
+	   2 Input     16 Bit        Muxes := 5     
+	   2 Input      1 Bit        Muxes := 15    
+	   4 Input      1 Bit        Muxes := 1     
 ---------------------------------------------------------------------------------
 Finished RTL Hierarchical Component Statistics
 ---------------------------------------------------------------------------------
@@ -1019,7 +1008,7 @@ WARNING: [Synth 8-3332] Sequential element (flash_addr_reg[22]) is unused and wi
 WARNING: [Synth 8-3332] Sequential element (flash_byte_reg) is unused and will be removed from module MemoryUnit.
 WARNING: [Synth 8-3332] Sequential element (r0_reg[2]) is unused and will be removed from module VGA_Controller.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:02:40 ; elapsed = 00:02:47 . Memory (MB): peak = 726.063 ; gain = 441.555
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:02:11 ; elapsed = 00:02:23 . Memory (MB): peak = 726.277 ; gain = 441.199
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1031,13 +1020,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:03:28 ; elapsed = 00:03:37 . Memory (MB): peak = 726.063 ; gain = 441.555
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:02:54 ; elapsed = 00:03:06 . Memory (MB): peak = 746.770 ; gain = 461.691
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:03:37 ; elapsed = 00:03:46 . Memory (MB): peak = 777.363 ; gain = 492.855
+Finished Timing Optimization : Time (s): cpu = 00:03:02 ; elapsed = 00:03:14 . Memory (MB): peak = 805.629 ; gain = 520.551
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1151,7 +1140,7 @@ WARNING: [Synth 8-3332] Sequential element (u17/current_addr_reg[14]) is unused 
 WARNING: [Synth 8-3332] Sequential element (u17/current_addr_reg[15]) is unused and will be removed from module Computer.
 WARNING: [Synth 8-3332] Sequential element (u17/flash_oe_reg) is unused and will be removed from module Computer.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:03:42 ; elapsed = 00:03:51 . Memory (MB): peak = 777.363 ; gain = 492.855
+Finished Technology Mapping : Time (s): cpu = 00:03:05 ; elapsed = 00:03:19 . Memory (MB): peak = 805.629 ; gain = 520.551
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1175,7 +1164,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:03:45 ; elapsed = 00:03:55 . Memory (MB): peak = 777.363 ; gain = 492.855
+Finished IO Insertion : Time (s): cpu = 00:03:08 ; elapsed = 00:03:22 . Memory (MB): peak = 805.629 ; gain = 520.551
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -1188,7 +1177,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:03:45 ; elapsed = 00:03:55 . Memory (MB): peak = 777.363 ; gain = 492.855
+Finished Renaming Generated Instances : Time (s): cpu = 00:03:08 ; elapsed = 00:03:22 . Memory (MB): peak = 805.629 ; gain = 520.551
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1200,25 +1189,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:03:46 ; elapsed = 00:03:55 . Memory (MB): peak = 777.363 ; gain = 492.855
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:03:09 ; elapsed = 00:03:22 . Memory (MB): peak = 805.629 ; gain = 520.551
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:03:46 ; elapsed = 00:03:55 . Memory (MB): peak = 777.363 ; gain = 492.855
+Finished Renaming Generated Ports : Time (s): cpu = 00:03:09 ; elapsed = 00:03:22 . Memory (MB): peak = 805.629 ; gain = 520.551
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:03:46 ; elapsed = 00:03:56 . Memory (MB): peak = 777.363 ; gain = 492.855
+Finished Handling Custom Attributes : Time (s): cpu = 00:03:09 ; elapsed = 00:03:22 . Memory (MB): peak = 805.629 ; gain = 520.551
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:03:46 ; elapsed = 00:03:56 . Memory (MB): peak = 777.363 ; gain = 492.855
+Finished Renaming Generated Nets : Time (s): cpu = 00:03:09 ; elapsed = 00:03:22 . Memory (MB): peak = 805.629 ; gain = 520.551
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -1237,18 +1226,18 @@ Report Cell Usage:
 |1     |BUFG   |     4|
 |2     |CARRY4 |    16|
 |3     |LUT1   |    49|
-|4     |LUT2   |    70|
-|5     |LUT3   |   107|
-|6     |LUT4   |    94|
-|7     |LUT5   |   219|
-|8     |LUT6   |   448|
-|9     |MUXF7  |    60|
+|4     |LUT2   |    74|
+|5     |LUT3   |   123|
+|6     |LUT4   |   103|
+|7     |LUT5   |   239|
+|8     |LUT6   |   443|
+|9     |MUXF7  |    63|
 |10    |MUXF8  |    11|
-|11    |FDCE   |   540|
+|11    |FDCE   |   541|
 |12    |FDPE   |    22|
 |13    |FDRE   |    62|
 |14    |FDSE   |     1|
-|15    |LD     |    16|
+|15    |LD     |    32|
 |16    |IBUF   |     7|
 |17    |IOBUF  |    24|
 |18    |OBUF   |   121|
@@ -1259,42 +1248,42 @@ Report Instance Areas:
 +------+----------------------+---------------+------+
 |      |Instance              |Module         |Cells |
 +------+----------------------+---------------+------+
-|1     |top                   |               |  1895|
+|1     |top                   |               |  1959|
 |2     |  local_pc_adder      |PCAdder        |     4|
 |3     |  local_pc_mux        |PCMux          |    14|
 |4     |  local_exe           |exe            |   514|
-|5     |    adder_instance    |adder          |    15|
-|6     |    alu_instance      |alu            |    52|
+|5     |    adder_instance    |adder          |    12|
+|6     |    alu_instance      |alu            |    63|
 |7     |    mux_goal_instance |mux_goal       |     3|
-|8     |  local_exe_mem       |exe_mem        |   131|
-|9     |  local_forward       |forward        |    23|
-|10    |  local_id            |id             |   530|
+|8     |  local_exe_mem       |exe_mem        |   147|
+|9     |  local_forward       |forward        |    48|
+|10    |  local_id            |id             |   537|
 |11    |    heap_instance     |heap           |   351|
-|12    |  local_mem_wb        |mem_wb         |    90|
-|13    |  local_pc_reg        |PCRegister     |    48|
+|12    |  local_mem_wb        |mem_wb         |    94|
+|13    |  local_pc_reg        |PCRegister     |    60|
 |14    |  u17                 |MemoryUnit     |   161|
 |15    |  u18                 |clock          |     5|
 |16    |  u23                 |VGA_Controller |   173|
 +------+----------------------+---------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:03:46 ; elapsed = 00:03:56 . Memory (MB): peak = 777.363 ; gain = 492.855
+Finished Writing Synthesis Report : Time (s): cpu = 00:03:09 ; elapsed = 00:03:22 . Memory (MB): peak = 805.629 ; gain = 520.551
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 152 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:02:54 ; elapsed = 00:03:26 . Memory (MB): peak = 777.363 ; gain = 175.445
-Synthesis Optimization Complete : Time (s): cpu = 00:03:47 ; elapsed = 00:03:56 . Memory (MB): peak = 777.363 ; gain = 492.855
+Synthesis finished with 0 errors, 0 critical warnings and 153 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:02:22 ; elapsed = 00:02:49 . Memory (MB): peak = 805.629 ; gain = 203.125
+Synthesis Optimization Complete : Time (s): cpu = 00:03:10 ; elapsed = 00:03:23 . Memory (MB): peak = 805.629 ; gain = 520.551
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 63 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Netlist 29-17] Analyzing 79 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 40 instances were transformed.
+  A total of 56 instances were transformed.
   IOBUF => IOBUF (IBUF, OBUFT): 24 instances
-  LD => LDCE: 16 instances
+  LD => LDCE: 32 instances
 
-300 Infos, 309 Warnings, 91 Critical Warnings and 0 Errors encountered.
+300 Infos, 300 Warnings, 91 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:03:55 ; elapsed = 00:04:08 . Memory (MB): peak = 777.363 ; gain = 497.379
+synth_design: Time (s): cpu = 00:03:18 ; elapsed = 00:03:35 . Memory (MB): peak = 805.629 ; gain = 525.414
 INFO: [Common 17-1381] The checkpoint 'E:/GitHub/ENV/Project_Computer/Computer/Computer.runs/synth_1/Computer.dcp' has been generated.
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.105 . Memory (MB): peak = 777.363 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Thu Dec  7 22:05:59 2017...
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.207 . Memory (MB): peak = 805.629 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Fri Dec  8 20:24:59 2017...

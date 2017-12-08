@@ -191,6 +191,8 @@ signal s_readAddressB: std_logic_vector(3 downto 0);
 signal pause_instruction: std_logic_vector(15 downto 0);
 signal s_pause1: std_logic;
 signal s_pause2: std_logic;
+signal s_flush: std_logic;
+--signal s_flush2: std_logic;
 
 
 begin
@@ -318,6 +320,8 @@ begin
 			pause_instruction <= "0000000000000000";
 			s_pause1 <= '0';
 			s_pause2 <= '0';
+			s_flush <= '0';
+--			s_flush2 <= '0';
 		elsif clock'event and clock = '1'then
 		
 		if pause = '1' then
@@ -339,11 +343,20 @@ begin
                    s_instruction <= pause_instruction;
                    s_pause2 <= '0';
 --        end if;
-        elsif flush = '0' then
-			s_instruction <= instruction;
-			s_from_pc <= fromPC;
-		else
+        elsif flush = '1' then
 			s_instruction <= "0000000000000000";
+                    s_flush <= '1';
+	       elsif s_flush = '1' then
+	           s_instruction <= "0000000000000000";
+                       s_flush <= '0';
+--                       s_flush2 <= '1';
+--            elsif s_flush2 = '1' then
+--            s_instruction <= "0000000000000000";
+--            s_flush2 <= '0';
+		else
+		s_instruction <= instruction;
+                    s_from_pc <= fromPC;
+			
 			end if;        
         
 		end if;

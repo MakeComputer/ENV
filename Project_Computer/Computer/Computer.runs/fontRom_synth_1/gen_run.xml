@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="fontRom_synth_1" LaunchPart="xc7a100tfgg676-2L" LaunchTime="1512364518">
-  <File Type="PA-TCL" Name="fontRom.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="fontRom_drc_synth.rpt"/>
+  <File Type="PA-TCL" Name="fontRom.tcl"/>
   <File Type="RDS-RDS" Name="fontRom.vds"/>
   <File Type="RDS-UTIL" Name="fontRom_utilization_synth.rpt"/>
   <File Type="RDS-UTIL-PB" Name="fontRom_utilization_synth.pb"/>

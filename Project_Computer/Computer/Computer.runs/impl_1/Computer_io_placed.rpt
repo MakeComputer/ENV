@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------
 | Tool Version              : Vivado v.2017.1 (win64) Build 1846317 Fri Apr 14 18:55:03 MDT 2017
-| Date                      : Thu Dec  7 22:08:37 2017
+| Date                      : Fri Dec  8 20:28:10 2017
 | Host                      : samsung running 64-bit major release  (build 9200)
 | Command                   : report_io -file Computer_io_placed.rpt
 | Design                    : Computer

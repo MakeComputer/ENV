@@ -484,6 +484,8 @@ architecture Computer_beh of Computer is
             from_forward_memory: out std_logic;
             
             forward_memory: out std_logic_vector(15 downto 0);
+            
+            forward_datay: out std_logic_vector(15 downto 0);
 
             forward_data: out std_logic_vector(15 downto 0)
 
@@ -533,17 +535,8 @@ signal clk_3 : std_logic;
 signal clk_registers : std_logic;
 signal clk : std_logic;
 signal clkIn_clock : std_logic;
-signal clk_div4 : std_logic:='0';
-signal clk_div8 : std_logic:='0';
-signal clk_div16 : std_logic:='0';
-signal clk_div32 : std_logic:='0';
-signal clk_div64 : std_logic:='0';
-signal clk_div128 : std_logic:='0';
-signal clk_div256: std_logic:='0';
-signal clk_div512: std_logic:='0';
-signal clk_div1024 : std_logic:='0';
-signal clk_div2048 : std_logic:='0';
-signal clk_div4096 : std_logic:='0';
+--signal clk_div4 : std_logic:='0';
+--signal clk_div8 : std_logic:='0';
 
 
 signal s_forward_r_x: std_logic_vector(2 downto 0);
@@ -633,6 +626,7 @@ signal fontRomData : std_logic_vector(7 downto 0);
 
 signal s_forward_memory: std_logic;
 signal s_forward_memory_data:std_logic_vector(15 downto 0);
+signal s_forward_datay:std_logic_vector(15 downto 0);
 
 
 begin
@@ -838,7 +832,7 @@ begin
         
         
         forward_datax => s_forward_data,
-        forward_datay => s_forward_data,
+        forward_datay => s_forward_datay,
         forward_address => s_forward_data
     );
    
@@ -955,76 +949,25 @@ exe_alu_rx => s_forward_exe_alu_rx,
         from_forward_address => s_from_forward_address,
         from_forward_memory => s_forward_memory,
         forward_memory => s_forward_memory_data,
+        forward_datay => s_forward_datay,
         forward_data => s_forward_data
 
     );
    
-    process (clk_in)
-    begin
-        if clk_in'event and clk_in = '1' then    --对50M输入信号二分频
-            clk_div4 <= not clk_div4;
-        end if;
-    end process;
+--    process (clk_in)
+--    begin
+--        if clk_in'event and clk_in = '1' then    --对50M输入信号二分频
+--            clk_div4 <= not clk_div4;
+--        end if;
+--    end process;
     
-    process (clk_div4)
-      begin
-          if clk_div4'event and clk_div4 = '1' then    --对50M输入信号二分频
-              clk_div8 <= not clk_div8;
-          end if;
-    end process;
- 
- 
-    process (clk_div8)
-       begin
-           if clk_div8'event and clk_div8 = '1' then    --对50M输入信号二分频
-               clk_div16 <= not clk_div16;
-           end if;
-   end process;
-  
-   process (clk_div16)
-    begin
-        if clk_div16'event and clk_div16 = '1' then    --对50M输入信号二分频
-            clk_div32 <= not clk_div32;
-        end if;
-    end process;
-    
-   process (clk_div32)
-     begin
-         if clk_div32'event and clk_div32 = '1' then    --对50M输入信号二分频
-             clk_div64 <= not clk_div64;
-         end if;
-     end process;
-     
-   process (clk_div64)
-      begin
-          if clk_div64'event and clk_div64 = '1' then    --对50M输入信号二分频
-              clk_div128 <= not clk_div128;
-          end if;
-     end process;
-    process (clk_div128)
-           begin
-               if clk_div128'event and clk_div128 = '1' then    --对50M输入信号二分频
-                   clk_div256 <= not clk_div256;
-               end if;
-           end process;
-     process (clk_div256)
-        begin
-            if clk_div256'event and clk_div256 = '1' then    --对50M输入信号二分频
-                clk_div512 <= not clk_div512;
-            end if;
-    end process;
-      process (clk_div512)
-       begin
-           if clk_div512'event and clk_div512 = '1' then    --对50M输入信号二分频
-               clk_div1024 <= not clk_div1024;
-           end if;
-       end process;
-    process (clk_div1024)
-          begin
-              if clk_div1024'event and clk_div1024 = '1' then    --对50M输入信号二分频
-                  clk_div2048 <= not clk_div2048;
-              end if;
-          end process;                                                               
+--    process (clk_div4)
+--      begin
+--          if clk_div4'event and clk_div4 = '1' then    --对50M输入信号二分频
+--              clk_div8 <= not clk_div8;
+--          end if;
+--    end process;
+                                                              
                                                           
     --clk_chooser
         process(clk_in, clk_hand, op,rst)

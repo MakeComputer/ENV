@@ -33,7 +33,8 @@ entity forward is
 		wb_memory_data: in std_logic_vector(15 downto 0);
 		
 		forward_memory: out std_logic_vector(15 downto 0) := "0000000000000000";
-		forward_data: out std_logic_vector(15 downto 0) := "0000000000000000"
+		forward_data: out std_logic_vector(15 downto 0) := "0000000000000000";
+		forward_datay: out std_logic_vector(15 downto 0):= "0000000000000000"
 		
 	);
 end forward;
@@ -50,174 +51,122 @@ begin
 			(exe_alu_rx = "101" and address_wb = "1010") or
 			(exe_alu_rx = "110" and address_wb= "1011")) then
 			from_forward_datax <= '1';
-			from_forward_datay <= '0';
-			from_forward_address <= '0';
---			from_forward_memory <= '0';
---            if	(wb_which="00") then
---			forward_data<=wb_toRegister;
---		elsif wb_which = "01" then
---			forward_data<=wb_memory_data;
---		elsif wb_which = "10" then 
---			if wb_toRegister = "0000000000000000" then
---				forward_data<="0000000000000000";
---			else
---				forward_data<="0000000000000001";
---			end if;
---		elsif wb_which = "11" then
---			if wb_toRegister(15) = '0' then
---				forward_data<="0000000000000000";
---			else
---				forward_data<="0000000000000001";
---			end if;
---		end if;
 			forward_data <= wb_toRegister;
-		--end if;
+	     elsif mem_registerWrite = '1' and 
+                        ((exe_alu_rx = "000" and ("0" & rx) = address_memory) or  
+                        (exe_alu_rx = "001" and ("0" & ry) = address_memory) or
+                        (exe_alu_rx = "010" and address_memory = "1000") or
+                        (exe_alu_rx = "100" and address_memory = "1001") or
+                        (exe_alu_rx = "101" and address_memory = "1010") or
+                        (exe_alu_rx = "110" and address_memory = "1011")) then
+                        from_forward_datax <= '1';
+            if    (memory_which="00") then
+                        forward_data<=mem_aluout;
+            --        elsif memory_which = "01" then
+            --            forward_data<=wb_memory_data;
+                    elsif memory_which = "10" then 
+                        if mem_aluout = "0000000000000000" then
+                            forward_data<="0000000000000000";
+                        else
+                            forward_data<="0000000000000001";
+                        end if;
+                    elsif memory_which = "11" then
+                        if mem_aluout(15) = '0' then
+                            forward_data<="0000000000000000";
+                        else
+                            forward_data<="0000000000000001";
+                        end if;
+                    end if;
+                else
+                from_forward_datax <= '0';
 		
-		elsif wb_registerWrite = '1' and address_memory /= address_wb and
+		end if;
+		
+		if wb_registerWrite = '1' and address_memory /= address_wb and
 			((exe_alu_ry = "10" and ("0" & rx) = address_wb) or  
 			(exe_alu_ry = "01" and ("0" & ry) = address_wb)) then
 			from_forward_datay <= '1';
-			from_forward_datax <= '0';
-			from_forward_address <= '0';
---			from_forward_memory <= '0';
-			forward_data <= wb_toRegister;
---if	(wb_which="00") then
---			forward_data<=wb_toRegister;
---		elsif wb_which = "01" then
---			forward_data<=wb_memory_data;
---		elsif wb_which = "10" then 
---			if wb_toRegister = "0000000000000000" then
---				forward_data<="0000000000000000";
---			else
---				forward_data<="0000000000000001";
---			end if;
---		elsif wb_which = "11" then
---			if wb_toRegister(15) = '0' then
---				forward_data<="0000000000000000";
---			else
---				forward_data<="0000000000000001";
---			end if;
---		end if;
-		--end if;
+			forward_datay <= wb_toRegister;
+			
+	   elsif mem_registerWrite = '1' and 
+                        ((exe_alu_ry = "10" and ("0" & rx) = address_memory) or  
+                        (exe_alu_ry = "01" and ("0" & ry) = address_memory)) then
+                        from_forward_datay <= '1';
+            --            from_forward_datax <= '0';
+            --            from_forward_address <= '0';
+            --            from_forward_memory <= '0';
+            --            forward_data <= mem_aluout;
+            if    (memory_which="00") then
+                        forward_datay<=mem_aluout;
+            --        elsif memory_which = "01" then
+            --            forward_data<=wb_memory_data;
+                    elsif memory_which = "10" then 
+                        if mem_aluout = "0000000000000000" then
+                            forward_datay<="0000000000000000";
+                        else
+                            forward_datay<="0000000000000001";
+                        end if;
+                    elsif memory_which = "11" then
+                        if mem_aluout(15) = '0' then
+                            forward_datay<="0000000000000000";
+                        else
+                            forward_datay<="0000000000000001";
+                        end if;
+                    end if;
+            else
+                from_forward_datay <= '0';
+            end if;
+
 		
-		elsif wb_registerWrite = '1' and address_memory /= address_wb and
+		if wb_registerWrite = '1' and address_memory /= address_wb and
 			((exe_select_address = "10" and address_wb = "1001") or 
 			(exe_select_address = "01" and ("0" & rx) = address_wb)) then
 			from_forward_address <= '1';
-			from_forward_datay <= '0';
-			from_forward_datax <= '0';
+--			from_forward_datay <= '0';
+--			from_forward_datax <= '0';
 --			from_forward_memory <= '0';
 			forward_data <= wb_toRegister;
---if	(wb_which="00") then
---			forward_data<=wb_toRegister;
---		elsif wb_which = "01" then
---			forward_data<=wb_memory_data;
---		elsif wb_which = "10" then 
---			if wb_toRegister = "0000000000000000" then
---				forward_data<="0000000000000000";
---			else
---				forward_data<="0000000000000001";
---			end if;
---		elsif wb_which = "11" then
---			if wb_toRegister(15) = '0' then
---				forward_data<="0000000000000000";
---			else
---				forward_data<="0000000000000001";
---			end if;
---		end if;
-		--end if;
-		
-		elsif mem_registerWrite = '1' and 
-            ((exe_alu_rx = "000" and ("0" & rx) = address_memory) or  
-            (exe_alu_rx = "001" and ("0" & ry) = address_memory) or
-            (exe_alu_rx = "010" and address_memory = "1000") or
-            (exe_alu_rx = "100" and address_memory = "1001") or
-            (exe_alu_rx = "101" and address_memory = "1010") or
-            (exe_alu_rx = "110" and address_memory = "1011")) then
-            from_forward_datax <= '1';
-            from_forward_datay <= '0';
-            from_forward_address <= '0';
---            from_forward_memory <= '0';
---            forward_data <= mem_aluout;
+			
+			elsif mem_registerWrite = '1' and 
+                        ((exe_select_address = "10" and address_memory = "1001") or 
+                        (exe_select_address = "01" and ("0" & rx) = address_memory)) then
+                        from_forward_address <= '1';
+            --            from_forward_datay <= '0';
+            --            from_forward_datax <= '0';
+            --            from_forward_memory <= '0';
+            --            forward_data <= mem_aluout;
+            if    (memory_which="00") then
+                        forward_data<=mem_aluout;
+            --        elsif memory_which = "01" then
+            --            forward_data<=wb_memory_data;
+                    elsif memory_which = "10" then 
+                        if mem_aluout = "0000000000000000" then
+                            forward_data<="0000000000000000";
+                        else
+                            forward_data<="0000000000000001";
+                        end if;
+                    elsif memory_which = "11" then
+                        if mem_aluout(15) = '0' then
+                            forward_data<="0000000000000000";
+                        else
+                            forward_data<="0000000000000001";
+                        end if;
+                    end if;
+	   else
+	   from_forward_address <= '0';
+--                   from_forward_datay <= '0';
+--                   from_forward_datax <= '0';
 
-if	(memory_which="00") then
-			forward_data<=mem_aluout;
---		elsif memory_which = "01" then
---			forward_data<=wb_memory_data;
-		elsif memory_which = "10" then 
-			if mem_aluout = "0000000000000000" then
-				forward_data<="0000000000000000";
-			else
-				forward_data<="0000000000000001";
-			end if;
-		elsif memory_which = "11" then
-			if mem_aluout(15) = '0' then
-				forward_data<="0000000000000000";
-			else
-				forward_data<="0000000000000001";
-			end if;
 		end if;
+		
+		
         --end if;
                 
-        elsif mem_registerWrite = '1' and 
-            ((exe_alu_ry = "10" and ("0" & rx) = address_memory) or  
-            (exe_alu_ry = "01" and ("0" & ry) = address_memory)) then
-            from_forward_datay <= '1';
-            from_forward_datax <= '0';
-            from_forward_address <= '0';
---            from_forward_memory <= '0';
---            forward_data <= mem_aluout;
-if	(memory_which="00") then
-			forward_data<=mem_aluout;
---		elsif memory_which = "01" then
---			forward_data<=wb_memory_data;
-		elsif memory_which = "10" then 
-			if mem_aluout = "0000000000000000" then
-				forward_data<="0000000000000000";
-			else
-				forward_data<="0000000000000001";
-			end if;
-		elsif memory_which = "11" then
-			if mem_aluout(15) = '0' then
-				forward_data<="0000000000000000";
-			else
-				forward_data<="0000000000000001";
-			end if;
-		end if;
+        
         --end if;
         
-        elsif mem_registerWrite = '1' and 
-            ((exe_select_address = "10" and address_memory = "1001") or 
-            (exe_select_address = "01" and ("0" & rx) = address_memory)) then
-            from_forward_address <= '1';
-            from_forward_datay <= '0';
-            from_forward_datax <= '0';
---            from_forward_memory <= '0';
---            forward_data <= mem_aluout;
-if	(memory_which="00") then
-			forward_data<=mem_aluout;
---		elsif memory_which = "01" then
---			forward_data<=wb_memory_data;
-		elsif memory_which = "10" then 
-			if mem_aluout = "0000000000000000" then
-				forward_data<="0000000000000000";
-			else
-				forward_data<="0000000000000001";
-			end if;
-		elsif memory_which = "11" then
-			if mem_aluout(15) = '0' then
-				forward_data<="0000000000000000";
-			else
-				forward_data<="0000000000000001";
-			end if;
-		end if;
-        else
-            from_forward_datax <= '0';
-            from_forward_datay <= '0';
-            from_forward_address <= '0';
-            from_forward_memory <= '0';
-            forward_data <= "0000000000000000";
-        end if;
+        
+        
         
         
         
